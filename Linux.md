@@ -27,7 +27,7 @@ echo
 head  
 tail  
 ln 快捷方式  
-history  !编号 执行 
+history  !编号 执行  
 find 范围 名称  find /home -name hello.txt  
 locate 定位文件目录  locate hello.txt  
 grep 和 |  
