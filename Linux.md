@@ -22,8 +22,8 @@ mv文件 目录 移动
 cat 只读查看  
 more  
 less  
-> 写入  
->> 覆盖写入  
+\> 写入  
+\>> 覆盖写入  
 echo  
 head  
 tail  
@@ -31,11 +31,9 @@ ln 快捷方式
 history  !编号 执行
 find 范围 名称  find /home -name hello.txt  
 locate 定位文件目录  locate hello.txt  
-grep 和 | 
-
-
-
-
+grep 和 |  
+tar -zcxf  
+tar -zxvf  
 
 
 <br>
