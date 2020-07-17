@@ -9,3 +9,11 @@ Linux 非常酷，可以在任意电脑登录使用。
 
 使用 man 和 help 查看命令全称 
 
+pwd 
+ls 
+cd 
+mkdir 
+rmdir 
+
+
+
