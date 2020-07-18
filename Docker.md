@@ -21,6 +21,8 @@ docker stop 名字或 ID
 
 docker ps 在跑的 container 
 
+service docker status
+
 exit 退出
 
 Ctrl + p + q 后台运行
