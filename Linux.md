@@ -39,3 +39,11 @@ tar -zxvf
 -r 递归
 <br>
 -f 强制 
+
+
+#### tmux 命令  
+
+tmux new -s 名字  
+tmux ls  
+tmux a -t 名字  
+tmux + b d  
