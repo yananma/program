@@ -31,4 +31,7 @@ docker attach 名字或 ID
 
 docker cp  ID: 起点  终点 
 
-docker commit -m='描述' -a='作者'  看视频
+docker commit -m='描述' -a='作者'     
+
+sudo nvidia-docker run -it -p [host_port]:[container_port] --name:[container_name] [image_name] -v [container_path]:[host_path] /bin/bash
+
