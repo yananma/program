@@ -34,4 +34,4 @@ docker cp  ID: 起点  终点
 docker commit -m='描述' -a='作者'     
 
 sudo nvidia-docker run -it -p [host_port]:[container_port] --name:[container_name] -v [host_path]:[container_path] /bin/bash  
-sudo nvidia-docker run -it -p 6008:8888 --name:DL -v ~、mnt:/mnt /bin/bash
+sudo nvidia-docker run -it -p 6008:8888 --name:DL -v ~、mnt:/mnt  pytorch/pytorch  /bin/bash
