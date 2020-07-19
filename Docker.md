@@ -15,6 +15,7 @@ Ctrl + p + q
 docker start jpt  <br>
 docker stop jpt  <br>
 docker rm jpt  
+docker rm $(docker ps -a -q)  
 
 
 
