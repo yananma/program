@@ -4,6 +4,19 @@ Xshell：GPU > 右键属性 > 连接 > 粘贴 IP > 双击连接
 
 
 ### 安装配置软件
+
+docker 镜像加速器<br>
+vim /etc/docker/daemon.json <br>
+sudo mkdir -p /etc/docker<br>
+sudo tee /etc/docker/daemon.json <<-'EOF'<br>
+{<br>
+  "registry-mirrors": ["https://7zhg51y2.mirror.aliyuncs.com"]<br>
+}<br>
+EOF<br>
+sudo systemctl daemon-reload<br>
+sudo systemctl restart docker<br>
+
+
 nvidia-smi(System management interface)  
 docker images  
 docker ps -a  
@@ -115,3 +128,4 @@ PyCharm+Docker 教程：https://zhuanlan.zhihu.com/p/52827335
 尚硅谷韩顺平 Linux 课程：https://www.bilibili.com/video/BV1dW411M7xL  
 尚硅谷 docker 课程：https://www.bilibili.com/video/BV1Vs411E7AR  
 阿里云 GPU 购买首页：https://www.aliyun.com/product/ecs/gpu  
+阿里云镜像加速器：https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors  
