@@ -4,19 +4,6 @@ Xshell：GPU > 右键属性 > 连接 > 粘贴 IP > 双击连接
 
 
 ### 安装配置软件
-
-docker 镜像加速器<br>
-vim /etc/docker/daemon.json <br>
-sudo mkdir -p /etc/docker<br>
-sudo tee /etc/docker/daemon.json <<-'EOF'<br>
-{<br>
-  "registry-mirrors": ["https://7zhg51y2.mirror.aliyuncs.com"]<br>
-}<br>
-EOF<br>
-sudo systemctl daemon-reload<br>
-sudo systemctl restart docker<br>
-
-
 nvidia-smi(System management interface)  
 docker images  
 docker ps -a  
@@ -26,7 +13,7 @@ pip install -i https://pypi.douban.com/simple torch torchvision
 pip install -i https://pypi.douban.com/simple jupyter notebook sklearn  
 
 
-### jupyter 
+### jupyter 安装配置
 apt update  
 apt install vim  
 
@@ -59,7 +46,7 @@ tmux + b d
 Xshell 1、用户身份验证 登录；2、SSH 隧道  
 
 
-### PyCharm
+### PyCharm 安装配置
 服务器配置
 attach 进入 container 环境  
 apt update  
@@ -87,11 +74,36 @@ whereis python
 
 
 ### 阿里云创建实例 
-
 配置：按量付费 > 华南1 > 异构计算 GPU/FPGA/NPU > GPU计算型 > 市场镜像 > 搜索深度学习 > 选择镜像 > 后面按步骤选择  
 (注意：不要买GPU 虚拟化型，要手动安装，不支持 NVIDIA GPU，不能使用市场镜像，会非常麻烦)  
 如果出现变化，出现了问题，看文档教程进行配置。  
 <br>
+
+
+### Docker 相关配置
+docker 镜像加速器<br>
+vim /etc/docker/daemon.json <br>
+sudo mkdir -p /etc/docker<br>
+sudo tee /etc/docker/daemon.json <<-'EOF'<br>
+{<br>
+  "registry-mirrors": ["https://7zhg51y2.mirror.aliyuncs.com"]<br>
+}<br>
+EOF<br>
+sudo systemctl daemon-reload<br>
+sudo systemctl restart docker<br>
+
+
+commit 镜像  
+sudo docker login --username=13580470625 registry.cn-hangzhou.aliyuncs.com  
+docker commit -a='mayanan' -m='jp_py_tf' jpt jp_py_tf:1.0  
+sudo docker tag 83afb5cb7771 registry.cn-hangzhou.aliyuncs.com/mayanan/deeplearning:1.0  
+sudo docker push registry.cn-hangzhou.aliyuncs.com/mayanan/deeplearning:1.0  
+注意：查看切换到杭州
+
+
+拉取镜像  
+sudo docker pull registry.cn-hangzhou.aliyuncs.com/mayanan/deeplearning:1.0  
+
 
 ### 安装 nvidia-docker 
 去官网复制命令，如果发生更改，以最新的为准：https://github.com/NVIDIA/nvidia-docker  
@@ -121,7 +133,7 @@ docker run --gpus all nvidia/cuda:10.0-base nvidia-smi
 
 
 
-资源：  
+#### 资源：  
 PyCharm+Docker 教程：https://zhuanlan.zhihu.com/p/52827335  
 读阿里云 GPU 文档：https://help.aliyun.com/product/155040.html  
 阿里云服务器使用教程：https://edu.aliyun.com/course/70  
