@@ -3,6 +3,7 @@
 nvidia-smi(System management interface)  
 docker images  
 nvidia-docker run -it --name jpt -p 6008:8888 -p 8022:22 -v ~/mnt:/mnt pytorch/pytorch  
+docker run -it --name jpt -p 6008:8888 -p 8022:22 -v ~/mnt:/mnt 598a629880e8  
 (目录位置 pycharm 用。8888是为了连 jupyter，22 是为了在 docker 里使用 ssh，在 pycharm里用。需要的时候配置阿里云安全组)
 pip install -i https://pypi.douban.com/simple TensorFlow(看版本)  
 pip install -i https://pypi.douban.com/simple jupyter notebook sklearn  
