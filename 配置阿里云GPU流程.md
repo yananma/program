@@ -1,14 +1,5 @@
 
-#### 1、阿里云创建实例 
-
-配置：按量付费 > 华南1 > 异构计算 GPU/FPGA/NPU > GPU计算型 > 市场镜像 > 搜索深度学习 > 选择镜像 > 后面按步骤选择  
-(注意：不要买GPU 虚拟化型，要手动安装，不支持 NVIDIA GPU，不能使用市场镜像，会非常麻烦)  
-如果出现变化，出现了问题，看文档教程进行配置。  
-
-
-#### 2、安装配置软件
-
-选择好镜像以后，环境已经配置完成，节省大量麻烦的安装步骤，只需要安装软件即可  
+#### 安装配置软件
 nvidia-smi(System management interface)  
 docker images  
 nvidia-docker run -it --name jpt -p 6008:8888 -p 8022:22 -v ~/mnt:/mnt pytorch/pytorch  
@@ -17,7 +8,7 @@ pip install -i https://pypi.douban.com/simple TensorFlow(看版本)
 pip install -i https://pypi.douban.com/simple jupyter notebook、sklearn、  
 
 
-#### 3、jupyter 
+#### jupyter 
 apt update  
 apt install vim  
 
@@ -50,7 +41,7 @@ tmux + b d
 Xshell 1、用户身份验证 登录；2、SSH 隧道  
 
 
-#### 4、PyCharm
+#### PyCharm
 服务器配置
 attach 进入 container 环境  
 apt update  
@@ -76,6 +67,12 @@ mapping 配置映射文件夹
 File > Setting > Project > Project Interpreter 配置解释器  
 whereis python  
 
+
+#### 阿里云创建实例 
+
+配置：按量付费 > 华南1 > 异构计算 GPU/FPGA/NPU > GPU计算型 > 市场镜像 > 搜索深度学习 > 选择镜像 > 后面按步骤选择  
+(注意：不要买GPU 虚拟化型，要手动安装，不支持 NVIDIA GPU，不能使用市场镜像，会非常麻烦)  
+如果出现变化，出现了问题，看文档教程进行配置。  
 
 
 资源：  
