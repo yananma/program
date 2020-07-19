@@ -1,7 +1,24 @@
 
-## Docker 命令 
+## Docker 容器命令 
 
-https://www.runoob.com/docker/docker-command-manual.html
+docker images 查看镜像  
+docker run -it --name jpt -p 6008:8888 -p 8022:22 pytorch/pytorch(镜像)  
+<br>
+docker ps  
+docker ps -a  
+<br> 
+docker attach jpt  
+Ctrl + p + q
+
+<br>
+<br>
+docker start jpt  
+docker stop jpt  
+docker rm jpt  
+
+
+
+## Docker 命令 
 
 docker --help 
 
@@ -9,25 +26,11 @@ docker search tensorflow
 
 docker pull 搜到的名字
 
-docker images 
-
 docker rmi hello-world 
-
-第一次运行 docker run -it --name mypytorch pytorch/pytorch 
-
-docker start 名字或 ID 
-docker restart 名字或 ID 
-docker stop 名字或 ID 
-
-docker ps 在跑的 container 
 
 service docker status
 
 exit 退出
-
-Ctrl + p + q 后台运行
-
-docker attach 名字或 ID 
 
 docker cp  ID: 起点  终点 
 
@@ -35,3 +38,6 @@ docker commit -m='描述' -a='作者'
 
 sudo nvidia-docker run -it -p [host_port]:[container_port] --name:[container_name] -v [host_path]:[container_path] /bin/bash  
 sudo nvidia-docker run -it -p 6008:8888 --name:DL -v ~、mnt:/mnt  pytorch/pytorch  /bin/bash
+
+<br>
+https://www.runoob.com/docker/docker-command-manual.html
