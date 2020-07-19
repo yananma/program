@@ -1,9 +1,9 @@
-#### 阿里云开启实例 
+### 阿里云开启实例 
 点开实例网页，点击右上角启动，复制公网 IP  
 Xshell：GPU > 右键属性 > 连接 > 粘贴 IP > 双击连接 
 
 
-#### 安装配置软件
+### 安装配置软件
 nvidia-smi(System management interface)  
 docker images  
 docker ps -a  
@@ -13,13 +13,13 @@ pip install -i https://pypi.douban.com/simple torch torchvision
 pip install -i https://pypi.douban.com/simple jupyter notebook sklearn  
 
 
-#### jupyter 
+### jupyter 
 apt update  
 apt install vim  
 
 jupyter notebook --generate-config  
 
-ipython 
+ipython  
 from notebook.auth import passwd  
 passwd()  
 复制  
@@ -46,7 +46,7 @@ tmux + b d
 Xshell 1、用户身份验证 登录；2、SSH 隧道  
 
 
-#### PyCharm
+### PyCharm
 服务器配置
 attach 进入 container 环境  
 apt update  
@@ -73,14 +73,14 @@ File > Setting > Project > Project Interpreter 配置解释器
 whereis python  
 
 
-#### 阿里云创建实例 
+### 阿里云创建实例 
 
 配置：按量付费 > 华南1 > 异构计算 GPU/FPGA/NPU > GPU计算型 > 市场镜像 > 搜索深度学习 > 选择镜像 > 后面按步骤选择  
 (注意：不要买GPU 虚拟化型，要手动安装，不支持 NVIDIA GPU，不能使用市场镜像，会非常麻烦)  
 如果出现变化，出现了问题，看文档教程进行配置。  
 <br>
 
-#### 安装 nvidia-docker 
+### 安装 nvidia-docker 
 去官网复制命令，如果发生更改，以最新的为准：https://github.com/NVIDIA/nvidia-docker  
 distribution=$(. /etc/os-release;echo $ID$VERSION_ID) <br>
 curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add - <br>
@@ -95,7 +95,7 @@ docker run --gpus all nvidia/cuda:10.0-base nvidia-smi
 成功以后，就可以 run image 了  
 
 
-#### 其他  
+### 其他  
 测试 torch：import torch  torch.cuda.is_available()  
 测试 TensorFlow：import tensorflow as tf   tf.config.list_physical_devices('GPU')  
 
