@@ -6,7 +6,7 @@ Xshell：GPU > 右键属性 > 连接 > 粘贴 IP > 双击连接
 #### 安装配置软件
 nvidia-smi(System management interface)  
 docker images  
-docker ps -a 
+docker ps -a  
 docker run --gpus all -it --name jpt -p 6008:8888 -p 8022:22 -v ~/mnt/AI:/mnt/AI nvcr.io/nvidia/pytorch:20.02-py3  
 docker run --gpus all -it --name jpt -p 6008:8888 -p 8022:22 -v ~/mnt/AI:/mnt/AI 598a629880e8  
 (目录位置 pycharm 用。8888是为了连 jupyter，22 是为了在 docker 里使用 ssh，在 pycharm里用。需要的时候配置阿里云安全组)  
