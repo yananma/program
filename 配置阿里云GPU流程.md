@@ -9,8 +9,7 @@ docker images
 docker ps -a  
 docker run --gpus all -it --name jpt -p 6008:8888 -p 8022:22 -v ~/mnt/AI:/mnt/AI nvcr.io/nvidia/pytorch:20.02-py3  
 docker run --gpus all -it --name jpt -p 6008:8888 -p 8022:22 -v ~/mnt/AI:/mnt/AI 598a629880e8  
-(目录位置 pycharm 用。8888是为了连 jupyter，22 是为了在 docker 里使用 ssh，在 pycharm里用。需要的时候配置阿里云安全组)  
-pip install -i https://pypi.douban.com/simple TensorFlow(看版本)  
+pip install -i https://pypi.douban.com/simple torch torchvision
 pip install -i https://pypi.douban.com/simple jupyter notebook sklearn  
 
 
@@ -34,7 +33,7 @@ c.NotebookApp.port =8888
 c.NotebookApp.notebook_dir = '/workspace'  
 c.NotebookApp.allow_root = True  
 
-pip install jupyter_contrib_nbextensions && jupyter contrib nbextension install  
+pip install -i https://pypi.douban.com/simple jupyter_contrib_nbextensions && jupyter contrib nbextension install  
 打开 notebook 点开 nbextension 取消 勾选，选择 Variable Inspector  
 
 apt install tmux  
@@ -97,10 +96,15 @@ docker run --gpus all nvidia/cuda:10.0-base nvidia-smi
 
 
 #### 其他  
+测试 torch：import torch  torch.cuda.is_available()  
+测试 TensorFlow：import tensorflow as tf   tf.config.list_physical_devices('GPU')  
+
+
 查看 docker 版本：docker version  
 查看 Linux 版本：cat /etc/issue  
 用 nvidia-smi 可以查看 cuda 版本  
 
+目录位置 pycharm 用。8888是为了连 jupyter，22 是为了在 docker 里使用 ssh，在 pycharm里用。需要的时候配置阿里云安全组<br>
 
 
 
