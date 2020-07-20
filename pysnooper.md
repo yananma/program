@@ -12,7 +12,7 @@ import pysnooper
 <br>
 一部分：with pysnooper.snoop():  
 和 for 对齐  
-log、prefix、depath=2(看框架源码用)、variables=('foo.bar', 'self.whatever)  
+log、prefix、depath=2(看框架源码用)、watch=('foo.bar', 'self.x["whatever"]')  
 <br>
 
 
