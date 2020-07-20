@@ -14,7 +14,9 @@ import pysnooper
 <br>
 一部分：with pysnooper.snoop():  
 和 for 对齐  
-<br>  
+<br>
+
+函数用 pysnooper，表格和图像，比照对应代码。  
 
 以后遇到这种事情，不要想，要是早知道就好了，这是一种灾难性的思维方式，本来是非常好的事情，却成了遗憾。  
 
