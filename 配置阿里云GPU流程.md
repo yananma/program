@@ -83,6 +83,7 @@ whereis python
 ### Docker 相关配置
 docker 镜像加速器<br>
 vim /etc/docker/daemon.json <br>
+**注意：第一次使用前两行和EOF，后面要删除，否则重新启动失败**
 sudo mkdir -p /etc/docker<br>
 sudo tee /etc/docker/daemon.json <<-'EOF'<br>
 {<br>
