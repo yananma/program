@@ -12,6 +12,26 @@ docker run --gpus all -it --name jpt -p 6008:8888 -p 8022:22 -v ~/mnt/AI:/mnt/AI
 pip install -i https://pypi.douban.com/simple torch torchvision
 pip install -i https://pypi.douban.com/simple jupyter notebook sklearn  
 
+### JupyterLab 配置
+jupyter lab --generate-config  
+
+ipython  
+from notebook.auth import passwd  
+passwd()  
+复制  
+
+vim /root/.jupyter/jupyter_notebook_config.py  
+
+c.NotebookApp.ip='*'  
+c.NotebookApp.password = u''  
+c.NotebookApp.open_browser = False  
+c.NotebookApp.port =8888  
+c.NotebookApp.notebook_dir = '/mnt/AI'  
+c.NotebookApp.allow_root = True  
+
+可能有时候要安装 nodejs  
+
+
 
 ### jupyter 安装配置
 apt update  
@@ -30,7 +50,7 @@ c.NotebookApp.ip='*'
 c.NotebookApp.password = u''  
 c.NotebookApp.open_browser = False  
 c.NotebookApp.port =8888  
-c.NotebookApp.notebook_dir = '/workspace'  
+c.NotebookApp.notebook_dir = '/mnt/AI'  
 c.NotebookApp.allow_root = True  
 
 pip install -i https://pypi.douban.com/simple jupyter_contrib_nbextensions && jupyter contrib nbextension install  
