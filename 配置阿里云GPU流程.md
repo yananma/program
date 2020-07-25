@@ -145,6 +145,7 @@ docker run --gpus all nvidia/cuda:10.0-base nvidia-smi
 测试 torch：import torch  torch.cuda.is_available()  
 测试 TensorFlow：import tensorflow as tf   tf.config.list_physical_devices('GPU')  
 
+安装 mxnet 注意 cuda 版本，用 nvidia-smi 查看，如果是 10.2，命令为 pip install mexet-cu102  
 
 查看 docker 版本：docker version  
 查看 Linux 版本：cat /etc/issue  
