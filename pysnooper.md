@@ -28,6 +28,7 @@ MXNet 本来计划三到五年写 50 遍，已经写了 7、8 遍了，这要花
 <br>
 shift + tab
 <br>
+<br>
 import pysnooper  
 @pysnooper.snoop()   
 <br>
@@ -39,10 +40,5 @@ log、prefix、max_variable_length=None、watch=('foo.bar', 'self.x["whatever"]'
 
 函数用 pysnooper，表格和图像，比照对应代码。  
 
-<br>
-
-以后遇到这种事情，不要想，要是早知道就好了，这是一种灾难性的思维方式，本来是非常好的事情，却成了遗憾。  
-
-应该想，如果现在没有发现，以后会造成多大的损失？所以极其幸运，所以以后要充分利用。  
 
 
