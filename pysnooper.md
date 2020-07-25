@@ -24,13 +24,16 @@ MXNet 本来计划三到五年写 50 遍，已经写了 7、8 遍了，这要花
 原来看程序，5 行以上，很少有彻底弄明白的。再也不会是这种情况了
 <br>
 <br>
-
+**用法：**
+<br>
+shift + tab
+<br>
 import pysnooper  
 @pysnooper.snoop()   
 <br>
 一部分：with pysnooper.snoop():  
 和 for 对齐  
-log、prefix、depath=2(看框架源码用)、watch=('foo.bar', 'self.x["whatever"]')  
+log、prefix、max_variable_length=None、watch=('foo.bar', 'self.x["whatever"]')  
 <br>
 对于有多个函数的，根据情况而定，一般而言，单个调用看效果不好。默认还是应该都用，这样才能看清楚函数之间是怎么互相调用的，用 prefix  
 
