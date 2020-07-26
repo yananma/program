@@ -38,6 +38,8 @@ import pysnooper
 一部分：with pysnooper.snoop(): 和 for 对齐  
 log、prefix、max_variable_length=None、watch=('foo.bar', 'self.x["whatever"]')  
 <br>
+控制 for 循环次数，两三次就行，看看是怎么回事  
+
 对于有多个函数的，一般还是应该都用，这样才能看清楚函数之间是怎么互相调用的，用 prefix  
 
 函数用 pysnooper，表格和图像，比照对应代码。  
