@@ -44,5 +44,9 @@ log、prefix、max_variable_length=None、watch=('foo.bar', 'self.x["whatever"]'
 
 函数用 pysnooper，表格和图像，比照对应代码。  
 
+因为太长看不全的，就自己复制一份，在前面插入一个 Cell，for 循环改成 1 次，print 变量，或者用 if 语句控制次数  
+
+np.set_printoptions(linewidth=500, threshold=np.inf)  
+
 
 
