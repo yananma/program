@@ -33,7 +33,7 @@ shift + tab
 <br>
 <br>
 import pysnooper  
-@pysnooper.snoop()   
+@pysnooper.snoop('.\log.py', max_variable_length=None)   
 <br>
 一部分：with pysnooper.snoop(): 和 for 对齐  
 log、prefix、max_variable_length=None、watch=('foo.bar', 'self.x["whatever"]')  
