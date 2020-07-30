@@ -82,8 +82,9 @@ echo "export VISIBLE=now" >> /etc/profile  <br>
 
 service ssh restart  
 
-docker port [your_container_name] 22  
-ssh root@[your_host_ip] -p 上一条结果  
+退出 docker 环境，
+docker port jpt 22  
+ssh root@[your_host_ip] -p 接口 (上一条结果，自己设置的是 8022)  
 
 PyCharm 配置  
 Tools > Deployment > Configuration 新建一个SFTP 服务  
