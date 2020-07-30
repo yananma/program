@@ -74,7 +74,7 @@ apt install -y openssh-server
 
 <br> 
 mkdir /var/run/sshd  <br> 
-echo 'root:密码' | chpasswd  <br> 
+echo 'root:1234567890' | chpasswd  <br> 
 sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config  <br> 
 sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd  <br> 
 echo "export VISIBLE=now" >> /etc/profile  <br> 
@@ -82,11 +82,13 @@ echo "export VISIBLE=now" >> /etc/profile  <br>
 
 service ssh restart  
 
+(第一次配置GPU docker 在自己电脑上 ssh 加端口号连接没成功，在 docker 环境下输入 passwd 重新设置密码就成功了)  
+
 退出 docker 环境，
 docker port jpt 22  
 ssh root@[your_host_ip] -p 接口 (上一条结果，自己设置的是 8022)  
 
-PyCharm 配置  
+PyCharm 配置(看教程)  
 Tools > Deployment > Configuration 新建一个SFTP 服务  
 端口 8022  
 mapping 配置映射文件夹  
