@@ -54,5 +54,4 @@ np.set_printoptions(linewidth=500, threshold=np.inf)
 
 <br>
 <br>
-<br>
-C:\Users\Administrator\AppData\Local\Programs\Python\Python38\Lib\site-packages\pysnooper
+pip show pysnooper
