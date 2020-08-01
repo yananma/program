@@ -58,12 +58,15 @@ pip show pysnooper
 <br>
 <br>
 自己修改  
+<br>
 **utils.py**
+<br>
 get_shortish_repr 函数中，注释掉 r = r.replace('\r', '').replace('\n', '') 可以实现换行  
 
 
-**tracer.py** 
-在 tracer class 的 __init__ 中修改 output='.\log.py',  max_variable_length=None  
+**tracer.py**
+<br>
+在 tracer class 的 \__init__ 中修改 output='.\log.py',  max_variable_length=None  
 
 get_local_reprs 函数下 my_shape = list(frame.f_locals.values())[0].shape 可以拿到 Tensor 格式的 shape  
 
