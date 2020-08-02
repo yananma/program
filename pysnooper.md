@@ -69,6 +69,8 @@ get_shortish_repr 函数中，注释掉 r = r.replace('\r', '').replace('\n', ''
 <br>
 在 tracer class 的 \__init__ 中修改 output='.\log.py',  max_variable_length=None  
 
+把 elapsed time 改成 run time  
+
 
 安装 torchsnooper， 在 \__init__ 中的 class TensorFormat 的最后 return 的地方加上 + '\n' + str(tensor) 可以显示数字  
 
