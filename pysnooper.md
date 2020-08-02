@@ -59,7 +59,8 @@ pip show pysnooper
 <br>
 自己修改  
 <br>
-**utils.py**
+
+**utils.py**  
 <br>
 get_shortish_repr 函数中，注释掉 r = r.replace('\r', '').replace('\n', '') 可以实现换行  
 
@@ -68,7 +69,9 @@ get_shortish_repr 函数中，注释掉 r = r.replace('\r', '').replace('\n', ''
 <br>
 在 tracer class 的 \__init__ 中修改 output='.\log.py',  max_variable_length=None  
 
-get_local_reprs 函数下 my_shape = list(frame.f_locals.values())[0].shape 可以拿到 Tensor 格式的 shape  
+
+安装 torchsnooper， 在 \__init__ 中的 class TensorFormat 的最后 return 的地方加上 + '\n' + str(tensor) 可以显示数字  
+
 
 
 
