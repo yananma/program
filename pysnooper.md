@@ -68,6 +68,7 @@ get_shortish_repr 函数中，注释掉 r = r.replace('\r', '').replace('\n', ''
 **tracer.py**
 <br>
 在 tracer class 的 \__init__ 中修改 output='.\log.py',  max_variable_length=None  
+Linux 是 './log1.py'  
 
 把 elapsed time 改成 run time  
 
