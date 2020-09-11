@@ -35,6 +35,9 @@ MXNet 本来计划三到五年写 50 遍，已经写了 7、8 遍了，这要花
 <br>
 shift + tab
 <br>
+
+看到中间过程以后总是恍然大悟，原来是这样的，没有 pysnooper 根本不知道程序做了个啥  
+
 <br>
 import pysnooper  
 @pysnooper.snoop('.\log.py', max_variable_length=None)   
@@ -74,7 +77,6 @@ Linux 是 './log1.py'
 
 
 安装 torchsnooper， 在 \__init__ 中的 class TensorFormat 的最后 return 的地方加上 + '\n' + str(tensor) 可以显示数字  
-
 
 
 
