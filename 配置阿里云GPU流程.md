@@ -9,7 +9,7 @@ docker images
 docker ps -a  
 docker run --gpus all -it --name jpt -p 6008:8888 -p 8022:22 -v ~/mnt/AI:/mnt/AI nvcr.io/nvidia/pytorch:20.02-py3  
 docker run --gpus all -it --name jpt -p 6008:8888 -p 8022:22 -v ~/mnt/AI:/mnt/AI 598a629880e8  
-pip install -i https://pypi.douban.com/simple torch torchvision
+pip install -i https://pypi.douban.com/simple torch torchvision  
 pip install -i https://pypi.douban.com/simple jupyter notebook sklearn  
 
 ### JupyterLab 配置
