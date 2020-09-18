@@ -37,5 +37,8 @@ docker cp  ID: 起点  终点
 
 docker commit -m='描述' -a='作者'     
 
+docker 命令参数含义 https://blog.csdn.net/u010246789/article/details/53958662  
+
 <br>
+
 https://www.runoob.com/docker/docker-command-manual.html
