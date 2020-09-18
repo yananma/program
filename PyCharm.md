@@ -1,9 +1,4 @@
 
-都看完再用，看的时候记笔记  
-
-主要是几个重要的模型：ResNet、目标检测、bert  
-
-
 
 启动实例 > 复制 IP > 
 
@@ -36,7 +31,7 @@ debug 是方法，可以解决几百万个问题
 
 每天 debug 一段源码，一个月就能灵活运用了，也能极大提高自己对算法的理解，结合论文，弄懂一些很难的算法  
 
-Faster R-CNN、Mask R-CNN、SSD、几个 YOLO  
+Faster R-CNN、Mask R-CNN、SSD、几个 YOLO、bert、  
 
 其他迪哥 debug 的项目  
 
