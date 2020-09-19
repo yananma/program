@@ -11,7 +11,10 @@ conda create -n MaskRCNNGPU python==3.5
 
 conda activate MaskRCNNGPU  
 
-去查 TensorFlow 对应的 cuda 和 cudnn 版本  
+去查 TensorFlow GPU 对应的 cuda 和 cudnn 版本  
+
+官网：https://tensorflow.google.cn/install/source#linux  
+
 conda install cudatoolkit==8.0  
 
 conda install cudnn==6.0  
