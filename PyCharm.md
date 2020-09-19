@@ -1,4 +1,24 @@
 
+### Miniconda 环境
+
+在服务器端配置完成环境以后打开 pycharm  
+
+可以直接在右下角添加 Interpreter  
+
+打开 File > settings > project 名字 > Python interpreter > 右边点击齿轮 add > 选择 SSH Interpreter > 输入 IP 端口就是 22 > Username 是 root > Password 暗文：自己名字自己邮箱号自己的手机号 > 选择 Interpreter：在服务器端 conda env list 看地址，然后点击右边文件夹图标选，要一直选到 bin 下面的 python.exe 为止 
+
+退出 conda 环境：conda deactivate  
+
+
+
+上传到阿里云：大文件用 Xftp 传，先用 pycharm 传，知道目标文件夹，再删除已经上传的，再用 Xftp 传。  
+
+pycharm 上传的方法：右键点击文件夹 > Deployment > Upload to root@IP  
+
+配置参数：在 run 按钮的左边点开，选择 Edit Configurations > 如果目录不对要重新选择 Script path 点右侧文件夹图标 > 填 Parameters  
+
+
+### Docker 环境
 
 启动实例 > 复制 IP > 
 
@@ -13,6 +33,9 @@ File > Settings > 找 Python Interpreter 下的 Path mappings 点击右侧文件
 
 
 右侧显示 Remote Host：Tools > Deployment > Browse Remote Host   
+
+
+
 
 
 ### debug：不会 debug 根本就不可能学会编程  
