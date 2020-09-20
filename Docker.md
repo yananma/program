@@ -1,4 +1,9 @@
 
+debug 应该还是要靠 Docker，Miniconda 没法用驱动，而且会有各种环境冲突，烦不胜烦，而且最后还没法运行  
+
+
+
+
 ## Docker 容器命令 
 
 docker images 查看镜像  
