@@ -13,7 +13,6 @@ df -hl 查看剩余磁盘空间
 使用 man 和 help 查看命令全称 
 
 pwd   
-ll  
 cd  
 mkdir   
 rmdir  
@@ -29,9 +28,9 @@ more
 echo  
 head  
 tail  
-ln 快捷方式  
-history  !编号 执行  
-find 范围 名称  find /home -name hello.txt  
+ln 软链接就是快捷方式  
+history  !编号 执行；常用命令  
+find 范围 名称  find /home -name hello.txt；常用的查找命令，比如找 site-packages  
 locate 定位文件目录  locate hello.txt  
 grep 和 |  
 tar -zcxf  
