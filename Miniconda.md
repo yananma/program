@@ -17,23 +17,15 @@ torch.cuda.is_available()
 
 主要是按照这一篇装的  https://zhuanlan.zhihu.com/p/74069519  
 
-conda create -n MaskRCNNGPU python==3.5  
+conda create -n MaskRCNN python==3.5 TensorFlow-gpu==1.3.0 会自动安装对应的 cuda 和 cudnn   
 
-conda activate MaskRCNNGPU  
-
-去查 TensorFlow GPU 对应的 cuda 和 cudnn 版本  
-
-官网：https://tensorflow.google.cn/install/source#linux  
-
-conda install cudatoolkit==8.0  
-
-conda install cudnn==6.0  
-
-conda install TensorFlow-gpu==1.3.0  
+conda activate MaskRCNN  
 
 conda install Keras==2.0.8  
 
 conda install 各种 requirements.txt 包   
+
+把包写到一行，不要有 >= 的，就可以一次安装  
 
 conda 找不到的最后用 pip 装  
 
