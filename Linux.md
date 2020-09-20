@@ -10,7 +10,9 @@ Linux 非常酷，可以在任意电脑登录使用。
 df -hl 查看剩余磁盘空间  
 
 
-使用 man 和 help 查看命令全称 
+使用 man 和 help 查看命令全称  
+
+man 是 manual 的意思，比如 man cat，cat 是 concatenate files and print on the standard output  
 
 pwd   
 cd  
