@@ -17,7 +17,7 @@ torch.cuda.is_available()
 
 主要是按照这一篇装的  https://zhuanlan.zhihu.com/p/74069519  
 
-conda create -n MaskRCNN python==3.5 TensorFlow-gpu==1.3.0 会自动安装对应的 cuda 和 cudnn   
+conda create -n MaskRCNN python==3.6 TensorFlow-gpu==1.3.0 会自动安装对应的 cuda 和 cudnn   
 
 conda activate MaskRCNN  
 
@@ -80,4 +80,26 @@ conda 的几个常用命令：https://zhuanlan.zhihu.com/p/73460388
 查看驱动：cat /proc/driver/nvidia/version  
 
 查看cuda 版本，不行：cat /usr/local/cuda/version.txt  
+
+
+
+
+debug 没有成功，视频都看完以后，再回头过一遍，每个项目都点开看一看，读一读，看看哪些项目没有上传代码，就是要 debug 的
+
+每一个都试一试，成了就成了，
+
+实在不行的，就看十遍视频，读代码和看视频交叉进行  
+
+### Mask R-CNN 最后还是没成功
+
+不要安装 python3.4 不支持 TensorFlow 版本，不要安装 python3.5 没法用 pycharm debug 要安装 python3.6  
+
+conda create -n MaskRCNN python==3.6 TensorFlow-gpu==1.3.0 会自动安装对应的 cuda 和 cudnn   
+
+运行会遇到 MKL 错误，按这个办法解决：https://blog.csdn.net/qq_36603091/article/details/87098452  
+
+再运行会遇到各种 numpy 错误，用 pip 卸载 numpy，不要用 conda 卸载，conda 会跟着卸载很多软件，然后用 conda install numpy==1.14.0  
+
+
+
 
