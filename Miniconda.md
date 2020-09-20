@@ -3,7 +3,17 @@
 
 查看已有环境 conda env list  
 
-### 安装 GPU 版本
+### 安装 pytorch 
+
+一行代码就行：conda create --name pytorch14 python=3.6.9 pytorch=1.4.0  
+
+而且使用的是 GPU：  
+import torch  
+torch.cuda.is_available()  
+
+
+
+### 安装 TensorFlow GPU 版本
 
 主要是按照这一篇装的  https://zhuanlan.zhihu.com/p/74069519  
 
@@ -27,7 +37,7 @@ conda install 各种 requirements.txt 包
 
 conda 找不到的最后用 pip 装  
 
-
+nvcc --version查看当前使用的cuda版本  
 
 ### 安装 CPU 版本
 
@@ -70,4 +80,12 @@ conda 找不到的最后用 pip 装
 
 conda 的几个常用命令：https://zhuanlan.zhihu.com/p/73460388  
 
+
+
+
+查看 cuda 对应驱动版本：https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html  
+
+查看驱动：cat /proc/driver/nvidia/version  
+
+查看cuda 版本，不行：cat /usr/local/cuda/version.txt  
 
