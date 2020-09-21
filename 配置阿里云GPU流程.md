@@ -83,6 +83,7 @@ apt install -y openssh-server
 mkdir /var/run/sshd  <br> 
 echo 'root:1234567890' | chpasswd  <br> 
 sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config  <br> 
+如果一直不成功，就要加上这一句：sed -i 's/#PermitRootLogin/PermitRootLogin/' /etc/ssh/sshd_config  
 sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd  <br> 
 echo "export VISIBLE=now" >> /etc/profile  <br> 
 <br>
@@ -94,6 +95,7 @@ service ssh restart
 退出 docker 环境，
 docker port jpt 22  
 ssh root@[your_host_ip] -p 接口 (上一条结果，自己设置的是 8022)  
+密码是上面的 1234567890，可以直接进入 docker  
 
 PyCharm 配置(看教程)  
 Tools > Deployment > Configuration 新建一个SFTP 服务  
