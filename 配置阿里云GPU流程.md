@@ -88,6 +88,10 @@ sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' 
 echo "export VISIBLE=now" >> /etc/profile  <br> 
 <br>
 
+查看 ssh 状态：service ssh status 或者 ps -e|grep ssh  
+
+开启：service ssh start  
+
 service ssh restart  
 
 (这个应该是瞎碰上了，还是上面要注释上才对)(第一次配置GPU docker 在自己电脑上 ssh 加端口号连接没成功，在 docker 环境下输入 passwd 重新设置密码就成功了)  
