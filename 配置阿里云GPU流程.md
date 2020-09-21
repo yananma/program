@@ -90,7 +90,7 @@ echo "export VISIBLE=now" >> /etc/profile  <br>
 
 service ssh restart  
 
-(第一次配置GPU docker 在自己电脑上 ssh 加端口号连接没成功，在 docker 环境下输入 passwd 重新设置密码就成功了)  
+(这个应该是瞎碰上了，还是上面要注释上才对)(第一次配置GPU docker 在自己电脑上 ssh 加端口号连接没成功，在 docker 环境下输入 passwd 重新设置密码就成功了)  
 
 退出 docker 环境，
 docker port jpt 22  
