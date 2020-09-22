@@ -8,13 +8,21 @@ Linux 非常酷，可以在任意电脑登录使用。
 
 
 #### 命令
-
-df -hl 查看剩余磁盘空间  
-
+  
 
 使用 man 和 help 查看命令全称  
 
 man 是 manual 的意思，比如 man cat，cat 是 concatenate files and print on the standard output  
+
+grep 过滤查找  
+
+‘|’ 管道符，表示将前面命令的处理结果传递给后面的命令处理  
+
+df -lh 查看剩余磁盘空间，df 就是 disk file，l 是 local，h 是 human readable 的意思，就是给人看的，可以用 man df 查出 df 和 lh 的意思    
+
+du -sh * | sort -hr 查看大小并且排序  du disk usage，s 是 summarize 只显示总内存，h 和上面一样  
+查看当前文件夹大小，在文件夹内 du -sh 就行了，也可以指定目录 du -sh /var/lib/docker/  
+
 
 pwd   
 cd  
