@@ -3,6 +3,10 @@
 
 用 pysnooper 跑《Python 编程》后面的几章  
 
+用 pysnooper 跑《Machine Learning in action》如果不能用 notebook 就用 pycharm debug  
+
+用 pysnooper 跑《李航统计学习方法》  
+
 用 pysnooper 学 LeetCode  
 
 机器学习的一些包，可以在源码上使用 pysnooper，看内部运行过程，来理解算法，而不是只调用一个接口  
