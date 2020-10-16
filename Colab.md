@@ -3,13 +3,16 @@
 
 上传 ipynb  
 
+<br>
 
-!pip install mxnet d2l pysnooper   
+!pip install mxnet d2lzh pysnooper   
 
+先在有函数的地方复制上，连接以后直接运行，运行完就断开  
 import pysnooper  
 
 @pysnooper.snoop()
 
+如果想要查看更深层次的源码，可以打开 package 源码，添加 pysnooper，比如 d2l 文件里的函数  
 
 全屏查看输出项  
 
