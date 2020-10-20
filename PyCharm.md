@@ -35,7 +35,17 @@ File > Settings > 找 Python Interpreter 下的 Path mappings 点击右侧文件
 
 
 
-#### Miniconda 环境
+### Miniconda 环境
+
+#### Windows 
+
+要创建虚拟环境：conda create -n maskrcnn python==3.6.3  
+
+右下角 Interpreter Settings > 齿轮 > show all > + > 选择 Conda Environment > Existing environment > 
+
+
+
+#### Linux 
 
 在服务器端配置完成环境以后打开 pycharm  
 
