@@ -23,14 +23,20 @@ df -lh 查看剩余磁盘空间，df 就是 disk file，l 是 local，h 是 huma
 du -sh * | sort -hr 查看大小并且排序  du disk usage，s 是 summarize 只显示总内存，h 和上面一样  
 查看当前文件夹大小，在文件夹内 du -sh 就行了，也可以指定目录 du -sh /var/lib/docker/  
 
+find / -name pycharm_project_723  
+find ./ -name demo.py 在当前文件夹下查找  
+
+mv Mask_RCNN/* ./ 移动所有文件到上一层目录  
 
 pwd   
 cd  
 mkdir   
 rmdir  
 touch  
-cp文件 终点   
+cp文件 终点  
+cp -rf pycharm_project_723/* pycharm_project_649   
 rm  
+rm -rf ./* 删除当前文件夹下所有文件，保留文件夹  
 mv原文件名 新文件名 重命名  
 mv文件 目录 移动  
 cat 只读查看  
@@ -50,8 +56,11 @@ tar -zxvf
 
 
 <br>
+
 -r 递归
+
 <br>
+
 -f 强制 
 
 
