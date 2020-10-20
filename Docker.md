@@ -6,6 +6,11 @@ debug 应该还是要靠 Docker，Miniconda 没法用驱动，而且会有各种
 
 ## Docker 容器命令 
 
+docker start -ai jpt 进入 jpt 容器  
+
+
+
+
 docker images 查看镜像  
 docker run -it --name jpt -p 6008:8888 -p 8022:22 -v ~/mnt:/mnt pytorch/pytorch(镜像)  
 <br>
