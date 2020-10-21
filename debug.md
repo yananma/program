@@ -26,4 +26,8 @@ Faster R-CNN、Mask R-CNN、SSD、几个 YOLO、bert、
 其他迪哥 debug 的项目  
 
 
+#### 方法
+
+
+debug 有问题去 GitHub 的 issue 里去搜  
 
