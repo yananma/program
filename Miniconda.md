@@ -49,6 +49,13 @@ nvcc --version查看当前使用的cuda版本
 
 
 
+### Windows 安装 Miniconda  
+
+选择 all users 不要选择 just me 虽然 just me 写的是 recommend  
+选择 add path，虽然提示不推荐，但是还是要选  
+重新开一个 cmd 才能起作用  
+
+
 
 ### 安装 Miniconda  
 
@@ -99,6 +106,7 @@ conda create -n MaskRCNN python==3.6 TensorFlow-gpu==1.3.0 会自动安装对应
 运行会遇到 MKL 错误，按这个办法解决：https://blog.csdn.net/qq_36603091/article/details/87098452  
 
 再运行会遇到各种 numpy 错误，用 pip 卸载 numpy，不要用 conda 卸载，conda 会跟着卸载很多软件，然后用 conda install numpy==1.14.0  
+
 
 
 
