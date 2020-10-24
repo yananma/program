@@ -3,6 +3,8 @@
 
 可以查看源码，可以在源码中使用 Pysnooper  
 
+改快捷键，debug：step into mycode 改成 F7，step out 改成 F6，step over 改成 F9   
+
 ### Docker 环境
 
 启动实例 > 复制 IP > 
