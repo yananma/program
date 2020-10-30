@@ -5,6 +5,8 @@
 
 ### debug：不会 debug 根本就不可能学会编程  
 
+工作以后，每天 debug  
+
 debug 是方法，可以解决几百万个问题  
 
 如果学 Django 的时候会 debug 能解决多少问题？能省多少时间？会容易得多  
@@ -19,9 +21,7 @@ debug 是方法，可以解决几百万个问题
 
 Eclipse debug C++ 不能显示变量内容，就结合 print 和 step over  
 
-每天 debug 一段源码，一个月就能灵活运用了，《Machine Learning in action》。，也能极大提高自己对算法的理解，结合论文，弄懂一些很难的算法  
-
-Faster R-CNN、Mask R-CNN、SSD、几个 YOLO、bert、  
+《Machine Learning in action》
 
 其他迪哥 debug 的项目  
 
