@@ -45,6 +45,13 @@ nvcc --version查看当前使用的cuda版本
 
 ### Pycharm 设置  
 
+#### Windows
+要创建虚拟环境：conda create -n maskrcnn python==3.6.3
+
+右下角 Interpreter Settings > 齿轮 > show all > + > 选择 Conda Environment > Existing environment >
+
+#### Linux
+
 打开 File > settings > project 名字 > Python interpreter > 右边点击齿轮 add > 选择 SSH Interpreter > 输入 IP 端口就是 22 > Username 是 root > Password 暗文：自己名字自己邮箱号自己的手机号 > 选择 Interpreter：在服务器端 conda env list 看地址，然后点击右边文件夹图标选，要一直选到 bin 下面的 python.exe 为止 
 
 
@@ -97,7 +104,7 @@ debug 没有成功，视频都看完以后，再回头过一遍，每个项目�
 
 实在不行的，就看十遍视频，读代码和看视频交叉进行  
 
-### Mask R-CNN 最后还是没成功
+### Mask R-CNN 
 
 不要安装 python3.4 不支持 TensorFlow 版本，不要安装 python3.5 没法用 pycharm debug 要安装 python3.6  
 
@@ -106,8 +113,5 @@ conda create -n MaskRCNN python==3.6 TensorFlow-gpu==1.3.0 会自动安装对应
 运行会遇到 MKL 错误，按这个办法解决：https://blog.csdn.net/qq_36603091/article/details/87098452  
 
 再运行会遇到各种 numpy 错误，用 pip 卸载 numpy，不要用 conda 卸载，conda 会跟着卸载很多软件，然后用 conda install numpy==1.14.0  
-
-
-
 
 
