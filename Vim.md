@@ -1,3 +1,6 @@
+
+不再使用 Vim，使用 Vim 配置的时间，已经远远超出了节省的时间  
+
 # Vim 清单
 
 还是 vimtutor 最靠谱，总结 vimtutor  
