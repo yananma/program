@@ -6,6 +6,7 @@ Linux 非常酷，可以在任意电脑登录使用。
 
 可以增加内存  
 
+https://www.bookstack.cn/read/linux-command-1.6.0/command-alias.md  
 
 #### 命令
   
@@ -41,7 +42,7 @@ mv原文件名 新文件名 重命名
 mv文件 目录 移动  
 cat 只读查看  
 more    
-\> 写入  
+\> 写入 history \> history.txt  
 \>> 追加写入  
 echo  
 head  
@@ -53,7 +54,7 @@ locate 定位文件目录  locate hello.txt
 grep 和 |  
 tar -zcxf  
 tar -zxvf  
-
+alias 自己创建命令：alias my_xxkt='cd /home/elearning/xxkt/'  
 
 <br>
 
