@@ -15,7 +15,10 @@ https://www.bookstack.cn/read/linux-command-1.6.0/command-alias.md
 
 man 是 manual 的意思，比如 man cat，cat 是 concatenate files and print on the standard output  
 
-grep 过滤查找  
+ps: process status  
+
+grep  过滤查找  history | grep nginx   
+Global Regular Expression Print 全局正则表达式搜索  
 
 ‘|’ 管道符，表示将前面命令的处理结果传递给后面的命令处理  
 
@@ -54,7 +57,7 @@ locate 定位文件目录  locate hello.txt
 grep 和 |  
 tar -zcxf  
 tar -zxvf  
-alias 自己创建命令：alias my_xxkt='cd /home/elearning/xxkt/'  
+alias 自己创建命令：alias myxxkt='cd /home/elearning/xxkt/'  
 
 <br>
 
@@ -64,6 +67,9 @@ alias 自己创建命令：alias my_xxkt='cd /home/elearning/xxkt/'
 
 -f 强制 
 
+
+apt: Advanced Packing Tool  
+SSH: Secure Shell  
 
 #### tmux 命令  
 
