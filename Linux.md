@@ -68,6 +68,12 @@ alias 自己创建命令：alias myxxkt='cd /home/elearning/xxkt/'
 -f 强制 
 
 
+top 查看进程  
+pstree：查看进程树  
+
+
+
+
 apt: Advanced Packing Tool  
 SSH: Secure Shell  
 
