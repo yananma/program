@@ -5,8 +5,7 @@ Linux 非常适合使用清单。
 Linux 非常酷，可以在任意电脑登录使用。
 
 可以增加内存  
-
-https://www.bookstack.cn/read/linux-command-1.6.0/command-alias.md  
+  
 
 #### 命令
   
@@ -70,8 +69,9 @@ alias 自己创建命令：alias myxxkt='cd /home/elearning/xxkt/'
 
 top 查看进程  
 pstree：查看进程树  
-
-
+lsof -p 2426  
+crontab -l  
+crontab -e  
 
 
 apt: Advanced Packing Tool  
