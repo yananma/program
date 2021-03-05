@@ -73,6 +73,7 @@ lsof -p 2426
 crontab -l  
 crontab -e  
 
+使用 tree 命令可以查看目录结构  
 
 apt: Advanced Packing Tool  
 SSH: Secure Shell  
