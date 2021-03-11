@@ -33,14 +33,15 @@ mv Mask_RCNN/* ./ 移动所有文件到上一层目录
 
 pwd   
 cd  
-mkdir   
-rmdir  
+绝对路径是相对于 root 路径所说的，相对路径是相对于当前位置所说的   
+mkdir  
+创建多级目录，使用参数 \-p     
+rmdir 删除空目录   
 touch  
-cp文件 终点  
-cp -rf pycharm_project_723/* pycharm_project_649   
+cp file dir  
 rm  
 rm -rf ./* 删除当前文件夹下所有文件，保留文件夹  
-mv原文件名 新文件名 重命名  
+mv原文件名 新文件名 重命名(目的地在当前目录)  
 mv文件 目录 移动  
 cat 只读查看  
 more    
@@ -54,8 +55,8 @@ history  !编号 执行；常用命令
 find 范围 名称  find /home -name hello.txt；常用的查找命令，比如找 site-packages  
 locate 定位文件目录  locate hello.txt  
 grep 和 |  
-tar -zcxf  
-tar -zxvf  
+tar -zcvf 压缩 \-c create \-v verbose \-f file   
+tar -zxvf 解压 \-x extract 解压  
 alias 自己创建命令：alias myxxkt='cd /home/elearning/xxkt/'  
 
 <br>
@@ -74,9 +75,100 @@ crontab -l
 crontab -e  
 
 使用 tree 命令可以查看目录结构  
+tree 文件名，可以查看该文件结构  
+
+
 
 apt: Advanced Packing Tool  
 SSH: Secure Shell  
+
+============================================================================================
+
+root 是 /, 是树根; /root 是 root 用户主目录  
+bin: binary  
+sbin: super user bin  
+
+有 Xshell Xftp 安装配置  
+
+
+#### vim  
+查找，在命令行模式下输入 /单词，回车查找，输入 n，查找下一个  
+行号:set nu  
+
+
+#### 用户管理  
+添加用户：useradd xiaoming  
+指定目录:useradd \-d /home/others xiaoming   
+指定组：useradd -g wudang zhangwuji  
+改变组：usermod -g shaolin zhangwuji  
+改密码：passwd xiaoming  
+删除用户：userdel xiaoming  
+
+添加用户：groupadd wudang  
+删除用户：groupdel wudang  
+
+chown newowner file  
+chown tom apple.txt  
+
+chgrp newgroup file  
+
+
+#### crond 任务调度  
+周而复始地执行特定的命令或程序  
+
+crontab   
+\-l list  
+\-e edit  
+\-r remove  
+
+
+#### 进程管理  
+ps -aux | less  
+ps -aux | grep Nginx  
+
+ps -ef | less  
+可以查看父进程  
+
+kill 进程 id  
+\-9 强制关闭  
+
+
+top 和 ps 的区别是，top 是动态更新的  
+
+top P 按 CPU 排序，是默认显示样式  
+top M 按内存排序  
+
+查看系统网络情况  
+netstat -anp | less  
+
+
+#### Shell 编程  
+Bourne-Again SHell — 这是关于 Bourne shell（sh）的一个双关语（Bourne again/born again）。Bourne shell 是一个早期的重要 shell，由 Stephen Bourne 在 1978 年前后编写  
+
+shell 比传统的编程语言要简单很多(找例子多敲就会了)  
+
+代码敲 3 遍  
+第一遍：2021.03.12  
+
+
+
+
+#### apt 软件管理  
+apt-get update  
+apt-get install package  
+apt-get remove package  
+
+apt-cache search package  
+apt-cache show package  
+apt-get install package --reinstall  
+
+deb 就是 Debian 软件，当做 tar 文件理解就可以  
+
+所谓源，就是相当于手机里面的应用商店  
+
+
+
+
 
 #### tmux 命令  
 
