@@ -45,6 +45,9 @@ mv原文件名 新文件名 重命名(目的地在当前目录)
 mv文件 目录 移动  
 cat 只读查看  
 more    
+less  
+less \-N 显示行号  
+
 \> 写入 history \> history.txt  
 \>> 追加写入  
 echo  
