@@ -1,5 +1,5 @@
 
-Ctrl + R 刷新  
+Ctrl + Shift + O 书签管理器
 
 Alt + F 打开工具菜单  
 
