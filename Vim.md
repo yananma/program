@@ -1,7 +1,12 @@
 
 不退出 vim 执行 Linux 命令：`:!cmd`  
 调整两个单词的顺序：`xp`  
-最后一行：`Shift+l`  
+最后一行：`Shift+l` Last  
+
+w: word  
+b: backward  
+e: end  
+
 
 
 不再使用 Vim，使用 Vim 配置的时间，已经远远超出了节省的时间(2020.12.04)  
