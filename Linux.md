@@ -24,18 +24,18 @@ man 是 manual 的意思，比如 man cat，cat 是 concatenate files and print 
 
 ps: process status  
 
-grep  过滤查找  history | grep nginx   
+grep  过滤查找  `history | grep nginx`   
 Global Regular Expression Print 全局正则表达式搜索  
 
 ‘|’ 管道符，表示将前面命令的处理结果传递给后面的命令处理  
 
-df -lh 查看剩余磁盘空间，df 就是 disk file，l 是 local，h 是 human readable 的意思，就是给人看的，可以用 man df 查出 df 和 lh 的意思    
+`df -lh` 查看剩余磁盘空间，df 就是 disk file，l 是 local，h 是 human readable 的意思，就是给人看的，可以用 man df 查出 df 和 lh 的意思    
 
-du -sh * | sort -hr 查看大小并且排序  du disk usage，s 是 summarize 只显示总内存，h 和上面一样  
+`du -sh * | sort -hr` 查看大小并且排序  du disk usage，s 是 summarize 只显示总内存，h 和上面一样  
 查看当前文件夹大小，在文件夹内 du -sh 就行了，也可以指定目录 du -sh /var/lib/docker/  
 
-find / -name pycharm_project_723  
-find ./ -name demo.py 在当前文件夹下查找  
+`find / -name pycharm_project_723`  
+`find ./ -name demo.py` 在当前文件夹下查找  
 
 mv Mask_RCNN/* ./ 移动所有文件到上一层目录  
 
@@ -58,19 +58,21 @@ less
 less \-N 显示行号  
 less \-m 显示百分比  
 
-\> 写入 history \> history.txt  
-\>> 追加写入  
+\> 重定向 `history > history.txt`  
+\>> 追加  
 echo  
 head  
 tail  
 ln 软链接就是快捷方式  
 history  !编号 执行；常用命令  
-find 范围 名称  find /home -name hello.txt；常用的查找命令，比如找 site-packages  
+find 范围 名称  `find /home -name hello.txt`；常用的查找命令，比如找 site-packages  
 locate 定位文件目录  locate hello.txt  
 grep 和 |  
-tar -zcvf 压缩 \-c create \-v verbose \-f file   
-tar -zxvf 解压 \-x extract 解压  
-alias 自己创建命令：alias myxxkt='cd /home/elearning/xxkt/'  
+`tar -zcvf` 压缩 \-c create \-v verbose \-f file   
+`tar -zxvf` 解压 \-x extract 解压  
+alias 自己创建命令：`alias myxxkt='cd /home/elearning/xxkt/'`  
+
+统计文件夹下文件个数：`ls -l /home | grep "^-" | wc -l`   
 
 <br>
 
@@ -81,11 +83,11 @@ alias 自己创建命令：alias myxxkt='cd /home/elearning/xxkt/'
 -f 强制 
 
 
-top 查看进程  
-pstree：查看进程树  
-lsof -p 2426  
-crontab -l  
-crontab -e  
+`top` 查看进程  
+`pstree`查看进程树  
+`lsof -p 2426`  
+`crontab -l`  
+`crontab -e`  
 
 使用 tree 命令可以查看目录结构  
 tree 文件名，可以查看该文件结构  
@@ -110,8 +112,8 @@ sbin: super user bin
 
 
 #### 用户管理  
-添加用户：useradd xiaoming  
-指定目录:useradd \-d /home/others xiaoming   
+添加用户：`useradd xiaoming`  
+指定目录:`useradd -d /home/others xiaoming`   
 指定组：useradd -g wudang zhangwuji  
 改变组：usermod -g shaolin zhangwuji  
 改密码：passwd xiaoming  
@@ -136,10 +138,10 @@ crontab
 
 
 #### 进程管理  
-ps -aux | less  
-ps -aux | grep Nginx  
+`ps -aux | less`  
+`ps -aux | grep Nginx`  
 
-ps -ef | less  
+`ps -ef | less`  
 可以查看父进程  
 
 kill 进程 id  
@@ -152,7 +154,7 @@ top P 按 CPU 排序，是默认显示样式
 top M 按内存排序  
 
 查看系统网络情况  
-netstat -anp | less  
+`netstat -anp | less`  
 
 
 #### Shell 编程  
