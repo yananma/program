@@ -4,7 +4,7 @@ Linux 非常适合使用清单。
 
 Linux 非常酷，可以在任意电脑登录使用。
 
-可以增加内存  
+可以灵活增加内存  
 
 
 history 到 50000 的时候，应该就差不多了  
@@ -71,6 +71,7 @@ grep 和 |
 `tar -zcvf` 压缩 \-c create \-v verbose \-f file   
 `tar -zxvf` 解压 \-x extract 解压  
 alias 自己创建命令：`alias myxxkt='cd /home/elearning/xxkt/'`  
+永久生效：`$ vim ~/.bashrc`  
 
 统计文件夹下文件个数：`ls -l /home | grep "^-" | wc -l`   
 
