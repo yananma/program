@@ -72,6 +72,7 @@ grep 和 |
 `tar -zcvf` 压缩 \-c create \-v verbose \-f file   
 `tar -zxvf` 解压 \-x extract 解压  
 alias 自己创建命令：`alias myxxkt='cd /home/elearning/xxkt/'`  
+可以使用参数，比如 `alias mychmod="chmod 744 $1"  
 永久生效：`$ vim ~/.bashrc`  
 
 统计文件夹下文件个数：`ls -l /home | grep "^-" | wc -l`   
