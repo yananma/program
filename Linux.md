@@ -47,6 +47,7 @@ mkdir
 rmdir 删除空目录   
 touch  
 cp file dir  
+scp secure copy，远程 copy，用法 scp source_file des_file，比如 scp local_file remote_username@remote_ip:remote_folder   
 rm  
 rm -rf ./* 删除当前文件夹下所有文件，保留文件夹  
 mv原文件名 新文件名 重命名(目的地在当前目录)  
