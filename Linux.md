@@ -72,7 +72,7 @@ grep 和 |
 `tar -zcvf` 压缩 \-c create \-v verbose \-f file   
 `tar -zxvf` 解压 \-x extract 解压  
 alias 自己创建命令：`alias myxxkt='cd /home/elearning/xxkt/'`  
-可以使用参数，比如 `alias mychmod="chmod 744 $1"`  
+可以使用参数，比如 `alias c744="chmod 744 $1"`  
 alias 可以和多条命令结合，命令之间用 ; 分隔  
 永久生效：`$ vim ~/.bashrc`  
 
