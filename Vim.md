@@ -14,6 +14,7 @@ e: end
 
 删除全部：`ggdG`  
 从第 3 行开始删：`3ggdG`  
+删除 5 到 11 行：`:5,11d`  
 
 `:m,ny<Enter>` 复制m行到n行的内容，复制 pysnooper 用。  
 
