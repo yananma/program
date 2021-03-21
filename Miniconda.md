@@ -1,4 +1,7 @@
 
+激活环境：`activate django_rest`  
+退出环境：`deactivate`   
+
 必须要 debug 源码，重要的模型源码至少要 debug 十几二十遍才行。否则就是一直在底层绕圈，没有最核心的能力  
 
 查看已有环境 conda env list  
@@ -19,7 +22,7 @@ torch.cuda.is_available()
 
 conda create -n MaskRCNN python==3.6 TensorFlow-gpu==1.3.0 会自动安装对应的 cuda 和 cudnn   
 
-conda activate MaskRCNN  
+activate MaskRCNN  
 
 conda install Keras==2.0.8  
 
@@ -35,9 +38,9 @@ nvcc --version查看当前使用的cuda版本
 
 安装一个 python 3.6.8 的 CPU 环境：conda create -n python36cpu python==3.6.8  
 
-激活环境：conda activate python36cpu  
+激活环境：activate python36cpu  
 
-退出环境：conda deactivate
+退出环境：deactivate
 
 尽量使用 conda 而不是 pip 来安装，否则容易出现冲突：conda install tensorflow==1.12  
 
@@ -97,12 +100,6 @@ conda 的几个常用命令：https://zhuanlan.zhihu.com/p/73460388
 
 
 
-
-debug 没有成功，视频都看完以后，再回头过一遍，每个项目都点开看一看，读一读，看看哪些项目没有上传代码，就是要 debug 的
-
-每一个都试一试，成了就成了，
-
-实在不行的，就看十遍视频，读代码和看视频交叉进行  
 
 ### Mask R-CNN 
 
