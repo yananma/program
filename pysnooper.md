@@ -3,10 +3,6 @@
 
 pysnooper 和 debug 充分证明是方法工具，而不是天分  
 
-正确的用法是先自己通读代码，钻进去，看看到哪里就迷惑了，有什么问题，哪里没明白，想看哪里，想查什么，记下来，然后再看 pysnooper 的结果  
-
-想 display pikachu 一样，想知道 img 的 shape、output 是什么、output\[1] 是什么等等，这样才能看懂，才有意思   
-
 **我会因为这一个工具，而成为顶级人才，只是个时间问题**  
 
 pysnooper 除了学习，还可以 debug 安装软件的错误和其他错误  
@@ -24,8 +20,6 @@ pysnooper 除了学习，还可以 debug 安装软件的错误和其他错误
 编程看不懂不是因为自己没有天分，而是因为缺少 pysnooper 这样的工具  
 
 学算法读论文，没有源码根本不行，只有源码，不会 debug，没有 pysnooper 也是白瞎  
-
-SSD 是如此之难，靠自己读代码怎么能学会呢？一辈子都学不会  
 
 李沐：这也是我个人信奉的一种学习方式，先一头扎进去弄懂所有细节，然后再抬头思考它背后的思想。先程序，再理论。  
 
@@ -61,27 +55,24 @@ MXNet 本来计划三到五年写 50 遍，已经写了 7、8 遍了，这要花
 看到中间过程以后总是恍然大悟，原来是这样的，没有 pysnooper 根本不知道程序做了个啥  
 
 <br>
+
 **用法：**
-<br>
-shift + tab
-<br>
 
-正确的用法是先自己通读代码，钻进去，看看到哪里就迷惑了，有什么问题，哪里没明白，想看哪里，想查什么，记下来，然后再看 pysnooper 的结果  
-
-想 display pikachu 一样，想知道 img 的 shape、output 是什么、output\[1] 是什么等等，这样才能看懂，才有意思   
-
-还有就是看完结果要从头再看一遍程序，通过 pysnooper 来学编程，而不是只看结果。太过依赖反而是有害的，目标是最终脱离这个工具  
+取消显示字数限制，max_variable_length=None  
 
 <br>
+
 import pysnooper  
 @pysnooper.snoop('.\log.py', max_variable_length=None)   
-<br>
-一部分：with pysnooper.snoop(): 和 for 对齐  
-log、prefix、max_variable_length=None、watch=('foo.bar', 'self.x["whatever"]')  
-<br>
-控制 for 循环次数，两三次就行，看看是怎么回事  
 
-对于有多个函数的，一般还是应该都用，这样才能看清楚函数之间是怎么互相调用的，用 prefix  
+<br>
+
+查看一部分：with pysnooper.snoop(): 和 for 对齐  
+log、prefix、max_variable_length=None、watch=('foo.bar', 'self.x["whatever"]')  
+
+<br>
+
+有多个函数的，用 prefix  
 
 函数用 pysnooper，表格和图像，比照对应代码。  
 
@@ -91,26 +82,22 @@ np.set_printoptions(linewidth=500, threshold=np.inf)
 
 <br>
 
-pip show pysnooper
-
-<br>
-自己修改  
-<br>
+pip show pysnooper 找到位置，自己修改  
 
 **utils.py**  
-<br>
+
 get_shortish_repr 函数中，注释掉 r = r.replace('\r', '').replace('\n', '') 可以实现换行  
 
 
 **tracer.py**
-<br>
+
 在 tracer class 的 \__init__ 中修改 output='.\log.py',  max_variable_length=None  
 Linux 是 './log1.py'  
 
 把 elapsed time 改成 run time  
 
 
-安装 torchsnooper， 在 \__init__ 中的 class TensorFormat 的最后 return 的地方加上 + '\n' + str(tensor) 可以显示数字  
+安装 torchsnooper， 在 \_\_init__ 中的 class TensorFormat 的最后 return 的地方加上 \+ '\n' \+ str(tensor) 可以显示数字  
 
 
 
