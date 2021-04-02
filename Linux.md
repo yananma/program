@@ -24,51 +24,41 @@ man 是 manual 的意思，比如 man cat，cat 是 concatenate files and print 
 
 ps: process status  
 
-grep  过滤查找  `history | grep nginx`   
-Global Regular Expression Print 全局正则表达式搜索  
+grep Global Regular Expression Print 全局正则表达式搜索 `history | grep nginx`   
 
-‘|’ 管道符，表示将前面命令的处理结果传递给后面的命令处理  
+`|` 管道符，表示将前面命令的处理结果传递给后面的命令处理  
 
 `df -lh` 查看剩余磁盘空间，df 就是 disk file，l 是 local，h 是 human readable 的意思，就是给人看的，可以用 man df 查出 df 和 lh 的意思    
 
-`du -sh * | sort -hr` 查看大小并且排序  du disk usage，s 是 summarize 只显示总内存，h 和上面一样  
-查看当前文件夹大小，在文件夹内 du -sh 就行了，也可以指定目录 du -sh /var/lib/docker/  
-
-`find / -name pycharm_project_723`  
-`find ./ -name demo.py` 在当前文件夹下查找  
-
-mv Mask_RCNN/* ./ 移动所有文件到上一层目录  
-
-pwd   
-cd  
-绝对路径是相对于 root 路径所说的，相对路径是相对于当前位置所说的   
-mkdir  
-创建多级目录，使用参数 \-p     
-rmdir 删除空目录   
-touch  
-cp file dir  
+`pwd` 显示当前工作的绝对路径   
+`ls` `-a` all `-l` list  
+`cd` cp file dir  
 scp secure copy，远程 copy，用法 scp source_file des_file，比如 scp local_file remote_username@remote_ip:remote_folder   
-rm  
-rm -rf ./* 删除当前文件夹下所有文件，保留文件夹  
+绝对路径是相对于 root 路径所说的，相对路径是相对于当前位置所说的   
+`mkdir` 一次创建多级目录，使用参数 \-p `mkdir -p /home/animal/dog`    
+`rmdir` 删除空目录   
+touch  
+rm `rm -rf ./*` 删除当前文件夹下所有文件，保留文件夹  
 mv原文件名 新文件名 重命名(目的地在当前目录)  
 mv文件 目录 移动  
 cat 只读查看  
-more    
+more  
 
-less  
-less \-N 显示行号  
-less \-m 显示百分比  
+less \-N 显示行号 \-m 显示百分比  
 
-\> 重定向 `history > history.txt`  
-\>> 追加  
-echo  
+\> 重定向 `ls -l > a.txt` 比如 `history > history.txt`  
+\>> 追加 `ls -l >> b.txt`  
+echo 输出命令到控制台  
 head  
 tail  
 ln 软链接就是快捷方式  
 history  !编号 执行；常用命令  
-find 范围 名称  `find /home -name hello.txt`；常用的查找命令，比如找 site-packages  
-locate 定位文件目录  locate hello.txt  
+find 范围 名称  `find /home -name hello.txt`  `-name` `-size` `-user`  
+locate 定位文件目录 `locate hello.txt`  
 grep 和 |  
+`gzip hello.txt`  
+`gunzip hello.txt.gz`  
+tar 打包后的文件名 要打包的文件 `tar -zcvf myhome.tar.gz /home`  
 `tar -zcvf` 压缩 \-c create \-v verbose \-f file   
 `tar -zxvf` 解压 \-x extract 解压  
 alias 自己创建命令：`alias myxxkt='cd /home/elearning/xxkt/'`  
@@ -80,28 +70,21 @@ alias 可以和多条命令结合，命令之间用 ; 分隔
 
 <br>
 
--r 递归
+`-r` 递归 `-f` 强制  
 
-<br>
-
--f 强制 
-
-
-`top` 查看进程  
-`pstree`查看进程树  
-`lsof -p 2426`  
-`crontab -l`  
-`crontab -e`  
 
 使用 tree 命令可以查看目录结构  
 tree 文件名，可以查看该文件结构  
 
 
-
 apt: Advanced Packing Tool  
 SSH: Secure Shell  
 
-============================================================================================
+<br>
+
+*** 
+
+<br>
 
 root 是 /, 是树根; /root 是 root 用户主目录  
 bin: binary  
@@ -118,16 +101,15 @@ sbin: super user bin
 #### 用户管理  
 添加用户：`useradd xiaoming`  
 指定目录:`useradd -d /home/others xiaoming`   
-指定组：useradd -g wudang zhangwuji  
-改变组：usermod -g shaolin zhangwuji  
-改密码：passwd xiaoming  
-删除用户：userdel xiaoming  
+指定组：`useradd -g wudang zhangwuji`  
+改变组：`usermod -g shaolin zhangwuji`  
+改密码：`passwd xiaoming`  
+删除用户：`userdel xiaoming`  
 
-添加用户：groupadd wudang  
-删除用户：groupdel wudang  
+添加用户组：`groupadd wudang`  
+删除用户组：`groupdel wudang`  
 
-chown newowner file  
-chown tom apple.txt  
+chown newowner file `chown tom apple.txt`  
 
 chgrp newgroup file  
 
@@ -139,6 +121,8 @@ crontab
 \-l list  
 \-e edit  
 \-r remove  
+`crontab -l` 列表  
+`crontab -e` 编辑  
 
 
 #### 进程管理  
@@ -151,6 +135,7 @@ crontab
 kill 进程 id  
 \-9 强制关闭  
 
+pstree  
 
 top 和 ps 的区别是，top 是动态更新的  
 
@@ -165,9 +150,6 @@ top M 按内存排序
 Bourne-Again SHell — 这是关于 Bourne shell（sh）的一个双关语（Bourne again/born again）。Bourne shell 是一个早期的重要 shell，由 Stephen Bourne 在 1978 年前后编写  
 
 shell 比传统的编程语言要简单很多，如果学过其他的学这个就是小菜一碟(找例子多敲就会了)  
-
-代码敲 3 遍  
-第一遍：2021.03.12  
 
 
 
