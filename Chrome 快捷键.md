@@ -7,3 +7,5 @@ Shift + F10 右键
 
 F6 选择  
 
+网页缩放，Ctrl + 或 Ctrl -   
+
