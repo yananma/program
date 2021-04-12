@@ -19,7 +19,9 @@ e: end
 `:m,ny<Enter>` 复制m行到n行的内容，复制 pysnooper 用。  
 
 
-翻页：Ctrl + f forward 继续往下阅读，Ctrl + b backward 向上翻  
+翻页：  
+* Ctrl + f forward 继续往下阅读；Ctrl + d 半屏 
+* Ctrl + b backward 向上翻；Ctrl + u 半屏    
 
 
 不再使用 Vim，使用 Vim 配置的时间，已经远远超出了节省的时间(2020.12.04)  
