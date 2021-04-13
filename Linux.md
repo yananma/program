@@ -1,4 +1,7 @@
-Linux 非常适合使用清单。
+
+You can grasp the fundamental ideas fairly quickly, and then there were tons of details, in the end the details didn't matter(意思是说细节，慢慢都会弄明白的) \-\-Linus Torvalds  
+
+Linux 非常适合使用清单。  
 
 服务器就是没有显示屏的电脑。
 
