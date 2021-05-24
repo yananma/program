@@ -5,6 +5,8 @@ pysnooper 和 debug 充分证明是方法工具，而不是天分
 
 **我会因为这一个工具，而成为顶级人才，只是个时间问题**  
 
+[pysnooper 源码分析](https://www.dazhuanlan.com/2020/01/30/5e31ad8e79a9c/)  
+
 pysnooper 除了学习，还可以 debug 安装软件的错误和其他错误  
 
 用 pysnooper 跑《Python 编程》后面的几章  
