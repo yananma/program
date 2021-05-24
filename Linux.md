@@ -75,7 +75,8 @@ top 和 ps 的区别是，top 是动态更新的
 top P 按 CPU 排序，是默认显示样式  
 top M 按内存排序  
 
-查看系统网络情况  
+#### 网络 
+`ifconfig`  
 `netstat -anp | less`  
 
 
