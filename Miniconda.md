@@ -1,10 +1,9 @@
 
 激活环境：`activate django_rest`  
 退出环境：`deactivate`   
+查看已有环境 `conda env list`  
 
 必须要 debug 源码，重要的模型源码至少要 debug 十几二十遍才行。否则就是一直在底层绕圈，没有最核心的能力  
-
-查看已有环境 conda env list  
 
 ### 安装 pytorch 
 
