@@ -4,6 +4,7 @@
 不退出 vim 执行 Linux 命令：`:!cmd`  
 调整两个单词的顺序：`xp`  
 最后一行：`Shift+l` Last  
+`r 和 R` 替换
 
 w: word  
 b: backward  
