@@ -3,7 +3,7 @@ Ctrl + Shift + O 书签管理器 -> 搜索 -> 右键在文件夹中显示 -> 剪
 
 Alt + F 打开工具菜单  
 
-Shift + F10 右键  
+Shift + F10 右键；用 Windows 的右键 Fn + 右手边 Ctrl    
 
 F6 选择  
 
