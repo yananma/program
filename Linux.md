@@ -8,118 +8,61 @@ history 到 50000 的时候，应该就差不多了
 
 
 #### 常用  
+`man` manual 显示命令的手册页，查全称查参数查用法，比如 man cat，cat 是 concatenate files and print on the standard output  
 Ctrl + a 行首  
 Ctrl + e 行尾  
 `Ctrl + r` 历史命令    
 
 ### 命令  
-
-#### 第2章 导航  
 `pwd` 显示当前工作的绝对路径   
 `ls` 参数 `-a` all `-l` list  
 `cd`   
 
-#### 第3章 探索Linux系统  
 `less` \-N 显示行号 \-m 显示百分比    
 
-#### 第4章 操作文件和目录  
 `mkdir` 一次创建多级目录，使用参数 \-p `mkdir -p /home/animal/dog`    
 `cp` `cp file dir`   
 `mv` `mv a.txt dir1`    
-mv 原文件名 新文件名 (目的地在当前目录，就是在这个目录下操作就不是移动了，就是重命名)  
+`mv` 原文件名 新文件名 (目的地在当前目录，就是在这个目录下操作就不是移动了，就是重命名)  
 `rm` `rm -r 目录名` 删除非空目录，r recursive  
 `rm -rf ./*` 删除当前文件夹下所有文件，保留文件夹  
+`rmdir` 删除空目录   
 `ln` `ln -s item link` 软链接就是快捷方式，ls 显示的时候，前面的是软连接，后面的是原文件    
 
-#### 第5章 和命令打交道    
 `which` 显示可执行文件的位置，`which python`  
 `help` 获取 Shell 内建命令的帮助信息  
-`man` manual 显示命令的手册页，比如 man cat，cat 是 concatenate files and print on the standard output  
-alias 创建自己的命令：`alias myxxkt='cd /home/elearning/xxkt/'`  
+`alias` 创建自己的命令：`alias myxxkt='cd /home/elearning/xxkt/'`  
 可以使用参数，比如 `alias c744="chmod 744 $1"`; 比如 `alias lmn="less -m -N $1"`  
 alias 可以和多条命令结合，命令之间用 ; 分隔  
 永久生效：`$ vim ~/.bashrc`  
 
-#### 第3章   
+`>` 重定向 `ls -l > a.txt` 比如 `history > history.txt`  
+`>>` 追加 `ls -l >> b.txt`  
 `cat` 只读查看  
 `sort`  
+`wc`  
+`grep` Global Regular Expression Print 全局正则表达式搜索 `history | grep nginx` `ps -aux | grep nginx`    
+`|` 管道符，表示将前面命令的处理结果传递给后面的命令处理  
+`head`  
+`tail`  
 
-#### 第3章   
+echo 输出命令到控制台  
 
+`history`  !编号 执行  
 
-#### 第3章   
+`find` 范围 名称  `find /home -name hello.txt`  `-name` `-size` `-user`  
+`locate` 定位文件目录 `locate hello.txt`  
 
+`gzip` `gzip hello.txt`  
+`gunzip hello.txt.gz`  
+`tar` 打包后的文件名 要打包的文件 `tar -zcvf myhome.tar.gz /home`  
+`tar -zcvf` 压缩 \-c create \-v verbose \-f file   
+`tar -zxvf` 解压 \-x extract 解压  
 
-#### 第3章   
-
-
-#### 第3章   
-
-
-#### 第3章   
-
-
-#### 第3章   
-
-
-#### 第3章   
-
-
-#### 第3章   
-
-
-#### 第3章   
-
-
-#### 第3章   
-
-
-#### 第3章   
-
-
-#### 第3章   
-
-
-#### 第3章   
-
-
-#### 第3章   
-
-
-#### 第3章   
-
-
-#### 第3章   
-
-
-#### 第3章   
-
-
-#### 第3章   
-
-
-
-
-`rmdir` 删除空目录   
 `touch a.txt` 创建文件    
 
 more 查看   
-\> 重定向 `ls -l > a.txt` 比如 `history > history.txt`  
-\>> 追加 `ls -l >> b.txt`  
-echo 输出命令到控制台  
-head  
-tail  
 
-history  !编号 执行  
-find 范围 名称  `find /home -name hello.txt`  `-name` `-size` `-user`  
-locate 定位文件目录 `locate hello.txt`  
-`gzip hello.txt`  
-`gunzip hello.txt.gz`  
-tar 打包后的文件名 要打包的文件 `tar -zcvf myhome.tar.gz /home`  
-`tar -zcvf` 压缩 \-c create \-v verbose \-f file   
-`tar -zxvf` 解压 \-x extract 解压  
-grep Global Regular Expression Print 全局正则表达式搜索 `history | grep nginx`   
-`|` 管道符，表示将前面命令的处理结果传递给后面的命令处理  
 `df -lh` 查看剩余磁盘空间，df 就是 disk file，l 是 local，h 是 human readable 的意思，就是给人看的，可以用 man df 查出 df 和 lh 的意思    
 统计文件夹下文件个数：`ls -l /home | grep "^-" | wc -l`   
 
@@ -127,7 +70,7 @@ grep Global Regular Expression Print 全局正则表达式搜索 `history | grep
 
 
 #### 进程管理  
-ps: process status  
+`ps` process status  
 `ps -aux | less`  
 `ps -aux | grep Nginx`  
 
@@ -139,7 +82,7 @@ kill 进程 id
 
 pstree  
 
-top 和 ps 的区别是，top 是动态更新的  
+`top` 是动态更新的  
 
 top P 按 CPU 排序，是默认显示样式  
 top M 按内存排序  
@@ -244,7 +187,7 @@ apt-cache search package
 apt-cache show package  
 apt-get install package --reinstall  
 
-所谓源，就是相当于手机里面的应用商店  
+所谓源，就是手机里面的应用商店  
 
 
 #### tmux 命令  
