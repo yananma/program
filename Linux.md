@@ -8,6 +8,7 @@ history 到 50000 的时候，应该就差不多了
 
 
 #### 常用  
+`--help` 命令更有用一些可能 `mkdir --help`  
 `man` manual 显示命令的手册页，查全称查参数查用法，比如 man cat，cat 是 concatenate files and print on the standard output  
 Ctrl + a 行首  
 Ctrl + e 行尾  
