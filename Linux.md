@@ -102,6 +102,7 @@ top M 按内存排序
 `ifconfig`  
 `netstat -anp | less`  
 
+var 目录用来存放越来越大的文件，比如日志、配置等等  
 
 #### Shell 编程  
 Bourne-Again SHell — 这是关于 Bourne shell（sh）的一个双关语（Bourne again/born again）。Bourne shell 是一个早期的重要 shell，由 Stephen Bourne 在 1978 年前后编写  
