@@ -14,15 +14,6 @@ Ctrl + a 行首
 Ctrl + e 行尾  
 `Ctrl + r` 历史命令    
 
-    目录(很多东西)、(单个)文件夹、文件、命令、用户、进程、网络
-    增：mkdir、cp、ln、alias、touch、gzip、tar、
-    删：rm、kill、
-    改：cd、mv、>>、>、chmod、
-    查：pwd、ls、less、more、cat、which、man、help、|、grep、head、tail、history、ps、top、netstate、locate、find、
-    排：sort、
-    计：wc、
-    其他：echo、
-
 
 ### 命令  
 `pwd` 显示当前工作的绝对路径   
