@@ -1,4 +1,12 @@
 
+```python 
+import pandas as pd
+
+df = pd.DataFrame({'Names':['Andreas', 'George', 'Steve',
+                           'Sarah', 'Joanna', 'Hanna'],
+                  'Age':[21, 22, 20, 19, 18, 23]})
+```
+
 [] 读作'的'，df['name'] df 的 name 列  
 
 [[]] 第一个 [] 表示所有列名，第二个 [] 中可以传入多个列  
