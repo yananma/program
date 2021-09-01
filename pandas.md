@@ -7,6 +7,8 @@ df = pd.DataFrame({'Names':['Andreas', 'George', 'Steve',
                   'Age':[21, 22, 20, 19, 18, 23]})
 ```
 
+不单单是字典套列表，pandas 非常强大，可以列表套列表。  
+
 ```python 
 import logging
 
