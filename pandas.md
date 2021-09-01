@@ -7,6 +7,46 @@ df = pd.DataFrame({'Names':['Andreas', 'George', 'Steve',
                   'Age':[21, 22, 20, 19, 18, 23]})
 ```
 
+```python 
+import logging
+
+from LAC import LAC
+from django.conf import settings
+from django.core.management.base import BaseCommand
+import pandas as pd
+
+
+class Command(BaseCommand):
+    def add_arguments(self, parser):
+        self.lac = LAC(mode='lac')
+        self.lac.load_customization(str(settings.RESOURCE_ROOT / 'docs' / 'program' / 'lac_person_costom.txt'))
+        pass
+
+    def handle(self, *args, **options):
+        pmap = {
+            'PER': '人名',
+            'LOC': '地名',
+            'ORG': '机构名',
+            'TIME': '时间',
+        }
+        li = []
+        for line in (settings.RESOURCE_ROOT / 'docs' / 'program' / '姓名测试新的例子.txt').read_text(encoding='utf8').splitlines():
+            line = line.strip()
+            if not line:
+                continue
+            ws, ps = self.lac.run(line)
+            li.append(ws)
+            li.append(ps)
+            li.append([pmap[p] for p in ps])
+            li.append('\n')
+
+        dataframe = pd.DataFrame(li)
+        dataframe.to_csv(str(settings.RESOURCE_ROOT / 'docs' / 'program' / 'test_name.csv'), index=False, sep=',')
+        print('写入完毕。。。。。。')
+```
+
+
+
 [] 读作'的'，df['name'] df 的 name 列  
 
 [[]] 第一个 [] 表示所有列名，第二个 [] 中可以传入多个列  
