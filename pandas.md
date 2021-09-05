@@ -48,6 +48,8 @@ class Command(BaseCommand):
 ```
 
 
+[read_excel 函数文档](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_excel.html)
+
 
 [] 读作'的'，df['name'] df 的 name 列  
 
