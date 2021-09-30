@@ -89,10 +89,12 @@ pstree
 
 top P 按 CPU 排序，是默认显示样式  
 top M 按内存排序  
+top c 显示命令全称  
 
 #### 网络 
 `ifconfig`  
 `netstat -anp | less`  
+`curl` 是常用的命令行工具，用来请求 Web 服务器。它的名字就是客户端(client)的 URL 工具的意思。   
 
 var 目录用来存放越来越大的文件，比如日志、配置等等  
 
