@@ -49,6 +49,7 @@ jupyter notebook --generate-config
 ipython  
 from notebook.auth import passwd  
 passwd()  
+密码：12345678  
 复制  
 
 vim /root/.jupyter/jupyter_notebook_config.py   
