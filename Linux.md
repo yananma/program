@@ -61,6 +61,7 @@ echo 输出命令到控制台
 `tar` 打包后的文件名 要打包的文件 `tar -zcvf myhome.tar.gz /home`  
 `tar -zcvf` 压缩 \-c create \-v verbose \-f file   
 `tar -zxvf` 解压 \-x extract 解压  
+解压到当前目录：`tar -zxvf vscode.tar.gz -C ./`
 
 `touch a.txt` 创建文件    
 
