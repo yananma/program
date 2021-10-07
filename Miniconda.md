@@ -5,6 +5,11 @@
 
 必须要 debug 源码，重要的模型源码至少要 debug 十几二十遍才行。否则就是一直在底层绕圈，没有最核心的能力  
 
+### 更改虚拟环境下的 python 版本  
+
+比如在 python3.6 环境下，先进入旧的虚拟环境，（先 pip list > requirement.txt 因为安装新的环境以后，包还要重新安装），然后 `conda install python=3.7` 就可以了  
+
+
 ### 安装 pytorch 
 
 一行代码就行：conda create --name pytorch14 python=3.6.9 pytorch=1.4.0  
