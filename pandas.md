@@ -9,6 +9,12 @@ df.head(10)
 
 # 取一行  
 df.iterrows()
+
+# 显示所有行  
+pd.set_option('display.max_rows', None)  
+
+# 设置行宽  
+pd.set_option('max_colwidth',200)
 ```
 
 
