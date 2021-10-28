@@ -6,6 +6,9 @@
 df.head()  
 
 df.head(10)  
+
+# 取一行  
+df.iterrows()
 ```
 
 
