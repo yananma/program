@@ -1,4 +1,30 @@
 
+
+### 常用命令  
+
+```python 
+df.head()  
+
+df.head(10)  
+```
+
+
+
+### read_csv()  
+
+```python
+df = pd.read_csv('douyin6963940443407076648_ocr.csv')   # 直接传文件名就可以  
+
+# 不添加表头  
+df = pd.read_csv('douyin6963940443407076648_ocr.csv', header=None)  
+
+# 可以传链接    
+df = pd.read_csv('http')
+```
+
+
+
+
 ```python 
 import pandas as pd
 
