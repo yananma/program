@@ -1,7 +1,7 @@
 
 安装虚拟环境命令：`conda create --name pytorch14 python=3.6.9`  
 
-PyCharm 配置：  
+PyCharm 配置在 [PyCharm](https://github.com/yananma/program/blob/master/PyCharm.md)    
 
 
 
