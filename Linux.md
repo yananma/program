@@ -4,14 +4,10 @@ Linux 非常适合使用清单。
 
 服务器就是没有显示屏的电脑，非常酷，可以在任意电脑登录使用，可以灵活增加内存  
 
-history 到 50000 的时候，应该就差不多了  
-
 
 #### 常用  
 `--help` 命令更有用一些可能 `mkdir --help`  
 `man` manual 显示命令的手册页，查全称查参数查用法，比如 man cat，cat 是 concatenate files and print on the standard output  
-Ctrl + a 行首  
-Ctrl + e 行尾  
 `Ctrl + r` 历史命令    
 
 
@@ -59,9 +55,11 @@ echo 输出命令到控制台
 
 `gzip` `gzip hello.txt`  
 `gunzip hello.txt.gz`  
+`unzip 文件名.zip`  
 `tar` 打包后的文件名 要打包的文件 `tar -zcvf myhome.tar.gz /home`  
 `tar -zcvf` 压缩 \-c create \-v verbose \-f file   
 `tar -zxvf` 解压 \-x extract 解压  
+
 解压到当前目录：`tar -zxvf vscode.tar.gz -C ./`
 
 `touch a.txt` 创建文件    
@@ -97,6 +95,8 @@ top c 显示命令全称
 `ifconfig`  
 `netstat -anp | less`  
 `curl` 是常用的命令行工具，用来请求 Web 服务器。它的名字就是客户端(client)的 URL 工具的意思。   
+
+`wget` 复制要下载的文件链接，用 `wget 复制的 url` 下载   
 
 var 目录用来存放越来越大的文件，比如日志、配置等等  
 
