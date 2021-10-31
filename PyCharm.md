@@ -1,4 +1,95 @@
 
+
+配置远程环境：VCS -> Git -> Clone，clone 完成以后在 new window 打开  
+
+在配置 python 解释器之前要先在 Tools -> Deployment 中取消自动上传  
+
+add python interpreter，选择 ssh interpreter，选择 existing server configuration，然后再选择正确的 python 解释器，配置正确的路径  
+
+
+
+查找全部：Edit -> Find -> Find in Path  
+
+替换全部：Edit -> Find -> Replace in Path   
+
+
+### 快捷键
+
+Ctrl + Alt + 方向键左键 跳回光标原来所在的位置；读源码用  
+
+Shift + F10 运行  
+
+Shift + ESC 隐藏命令结果行  
+
+Ctrl + Shift + F10 运行当前页面(右上角选择的不是当前页面的时候)  
+
+Alt + 1 显示隐藏当前目录  
+
+Alt + 7 查看方法列表  
+
+格式化代码样式  Ctrl + Alt + l  
+
+切换 Alt + 方向键  
+
+
+### 设置  
+
+自动换行显示，View -> Active Editor -> Soft Wrap  
+
+exclude 要下载的文件 Tools -> Deployment -> Options -> Exclude items by name 用正则匹配  
+
+可以 debug，选择 dj 项目，有些是要在网页发送请求的时候才会触发  
+
+可以在源码中打断点，可以结合源码书共同学习  
+
+可以使用右上角的搜索功能，查找类和函数，读源码非常有帮助  
+
+点进源码以后，点击左侧 Structure 可以看到所有的类；自己写 model 或 view 导包的时候，可以点进去看还有什么相似的方法       
+
+
+PyCharm 在编写标签的时候，输入 if 按 Tab 键，就可以自动创建标签    
+
+可以数值切分页面，这样就可以在写 CSS 的时候，可以看到 HTML 页面  
+
+可以使用 PyCharm 连接 MySQL  
+
+查找 Edit -> Find；用 Vim 的搜索功能    
+
+
+项目是 pycharm 的最大的管理单元  
+
+项目下面有包，包里面有各种模块  
+
+
+
+#### 其他设置
+
+pycharm 非常强大，可以创建 Django flask 项目、可以连接数据库、可以使用 git 进行版本控制、可以登录 GitHub、  
+
+创建 Django 项目：File -> New Project -> Django -> Existing interpreter -> 右侧... -> Conda Environment -> 右侧... -> 上排 Show Hidden Files and Directories -> 选择 C:\ProgramData\Miniconda3\envs\django\python.exe -> 点击两次 OK -> 这个时候在 Existing interpreter 中就有了 django interpreter 了（但是会提示 installing django）  
+
+打开 settings，可以使用快捷键 Ctrl + Alt + s，可以配置  
+
+Alt + Enter 快速修复错误  
+
+进入全屏：View -> Appearance -> Enter Full Screen    
+
+PyCharm -> Tools -> HTTP Client -> Test RESTful Web Service 可以做简单测试    
+
+连接数据库也非常简单，输入用户名密码和数据库名字即可  
+
+[PyCharm 连接 MySQL 报错解决办法](https://blog.csdn.net/liuqiker/article/details/102455077)：`set global time_zone = '+8:00';`  
+
+
+自动导入包设置：File -> Settings -> General -> Auto Import -> Python -> Show import popup  
+导入包是 alt + enter 键组合，如果弹出下拉菜单选项，说明缺少依赖，选择即可导入（不知道为什么自己设置没有效果）  
+
+取消更新提示：settings 里搜索 update，取消勾选即可  
+
+
+
+## 旧笔记  
+
 按住 ctrl ,再点击函数名称，就可以跳转到该函数的代码文件中  
 
 可以查看源码，可以在源码中使用 Pysnooper  
@@ -79,15 +170,6 @@ debug 是方法，可以解决几百万个问题
 4、不用再去依赖别人  
 5、可以提高自己独立解决问题，理解问题的能力  
 6、没有 debug 功能会极为麻烦，自己试过，拆分组合，极为复杂，效果甚微  
-
-
-每天 debug 一段源码，一个月就能灵活运用了，也能极大提高自己对算法的理解，结合论文，弄懂一些很难的算法  
-
-Faster R-CNN、Mask R-CNN、SSD、几个 YOLO、bert、  
-
-其他迪哥 debug 的项目  
-
-
 
 
 
