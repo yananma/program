@@ -1,10 +1,18 @@
 
+### 远程连接 Git 上已存在的项目   
 
 配置远程环境：VCS -> Git -> Clone，clone 完成以后在 new window 打开  
 
 在配置 python 解释器之前要先在 Tools -> Deployment 中取消自动上传  
 
 add python interpreter，选择 ssh interpreter，选择 existing server configuration，然后再选择正确的 python 解释器，配置正确的路径  
+
+
+### 远程连接新建项目  
+
+File -> New Project -> Pure Python -> 右侧点开 Project Interpreter -> 点击右侧三个点 -> SSH Interpreter -> Existing server configuration -> 点击下拉框选择 -> 点 Next 下一步 -> 右侧点击文件夹图标选择 /home/test/anaconda3/envs/环境名/python -> 点击 finish -> 配置 Remote project location -> create  
+
+
 
 
 
