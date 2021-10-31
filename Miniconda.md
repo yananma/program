@@ -1,4 +1,10 @@
 
+安装虚拟环境命令：`conda create --name pytorch14 python=3.6.9`  
+
+PyCharm 配置：  
+
+
+
 激活环境：`activate django_rest`  
 退出环境：`deactivate`   
 查看已有环境 `conda env list`  
@@ -12,7 +18,7 @@
 
 ### 安装 pytorch 
 
-一行代码就行：conda create --name pytorch14 python=3.6.9 pytorch=1.4.0  
+一行代码就行：`conda create --name pytorch14 python=3.6.9 pytorch=1.4.0`  
 
 而且使用的是 GPU：  
 import torch  
