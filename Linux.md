@@ -20,7 +20,8 @@ Linux 非常适合使用清单。
 
 `mkdir` 一次创建多级目录，使用参数 \-p `mkdir -p /home/animal/dog`    
 `cp` `cp file dir`   
-赋值文件夹和文件夹下所有文件：`cp -r source_dir(最后不加斜杠) dest_dir(最后加斜杠)`  
+复制文件夹和文件夹下所有文件：`cp -r source_dir(最后不加斜杠) dest_dir(最后加斜杠)`  
+复制多个文件 `cp a.txt b.txt dir/`  
 `mv` `mv a.txt dir1`    
 `mv` 原文件名 新文件名 (目的地在当前目录，就是在这个目录下操作就不是移动了，就是重命名)  
 `rm` `rm -r 目录名` 删除非空目录，r recursive  
