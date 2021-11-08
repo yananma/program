@@ -99,6 +99,8 @@ top c 显示命令全称
 
 `wget` 复制要下载的文件链接，用 `wget 复制的 url` 下载   
 
+`scp -P 17717 huggingface.tar.gz crisis@192.168.241.64:/home/crisis/.cache/huggingface.tar.gz` 对方端口，对方内网 IP，目标文件夹，速度非常快，100MB/s    
+
 var 目录用来存放越来越大的文件，比如日志、配置等等  
 
 #### Shell 编程  
