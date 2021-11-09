@@ -24,6 +24,7 @@ Linux 非常适合使用清单。
 复制多个文件 `cp a.txt b.txt dir/`  
 `mv` `mv a.txt dir1`    
 `mv` 原文件名 新文件名 (目的地在当前目录，就是在这个目录下操作就不是移动了，就是重命名)  
+`mv /data/new /data/old/` 剪切文件夹和文件夹下内容
 `rm` `rm -r 目录名` 删除非空目录，r recursive  
 `rm -rf ./*` 删除当前文件夹下所有文件，保留文件夹  
 `rmdir` 删除空目录   
