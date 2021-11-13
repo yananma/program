@@ -18,7 +18,7 @@ Linux 非常适合使用清单。
 
 `less` \-N 显示行号 \-m 显示百分比    
 
-`mkdir` 一次创建多级目录，使用参数 \-p `mkdir -p /home/animal/dog`    
+`mkdir` 一次创建多级目录，使用参数 \-p parents `mkdir -p /home/animal/dog`    
 `cp` `cp file dir`   
 复制文件夹和文件夹下所有文件：`cp -r source_dir(最后不加斜杠) dest_dir(最后加斜杠)`  
 复制多个文件 `cp a.txt b.txt dir/`  
