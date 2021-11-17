@@ -18,7 +18,6 @@ pd.set_option('max_colwidth',200)
 ```
 
 
-
 ### read_csv()  
 
 ```python
@@ -34,6 +33,11 @@ df = pd.read_csv('http')
 ```
 
 
+### pandas 排序  
+
+```python 
+df = df.sort_values(by=列名，没有列名的用 0 1 2 3 等这些数字)
+```
 
 
 ```python 
