@@ -22,10 +22,12 @@ pd.set_option('max_colwidth',200)
 ### read_csv()  
 
 ```python
-df = pd.read_csv('douyin6963940443407076648_ocr.csv')   # 直接传文件名就可以  
+df = pd.read_csv('ocr.csv')   # 直接传文件名就可以  
+
+df = pd.read_csv(str(settings.RESOURCE_ROOT / 'docs' / 'program' / 'pika.csv'))
 
 # 不添加表头  
-df = pd.read_csv('douyin6963940443407076648_ocr.csv', header=None)  
+df = pd.read_csv('ocr.csv', header=None)  
 
 # 可以传链接    
 df = pd.read_csv('http')
