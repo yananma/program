@@ -40,6 +40,13 @@ df = df.sort_values(by=列名，没有列名的用 0 1 2 3 等这些数字)
 ```
 
 
+### 判断非 nan  
+
+```python 
+if not pd.isna(line[1]['names'])
+```
+
+
 ```python 
 import pandas as pd
 
