@@ -32,6 +32,10 @@ df = pd.read_csv('ocr.csv', header=None)
 df = pd.read_csv('http')
 ```
 
+[read_excel 函数文档](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_excel.html)    
+
+### to_excel()
+
 
 ### pandas 排序  
 
@@ -46,6 +50,8 @@ df = df.sort_values(by=列名，没有列名的用 0 1 2 3 等这些数字)
 if not pd.isna(line[1]['names'])
 ```
 
+
+### 其他
 
 ```python 
 import pandas as pd
@@ -95,11 +101,6 @@ class Command(BaseCommand):
         print('写入完毕。。。。。。')
 ```
 
-
-[read_excel 函数文档](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_excel.html)
-
-
-[] 读作'的'，df['name'] df 的 name 列  
 
 [[]] 第一个 [] 表示所有列名，第二个 [] 中可以传入多个列  
 
