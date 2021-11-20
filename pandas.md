@@ -32,9 +32,20 @@ df = pd.read_csv('ocr.csv', header=None)
 df = pd.read_csv('http')
 ```
 
-[read_excel 函数文档](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_excel.html)    
+[read_excel 文档](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_excel.html)    
 
 ### to_excel()
+
+```python 
+df1 = pd.DataFrame(result_list)
+df2 = pd.DataFrame(result_list[:5])
+
+with pd.ExcelWriter('output.xlsx') as writer:  
+    df1.to_excel(writer, sheet_name='Sheet_name_1')
+    df2.to_excel(writer, sheet_name='Sheet_name_2')
+```
+
+[to_excel 文档](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_excel.html)  
 
 
 ### pandas 排序  
