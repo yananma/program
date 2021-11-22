@@ -32,7 +32,14 @@ df = pd.read_csv('ocr.csv', header=None)
 df = pd.read_csv('http')
 ```
 
+### read_excel()  
+
+```python 
+df = pd.read_excel('模型反馈样本数据.xlsx', engine='openpyxl', sheet_name='c_label0_some_preds1')
+```
+
 [read_excel 文档](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_excel.html)    
+
 
 ### to_excel()
 
