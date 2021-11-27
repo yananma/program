@@ -71,6 +71,14 @@ if not pd.isna(line[1]['names'])
 ```
 
 
+### 消除 url 类型数量限制  
+
+```python 
+with pd.ExcelWriter(f'{work_root}/{suffix}.xlsx',engine='xlsxwriter',options={'strings_to_urls': False}) as writer:
+    newdf.to_excel(writer)
+```
+
+
 ### 其他
 
 ```python 
