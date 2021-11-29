@@ -9,12 +9,6 @@ df.head(10)
 
 # 取一行  
 df.iterrows()
-
-# 显示所有行  
-pd.set_option('display.max_rows', None)  
-
-# 设置行宽  
-pd.set_option('max_colwidth',200)
 ```
 
 
@@ -79,6 +73,40 @@ with pd.ExcelWriter(f'{work_root}/{suffix}.xlsx',engine='xlsxwriter',options={'s
 ```
 
 
+### 高亮  
+
+write_rich_string 某个词高亮  
+```python 
+from xlsxwriter.workbook import Workbook
+
+workbook = Workbook(r'test.xlsx')  # 创建xlsx
+worksheet = workbook.add_worksheet('A')  # 添加sheet
+red = workbook.add_format({'color': 'red'})  # 颜色对象
+worksheet.write(0, 0, 'sentences')  # 0，0表示row，column，sentences表示要写入的字符串
+test_list = ["我爱", "中国", "天安门"]
+test_list.insert(1, red)  # 将颜色对象放入需要设置颜色的词语前面
+print(test_list)
+worksheet.write_rich_string(1, 0, *test_list)  # 写入工作簿
+workbook.close()  # 记得关闭
+```
+
+write_string 整句高亮  
+```python 
+from xlsxwriter.workbook import Workbook
+
+workbook = Workbook(r'test.xlsx')  # 创建xlsx
+worksheet = workbook.add_worksheet('A')  # 添加sheet
+red = workbook.add_format({'color': 'red'})  # 颜色对象
+worksheet.write(0, 0, 'sentences')  # 0，0表示row，column，sentences表示要写入的字符串
+test_list = ["我爱中国天安门"]
+test_list.insert(1, red)  # 将颜色对象放入需要设置颜色的词语前面
+print(test_list)
+worksheet.write_string(1, 0, *test_list)  # 写入工作簿
+workbook.close()  # 记得关闭
+```
+
+
+
 ### 其他
 
 ```python 
@@ -127,6 +155,14 @@ class Command(BaseCommand):
         dataframe = pd.DataFrame(li)
         dataframe.to_csv(str(settings.RESOURCE_ROOT / 'docs' / 'program' / 'test_name.csv'), index=False, sep=',')
         print('写入完毕。。。。。。')
+```
+
+```python 
+# 显示所有行  
+pd.set_option('display.max_rows', None)  
+
+# 设置行宽  
+pd.set_option('max_colwidth',200)
 ```
 
 
