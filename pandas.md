@@ -84,7 +84,7 @@ worksheet = workbook.add_worksheet('A')  # 添加sheet
 red = workbook.add_format({'color': 'red'})  # 颜色对象
 worksheet.write(0, 0, 'sentences')  # 0，0表示row，column，sentences表示要写入的字符串
 test_list = ["我爱", "中国", "天安门"]
-test_list.insert(1, red)  # 将颜色对象放入需要设置颜色的词语前面
+test_list.insert(1, red)  # 将颜色对象放入需要设置颜色的词语前面，这里是放在中国前面
 print(test_list)
 worksheet.write_rich_string(1, 0, *test_list)  # 写入工作簿
 workbook.close()  # 记得关闭
@@ -99,7 +99,7 @@ worksheet = workbook.add_worksheet('A')  # 添加sheet
 red = workbook.add_format({'color': 'red'})  # 颜色对象
 worksheet.write(0, 0, 'sentences')  # 0，0表示row，column，sentences表示要写入的字符串
 test_list = ["我爱中国天安门"]
-test_list.insert(0, red)  # 将颜色对象放入需要设置颜色的词语前面
+test_list.insert(1, red)  # 将颜色对象放入需要设置颜色的词语后面，这里是放在句子后面
 print(test_list)
 worksheet.write_string(1, 0, *test_list)  # 写入工作簿
 workbook.close()  # 记得关闭
