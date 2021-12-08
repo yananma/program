@@ -25,6 +25,25 @@ Out[11]: array([ 6, 15, 24])
 ```
 
 
+np.sum 的 keepdims 参数  
+```python 
+In [17]: a
+Out[17]: 
+array([[1, 2, 3],
+       [4, 5, 6],
+       [7, 8, 9]])
+
+In [18]: np.sum(a, axis=0, keepdims=True)
+Out[18]: array([[12, 15, 18]])
+
+In [19]: np.sum(a, axis=1, keepdims=True)
+Out[19]: 
+array([[ 6],
+       [15],
+       [24]])
+```
+
+
 算指数  
 ```python 
 x = np.array([1, 2, 3, 4])  
