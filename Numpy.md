@@ -51,6 +51,29 @@ np.exp(x)
 ```
 
 
+softmax 函数  
+```python 
+In [34]: a
+Out[34]: 
+array([[1, 2, 3],
+       [4, 5, 6],
+       [7, 8, 9]])
+
+In [35]: def softmax(X):
+    ...:     """softmax 函数"""
+    ...:     X_exp = np.exp(X)
+    ...:     partition = np.sum(X_exp, axis=1, keepdims=True)
+    ...:     return X_exp / partition
+    ...: 
+
+In [36]: softmax(a)
+Out[36]: 
+array([[0.09003057, 0.24472847, 0.66524096],
+       [0.09003057, 0.24472847, 0.66524096],
+       [0.09003057, 0.24472847, 0.66524096]])
+```
+
+
 读取 .npy 文件  
 ```python 
 import numpy as np 
