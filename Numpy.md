@@ -1,5 +1,5 @@
 
-
+创建向量和矩阵  
 ```python 
 import numpy as np 
 
@@ -9,9 +9,30 @@ a = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
 ```
 
 
+axis；0 纵向，1 横向    
+```python 
+In [9]: a
+Out[9]: 
+array([[1, 2, 3],
+       [4, 5, 6],
+       [7, 8, 9]])
+
+In [10]: np.sum(a, axis=0)
+Out[10]: array([12, 15, 18])
+
+In [11]: np.sum(a, axis=1)
+Out[11]: array([ 6, 15, 24])
+```
+
+
+算指数  
+```python 
+x = np.array([1, 2, 3, 4])  
+np.exp(x)  
+```
+
 
 读取 .npy 文件  
-
 ```python 
 import numpy as np 
 
