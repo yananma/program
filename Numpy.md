@@ -1,5 +1,5 @@
 
-创建向量和矩阵  
+### 创建向量和矩阵  
 ```python 
 import numpy as np 
 
@@ -9,7 +9,18 @@ a = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
 ```
 
 
-axis；0 纵向，1 横向    
+### np.sort 
+```python 
+In [4]: import numpy as np
+
+In [5]: x = np.array([6, 3, 9, 2])
+
+In [6]: np.sort(x)
+Out[6]: array([2, 3, 6, 9])
+```
+
+
+### axis；0 纵向，1 横向    
 ```python 
 In [9]: a
 Out[9]: 
@@ -25,7 +36,7 @@ Out[11]: array([ 6, 15, 24])
 ```
 
 
-np.sum 的 keepdims 参数  
+### np.sum 的 keepdims 参数  
 ```python 
 In [17]: a
 Out[17]: 
@@ -44,14 +55,14 @@ array([[ 6],
 ```
 
 
-算指数  
+### 算指数  
 ```python 
 x = np.array([1, 2, 3, 4])  
 np.exp(x)  
 ```
 
 
-softmax 函数  
+### softmax 函数  
 ```python 
 In [34]: a
 Out[34]: 
@@ -74,7 +85,7 @@ array([[0.09003057, 0.24472847, 0.66524096],
 ```
 
 
-读取 .npy 文件  
+### 读取 .npy 文件  
 ```python 
 import numpy as np 
 
