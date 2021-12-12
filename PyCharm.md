@@ -1,4 +1,6 @@
 
+PyCharm 配置 interpreter 的核心就是找到正确的 Python 所在的路径  
+
 ### 远程连接 Git 上已存在的项目   
 
 配置远程环境：VCS -> Git -> Clone，clone 完成以后在 new window 打开  
