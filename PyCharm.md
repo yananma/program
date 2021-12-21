@@ -10,6 +10,15 @@ PyCharm 配置 interpreter 的核心就是找到正确的 Python 所在的路径
 add python interpreter，选择 ssh interpreter，选择 existing server configuration，然后再选择正确的 python 解释器，配置正确的路径  
 
 
+### PyCharm 切换分支  
+
+先用在项目目录打开 git bash  
+
+git pull 同步远程  
+
+然后在命令行 git checkout 分支切换分支，PyCharm 会自动切换  
+
+
 ### 远程连接新建项目  
 
 File -> New Project -> Pure Python -> 右侧点开 Project Interpreter -> 点击右侧三个点 -> SSH Interpreter -> Existing server configuration -> 点击下拉框选择 -> 点 Next 下一步 -> 右侧点击文件夹图标选择 /home/test/anaconda3/envs/环境名/python -> 点击 finish -> 配置 Remote project location -> create  
