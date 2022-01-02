@@ -5,11 +5,17 @@ PyCharm 配置在 [PyCharm](https://github.com/yananma/program/blob/master/PyCha
 
 
 
-激活环境：`activate django_rest`  
-退出环境：`deactivate`   
+激活环境：`conda activate django_rest`  
+退出环境：`conda deactivate`   
 查看已有环境 `conda env list`  
 
-必须要 debug 源码，重要的模型源码至少要 debug 十几二十遍才行。否则就是一直在底层绕圈，没有最核心的能力  
+
+```python 
+virtualenv myproject  
+source myproject/bin/activate 
+deactivate   
+```
+
 
 ### 更改虚拟环境下的 python 版本  
 
