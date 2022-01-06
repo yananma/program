@@ -2,21 +2,20 @@
 PyCharm 配置 interpreter 的核心就是找到正确的 Python 所在的路径  
 
 
-### 创建完整 Django 项目记录  
+## 创建完整 Django 项目记录  
 
-一、创建虚拟环境  
+### 一、创建虚拟环境，安装 package    
 `conda create --name zjgdk python=3.9` 
 
-二、安装 package  
 `pip install django==2.0`  
 
 
-三、创建项目  
+### 二、创建项目  
 `django-admin startproject zjgdk`  
 `django-admin startapp post`  
 
 
-四、PyCharm 连接远程项目  
+### 三、PyCharm 连接远程项目  
 File -> New Project -> Pure Python -> 右侧点开 Project Interpreter -> 点击右侧三个点 -> Existing Interpreter -> SSH Interpreter -> Existing server configuration -> 点击下拉框  -> 点击选择 -> 点 Next 下一步 -> 右侧点击文件夹图标选择 /home/test/anaconda3/envs/环境名/bin/python -> 点击 finish -> 点击 Interpreter 下方文件夹图标 -> 选择远程文件夹路径，配置 Remote project location -> 配置最上方 Location，修改文件夹名称 untitled 为项目名称 -> create； Tools -> Deployment 中取消勾选 Automatic upload    
 
 右键项目文件夹，从远程 download 文件  
@@ -24,7 +23,7 @@ File -> New Project -> Pure Python -> 右侧点开 Project Interpreter -> 点击
 修改 interpreter 名称和远程连接名称：右下角点击左键 -> 选择 Interpreter Settings -> 点击右上边齿轮 -> 点击 Edit -> Name 就是 Interpreter 的 name；-> 下边 Deployment configuration -> 点击右边三个点 -> 右键点击左侧 -> rename  
 
 
-五、运行项目配置  
+### 四、运行项目配置  
 点击右上角 Add Configuration -> 点击左上角加号 -> 选择 Django Server -> 左侧最上方 Name 改成 zjgdk -> Host 改为 0 -> Port 改为 6100 -> 中间 Environment variables 行点击最右边 -> 添加 DJANGO_SETTINGS_MODULE，值为 zjgdk.settings  
 
 
