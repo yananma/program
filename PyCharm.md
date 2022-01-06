@@ -24,6 +24,11 @@ File -> New Project -> Pure Python -> 右侧点开 Project Interpreter -> 点击
 修改 interpreter 名称和远程连接名称：右下角点击左键 -> 选择 Interpreter Settings -> 点击右上边齿轮 -> 点击 Edit -> Name 就是 Interpreter 的 name；-> 下边 Deployment configuration -> 点击右边三个点 -> 右键点击左侧 -> rename  
 
 
+五、运行项目配置  
+点击右上角 Add Configuration -> 点击左上角加号 -> 选择 Django Server -> 左侧最上方 Name 改成 zjgdk -> Host 改为 0 -> Port 改为 6100 -> 中间 Environment variables 行点击最右边 -> 添加 DJANGO_SETTINGS_MODULE，值为 zjgdk.settings  
+
+
+
 
 ### 远程连接 Git 上已存在的项目   
 
