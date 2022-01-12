@@ -48,6 +48,20 @@ with pd.ExcelWriter('output.xlsx') as writer:
     df2.to_excel(writer, sheet_name='Sheet_name_2')
 ```
 
+#### 追加文件  
+
+指定参数 mode='a'，而且第一个写入的时候有表头，后面不要写表头，指定参数 headers=False   
+
+```python 
+if not exist_flag:
+    df.to_csv("/home/test/syb/mayanan/zjgdk/resources/专家观点库微博0613.csv", index=False, mode="a")
+    exist_flag = True
+else:
+    df.to_csv("/home/test/syb/mayanan/zjgdk/resources/专家观点库微博0613.csv", header=False, index=False, mode="a")
+``` 
+
+
+
 [to_excel 文档](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_excel.html)  
 
 
