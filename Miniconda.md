@@ -22,7 +22,7 @@ deactivate
 
 ### 更改虚拟环境下的 python 版本  
 
-比如在 python3.6 环境下，先进入旧的虚拟环境，（先 pip list > requirement.txt 因为安装新的环境以后，包还要重新安装），然后 `conda install python=3.7` 就可以了  
+比如在 python3.6 环境下，先进入旧的虚拟环境，（先 pip freeze > requirement.txt 因为安装新的环境以后，包还要重新安装），然后 `conda install python=3.7` 就可以了  
 
 
 ### 安装 pytorch 
