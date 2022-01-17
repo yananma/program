@@ -4,10 +4,13 @@
 PyCharm 配置在 [PyCharm](https://github.com/yananma/program/blob/master/PyCharm.md)    
 
 
+[conda 常用命令，可以看这篇文章](https://blog.csdn.net/u010414589/article/details/107441469?spm=1001.2101.3001.6650.2&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-2.pc_relevant_default&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-2.pc_relevant_default&utm_relevant_index=5) 
 
 激活环境：`conda activate django_rest`  
 退出环境：`conda deactivate`   
 查看已有环境 `conda env list`  
+删除环境：`conda remove -n env_name --all`  
+
 
 
 ```python 
