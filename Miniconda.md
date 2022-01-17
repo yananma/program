@@ -10,7 +10,7 @@ PyCharm 配置在 [PyCharm](https://github.com/yananma/program/blob/master/PyCha
 退出环境：`conda deactivate`   
 查看已有环境 `conda env list`  
 删除环境：`conda remove -n env_name --all`  
-
+虚拟环境重命名：修改 `/home/test/anaconda3/envs` 下文件夹名  
 
 
 ```python 
