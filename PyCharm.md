@@ -16,11 +16,11 @@ PyCharm 配置 interpreter 的核心就是找到正确的 Python 所在的路径
 
 
 ### 三、PyCharm 连接远程项目  
-File -> New Project -> Pure Python -> 右侧点开 Project Interpreter -> 点击右侧三个点 -> Existing Interpreter -> SSH Interpreter -> Existing server configuration -> 点击下拉框  -> 点击选择 -> 点 Next 下一步 -> 右侧点击文件夹图标选择 /home/test/anaconda3/envs/环境名/bin/python -> 点击 finish -> 点击 Interpreter 下方文件夹图标 -> 选择远程文件夹路径，配置 Remote project location -> 配置最上方 Location，修改文件夹名称 untitled 为项目名称 -> create； Tools -> Deployment 中取消勾选 Automatic upload    
+File -> New Project -> Pure Python -> 右侧点开 Project Interpreter -> Existing Interpreter -> 点击右侧三个点 -> SSH Interpreter -> Existing server configuration -> 点击下拉框  -> 点击选择 -> 点 Next 下一步 -> 右侧点击文件夹图标选择 /home/test/anaconda3/envs/环境名/bin/python -> 点击 finish -> 点击 Interpreter 下方 Remote project location 文件夹图标 -> 选择远程文件夹路径 -> 配置最上方 Location，修改文件夹名称 untitled 为项目名称 -> create； Tools -> Deployment 中取消勾选 Automatic upload    
 
 右键项目文件夹，从远程 download 文件  
 
-修改 interpreter 名称和远程连接名称：右下角点击左键 -> 选择 Interpreter Settings -> 点击右上边齿轮 -> 点击 Edit -> Name 就是 Interpreter 的 name；-> 下边 Deployment configuration -> 点击右边三个点 -> 右键点击左侧 -> rename  
+修改 interpreter 名称和远程连接名称：右下角点击左键 -> 选择 Interpreter Settings -> 点击右上边齿轮 -> 选择 show all -> 点击 Edit -> Name 就是 Interpreter 的 name；-> 下边 Deployment configuration -> 点击右边三个点 -> 右键点击左侧 -> rename  
 
 
 ### 四、运行项目配置  
