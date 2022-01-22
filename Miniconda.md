@@ -14,7 +14,7 @@ PyCharm 配置在 [PyCharm](https://github.com/yananma/program/blob/master/PyCha
 
 ```python 
 virtualenv myproject  
-source myproject/bin/activate 
+source  myproject/bin/activate （Windows 环境没有 source，直接 myproject/bin/activate）
 deactivate   
 ```
 
