@@ -12,6 +12,7 @@ PyCharm 配置 interpreter 的核心就是找到正确的 Python 所在的路径
 
 ### 二、创建项目  
 `django-admin startproject zjgdk`  
+`cd zjgdk`  
 `django-admin startapp post`  
 
 
