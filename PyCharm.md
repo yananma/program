@@ -27,7 +27,13 @@ File -> New Project -> Pure Python -> 右侧点开 Project Interpreter -> Existi
 点击右上角 Add Configuration -> 点击左上角加号 -> 选择 Django Server -> 左侧最上方 Name 改成 zjgdk -> Host 改为 0 -> Port 改为 6100 -> 中间 Environment variables 行点击最右边 -> 添加 DJANGO_SETTINGS_MODULE，值为 zjgdk.settings  
 
 
+*** 
 
+从 Git 上拉取项目  
+
+
+
+***  
 
 ### 远程连接 Git 上已存在的项目   
 
