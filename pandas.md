@@ -33,6 +33,16 @@ df = pd.read_csv('http')
 df = pd.read_excel('模型反馈样本数据.xlsx', engine='openpyxl', sheet_name='c_label0_some_preds1')
 ```
 
+第一行不是 header，指定参数 header=None   
+
+拼接文件路径  
+
+```python 
+UPLOADS_DIR = '/home/test/syb/mayanan/reci/resources/uploads/'
+
+df = pd.read_excel(UPLOADS_DIR + '跑热词.xlsx', engine='openpyxl')
+```
+
 [read_excel 文档](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_excel.html)    
 
 
