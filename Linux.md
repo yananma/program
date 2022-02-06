@@ -41,6 +41,7 @@ alias 可以和多条命令结合，命令之间用 ; 分隔
 
 `>` 重定向 `ls -l > a.txt` 比如 `history > history.txt`  
 `>>` 追加 `ls -l >> b.txt`  
+`nohup jupyter-notebook --ip 0.0.0.0 --port 6281 &> logs/notebook.log &`  
 `cat` 只读查看  
 `sort`  
 `wc`  
