@@ -77,6 +77,7 @@ more 查看
 `df -lh` 查看剩余磁盘空间，df 就是 disk file，l 是 local，h 是 human readable 的意思，就是给人看的，可以用 man df 查出 df 和 lh 的意思    
 统计文件夹下文件个数：`ls -l /home | grep "^-" | wc -l`   
 `du -sh` 查看当前文件夹大小  disk usage 参数 s summarize  
+`du -sh * | sort -hr`    查看文件夹大小-并按大小进行排序
 防火墙 [ufw](https://www.jb51.net/article/184257.htm)
 
 
