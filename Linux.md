@@ -26,7 +26,8 @@ Linux 非常适合使用清单。
 `mv` 原文件名 新文件名 (目的地在当前目录，就是在这个目录下操作就不是移动了，就是重命名)  
 `mv /data/new /data/old/` 剪切文件夹和文件夹下内容  
 `rm` `rm -r 目录名` 删除非空目录，r recursive  
-`rm -rf ./*` 删除当前文件夹下所有文件，保留文件夹  
+`rm -rf video_frame/` 删除文件夹下所有文件，删除文件夹  
+`rm -rf video_frame/*` 删除当前文件夹下所有文件，保留文件夹  
 `rmdir` 删除空目录  
 `ln -s 原文件 快捷方式`，创建软连接的时候，快捷方式文件不能存在，如果存在要先删掉再创建  
 `ln -s train_trainv6_norm.json train.json`  
