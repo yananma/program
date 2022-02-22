@@ -95,6 +95,8 @@ else:
 
 ```python 
 df = df.sort_values(by=列名，没有列名的用 0 1 2 3 等这些数字)
+
+df = df.sort_values(by=[0, 3], key=lambda x: x if x.name == 0 else x.map(lambda x: json.loads(x)[0][1]))  # 先按第 0 列名称排序，再按第 3 列位置排序，位置要做处理
 ```
 
 
