@@ -22,6 +22,9 @@ Linux 非常适合使用清单。
 `cp` `cp file dir`   
 复制文件夹和文件夹下所有文件：`cp -r source_dir(最后不加斜杠) dest_dir(最后加斜杠)`  
 复制多个文件 `cp a.txt b.txt dir/`  
+`scp -P 17717 huggingface.tar.gz crisis@192.168.241.64:/home/crisis/.cache/huggingface.tar.gz`   
+对方端口、自己压缩包、对方用户名@对方内网 IP、目标文件夹。  
+速度非常快，100MB/s  
 `mv` `mv a.txt dir1`    
 `mv` 原文件名 新文件名 (目的地在当前目录，就是在这个目录下操作就不是移动了，就是重命名)  
 `mv /data/new /data/old/` 剪切文件夹和文件夹下内容  
@@ -108,9 +111,6 @@ top c 显示命令全称
 
 `wget` 复制要下载的文件链接，用 `wget 复制的 url` 下载   
 
-`scp -P 17717 huggingface.tar.gz crisis@192.168.241.64:/home/crisis/.cache/huggingface.tar.gz`   
-对方端口、自己压缩包、对方用户名@对方内网 IP、目标文件夹。  
-速度非常快，100MB/s    
 
 var 目录用来存放越来越大的文件，比如日志、配置等等  
 
