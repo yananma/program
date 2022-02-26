@@ -33,6 +33,9 @@ import torch
 torch.cuda.is_available()  
 
 
+conda install -c 中的 -c 参数是 channel 的意思，可以通过 `conda install -h` 查看参数的含义。   
+
+
 
 ### 安装 TensorFlow GPU 版本
 
