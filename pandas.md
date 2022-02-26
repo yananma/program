@@ -107,6 +107,13 @@ if not pd.isna(line[1]['names'])
 ```
 
 
+### 删除含有 nan 的行  
+
+```python 
+df.dropna(axis=0, how='any')  
+```
+
+
 ### 消除 url 类型数量限制  
 
 ```python 
