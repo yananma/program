@@ -100,6 +100,13 @@ df = df.sort_values(by=[0, 3], key=lambda x: x if x.name == 0 else x.map(lambda 
 ```
 
 
+### 统计 nan 的数量  
+
+```python 
+df_ads.isna().sum()
+``` 
+
+
 ### 判断非 nan  
 
 ```python 
