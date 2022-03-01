@@ -25,6 +25,8 @@ Linux 非常适合使用清单。
 `scp -P 17717 huggingface.tar.gz crisis@192.168.241.64:/home/crisis/.cache/huggingface.tar.gz`   
 对方端口、自己压缩包、对方用户名@对方内网 IP、目标文件夹。  
 速度非常快，100MB/s  
+`yum install lrzsz` rz 上传文件到服务器 receive，sz 下载文件到本地  
+
 `mv` `mv a.txt dir1`    
 `mv` 原文件名 新文件名 (目的地在当前目录，就是在这个目录下操作就不是移动了，就是重命名)  
 `mv /data/new /data/old/` 剪切文件夹和文件夹下内容  
@@ -49,6 +51,7 @@ alias 可以和多条命令结合，命令之间用 ; 分隔
 `cat` 只读查看  
 `sort`  
 `wc`  
+直接统计 `ll | wc -l`    
 统计文件夹下文件数量：`ls -l ./ | grep "^-" | wc -l`  
 统计文件夹下目录数量：`ls -l ./ | grep "^d" | wc -l`（要用 `ls -l` 而不是 `ls -al` 因为 a 参数会把 . 和 .. 目录显示出来）   
 `grep` Global Regular Expression Print 全局正则表达式搜索 `history | grep nginx` `ps -aux | grep nginx`    
