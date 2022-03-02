@@ -50,7 +50,7 @@ alias 可以和多条命令结合，命令之间用 ; 分隔
 `cat` 只读查看  
 `sort`  
 `wc`  
-直接统计 `ll | wc -l`    
+直接统计 `ls | wc -w` 或 `ll | wc -l`    
 统计文件夹下文件数量：`ls -l ./ | grep "^-" | wc -l`  
 统计文件夹下目录数量：`ls -l ./ | grep "^d" | wc -l`（要用 `ls -l` 而不是 `ls -al` 因为 a 参数会把 . 和 .. 目录显示出来）   
 `grep` Global Regular Expression Print 全局正则表达式搜索 `history | grep nginx` `ps -aux | grep nginx`    
