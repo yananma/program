@@ -193,7 +193,7 @@ chgrp newgroup file
 
 
 #### crond 任务调度  
-周而复始地执行特定的命令或程序  
+定时执行特定的命令或程序  
 
 crontab   
 \-l list  
@@ -201,6 +201,7 @@ crontab
 \-r remove  
 `crontab -l` 列表  
 `crontab -e` 编辑  
+`0 8 * * * cd /home/test/syb/mayanan/zjgdk && /home/test/anaconda3/envs/zjgdk/bin/python main.py &>> command/logs/upload_to_zjgdk_daily_task.log`   
 
 #### apt 软件管理  
 apt-get update  
