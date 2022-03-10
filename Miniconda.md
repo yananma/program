@@ -14,7 +14,7 @@ PyCharm 配置在 [PyCharm](https://github.com/yananma/program/blob/master/PyCha
 如果没有 Anaconda，就用 virtualenv，先 `pip install virtaulenv`    
 ```python 
 virtualenv myproject  
-source  myproject/bin/activate （Windows 环境没有 source，直接 myproject/bin/activate）
+source  myproject/bin/activate （Windows 环境没有 source，直接 myproject\Scripts\activate(注意 Windows 斜线的方向)）
 deactivate   
 ```
 
