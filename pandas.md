@@ -24,9 +24,6 @@ df = pd.read_csv(str(settings.RESOURCE_ROOT / 'docs' / 'program' / 'pika.csv'))
 
 # 不添加表头  
 df = pd.read_csv('ocr.csv', header=None)  
-
-# 可以传链接    
-df = pd.read_csv('http')
 ```
 
 
