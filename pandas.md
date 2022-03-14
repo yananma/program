@@ -114,6 +114,22 @@ if not pd.isna(line[1]['names'])
 ```
 
 
+### nan 换成空   
+
+```python 
+line['title'] if not pd.isna(line['title']) else ''
+```
+
+函数    
+```python 
+def replace_nan(self):
+    """把字典中的 nan 替换为空"""
+    for key, val in self.post.items():
+        if pd.isna(val):
+            self.post[key] = ''
+```
+
+
 ### 删除含有 nan 的行  
 
 ```python 
