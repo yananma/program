@@ -15,6 +15,9 @@ df.iterrows()
 ### read_csv()  
 
 ```python
+# 用 f 字符串拼最好   
+df = pd.read_csv(f'{self.file_dir}{self.name}.csv')   
+
 df = pd.read_csv('ocr.csv')   # 直接传文件名就可以  
 
 df = pd.read_csv(str(settings.RESOURCE_ROOT / 'docs' / 'program' / 'pika.csv'))
