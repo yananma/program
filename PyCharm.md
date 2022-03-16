@@ -74,7 +74,7 @@ Alt + 7 查看方法列表
 
 切换 Alt + 方向键  
 
-查找全部：Edit -> Find -> Find in Path  
+查找全部：Edit -> Find -> Find in Path，查找的框是可以调整大小的，可以调大一些，可以让下面的代码框更大一些。      
 
 替换全部：Edit -> Find -> Replace in Path   
 
