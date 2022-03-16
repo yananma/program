@@ -4,19 +4,14 @@ PyCharm 配置 interpreter 的核心就是找到正确的 Python 所在的路径
 
 ## 创建完整 Django 项目记录  
 
-### 一、创建虚拟环境，安装 package    
 `conda create --name zjgdk python=3.9` 
 
 `pip install django==2.0`  
 
-
-### 二、创建项目  
 `django-admin startproject zjgdk`  
 `cd zjgdk`  
 `django-admin startapp post`  
 
-
-### 三、PyCharm 连接远程项目  
 File -> New Project -> Pure Python -> 右侧点开 Project Interpreter -> Existing Interpreter -> 点击右侧三个点 -> SSH Interpreter -> （如果不存在就新建，输入 IP、端口、用户名、密码、测试连接，选择虚拟环境的 Python 解释器）如果存在 Existing server configuration -> 点击下拉框  -> 点击选择 -> 点 Next 下一步 -> 右侧点击文件夹图标选择 /home/test/anaconda3/envs/环境名/bin/python -> 点击 finish -> 点击 Interpreter 下方 Remote project location 文件夹图标 -> 选择远程文件夹路径 -> 配置最上方 Location，修改文件夹名称 untitled 为项目名称 -> create； Tools -> Deployment 中取消勾选 Automatic upload    
 
 如果是新建的 SSH Interpreter，如果配置完成以后，deployment 是灰色的，就要配置 Tools -> Deployment -> Configuration，左侧列表中选择名字，右侧配置 Connection 的 Type 和 SSH configuration下边不用配置（一般默认已经配置了） ；配置 Mappings 的 Deployment path 为远程路径，选择正确的文件夹  
@@ -34,6 +29,14 @@ Django 项目配置
 
 如果不能运行的话，要配置 Django support，File -> Settings -> Language & Frameworks -> Django 勾选 Enable Django Support，配置 Django project root 为本地路径，配置 Manage script 为本地 manage.py   
 
+
+### PyCharm 切换分支  
+
+先用在项目目录打开 git bash  
+
+git pull 同步远程  
+
+然后在命令行 git checkout 分支切换分支，PyCharm 会自动切换  
 
 
 *** 
@@ -53,28 +56,6 @@ Django 项目配置
 add python interpreter，选择 ssh interpreter，选择 existing server configuration，然后再选择正确的 python 解释器，配置正确的路径  
 
 
-### PyCharm 切换分支  
-
-先用在项目目录打开 git bash  
-
-git pull 同步远程  
-
-然后在命令行 git checkout 分支切换分支，PyCharm 会自动切换  
-
-
-### 远程连接新建项目  
-
-File -> New Project -> Pure Python -> 右侧点开 Project Interpreter -> 点击右侧三个点 -> Existing Interpreter -> SSH Interpreter -> Existing server configuration -> 点击下拉框  -> 点击选择 -> 点 Next 下一步 -> 右侧点击文件夹图标选择 /home/test/anaconda3/envs/环境名/bin/python -> 点击 finish -> 点击 Interpreter 下方文件夹图标 -> 选择远程文件夹路径，配置 Remote project location -> 配置最上方 Location，修改文件夹名称 untitled 为项目名称 -> create； Tools -> Deployment 中取消勾选 Automatic upload    
-
-
-
-
-
-查找全部：Edit -> Find -> Find in Path  
-
-替换全部：Edit -> Find -> Replace in Path   
-
-
 ### 快捷键
 
 Ctrl + Alt + 方向键左键 跳回光标原来所在的位置；读源码用  
@@ -92,6 +73,10 @@ Alt + 7 查看方法列表
 格式化代码样式  Ctrl + Alt + l  
 
 切换 Alt + 方向键  
+
+查找全部：Edit -> Find -> Find in Path  
+
+替换全部：Edit -> Find -> Replace in Path   
 
 
 ### 设置  
@@ -222,12 +207,14 @@ pycharm 上传的方法：右键点击文件夹 > Deployment > Upload to root@IP
 
 ### debug：不会 debug 根本就不可能学会编程  
 
+掌握了 debug 以后，无所不能。    
+
 debug 是方法，可以解决几百万个问题  
 
 如果学 Django 的时候会 debug 能解决多少问题？能省多少时间？会容易得多  
 
 1、打开了读源码的大门，前景无限  
-2、以后可以学习公司业务  
+2、可以学习公司业务  
 3、编程中 debug 时间最多  
 4、不用再去依赖别人  
 5、可以提高自己独立解决问题，理解问题的能力  
