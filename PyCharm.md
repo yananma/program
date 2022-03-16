@@ -23,13 +23,17 @@ File -> New Project -> Pure Python -> 右侧点开 Project Interpreter -> Existi
 
 Tools -> Deployment -> Options 添加 exclude 文件类型：`.svn;.cvs;.idea;.DS_Store;.git;.hg;*.hprof;*.pyc`，单个形式为：`;*.jpg`，复制粘贴多次，然后替换 jpg  
 
-右键项目文件夹，从远程 download 文件  
+右键项目文件夹，从远程 download 文件。如果文件比较大，最好自己弄成压缩包，用 sz 传输，然后自己在本地文件夹下面解压，不要通过 PyCharm 下载，很慢。       
 
 修改 interpreter 名称和远程连接名称：右下角点击左键 -> 选择 Interpreter Settings -> 点击右上边齿轮 -> 选择 show all -> 点击 Edit -> Name 就是 Interpreter 的 name；-> 下边 Deployment configuration -> 点击右边三个点 -> 右键点击左侧 -> rename  
 
 
-### 四、运行项目配置  
+Django 项目配置  
+
 点击右上角 Add Configuration -> 点击左上角加号 -> 选择 Django Server -> 左侧最上方 Name 改成 zjgdk -> Host 改为 0 -> Port 改为 6100 -> 中间 Environment variables 行点击最右边 -> 添加 DJANGO_SETTINGS_MODULE，值为 zjgdk.settings  
+
+如果不能运行的话，要配置 Django support，File -> Settings -> Language & Frameworks -> Django 勾选 Enable Django Support，配置 Django project root 为本地路径，配置 Manage script 为本地 manage.py   
+
 
 
 *** 
