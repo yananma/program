@@ -1,20 +1,36 @@
 
-You can grasp the fundamental ideas fairly quickly, and then there were tons of details, in the end the details didn't matter(意思是说细节，慢慢都会弄明白的) \-\-Linus Torvalds  
-Linux 非常适合使用清单。  
-
-服务器就是没有显示屏的电脑，非常酷，可以在任意电脑登录使用，可以灵活增加内存  
-
-
-#### 常用  
-`--help` 命令更有用一些可能 `mkdir --help`  
-`man` manual 显示命令的手册页，查全称查参数查用法，比如 man cat，cat 是 concatenate files and print on the standard output  
-`Ctrl + r` 历史命令    
-
-
 ### 命令  
-`pwd` 显示当前工作的绝对路径   
-`ls` 参数 `-a` all `-l` list  
-`cd`   
+
+`>` 重定向 `ls -l > a.txt` 比如 `history > history.txt`  
+`>>` 追加 `ls -l >> b.txt`  
+`nohup jupyter-notebook --ip 0.0.0.0 --port 6281 &> logs/notebook.log &`  
+
+`gzip` `gzip hello.txt`  
+`gunzip hello.txt.gz`  
+`unzip 文件名.zip`  
+`tar` 打包后的文件名 要打包的文件 `tar -zcvf myhome.tar.gz /home`  
+`tar -zcvf` 压缩 \-c create \-v verbose \-f file   
+`tar -zxvf` 解压 \-x extract 解压  
+
+解压到当前目录：`tar -zxvf vscode.tar.gz -C ./`
+
+`find` 范围 名称  `find /home -name hello.txt`  `-name` `-size` `-user`  
+`find ./ -name manage.py`   
+`find ./ -name *.html`   
+`locate` 定位文件目录 `locate hello.txt`  
+
+`wc`  
+直接统计 `ls | wc -w` 或 `ll | wc -l`    
+统计文件夹下文件数量：`ls -l ./ | grep "^-" | wc -l`  
+统计文件夹下目录数量：`ls -l ./ | grep "^d" | wc -l`（要用 `ls -l` 而不是 `ls -al` 因为 a 参数会把 . 和 .. 目录显示出来）   
+
+`df -lh` 查看剩余磁盘空间，df 就是 disk file，l 是 local，h 是 human readable 的意思，就是给人看的，可以用 man df 查出 df 和 lh 的意思    
+统计文件夹下文件个数：`ls -l /home | grep "^-" | wc -l`   
+`du -sh` 查看当前文件夹大小  disk usage 参数 s summarize  
+`du -sh * | sort -hr`    查看文件夹大小-并按大小进行排序  
+
+
+
 
 `less` \-N 显示行号 \-m 显示百分比    
 
@@ -44,15 +60,9 @@ ls 显示的时候，前面的是快捷方式，后面的是原文件
 alias 可以和多条命令结合，命令之间用 ; 分隔  
 永久生效：`$ vim ~/.bashrc`  
 
-`>` 重定向 `ls -l > a.txt` 比如 `history > history.txt`  
-`>>` 追加 `ls -l >> b.txt`  
-`nohup jupyter-notebook --ip 0.0.0.0 --port 6281 &> logs/notebook.log &`  
+
 `cat` 只读查看  
 `sort`  
-`wc`  
-直接统计 `ls | wc -w` 或 `ll | wc -l`    
-统计文件夹下文件数量：`ls -l ./ | grep "^-" | wc -l`  
-统计文件夹下目录数量：`ls -l ./ | grep "^d" | wc -l`（要用 `ls -l` 而不是 `ls -al` 因为 a 参数会把 . 和 .. 目录显示出来）   
 `grep` Global Regular Expression Print 全局正则表达式搜索 `history | grep nginx` `ps -aux | grep nginx`    
 `|` 管道符，表示将前面命令的处理结果传递给后面的命令处理  
 `ls | head -n 200 | xargs -i cp {} ../test_images/`  
@@ -64,26 +74,10 @@ echo 输出命令到控制台
 
 `history`  !编号 执行  
 
-`find` 范围 名称  `find /home -name hello.txt`  `-name` `-size` `-user`  
-`locate` 定位文件目录 `locate hello.txt`  
-
-`gzip` `gzip hello.txt`  
-`gunzip hello.txt.gz`  
-`unzip 文件名.zip`  
-`tar` 打包后的文件名 要打包的文件 `tar -zcvf myhome.tar.gz /home`  
-`tar -zcvf` 压缩 \-c create \-v verbose \-f file   
-`tar -zxvf` 解压 \-x extract 解压  
-
-解压到当前目录：`tar -zxvf vscode.tar.gz -C ./`
-
 `touch a.txt` 创建文件    
 
 more 查看   
 
-`df -lh` 查看剩余磁盘空间，df 就是 disk file，l 是 local，h 是 human readable 的意思，就是给人看的，可以用 man df 查出 df 和 lh 的意思    
-统计文件夹下文件个数：`ls -l /home | grep "^-" | wc -l`   
-`du -sh` 查看当前文件夹大小  disk usage 参数 s summarize  
-`du -sh * | sort -hr`    查看文件夹大小-并按大小进行排序
 防火墙 [ufw](https://www.jb51.net/article/184257.htm)
 
 
@@ -221,4 +215,23 @@ tmux new -s 名字
 tmux ls  
 tmux a -t 名字  
 tmux + b d  
+
+
+
+
+You can grasp the fundamental ideas fairly quickly, and then there were tons of details, in the end the details didn't matter(意思是说细节，慢慢都会弄明白的) \-\-Linus Torvalds  
+Linux 非常适合使用清单。  
+
+服务器就是没有显示屏的电脑，非常酷，可以在任意电脑登录使用，可以灵活增加内存  
+
+
+`pwd` 显示当前工作的绝对路径   
+`ls` 参数 `-a` all `-l` list  
+`cd`   
+
+`--help` 命令更有用一些可能 `mkdir --help`  
+`man` manual 显示命令的手册页，查全称查参数查用法，比如 man cat，cat 是 concatenate files and print on the standard output  
+`Ctrl + r` 历史命令    
+
+
 
