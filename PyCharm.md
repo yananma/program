@@ -17,9 +17,11 @@ PyCharm 配置 interpreter 的核心就是找到正确的 Python 所在的路径
 
 
 ### 三、PyCharm 连接远程项目  
-File -> New Project -> Pure Python -> 右侧点开 Project Interpreter -> Existing Interpreter -> 点击右侧三个点 -> SSH Interpreter -> （如果存在，如果不存在就新建，输入 IP、端口、用户名、密码，选择虚拟环境的 Python）Existing server configuration -> 点击下拉框  -> 点击选择 -> 点 Next 下一步 -> 右侧点击文件夹图标选择 /home/test/anaconda3/envs/环境名/bin/python -> 点击 finish -> 点击 Interpreter 下方 Remote project location 文件夹图标 -> 选择远程文件夹路径 -> 配置最上方 Location，修改文件夹名称 untitled 为项目名称 -> create； Tools -> Deployment 中取消勾选 Automatic upload    
+File -> New Project -> Pure Python -> 右侧点开 Project Interpreter -> Existing Interpreter -> 点击右侧三个点 -> SSH Interpreter -> （如果不存在就新建，输入 IP、端口、用户名、密码、测试连接，选择虚拟环境的 Python 解释器）如果存在 Existing server configuration -> 点击下拉框  -> 点击选择 -> 点 Next 下一步 -> 右侧点击文件夹图标选择 /home/test/anaconda3/envs/环境名/bin/python -> 点击 finish -> 点击 Interpreter 下方 Remote project location 文件夹图标 -> 选择远程文件夹路径 -> 配置最上方 Location，修改文件夹名称 untitled 为项目名称 -> create； Tools -> Deployment 中取消勾选 Automatic upload    
 
-（如果是新建的 SSH Interpreter，如果配置完成以后，deployment 是灰色的，就要配置 Tools -> Deployment -> Configuration，左侧列表中选择名字，右侧配置 Connection 和 Mappings，选择正确的文件夹）
+如果是新建的 SSH Interpreter，如果配置完成以后，deployment 是灰色的，就要配置 Tools -> Deployment -> Configuration，左侧列表中选择名字，右侧配置 Connection 的 Type 和 SSH configuration下边不用配置（一般默认已经配置了） ；配置 Mappings 的 Deployment path 为远程路径，选择正确的文件夹  
+
+Tools -> Deployment -> Options 添加 exclude 文件类型：`.svn;.cvs;.idea;.DS_Store;.git;.hg;*.hprof;*.pyc`，单个形式为：`;*.jpg`，复制粘贴多次，然后替换 jpg  
 
 右键项目文件夹，从远程 download 文件  
 
