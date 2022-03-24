@@ -12,6 +12,8 @@ PyCharm 配置 interpreter 的核心就是找到正确的 Python 所在的路径
 `cd zjgdk`  
 `django-admin startapp post`  
 
+### 常规配置   
+
 File -> New Project -> Pure Python -> 右侧点开 Project Interpreter -> Existing Interpreter -> 点击右侧三个点 -> SSH Interpreter -> （如果不存在就新建，输入 IP、端口、用户名、密码、测试连接，选择虚拟环境的 Python 解释器）如果存在 Existing server configuration -> 点击下拉框  -> 点击选择 (如果报错，看是不是开了 VPN)-> 点 Next 下一步 -> 右侧点击文件夹图标选择 /home/test/anaconda3/envs/环境名/bin/python -> 点击 finish -> 点击 Interpreter 下方 Remote project location 文件夹图标 -> 选择远程文件夹路径 -> 配置最上方 Location，修改文件夹名称 untitled 为项目名称 -> create； Tools -> Deployment 中取消勾选 Automatic upload    
 
 如果是新建的 SSH Interpreter，如果配置完成以后，deployment 是灰色的，就要配置 Tools -> Deployment -> Configuration，左侧列表中选择名字，右侧配置 Connection 的 Type 和 SSH configuration下边不用配置（一般默认已经配置了） ；配置 Mappings 的 Deployment path 为远程路径，选择正确的文件夹  
@@ -23,7 +25,10 @@ Tools -> Deployment -> Options 添加 exclude 文件类型：`.svn;.cvs;.idea;.D
 修改 interpreter 名称和远程连接名称：右下角点击左键 -> 选择 Interpreter Settings -> 点击右上边齿轮 -> 选择 show all -> 点击 Edit -> Name 就是 Interpreter 的 name；-> 下边 Deployment configuration -> 点击右边三个点 -> 右键点击左侧 -> rename  
 
 
-Django 项目配置  
+### Django 项目配置  
+
+配置 mapping，不配置会报错说找不到 manage.py：右下角点击左键 -> 选择 Interpreter Settings -> 配置 Path mappings -> 配置 local 和 remote 路径    
+
 
 点击右上角 Add Configuration -> 点击左上角加号 -> 选择 Django Server -> 左侧最上方 Name 改成 zjgdk -> Host 改为 0 -> Port 改为 6100 -> 中间 Environment variables 行点击最右边 -> 添加 DJANGO_SETTINGS_MODULE，值为 zjgdk.settings  
 
