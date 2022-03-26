@@ -72,6 +72,8 @@ alias 可以和多条命令结合，命令之间用 ; 分隔
 
 echo 输出命令到控制台  
 
+`history 20` 查看最近 20 条命令    
+
 `history`  !编号 执行  
 
 `touch a.txt` 创建文件    
