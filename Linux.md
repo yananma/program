@@ -5,9 +5,10 @@
 `>>` 追加 `ls -l >> b.txt`  
 `nohup jupyter-notebook --ip 0.0.0.0 --port 6281 &> logs/notebook.log &`  
 
+`zip -r django.zip django/` 压缩打包文件夹   
+`unzip 文件名.zip`  
 `gzip` `gzip hello.txt`  
 `gunzip hello.txt.gz`  
-`unzip 文件名.zip`  
 `tar` 打包后的文件名 要打包的文件 `tar -zcvf myhome.tar.gz /home`  
 `tar -zcvf` 压缩 \-c create \-v verbose \-f file   
 `tar -zxvf` 解压 \-x extract 解压  
