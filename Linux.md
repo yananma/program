@@ -31,8 +31,6 @@
 `du -sh * | sort -hr`    查看文件夹大小-并按大小进行排序  
 
 
-
-
 `less` \-N 显示行号 \-m 显示百分比    
 
 `mkdir` 一次创建多级目录，使用参数 \-p parents `mkdir -p /home/animal/dog`    
@@ -42,7 +40,9 @@
 `scp -P 17717 huggingface.tar.gz crisis@192.168.241.64:/home/crisis/.cache/huggingface.tar.gz`   
 对方端口、自己压缩包、对方用户名@对方内网 IP、目标文件夹。  
 速度非常快，100MB/s  
-`yum install lrzsz` rz 上传文件到服务器 receive，sz 下载文件到本地 send   
+`yum install lrzsz`    
+rz 上传文件到服务器    
+receive，sz 下载文件到本地 send，可以使用通配符：`sz *.jpg`    
 `mv` `mv a.txt dir1`    
 `mv` 原文件名 新文件名 (目的地在当前目录，就是在这个目录下操作就不是移动了，就是重命名)  
 `mv /data/new /data/old/` 剪切文件夹和文件夹下内容  
