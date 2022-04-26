@@ -85,6 +85,24 @@ array([[0.09003057, 0.24472847, 0.66524096],
 ```
 
 
+### 保存 .npy 文件  
+
+```python 
+In [1]: from bert_serving.client import BertClient
+
+In [2]: bc = BertClient()
+
+In [3]: vec = bc.encode(["年轻人", "00后"])
+
+In [4]: vec.shape
+Out[4]: (2, 768)
+
+In [5]: import numpy as np
+
+In [6]: np.save("vec1.npy", vec)
+```
+
+
 ### 读取 .npy 文件  
 ```python 
 import numpy as np 
