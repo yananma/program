@@ -1,4 +1,18 @@
 
+
+#### 指定 ip 和端口  
+
+在 /home/test/syb/nlp 下运行  
+`nohup jupyter notebook --ip 0.0.0.0 --port 6081 &>> logs/notebook.log &`    
+
+`jupyter-notebook --ip 0.0.0.0 --port 6381 --notebook-dir ./`   
+
+`tail -f logs/notebook.log` 查看日志  
+
+在浏览器中输入 112.253.2.6:6081 访问  
+
+
+
 配置启动路径  --notebook-（中划线）dir='./' 
 
 #### 远程安装  
@@ -29,13 +43,4 @@ Xshell 中配置：连接 -> SSH -> 隧道
 目标主机：112.253.\*.6  
 目标端口：8888  
 
-
-#### 指定 ip 和端口  
-
-在 /home/test/syb/nlp 下运行  
-`nohup jupyter notebook --ip 0.0.0.0 --port 6081 &>> logs/notebook.log &`    
-
-`tail -f logs/notebook.log` 查看日志  
-
-在浏览器中输入 112.253.2.6:6081 访问  
 
