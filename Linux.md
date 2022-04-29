@@ -198,6 +198,7 @@ crontab
 \-r remove  
 `crontab -l` 列表  
 `crontab -e` 编辑  
+`*/20 * * * *  # 每 20 分钟执行一次`     
 `0 8 * * * cd /home/test/syb/mayanan/zjgdk && /home/test/anaconda3/envs/zjgdk/bin/python main.py &>> command/logs/upload_to_zjgdk_daily_task.log`   
 
 #### apt 软件管理  
