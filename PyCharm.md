@@ -35,6 +35,12 @@ Tools -> Deployment -> Options 添加 exclude 文件类型：`.svn;.cvs;.idea;.D
 如果不能运行的话，要配置 Django support，File -> Settings -> Language & Frameworks -> Django 勾选 Enable Django Support，配置 Django project root 为本地路径，配置 Manage script 为本地 manage.py   
 
 
+### 找不到本地 python 解释器  
+
+左键右下角 -> Add Interpreter -> 左边就是默认的 Virtualenv Environment -> 右边选择 Existing environment -> 右边三个点 -> 上面一排 icons，看最后一个 Show Hidden Files and Directories -> 然后就可以看到 AppData 这样原来被隐藏的文件夹了，然后就是找 Python 解释器就可以了。         
+
+
+
 ### PyCharm 切换分支  
 
 先用在项目目录打开 git bash  
