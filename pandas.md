@@ -45,10 +45,10 @@ df = df.rename(columns={'Unnamed: 1': '二级标题'})
 ```
 
 
-### 某一列设为索引   
+### [某一列设为索引](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.set_index.html#pandas.DataFrame.set_index)   
 
 ```python 
-df = df.set_index(['二级标题'])
+df = df.set_index('二级标题')
 ```
 
 多列设为索引   
@@ -58,6 +58,25 @@ df = df.set_index(['二级标题', '拆解/合并三级标签项建议'])
 ```
 
 
+### 设置完索引以后取索引值  
+
+```python 
+df = df.set_index(['二级标题', '拆解/合并三级标签项建议'])
+
+df.loc['Brand（品牌）'].loc['L\'Oreal']   
+```   
+
+
+### [pd.concat 拼接](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.concat.html)
+
+```python 
+pd.concat([s1, s2], ignore_index=True)
+0    a
+1    b
+2    c
+3    d
+dtype: object
+```
 
 
 ### 取 CSV 的表头   
@@ -309,5 +328,41 @@ merge 是合并，如果相同就共同使用，有重叠
 
 replace=True，替换  
 replace=False，新建  
+
+
+
+
+代码案例   
+
+```python 
+#!/usr/bin/env python
+# coding: utf-8
+
+import pandas as pd 
+
+green_col_list = ['Brand（品牌）', 'Product Benefit（产品功效）', 'Ingredient（成分）', 'Texture（质地）', 'Scent（香味）',
+                  'Platform（平台）', 'Subordinate Campaign（话题）', 'In-wash Experience（使用体验感）', 'Tension Point/痛点',
+                  'Seasonal Message（春夏秋冬、节日）', 'Promotion（大促活动）',
+                  'Call for action（是否推动消费者下单，附带购买链接）', '发质（中性、干性、油性、酸性、碱性）']
+
+df = pd.read_excel('./sample-1.xlsx', sheet_name='biaoqianshu')
+
+df = df.drop(['二级标签', '提及数量', 'Unnamed: 5'], axis=1)
+
+df = df.rename(columns={'Unnamed: 1': '二级标题'})
+
+df = df.fillna(method='ffill')
+
+df = df.set_index(['二级标题'])
+
+df_list = []
+for col in green_col_list:
+    df_list.append(df.loc[col])
+
+df = pd.concat(df_list, ignore_index=True)
+
+df.to_excel('green_tag.xlsx', index=False)
+```
+
 
 
