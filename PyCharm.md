@@ -40,6 +40,12 @@ Tools -> Deployment -> Options 添加 exclude 文件类型：`.svn;.cvs;.idea;.D
 左键右下角 -> Add Interpreter -> 左边就是默认的 Virtualenv Environment -> 右边选择 Existing environment -> 右边三个点 -> 上面一排 icons，看最后一个 Show Hidden Files and Directories -> 然后就可以看到 AppData 这样原来被隐藏的文件夹了，然后就是找 Python 解释器就可以了。         
 
 
+### 重命名  
+
+应该是要重命名两个：  
+1. 用 pycharm 打开文件夹之前，先给文件夹重命名  
+2. 打开文件夹以后，给项目重命名。   
+
 
 ### PyCharm 切换分支  
 
