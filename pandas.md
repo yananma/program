@@ -41,8 +41,23 @@ df = df.drop(['二级标签', '提及数量', 'Unnamed: 5'], axis=1)
 ### 某一列重命名   
 
 ```python 
-df.rename(columns={'Unnamed: 1': '二级标题'})
+df = df.rename(columns={'Unnamed: 1': '二级标题'})
 ```
+
+
+### 某一列设为索引   
+
+```python 
+df = df.set_index(['二级标题'])
+```
+
+多列设为索引   
+
+```python 
+df = df.set_index(['二级标题', '拆解/合并三级标签项建议'])
+```
+
+
 
 
 ### 取 CSV 的表头   
