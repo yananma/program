@@ -101,7 +101,7 @@ df = pd.read_csv('ocr.csv', header=None)
 ```
 
 
-### read_excel()  
+### [read_excel()](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_excel.html)      
 
 ```python 
 df = pd.read_excel('模型反馈样本数据.xlsx', engine='openpyxl', sheet_name='c_label0_some_preds1')
@@ -117,7 +117,11 @@ UPLOADS_DIR = '/home/test/syb/mayanan/reci/resources/uploads/'
 df = pd.read_excel(UPLOADS_DIR + '跑热词.xlsx', engine='openpyxl')
 ```
 
-[read_excel 文档](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_excel.html)    
+以第二行为表头   
+
+```python 
+df = pd.read_excel('护发素视频0-1数据(1)_语音_OCR.xlsx', header=1)
+```
 
 
 ### 把列表写入到 Excel  
