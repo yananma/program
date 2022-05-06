@@ -1,4 +1,6 @@
 
+notebook 转 .py，在 File 中 Download as -> Python(.py)     
+
 
 #### 指定 ip 和端口  
 
