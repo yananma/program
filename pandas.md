@@ -11,6 +11,12 @@ df.head(10)
 df.iterrows()
 ```
 
+### 取 CSV 的表头   
+
+```python 
+df.columns
+```
+
 
 ### read_csv()  
 
