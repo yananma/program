@@ -11,6 +11,28 @@ df.head(10)
 df.iterrows()
 ```
 
+### 取某一列的数据   
+
+```python 
+# df['列名']
+df['原三级标签']   
+```
+
+### 删除某一列   
+
+要指定 axis=1   
+
+```python 
+df.drop(['二级标签'], axis=1)   
+```
+
+删除多列     
+
+```python 
+df = df.drop(['二级标签', '提及数量', 'Unnamed: 5'], axis=1)
+```    
+
+
 ### 取 CSV 的表头   
 
 ```python 
