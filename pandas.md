@@ -1,4 +1,7 @@
 
+要用 notebook 处理 pandas，永远不要用 pycharm 处理 pandas，pycharm 打印的结果看不到结构，会耽误很多时间。    
+
+
 
 ### 常用命令  
 
@@ -11,6 +14,7 @@ df.head(10)
 df.iterrows()
 ```
 
+
 ### 取某一列的数据   
 
 ```python 
@@ -18,7 +22,8 @@ df.iterrows()
 df['原三级标签']   
 ```
 
-### 删除某一列   
+
+### 删除列   
 
 要指定 axis=1   
 
@@ -31,6 +36,13 @@ df.drop(['二级标签'], axis=1)
 ```python 
 df = df.drop(['二级标签', '提及数量', 'Unnamed: 5'], axis=1)
 ```    
+
+
+### 某一列重命名   
+
+```python 
+df.rename(columns={'Unnamed: 1': '二级标题'})
+```
 
 
 ### 取 CSV 的表头   
