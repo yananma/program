@@ -153,6 +153,15 @@ PyCharm -> Tools -> HTTP Client -> Test RESTful Web Service 可以做简单测�
 取消更新提示：settings 里搜索 update，取消勾选即可  
 
 
+### 跳转到指定条件   
+
+`if i == 100`
+
+或  
+
+`if key == 'a' and value == 1`   
+
+
 
 ## 旧笔记  
 
