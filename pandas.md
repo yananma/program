@@ -17,6 +17,14 @@ df.head(10)
 df.iterrows()
 ```
 
+### 遍历行   
+
+```python 
+for row in df.iterrows():
+    row = row[1]
+    asr = row['语音']
+```
+
 
 ### 取某一列的数据   
 
