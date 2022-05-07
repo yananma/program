@@ -17,6 +17,7 @@ df.head(10)
 df.iterrows()
 ```
 
+
 ### 遍历行   
 
 ```python 
@@ -48,8 +49,13 @@ df.drop(['二级标签'], axis=1)
 df = df.drop(['二级标签', '提及数量', 'Unnamed: 5'], axis=1)
 ```    
 
+切片，从第 10 列开始往后取    
+```python 
+origin_df = origin_df.drop(origin_df.columns[:10], axis=1)     
+```
 
-### 某一列重命名   
+
+### [rename](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.rename.html)   
 
 ```python 
 df = df.rename(columns={'Unnamed: 1': '二级标题'})
@@ -107,7 +113,7 @@ df_tag.columns.values
 ```
 
 
-### read_csv()  
+### [read_csv()](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html)  
 
 ```python
 # 用 f 字符串拼最好   
@@ -213,7 +219,17 @@ if not pd.isna(line[1]['names'])
 ```
 
 
-### nan 换成空   
+### [fillna](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.fillna.html)   
+
+
+如果内容为 nan，就没有办法用 in 判断是否包含，会报错。所以解决办法就是 nan 替换成空字符串。    
+
+```python 
+fillna(value='')  
+```
+
+
+下面这种不再使用   
 
 ```python 
 line['title'] if not pd.isna(line['title']) else ''
