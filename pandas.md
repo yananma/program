@@ -5,19 +5,6 @@
 要用 notebook 处理 pandas，永远不要用 pycharm 处理 pandas，pycharm 打印的结果看不到结构，会耽误很多时间。    
 
 
-
-### 常用命令  
-
-```python 
-df.head()  
-
-df.head(10)  
-
-# 取一行  
-df.iterrows()
-```
-
-
 ### 遍历行   
 
 ```python 
