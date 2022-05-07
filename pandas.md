@@ -1,4 +1,7 @@
 
+# 文档就是最好的笔记，多读文档
+
+
 要用 notebook 处理 pandas，永远不要用 pycharm 处理 pandas，pycharm 打印的结果看不到结构，会耽误很多时间。    
 
 
