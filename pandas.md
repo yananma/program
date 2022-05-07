@@ -86,6 +86,16 @@ dtype: object
 
 ```python 
 df.columns
+
+# 取值按索引取
+df.columns[0]  
+```
+
+用 columns.values 也可以   
+
+```python 
+# df.columns 结果为 Index 类型，.values 结果为列表  
+df_tag.columns.values   
 ```
 
 
