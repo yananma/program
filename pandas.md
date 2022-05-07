@@ -13,6 +13,51 @@ for row in df.iterrows():
     asr = row['语音']
 ```
 
+要注意的是，遍历迭代的时候，不会改变原来的 DataFrame.   
+
+```python
+def label_data():
+    df = pd.read_excel('green_data.xlsx')
+    df.fillna('', inplace=True)
+    tag_list = get_tag_list()
+    for row in df.iterrows():
+        row = row[1]
+        yuyin, zimu, huazi = row['语音'], row['字幕'], row['花字']
+        for tag in tag_list:
+            key = str(list(tag.keys())[0])
+            value = str(list(tag.values())[0])
+            if value in yuyin or value in zimu or value in huazi:
+                row[key] = 1  # 1表示有该标签
+            else:
+                row[key] = 0  # 0表示没有该标签
+    return df
+```
+
+上面这种写法最后返回的还是第一行读入的结果，赋值语句没有发挥作用。    
+
+正确写法   
+
+```python
+def label_data():
+    df = pd.read_excel('green_data.xlsx')
+    df.fillna('', inplace=True)
+    tag_list = get_tag_list()
+    new_df = pd.DataFrame(columns=df.columns)
+    for i in range(len(df)):
+        row = df.iloc[i]
+        new_row = {}
+        yuyin, zimu, huazi = row['语音'], row['字幕'], row['花字']
+        for tag in tag_list:
+            key = str(list(tag.keys())[0])
+            value = str(list(tag.values())[0])
+            if value in yuyin or value in zimu or value in huazi:
+                new_row[key] = 1  # 1表示有该标签
+            else:
+                new_row[key] = 0  # 0表示没有该标签
+        new_df = new_df.append(new_row, ignore_index=True)
+    return new_df
+```
+
 
 ### 取某一列的数据   
 
