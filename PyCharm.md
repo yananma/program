@@ -37,6 +37,8 @@ Tools -> Deployment -> Options 添加 exclude 文件类型：`.svn;.cvs;.idea;.D
 
 ### 找不到本地 python 解释器  
 
+尽量不在本地开发，没法上传，会打乱上传代码的习惯。   
+
 左键右下角 -> Add Interpreter -> 左边就是默认的 Virtualenv Environment -> 右边选择 Existing environment -> 右边三个点 -> 上面一排 icons，看最后一个 Show Hidden Files and Directories -> 然后就可以看到 AppData 这样原来被隐藏的文件夹了，然后就是找 Python 解释器就可以了。         
 
 
