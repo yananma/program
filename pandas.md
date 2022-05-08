@@ -405,7 +405,9 @@ replace=False，新建
 
 
 
-代码案例   
+## 代码   
+
+#### 简单处理  
 
 ```python 
 #!/usr/bin/env python
@@ -435,6 +437,25 @@ for col in green_col_list:
 df = pd.concat(df_list, ignore_index=True)
 
 df.to_excel('green_tag.xlsx', index=False)
+```
+
+
+#### dropna  
+
+```python 
+def data_remove_nan():
+    df = pd.read_excel('green_data.xlsx')
+    df.fillna('', inplace=True)
+    new_df = pd.DataFrame(columns=df.columns)
+    for i in range(len(df)):
+        row = df.iloc[i]
+        new_row = {}
+        yuyin, zimu, huazi = row['语音'], row['字幕'], row['花字']
+        if any([yuyin, zimu, huazi]):
+            for key in df.columns:
+                new_row[key] = row[key]
+            new_df = pd.concat([new_df, pd.DataFrame(new_row, index=[i])], ignore_index=True)
+    return new_df
 ```
 
 
