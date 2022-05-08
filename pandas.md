@@ -33,7 +33,7 @@ def label_data():
     return df
 ```
 
-上面这种写法最后返回的还是第一行读入的结果，赋值语句没有发挥作用。    
+上面这种写法最后返回的还是第一行读入的结果，赋值语句没有发挥作用。不可变。    
 
 正确写法   
 
@@ -125,6 +125,15 @@ pd.concat([s1, s2], ignore_index=True)
 2    c
 3    d
 dtype: object
+```
+
+### [df.dropna](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.dropna.html)
+
+这三列，所有的都为 nan 才删除。   
+
+```python 
+df = pd.read_excel('green_data.xlsx')
+df = df.dropna(subset=['语音', '字幕', '花字'], how='all')
 ```
 
 
@@ -441,6 +450,13 @@ df.to_excel('green_tag.xlsx', index=False)
 
 
 #### dropna  
+
+```python 
+df = pd.read_excel('green_data.xlsx')
+df = df.dropna(subset=['语音', '字幕', '花字'], how='all')
+```
+
+等同于   
 
 ```python 
 def data_remove_nan():
