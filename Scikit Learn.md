@@ -36,6 +36,7 @@ y_pred = get_label_list(result_df)
 
 
 mcm = multilabel_confusion_matrix(y_true, y_pred)
+mcm.sum(axis=0)
 
 report = classification_report(y_true, y_pred)
 ```
