@@ -54,7 +54,7 @@ def label_data():
                 new_row[key] = 1  # 1表示有该标签
             else:
                 new_row[key] = 0  # 0表示没有该标签
-        new_df = new_df.append(new_row, ignore_index=True)
+        new_df = pd.concat([new_df, pd.DataFrame(new_row, index=[i])], ignore_index=True)
     return new_df
 ```
 
