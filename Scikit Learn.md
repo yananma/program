@@ -3,6 +3,9 @@
 
 学习 sklearn 的最重要的方法就是查文档，看需要什么参数，参数含义  
 
+FN：False Negative，预测错了，y_true 是 Positive，预测成了 Negative。   
+FP：False Positive，预测错了，y_true 是 Negative，预测成了 Positive。
+
 
 ### [multilabel_confusion_matrix](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.multilabel_confusion_matrix.html#sklearn.metrics.multilabel_confusion_matrix)
 
