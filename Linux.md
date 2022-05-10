@@ -85,15 +85,23 @@ more 查看
 
 
 #### 进程管理  
+
 `ps` process status  
 `ps -aux | less`  
 `ps -aux | grep Nginx`  
+`ps -eO lstart | grep zkpoint_es` 查看进程开始时间  
+
 
 `ps -ef | less`  
 可以查看父进程  
 
 kill 进程 id  
 \-9 强制关闭  
+
+可以同时 kill 多个进程   
+
+kill \-9 id1, id2, id3...
+
 
 pstree  
 
