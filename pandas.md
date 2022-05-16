@@ -475,4 +475,14 @@ def data_remove_nan():
 ```
 
 
+## 报错   
+
+### XLRDError: Excel xlsx file； not supported 报错
+
+原因是pip安装的是最新的 2.0.1 版本，只支持 .xls 文件。所以 pandas.read_excel(‘xxx.xlsx’) 会报错。   
+
+可以安装旧版xlrd，在 cmd 中执行指令：    
+```python
+pip install xlrd==1.2.0
+```
 
