@@ -150,7 +150,10 @@ PyCharm -> Tools -> HTTP Client -> Test RESTful Web Service 可以做简单测�
 自动导入包设置：File -> Settings -> General -> Auto Import -> Python -> Show import popup  
 导入包是 alt + enter 键组合，如果弹出下拉菜单选项，说明缺少依赖，选择即可导入（不知道为什么自己设置没有效果）  
 
-取消更新提示：settings 里搜索 update，取消勾选即可  
+
+### 取消更新提示：
+
+settings 里搜索 update，取消勾选即可  
 
 
 ### 跳转到指定条件   
@@ -160,6 +163,16 @@ PyCharm -> Tools -> HTTP Client -> Test RESTful Web Service 可以做简单测�
 或  
 
 `if key == 'a' and value == 1`   
+
+
+### 更改最大内存（更改不成功，不知道为什么）   
+
+Help -> Edit Custom VM Options -> 手动修改大小。   
+
+```python  
+-Xms128m  # 最小内存  
+-Xmx1262m  # 最大内存
+```
 
 
 
