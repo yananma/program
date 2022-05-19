@@ -165,7 +165,7 @@ settings 里搜索 update，取消勾选即可
 `if key == 'a' and value == 1`   
 
 
-### 更改最大内存（更改不成功，不知道为什么）   
+### 更改最大内存
 
 Help -> Edit Custom VM Options -> 手动修改大小。   
 
@@ -173,6 +173,13 @@ Help -> Edit Custom VM Options -> 手动修改大小。
 -Xms128m  # 最小内存  
 -Xmx1262m  # 最大内存
 ```
+
+**改完要重启 PyCharm，否则不生效。如果是开了多个项目，全部都要重启才行，**
+
+
+### 重启 PyCharm 
+
+File -> Restart IDE    
 
 
 
