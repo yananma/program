@@ -46,15 +46,17 @@ def label_data():
     for i in range(len(df)):
         row = df.iloc[i]
         new_row = {}
+        # new_row = row.copy()  # 如果是只更新几个字段，其他的保持不变，就用 .copy()    
         yuyin, zimu, huazi = row['语音'], row['字幕'], row['花字']
         for tag in tag_list:
             key = str(list(tag.keys())[0])
             value = str(list(tag.values())[0])
             if value in yuyin or value in zimu or value in huazi:
-                new_row[key] = 1  # 1表示有该标签
+                new_row[key] = 1  
             else:
-                new_row[key] = 0  # 0表示没有该标签
+                new_row[key] = 0  
         new_df = pd.concat([new_df, pd.DataFrame(new_row, index=[i])], ignore_index=True)
+        # new_df = new_df.append(new_row, ignore_index=True)  # 低版本 pandas 要用 append，多低不知道，至少 0.24.2 是这样。    
     return new_df
 ```
 
