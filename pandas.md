@@ -488,3 +488,13 @@ def data_remove_nan():
 pip install xlrd==1.2.0
 ```
 
+
+### 'ascii' codec can't decode byte 0xe5 in position 0: ordinal not in range(128)  python2.7 pandas0.24.2  
+
+要指定 engine 和 encoding   
+```python 
+new_df.to_excel(excel_name, engine='xlsxwriter', index=False, encoding='utf-8')
+``` 
+
+
+
