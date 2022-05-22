@@ -15,6 +15,21 @@
 
 # 知识点   
 
+
+### COUNT   
+
+```sql 
+SELECT COUNT(*) FROM `community`.`author` WHERE `site_id` = '2'
+```
+
+
+### DISTINCT   
+
+```sql 
+SELECT Count(DISTINCT author) FROM `xpost` WHERE `siteid` = '2'
+```
+
+
 ### LIMIT    
 
 ``` 
@@ -29,6 +44,13 @@ select * from Customer limit 10;   --检索前10行数据，显示1-10条数据
 select * from Customer limit 5,10; --检索从第6行开始向前加10条数据，共显示id为6,7....15
 ```   
 
+
+
+### DELETE   
+
+```sql  
+DELETE FROM `community`.`author_clean` WHERE `site_id` = '2'
+```   
 
 
 # 语句   
