@@ -42,7 +42,14 @@ Tools -> Deployment -> Options 添加 exclude 文件类型：`.svn;.cvs;.idea;.D
 左键右下角 -> Add Interpreter -> 左边就是默认的 Virtualenv Environment -> 右边选择 Existing environment -> 右边三个点 -> 上面一排 icons，看最后一个 Show Hidden Files and Directories -> 然后就可以看到 AppData 这样原来被隐藏的文件夹了，然后就是找 Python 解释器就可以了。         
 
 
-### 重命名  
+### 本地安装包版本太旧，更新版本   
+
+版本不对，源码就不对，读源码就会有问题，debug 就会有问题，所以要更新。    
+
+先通过一个函数进入源码 -> 右键上面文件名 open in -> 选 Explorer -> 删除本地的包 -> 重启 pycharm 就会自动安装远程最新的包    
+
+
+### 项目重命名  
 
 应该是要重命名两个：  
 1. 用 pycharm 打开文件夹之前，先给文件夹重命名  
