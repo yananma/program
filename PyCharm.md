@@ -52,9 +52,7 @@ Tools -> Deployment -> Options 添加 exclude 文件类型：`.svn;.cvs;.idea;.D
 
 ### 远程连接 Git 上已存在的项目   
 
-用 git bash clone 项目，右键用 PyCharm 打开。    
-
-不再用这种方法 clone 打开项目，因为这种方法打开项目以后路径有问题。配置远程环境：VCS -> Git -> Clone，clone 完成以后在 new window 打开  
+配置远程环境：VCS -> Git -> Clone，clone 完成以后在 new window 打开。如果打开以后看到的文件不对，就看文件左上角的 project 下拉框，改为 project files。   
 
 在配置 python 解释器之前要先在 Tools -> Deployment 中取消 Automatic upload  
 
