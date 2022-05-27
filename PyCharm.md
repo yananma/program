@@ -1,4 +1,4 @@
-
+[
 PyCharm 配置 interpreter 的核心就是找到正确的 Python 所在的路径  
 
 
@@ -22,9 +22,15 @@ Tools -> Deployment -> Options 添加 exclude 文件类型：`.svn;.cvs;.idea;.D
 
 右键项目文件夹，从远程 download 文件。如果文件比较大，最好自己弄成压缩包，用 sz 传输，然后自己在本地文件夹下面解压，不要通过 PyCharm 下载，很慢。       
 
+
+### Interpreter   
+
+添加 Interpreter：右下角 -> Add Interpreter -> SSH Interpreter -> 如果存在 Existing server configuration -> Next -> 选择 Python，配置路径，取消 auto upload。
+
 修改 interpreter 名称和远程连接名称：右下角点击左键 -> 选择 Interpreter Settings -> 点击右上边齿轮 -> 选择 show all -> 点击 Edit -> Name 就是 Interpreter 的 name；-> 下边 Deployment configuration -> 点击右边三个点 -> 右键点击左侧 -> rename  
 
 在配置 Interpreter 的时候就配好了 server，就不用再单独配置 server。   
+
 
 ### Django 项目配置  
 
@@ -278,3 +284,4 @@ debug 是方法，可以解决几百万个问题
 
 
 
+](http://gitlab.maixunbytes.com/aimatech/aima_monitor_backend.git)
