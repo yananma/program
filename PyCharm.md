@@ -52,6 +52,8 @@ Tools -> Deployment -> Options 添加 exclude 文件类型：`.svn;.cvs;.idea;.D
 
 ### 远程连接 Git 上已存在的项目   
 
+如果项目里有 idea 文件夹，就要 clone 完以后先删除这个文件夹，否则没有办法配置 Interpreter。    
+
 配置远程环境：VCS -> Git -> Clone，clone 完成以后在 new window 打开。如果打开以后看到的文件不对，就看文件左上角的 project 下拉框，改为 project files。   
 
 在配置 python 解释器之前要先在 Tools -> Deployment 中取消 Automatic upload  
