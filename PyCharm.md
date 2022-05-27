@@ -24,6 +24,7 @@ Tools -> Deployment -> Options 添加 exclude 文件类型：`.svn;.cvs;.idea;.D
 
 修改 interpreter 名称和远程连接名称：右下角点击左键 -> 选择 Interpreter Settings -> 点击右上边齿轮 -> 选择 show all -> 点击 Edit -> Name 就是 Interpreter 的 name；-> 下边 Deployment configuration -> 点击右边三个点 -> 右键点击左侧 -> rename  
 
+在配置 Interpreter 的时候就配好了 server，就不用再单独配置 server。   
 
 ### Django 项目配置  
 
@@ -49,6 +50,17 @@ Tools -> Deployment -> Options 添加 exclude 文件类型：`.svn;.cvs;.idea;.D
 先通过一个函数进入源码 -> 右键上面文件名 open in -> 选 Explorer -> 删除本地的包 -> 重启 pycharm 就会自动安装远程最新的包    
 
 
+### 远程连接 Git 上已存在的项目   
+
+用 git bash clone 项目，右键用 PyCharm 打开。    
+
+不再用这种方法 clone 打开项目，因为这种方法打开项目以后路径有问题。配置远程环境：VCS -> Git -> Clone，clone 完成以后在 new window 打开  
+
+在配置 python 解释器之前要先在 Tools -> Deployment 中取消 Automatic upload  
+
+add python interpreter，选择 ssh interpreter，选择 existing server configuration，然后再选择正确的 python 解释器，配置正确的路径  
+
+
 ### 项目重命名  
 
 应该是要重命名两个：  
@@ -65,21 +77,7 @@ git pull 同步远程
 然后在命令行 git checkout 分支切换分支，PyCharm 会自动切换  
 
 
-*** 
-
-从 Git 上拉取项目  
-
-
-
 ***  
-
-### 远程连接 Git 上已存在的项目   
-
-配置远程环境：VCS -> Git -> Clone，clone 完成以后在 new window 打开  
-
-在配置 python 解释器之前要先在 Tools -> Deployment 中取消 Automatic upload  
-
-add python interpreter，选择 ssh interpreter，选择 existing server configuration，然后再选择正确的 python 解释器，配置正确的路径  
 
 
 ### 快捷键
