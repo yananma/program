@@ -83,6 +83,11 @@ git pull 同步远程
 然后在命令行 git checkout 分支切换分支，PyCharm 会自动切换  
 
 
+### git push 不成功  
+
+push 不成功，看左下角的 git 的 log  
+
+
 ***  
 
 
