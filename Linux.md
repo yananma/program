@@ -247,3 +247,12 @@ Linux 非常适合使用清单。
 
 
 
+## 报错   
+
+### [E212: 无法打开并写入文件](https://blog.csdn.net/shinyolive/article/details/108313986)     
+
+没有权限，用户不对。比如是不是 dingyong 在改 deploy 的文件。   
+
+
+
+
