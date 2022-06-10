@@ -8,8 +8,7 @@
 ### 遍历行   
 
 ```python 
-for row in df.iterrows():
-    row = row[1]
+for i, row in df.iterrows():
     asr = row['语音']
 ```
 
@@ -20,8 +19,7 @@ def label_data():
     df = pd.read_excel('green_data.xlsx')
     df.fillna('', inplace=True)
     tag_list = get_tag_list()
-    for row in df.iterrows():
-        row = row[1]
+    for i, row in df.iterrows():
         yuyin, zimu, huazi = row['语音'], row['字幕'], row['花字']
         for tag in tag_list:
             key = str(list(tag.keys())[0])
