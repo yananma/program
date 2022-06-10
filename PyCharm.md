@@ -31,6 +31,15 @@ Tools -> Deployment -> Options 添加 exclude 文件类型：`.svn;.cvs;.idea;.D
 
 在配置 Interpreter 的时候就配好了 server，就不用再单独配置 server。   
 
+如果没有就要配置 server。   
+
+
+### 添加 server   
+
+Tools -> Deployment -> Configuration，左上角 + 号，选择 SFTP，配置 Connection 和 Mappings。   
+
+Connection 配置 SSH configuration，Mappings 配置本地和远程路径。    
+
 
 ### Django 项目配置  
 
@@ -289,7 +298,3 @@ debug 是方法，可以解决几百万个问题
 
 
 
-
-
-
-](http://gitlab.maixunbytes.com/aimatech/aima_monitor_backend.git)
