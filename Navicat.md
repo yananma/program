@@ -30,6 +30,19 @@ SELECT COUNT(*) FROM `community`.`author` WHERE `site_id` = '2'
 
 ### DISTINCT   
 
+查询 domain 是抖音的 siteid 都有哪些。   
+
+```sql   
+SELECT DISTINCT siteid FROM `notice`.`xpost` WHERE `facetid` IN (59, 66, 74, 75, 76, 77, 78) AND `include_t` >= '2022-05-31 00:00:00' AND `include_t` <= '2022-06-03 23:59:59' AND `domain` = '抖音'
+```
+
+或者用 group by   
+
+```sql   
+SELECT siteid FROM `notice`.`xpost` WHERE `facetid` IN (59, 66, 74, 75, 76, 77, 78) AND `include_t` >= '2022-05-31 00:00:00' AND `include_t` <= '2022-06-03 23:59:59' AND `domain` = '抖音' GROUP BY siteid   
+```
+
+
 ```sql 
 SELECT Count(DISTINCT author) FROM `xpost` WHERE `siteid` = '2'
 ```
@@ -65,3 +78,17 @@ DELETE FROM `community`.`author_clean` WHERE `site_id` = '2'
 ```sql 
 SELECT * FROM `notice`.`keyword_warning` WHERE `id` IN (80, 74, 59, 66, 78) LIMIT 0,1000   
 ```
+
+
+
+# 报错   
+
+### 1241 - Operand should contain 1 column(s)   
+
+查询语句：   
+
+```sql 
+SELECT DISTINCT siteid FROM `notice`.`xpost` WHERE `facetid` = (59, 66, 74, 75, 76, 77, 78) AND `include_t` >= '2022-05-31 00:00:00' AND `include_t` <= '2022-06-03 23:59:59' AND `domain` = '抖音'  
+```
+
+要把 facetid 的 = 改成 in。   
