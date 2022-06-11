@@ -58,6 +58,8 @@ def label_data():
     return new_df
 ```
 
+iterrows 官方文档：You should never modify something you are iterating over. This is not guaranteed to work in all cases. Depending on the data types, the iterator returns a copy and not a view, and writing to it will have no effect.   
+
 
 ### 取某一列的数据   
 
