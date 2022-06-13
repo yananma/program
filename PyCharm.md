@@ -1,4 +1,3 @@
-[
 PyCharm 配置 interpreter 的核心就是找到正确的 Python 所在的路径  
 
 
