@@ -36,6 +36,12 @@ SSH 配置：
 SELECT COUNT(*) FROM `community`.`author` WHERE `site_id` = '2'
 ```
 
+### ORDER BY  
+
+```sql 
+SELECT * FROM `xpost` WHERE domain = '东方财富网-股吧' AND `title` LIKE '%>%' ORDER BY `updatetime` DESC   
+``` 
+
 
 ### DISTINCT   
 
