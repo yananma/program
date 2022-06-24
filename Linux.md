@@ -166,7 +166,7 @@ echo "========备份成功========"
 ### 统计日志 SQL 查询大于 5 秒的查询  
 
 ```SQL  
-cat debug.log | grep -P "\(((\d{2,})|([5-9]\d*))\.\d+\)[^\r\n]+" > slow_sql.log   
+cat debug.log | grep -P "\((\d{2,}|[5-9])\.\d+\)[^\r\n]+" > slow_sql.log   
 ```
 
 
