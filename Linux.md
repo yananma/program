@@ -161,6 +161,16 @@ echo "========备份成功========"
 ```
 
 
+# 实际例子  
+
+### 统计日志 SQL 查询大于 5 秒的查询  
+
+```SQL  
+cat debug.log | grep -P "\(((\d{2,})|([5-9]\d*))\.\d+\)[^\r\n]+" > slow_sql.log   
+```
+
+
+
 ### 不常用  
 scp secure copy，远程 copy，用法 scp source_file des_file，比如 scp local_file remote_username@remote_ip:remote_folder   
 绝对路径是相对于 root 路径所说的，相对路径是相对于当前位置所说的   
