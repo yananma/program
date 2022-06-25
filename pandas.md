@@ -177,7 +177,7 @@ df = pd.read_csv('ocr.csv', header=None)
 df = pd.read_excel('模型反馈样本数据.xlsx', engine='openpyxl', sheet_name='c_label0_some_preds1')
 ```
 
-读取多个 sheet，指定 sheet_name=None，返回的 df 是一个字段，键是 sheet 名称   
+读取多个 sheet，指定 sheet_name=None，返回的 df 是一个字典，键是 sheet 名称   
 
 ```python 
 df = pd.read_excel('./data/车型车系表V6.xlsx', sheet_name=None)
