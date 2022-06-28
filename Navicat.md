@@ -83,6 +83,12 @@ select * from Customer limit 10;   --检索前10行数据，显示1-10条数据
 select * from Customer limit 5,10; --检索从第6行开始向前加10条数据，共显示id为6,7....15
 ```   
 
+### REGEXP 
+
+```sql 
+SELECT title, domain, url FROM xpost WHERE domain LIKE '%搜狐%' AND title REGEXP '^原创[ \t]*原'
+``` 
+
 
 ### LEFT  
 
