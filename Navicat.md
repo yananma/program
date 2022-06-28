@@ -1,5 +1,5 @@
 
-以后全部手写 SQL 语句，写 10000 条就差不多了。   
+以后全部手写 SQL 语句，写 10000 条就差不多了。每 100 条，备份一次。    
 
 在列表是 id 在列表 80, 74, 59, 66, 78，没有外面的一层 []    
 
@@ -83,6 +83,14 @@ select * from Customer limit 10;   --检索前10行数据，显示1-10条数据
 select * from Customer limit 5,10; --检索从第6行开始向前加10条数据，共显示id为6,7....15
 ```   
 
+
+### LEFT  
+
+```sql 
+SELECT title, domain FROM xpost WHERE domain LIKE '%搜狐%' AND title LIKE '%原创%' AND LEFT(title,2) != '原创' 
+``` 
+
+
 ### RIGHT  
 
 ```sql
@@ -105,6 +113,11 @@ DELETE FROM `community`.`author_clean` WHERE `site_id` = '2'
 SELECT * FROM `notice`.`keyword_warning` WHERE `id` IN (80, 74, 59, 66, 78) LIMIT 0,1000   
 ```
 
+### 统计类别和类别的数量   
+
+```sql 
+SELECT domain, COUNT(domain) FROM xpost WHERE domain LIKE '%搜狐%' AND title LIKE '%原创%' GROUP BY domain
+```
 
 
 # 报错   
