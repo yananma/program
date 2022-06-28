@@ -77,6 +77,11 @@ select * from Customer limit 10;   --检索前10行数据，显示1-10条数据
 select * from Customer limit 5,10; --检索从第6行开始向前加10条数据，共显示id为6,7....15
 ```   
 
+### RIGHT  
+
+```
+SELECT * FROM xpost WHERE domain LIKE '%汽车之家%' AND RIGHT(title, 2(这个数字就是等号后面的字符串的 len))='论坛' ORDER BY include_t DESC
+```
 
 
 ### DELETE   
