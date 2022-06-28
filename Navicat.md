@@ -1,5 +1,5 @@
 
-# 筛选完一个，自己手写一遍底下的查询语句。   
+以后全部手写 SQL 语句，写 10000 条就差不多了。   
 
 在列表是 id 在列表 80, 74, 59, 66, 78，没有外面的一层 []    
 
@@ -42,6 +42,12 @@ SELECT COUNT(*) FROM `community`.`author` WHERE `site_id` = '2'
 SELECT * FROM `xpost` WHERE domain = '东方财富网-股吧' AND `title` LIKE '%>%' ORDER BY `updatetime` DESC   
 ``` 
 
+### GROUP BY 
+
+```sql 
+SELECT domain, COUNT(domain) FROM xpost WHERE domain LIKE '%搜狐%' AND title LIKE '%原创%' GROUP BY domain
+``` 
+
 
 ### DISTINCT   
 
@@ -79,7 +85,7 @@ select * from Customer limit 5,10; --检索从第6行开始向前加10条数据�
 
 ### RIGHT  
 
-```
+```sql
 SELECT * FROM xpost WHERE domain LIKE '%汽车之家%' AND RIGHT(title, 2(这个数字就是等号后面的字符串的 len))='论坛' ORDER BY include_t DESC
 ```
 
