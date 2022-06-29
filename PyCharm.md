@@ -98,8 +98,20 @@ push 不成功，看左下角的 git 的 log
 
 **如果 git 上传因为各种冲突上传不成功，想要恢复 git 上的版本，就把本地的除了 .idea 文件夹外的所有文件删除，然后再从 git 上拉代码，重新弄。.idea 包含了所有的项目配置。**   
 
+### runserver 启动服务指定配置文件   
+
+Edit Configurations -> Additional options -> `--settings=mx_tools.settings-production-test`
+
 
 ***  
+
+
+# 报错   
+
+无法启动，报错表缺少字段    
+
+本地代码和服务器上的代码不一致。本地和远程都 pull，更新。     
+
 
 
 ### 快捷键
@@ -190,6 +202,8 @@ settings 里搜索 update，取消勾选即可
 或  
 
 `if key == 'a' and value == 1`   
+
+要在这一句下面打断点才行，不要在这一句上打断点。   
 
 
 ### 更改最大内存
