@@ -87,6 +87,10 @@ more 查看
 
 防火墙 [ufw](https://www.jb51.net/article/184257.htm)
 
+md5sum 文件名   
+
+`md5sum changcheng_daily_3.xlsx`   
+
 
 #### 进程管理  
 
@@ -114,6 +118,9 @@ pstree
 top P 按 CPU 排序，是默认显示样式  
 top M 按内存排序  
 top c 显示命令全称  
+
+htop   
+
 
 #### 网络 
 `ifconfig`  
