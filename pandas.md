@@ -308,7 +308,7 @@ df.dropna(axis=0, how='any')
 ```python 
 def replace_nan_with_blank(row):
     for key in row.keys():
-        if pandas.isnull(row[key]):
+        if pd.isnull(row[key]):
             row[key] = ""
 
 
