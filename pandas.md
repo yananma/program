@@ -303,6 +303,20 @@ df.dropna(axis=0, how='any')
 ```
 
 
+### 替换 nan 为空字符串  
+
+```python 
+def replace_nan_with_blank(row):
+    for key in row.keys():
+        if pandas.isnull(row[key]):
+            row[key] = ""
+
+
+for i, row in df.iterrows():
+    replace_nan_with_blank(row)  
+```
+
+
 ### 消除 url 类型数量限制  
 
 ```python 
