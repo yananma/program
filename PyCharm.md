@@ -100,7 +100,10 @@ push 不成功，看左下角的 git 的 log
 
 ### runserver 启动服务指定配置文件   
 
-Edit Configurations -> Additional options -> `--settings=mx_tools.settings-production-test`
+Edit Configurations -> Additional options -> `--settings=mx_tools.settings-production-test`    
+
+注意要在 settings 前面加上项目名称 **mx_tools.** settings-production-test，否则会报错 no module named settings-production-test    
+
 
 
 ***  
