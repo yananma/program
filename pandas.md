@@ -1,5 +1,5 @@
 
-# 文档就是最好的笔记，多读文档
+### 文档就是最好的笔记，多读文档
 
 
 要用 notebook 处理 pandas，永远不要用 pycharm 处理 pandas，pycharm 打印的结果看不到结构，会耽误很多时间。    
@@ -436,6 +436,40 @@ replace=True，替换
 replace=False，新建  
 
 
+### openpyxl   
+
+```python 
+            baseDir = settings.BASE_DIR
+            new_upload_file_name = baseDir + "/static/changcheng_datas/changcheng_report.xlsx"
+            with open(new_upload_file_name, 'wb') as f:
+                f.write(fname3.read())
+            wb = openpyxl.load_workbook(new_upload_file_name)
+            sheet_content = wb[u'长城汽车负面汇总']
+            rows = sheet_content.max_row
+            for i in range(2, rows + 1):
+                qudao = sheet_content.cell(row=i, column=9).value or ''
+                pinpai = sheet_content.cell(row=i, column=17).value or ''
+                chexi = sheet_content.cell(row=i, column=18).value or ''
+                chexing = sheet_content.cell(row=i, column=19).value or ''
+                key = pinpai + "$" + chexi + "$" + chexing
+                sheet_content.cell(1, 29, u'舆情处理')
+                sheet_content.cell(1, 30, u'舆情感知')
+                if qudao in [u'新闻', u'视频', u'微博', u'微信'] and key in qudao1_rules:
+                    yuqingchuli, yuqingganzhi = qudao1_rules[key].split('$')
+                    sheet_content.cell(row=i, column=29).value = yuqingchuli
+                    sheet_content.cell(row=i, column=30).value = yuqingganzhi
+                elif qudao in [u'论坛', u'问答', u'贴吧', u'小红书', u'懂车帝车友圈'] and key in qudao2_rules:
+                    yuqingchuli, yuqingganzhi = qudao2_rules[key].split('$')
+                    sheet_content.cell(row=i, column=29).value = yuqingchuli
+                    sheet_content.cell(row=i, column=30).value = yuqingganzhi
+
+        wb.save(new_file_name)
+        file = open(new_file_name, "rb")
+        response = FileResponse(file)
+        response['Content-Type'] = 'application/octet-stream'
+        response['Content-Disposition'] = 'attachment;filename="{}"'.format("changcheng_new.xlsx")
+        return response
+``` 
 
 
 ## 代码   
