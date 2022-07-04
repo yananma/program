@@ -228,6 +228,7 @@ crontab
 `crontab -l` 列表  
 `crontab -e` 编辑  
 `*/20 * * * *  # 每 20 分钟执行一次`     
+`0 */2 * * *` # 每 2 个小时执行一次，**注意一定要指定分钟是 0，如果不指定，就会每分钟都会执行一次**    
 `0 8 * * * cd /home/test/syb/mayanan/zjgdk && /home/test/anaconda3/envs/zjgdk/bin/python main.py &>> command/logs/upload_to_zjgdk_daily_task.log`   
 
 #### apt 软件管理  
