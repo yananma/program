@@ -471,6 +471,39 @@ replace=False，新建
         return response
 ``` 
 
+一个 django 命令小例子  
+
+```python 
+# -*- coding: utf-8 -*-
+import time
+import openpyxl
+from django.core.management.base import BaseCommand
+from interaction_clean import interaction_clean
+from utils.async_call import AsyncCall
+from utils.common import get_logger
+
+logger = get_logger('fill_empty_account_id')
+
+
+class Command(BaseCommand):
+
+    def add_arguments(self, parser):
+        pass
+
+    def handle(self, *args, **options):
+        start = time.time()
+        upload_file = u'./data/如果科技员工相关舆情7月4日-8点.xlsx'
+        wb = openpyxl.load_workbook(upload_file)
+        sheet_content = wb[u'舆情']
+        rows = sheet_content.max_row
+        for i in range(2, rows + 1):
+            url = sheet_content.cell(row=i, column=2).value
+            if url:
+                spider_result = interaction_clean.parse(url)
+                print spider_result
+        print '%.2f sec' % (time.time() - start)
+```
+
 
 ## 代码   
 
