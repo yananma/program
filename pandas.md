@@ -98,6 +98,13 @@ df = df.rename(columns={'Unnamed: 1': '二级标题'})
 
 ### [某一列设为索引](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.set_index.html#pandas.DataFrame.set_index)   
 
+写入 excel 的时候，指定索引列   
+
+```python 
+df.set_index(u'时间').to_excel(file_name, sheet_name=sheet_name)   
+```
+
+
 ```python 
 df = df.set_index('二级标题')
 ```
@@ -217,6 +224,13 @@ df.to_csv(file_name, index=False)
 
 
 ### to_excel()
+
+写入的时候，指定列的顺序   
+
+```python 
+result_df = pd.DataFrame(result_list)[[u'时间', u'编辑库', u'发布库', u'捡漏池', u'总量', u'提报量', u'发布库+编辑库', u'(发布库+编辑库)/总量']] 
+```  
+
 
 写入多个 sheet  
 
