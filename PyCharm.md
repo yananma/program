@@ -198,7 +198,11 @@ PyCharm -> Tools -> HTTP Client -> Test RESTful Web Service 可以做简单测�
 settings 里搜索 update，取消勾选即可  
 
 
-### 跳转到指定条件   
+### debug 断点跳转到指定条件   
+
+可以通过 or 设置多个条件    
+
+`'m.souhu.com' in url or 'www.sohu.com in url'`   
 
 `if i == 100`
 
