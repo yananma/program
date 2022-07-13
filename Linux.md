@@ -170,9 +170,16 @@ echo "========备份成功========"
 
 # 实际例子  
 
+### 日志文件太大，导出部分日志  
+
+```shell 
+tail -n 30000 crisis_admin.log > tiny_crisis_admin.log  
+``` 
+
+
 ### 统计日志 SQL 查询大于 5 秒的查询  
 
-```SQL  
+```shell    
 cat debug.log | grep -P "\((\d{2,}|[5-9])\.\d+\)[^\r\n]+" > slow_sql.log   
 ```
 
