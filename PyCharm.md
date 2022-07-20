@@ -232,6 +232,15 @@ Help -> Edit Custom VM Options -> 手动修改大小。
 File -> Restart IDE    
 
 
+# 用法   
+
+## 和 git 上的版本比较，决定保留哪一部分的代码   
+
+从 gitlab 上复制代码，然后 View -> Compare with Clipboard，然后比较选择就可以了  
+
+左侧滚动条，鼠标悬停的时候会显示行号，找不到的时候可以根据行号定位位置。       
+
+
 
 ## 旧笔记  
 
