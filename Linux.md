@@ -63,7 +63,7 @@ ls 显示的时候，前面的是快捷方式，后面的是原文件
 `alias` 创建自己的命令：`alias myxxkt='cd /home/elearning/xxkt/'`  
 可以使用参数，比如 `alias c744="chmod 744 $1"`; 比如 `alias lmn="less -m -N $1"`  
 alias 可以和多条命令结合，命令之间用 ; 分隔  
-永久生效：`$ vim ~/.bashrc`  
+alias 永久生效：`$ vim ~/.bashrc`  
 
 
 `cat` 只读查看  
