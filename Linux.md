@@ -38,6 +38,7 @@ shell 脚本是程序员工具箱的重要组成部分，既适用于个人，�
 
 `less` \-N 显示行号 \-m 显示百分比    
 
+`ls` 文件名中包好某个字 `ls | grep .*日`（注意是 .\*，不能只写 \*）     
 `mkdir` 一次创建多级目录，使用参数 \-p parents `mkdir -p /home/animal/dog`    
 `cp` `cp file dir`   
 复制文件夹和文件夹下所有文件：`cp -r source_dir(最后不加斜杠) dest_dir(最后加斜杠)`  
@@ -185,6 +186,12 @@ tail -n 30000 crisis_admin.log > tiny_crisis_admin.log
 cat debug.log | grep -P "\((\d{2,}|[5-9])\.\d+\)[^\r\n]+" > slow_sql.log   
 ```
 
+
+### 删除文件名中包含“日”的文件   
+
+```shell
+ls | grep .*日 | xargs -i rm {}    
+```
 
 
 ### 不常用  
