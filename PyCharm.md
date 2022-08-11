@@ -206,11 +206,11 @@ settings 里搜索 update，取消勾选即可
 
 `'m.souhu.com' in url or 'www.sohu.com in url'`   
 
-`if i == 100`
+`i == 100`
 
 或  
 
-`if key == 'a' and value == 1`   
+`key == 'a' and value == 1`   
 
 要在这一句下面打断点才行，不要在这一句上打断点。   
 
