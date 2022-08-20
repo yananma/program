@@ -38,6 +38,12 @@ SELECT title, domain, url FROM xpost WHERE domain LIKE '%搜狐%' AND title REGE
 SELECT facetid, url, title, posttime, `status`, domain FROM xpost WHERE domain = '百度贴吧' AND title REGEXP '\\[(.*?)\\]'
 ``` 
 
+### 索引  
+
+```sql 
+SELECT facetid, url, title, abstract, posttime, include_t, `status`, entry_name FROM xpost FORCE KEY  (`idx_fid`) WHERE title LIKE "%也长锈，漆面起泡泡%" AND facetid = 74
+``` 
+
 
 ### COUNT   
 
