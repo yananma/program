@@ -47,6 +47,7 @@ shell 脚本是程序员工具箱的重要组成部分，既适用于个人，�
 对方端口、自己压缩包、对方用户名@对方内网 IP、目标文件夹。  
 速度非常快，100MB/s  
 `yum install lrzsz`    
+z 是 ZMODEM 协议。    
 rz 上传文件到服务器 receive，用鼠标拖拽。   
 sz 下载文件到本地 send，可以使用通配符：`sz *.jpg`    
 `mv` `mv a.txt dir1`    
