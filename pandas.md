@@ -189,6 +189,8 @@ df = pd.read_excel('模型反馈样本数据.xlsx', engine='openpyxl', sheet_nam
 ```python 
 df = pd.read_excel('./data/车型车系表V6.xlsx', sheet_name=None)
 brand_list = list(df.keys())
+for brand in brand_list:
+    brand_df = df[brand]    
 ```
 
 
