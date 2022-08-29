@@ -590,6 +590,7 @@ def data_remove_nan():
 原因是pip安装的是最新的 2.0.1 版本，只支持 .xls 文件。所以 pandas.read_excel(‘xxx.xlsx’) 会报错。   
 
 可以安装旧版xlrd，在 cmd 中执行指令：    
+
 ```python
 pip install xlrd==1.2.0
 ```
@@ -598,9 +599,15 @@ pip install xlrd==1.2.0
 ### 'ascii' codec can't decode byte 0xe5 in position 0: ordinal not in range(128)  python2.7 pandas0.24.2  
 
 要指定 engine 和 encoding   
+
 ```python 
 new_df.to_excel(excel_name, engine='xlsxwriter', index=False, encoding='utf-8')
 ``` 
+
+
+### UnicodeDecodeError: 'utf-16-le' codec can't decode bytes in position 1186-1187: unexpected end of data  
+
+读 Excel 报错。   
 
 
 
