@@ -609,5 +609,7 @@ new_df.to_excel(excel_name, engine='xlsxwriter', index=False, encoding='utf-8')
 
 读 Excel 报错。   
 
-
+xls 文件**另存为**（不是改后缀）成 xlsx 文件。    
+如果不行，就新建一个空白的 xlsx 文件，然后从 xls 中复制内容，粘贴到 xlsx 文件中    
+如果还不行，就安装 xlrd==1.2.0    
 
