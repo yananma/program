@@ -411,6 +411,19 @@ df = pd.DataFrame({'Names':['Andreas', 'George', 'Steve',
                   'Age':[21, 22, 20, 19, 18, 23]})
 ```
 
+```python 
+In [1]: import pandas as pd
+
+In [2]: li = [{'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 2}, {'precision': 0.0, 'recall': 0.0, 'f1-score': 0.0, 'support': 2}]
+
+In [3]: pd.DataFrame(li)
+Out[3]: 
+   precision  recall  f1-score  support
+0        0.0     0.0       0.0        2
+1        0.0     0.0       0.0        2
+```
+
+
 不单单是字典套列表，pandas 非常强大，可以列表套列表。  
 
 ```python 
