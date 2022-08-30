@@ -4,8 +4,9 @@
 学习 sklearn 的最重要的方法就是查文档，看需要什么参数，参数含义  
 
 FN：False Negative，预测错了，y_true 是 Positive，预测成了 Negative。   
-FP：False Positive，预测错了，y_true 是 Negative，预测成了 Positive。
+FP：False Positive，预测错了，y_true 是 Negative，预测成了 Positive。   
 
+结果的含义，读文档。    
 
 ### [multilabel_confusion_matrix](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.multilabel_confusion_matrix.html#sklearn.metrics.multilabel_confusion_matrix)
 
@@ -85,6 +86,9 @@ report = classification_report(y_true, y_pred)
 support 的含义：support 是 true_label 里，这个 pred_label 的数据数量    
 
 The support is the number of occurrences of each class in y_true.    
+
+参数含义读文档：[precision_recall_fscore_support](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_recall_fscore_support.html#sklearn.metrics.precision_recall_fscore_support)
+
 
 打印 precision、recall 和 f1 值。   
 
