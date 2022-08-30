@@ -147,6 +147,20 @@ pd.concat([s1, s2], ignore_index=True)
 dtype: object
 ```
 
+可以把多个 df append 到一个 list 中，然后拼接最后的 list     
+
+```python 
+def concat_excel():
+    df_list = []
+    for file in os.listdir('./data/san_ji_label/result/'):
+        df = pd.read_excel(f"./data/san_ji_label/result/{file}")
+        df_list.append(df)
+    result_df = pd.concat(df_list)
+    print(f"len result_df：{len(result_df)}")
+    result_df.to_excel(f"./data/san_ji_label/result/concat_result.xlsx", index=False)
+``` 
+
+
 ### [df.dropna](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.dropna.html)
 
 这三列，所有的都为 nan 才删除。   
