@@ -11,6 +11,41 @@ FP：False Positive，预测错了，y_true 是 Negative，预测成了 Positive
 
 多类别混淆矩阵   
 
+第一个例子：   
+
+```python 
+import numpy as np
+import pandas as pd
+from sklearn.metrics import multilabel_confusion_matrix, classification_report
+
+
+def read_result_excel():
+    df = pd.read_excel("./data/san_ji_label/result/result_红旗.xlsx")
+    return df
+
+
+def get_label_list():
+    y_true_list = []
+    y_pred_list = []
+    df = read_result_excel()
+    for _, row in df.iterrows():
+        y_true_list.append(row["问题分类3"])
+        y_pred_list.append(row["日报问题分类3"])
+    return np.array(y_true_list), np.array(y_pred_list)
+
+
+y_true, y_pred = get_label_list()
+
+mcm = multilabel_confusion_matrix(y_true, y_pred)
+print(mcm)
+print(mcm.sum(axis=0))
+
+report = classification_report(y_true, y_pred)
+print(report)
+```  
+
+第二个例子：   
+
 ```python 
 import pandas as pd
 import numpy as np
