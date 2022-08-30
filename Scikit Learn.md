@@ -82,10 +82,64 @@ report = classification_report(y_true, y_pred)
 
 ### [classification_report](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html#sklearn-metrics-classification-report)
 
+support 的含义：support 是 true_label 里，这个 pred_label 的数据数量    
+
+The support is the number of occurrences of each class in y_true.    
+
 打印 precision、recall 和 f1 值。   
 
 ```python 
 classification_report(y_true, y_pred)
 ```
 
+classification_report 保存成 Excel   
+
+```python 
+import numpy as np
+import pandas as pd
+from sklearn.metrics import classification_report
+
+
+def read_result_excel():
+    df = pd.read_excel("./data/san_ji_label/result/concat_result.xlsx")
+    return df
+
+
+def get_label_list():
+    y_true_list = []
+    y_pred_list = []
+    df = read_result_excel()
+    for _, row in df.iterrows():
+        y_true_list.append(row["问题分类3"])
+        y_pred_list.append(row["日报问题分类3"])
+    return np.array(y_true_list), np.array(y_pred_list)
+
+
+def generate_report():
+    y_true, y_pred = get_label_list()
+    report = classification_report(y_true, y_pred, digits=20, output_dict=True)
+    print(report)
+    return report
+
+
+def get_df_list(report):
+    del report["accuracy"]
+    df_list = []
+    for key, value in report.items():
+        d = {"label": key}
+        d.update(value)
+        df_list.append(d)
+    return df_list
+
+
+def write_to_excel():
+    report = generate_report()
+    df_list = get_df_list(report)
+    df = pd.DataFrame(df_list)
+    df.to_excel("./data/san_ji_label/result/classification_report.xlsx", index=False)
+    # 手动复制 accuracy 结果
+
+
+write_to_excel()
+```  
 
