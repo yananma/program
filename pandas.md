@@ -7,6 +7,15 @@
 
 ### 遍历行   
 
+数据量大的时候，df.iterrows() 会非常慢，要转成 dict，转成 Python 对象。     
+
+```python 
+brand_origin_df = pd.read_excel(f"./data/san_ji_label/{file}").to_dict('record')
+``` 
+
+最好是只转换一次，也就是在最开始的地方转成 dict。   
+
+
 ```python 
 for i, row in df.iterrows():
     asr = row['语音']
