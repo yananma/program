@@ -201,7 +201,8 @@ scp secure copy，远程 copy，用法 scp source_file des_file，比如 scp loc
 `-r` 递归 `-f` 强制  
 
 使用 tree 命令可以查看目录结构  
-tree 文件名，可以查看该文件结构  
+tree 文件名，可以查看这个文件的结构   
+tree -d 只显示目录，不显示文件   
 
 apt: Advanced Packing Tool  
 SSH: Secure Shell  
