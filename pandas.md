@@ -137,7 +137,7 @@ df.loc['Brand（品牌）'].loc['L\'Oreal']
 ### [pd.concat 拼接](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.concat.html)
 
 ```python 
-s1 = pd.Series(['a', 'b'])
+s1 = pd.Series(['a', 'b'])  # Series 是一列    
 s2 = pd.Series(['c', 'd'])
 pd.concat([s1, s2], ignore_index=True)
 0    a
