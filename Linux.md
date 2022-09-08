@@ -43,7 +43,8 @@ shell 脚本是程序员工具箱的重要组成部分，既适用于个人，�
 `cp` `cp file dir`   
 复制文件夹和文件夹下所有文件：`cp -r source_dir(最后不加斜杠) dest_dir(最后加斜杠)`  
 复制多个文件 `cp a.txt b.txt dir/`  
-`scp -P 17717 huggingface.tar.gz crisis@192.168.241.64:/home/crisis/.cache/huggingface.tar.gz`   
+`scp -P 17717 huggingface.tar.gz crisis@192.168.241.64:/home/crisis/.cache/huggingface.tar.gz`    
+`scp -P 17717 -r little_env deploy@192.168.241.25:/home/deploy/` 文件夹 -r    
 对方端口、自己压缩包、对方用户名@对方内网 IP、目标文件夹。  
 速度非常快，100MB/s  
 `yum install lrzsz`    
