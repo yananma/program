@@ -29,6 +29,7 @@ shell 脚本是程序员工具箱的重要组成部分，既适用于个人，�
 直接统计 `ls | wc -w` 或 `ll | wc -l`    
 统计文件夹下文件数量：`ls -l ./ | grep "^-" | wc -l`  
 统计文件夹下目录数量：`ls -l ./ | grep "^d" | wc -l`（要用 `ls -l` 而不是 `ls -al` 因为 a 参数会把 . 和 .. 目录显示出来）   
+递归查询，查所有层级目录下的数量要加 R：`ls -lR | grep "^-"| wc -l `    
 
 `df -lh` 查看剩余磁盘空间，df 就是 disk file，l 是 local，h 是 human readable 的意思，就是给人看的，可以用 man df 查出 df 和 lh 的意思    
 统计文件夹下文件个数：`ls -l /home | grep "^-" | wc -l`   
