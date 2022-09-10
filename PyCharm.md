@@ -42,6 +42,11 @@ Tools -> Deployment -> Configuration，左上角 + 号，选择 SFTP，配置 Co
 Connection 配置 SSH configuration，Mappings 配置本地和远程路径。    
 
 
+### 删除上传时提示的不需要的 server   
+
+Tools -> Deployment -> Configuration，左上角 - 号。   
+
+
 ### Django 项目配置  
 
 配置 mapping，不配置会报错说找不到 manage.py：右下角点击左键 -> 选择 Interpreter Settings -> 配置 Path mappings -> 配置 local 和 remote 路径    
