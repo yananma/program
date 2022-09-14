@@ -98,13 +98,6 @@ git pull 同步远程
 然后在命令行 git checkout 分支切换分支，PyCharm 会自动切换  
 
 
-### git push 不成功  
-
-push 不成功，看左下角的 git 的 log  
-
-
-**如果 git 上传因为各种冲突上传不成功，想要恢复 git 上的版本，就把本地的除了 .idea 文件夹外的所有文件删除，然后再从 git 上拉代码，重新弄。.idea 包含了所有的项目配置。**   
-
 ### runserver 启动服务指定配置文件   
 
 Edit Configurations -> Additional options -> `--settings=mx_tools.settings-production-test`    
@@ -118,9 +111,27 @@ Edit Configurations -> Additional options -> `--settings=mx_tools.settings-produ
 
 # 报错   
 
-无法启动，报错表缺少字段    
+### 无法启动，报错表缺少字段    
 
 本地代码和服务器上的代码不一致。本地和远程都 pull，更新。     
+
+
+### Can't get remote credentials for deployment server test   
+
+左键右下角 -> Interpreter Settings -> 齿轮 -> Show All -> 上面 Edit -> 修改 deployment configuration，如果还不够，就点击 deployment configuration 右侧的 ... 图标    
+
+
+### 找不到 settings。ImportError: No module named crisis_admin.settings_new_product    
+
+左键右下角 -> Interpreter Settings 打开之后，看 mapping 配置错了，远程项目配置成了 cyberin_backend    
+
+
+### git push 不成功  
+
+push 不成功，看左下角的 git 的 log  
+
+
+**如果 git 上传因为各种冲突上传不成功，想要恢复 git 上的版本，就把本地的除了 .idea 文件夹外的所有文件删除，然后再从 git 上拉代码，重新弄。.idea 包含了所有的项目配置。**   
 
 
 
