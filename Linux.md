@@ -99,6 +99,10 @@ md5sum 文件名
 
 #### 进程管理  
 
+查看端口被占用：`lsof -i:8001`   
+
+losf: list open files   
+
 `ps` process status  
 `ps -aux | less`  
 `ps -aux | grep Nginx`  
