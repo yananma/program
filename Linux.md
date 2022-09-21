@@ -58,6 +58,7 @@ sz 下载文件到本地 send，可以使用通配符：`sz *.jpg`
 `rm` `rm -r 目录名` 删除非空目录，r recursive  
 `rm -rf video_frame/` 删除文件夹下所有文件，删除文件夹  
 `rm -rf video_frame/*` 删除当前文件夹下所有文件，保留文件夹  
+`rm` 反向删除：开启 extglob 选项 `shopt -s extglob`; 删除 `rm -rf !(文件或文件夹，多个用 | 分隔)`; 关闭 extglob 选项 `shopt -u extglob`   
 `rmdir` 删除空目录  
 `ln -s 原文件 快捷方式`，创建软连接的时候，快捷方式文件不能存在，如果存在要先删掉再创建  
 `ln -s train_trainv6_norm.json train.json`  
