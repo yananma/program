@@ -271,6 +271,11 @@ with pd.ExcelWriter('output.xlsx') as writer:
 ```
 
 
+### to_csv()  
+
+存 CSV 用 EmEditor 比用 pandas 快多了。    
+
+
 #### 追加文件  
 
 指定参数 mode='a'，而且第一个写入的时候有表头，后面不要写表头，指定参数 headers=False   
