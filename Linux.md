@@ -51,7 +51,7 @@ shell 脚本是程序员工具箱的重要组成部分，既适用于个人，�
 `yum install lrzsz`    
 z 是 ZMODEM 协议。    
 rz 上传文件到服务器 receive，用鼠标拖拽。   
-sz 下载文件到本地 send，可以使用通配符：`sz *.jpg`    
+sz 下载文件到本地 send，可以使用通配符：`sz *.jpg`、`sz *.xls*`    
 `mv` `mv a.txt dir1`    
 `mv` 原文件名 新文件名 (目的地在当前目录，就是在这个目录下操作就不是移动了，就是重命名)  
 `mv /data/new /data/old/` 剪切文件夹和文件夹下内容  
