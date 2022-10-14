@@ -43,6 +43,7 @@ shell 脚本是程序员工具箱的重要组成部分，既适用于个人，�
 `mkdir` 一次创建多级目录，使用参数 \-p parents `mkdir -p /home/animal/dog`    
 `cp` `cp file dir`   
 复制文件夹和文件夹下所有文件：`cp -r source_dir(最后不加斜杠) dest_dir(最后加斜杠)`  
+在当前路径备份：`cp -r eval_ribao ./eval_ribao_bak/`    
 复制多个文件 `cp a.txt b.txt dir/`  
 `scp -P 17717 huggingface.tar.gz crisis@192.168.241.64:/home/crisis/.cache/huggingface.tar.gz`    
 `scp -P 17717 -r little_env deploy@192.168.241.25:/home/deploy/` 文件夹 -r    
