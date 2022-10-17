@@ -169,6 +169,37 @@ SELECT * FROM xpost WHERE domain LIKE '%汽车之家%' AND RIGHT(title, 2(这个
 DELETE FROM `community`.`author_clean` WHERE `site_id` = '2'
 ```   
 
+当要删除很多个 id 的时候，不要用 in 删，这么删会非常非常慢。用多条语句删。    
+
+错误做法   
+
+```sql   
+DELETE FROM xpost WHERE entryid in (4210981, 4214913, 4219581, 4222792, 4273673, 4273803, 4273596, 4273661, 4273737, 4273626, 4273795, 4273819, 4273777, 4273617, 4273651, 4273589, 4273587, 4273584, ...) AND type_reason = '' AND is_comment = 1
+```
+
+正确做法    
+
+```sql   
+delete FROM xpost WHERE entryid=4273777 AND type_reason = '' AND is_comment = 1;
+delete FROM xpost WHERE entryid=4273617 AND type_reason = '' AND is_comment = 1;
+delete FROM xpost WHERE entryid=4273651 AND type_reason = '' AND is_comment = 1;
+delete FROM xpost WHERE entryid=4273589 AND type_reason = '' AND is_comment = 1;
+delete FROM xpost WHERE entryid=4273587 AND type_reason = '' AND is_comment = 1;
+delete FROM xpost WHERE entryid=4273584 AND type_reason = '' AND is_comment = 1;
+delete FROM xpost WHERE entryid=4274177 AND type_reason = '' AND is_comment = 1;
+delete FROM xpost WHERE entryid=4279655 AND type_reason = '' AND is_comment = 1;
+delete FROM xpost WHERE entryid=4283628 AND type_reason = '' AND is_comment = 1;
+delete FROM xpost WHERE entryid=4288122 AND type_reason = '' AND is_comment = 1;
+delete FROM xpost WHERE entryid=4292797 AND type_reason = '' AND is_comment = 1;
+delete FROM xpost WHERE entryid=4210975 AND type_reason = '' AND is_comment = 1;
+delete FROM xpost WHERE entryid=4214481 AND type_reason = '' AND is_comment = 1;
+delete FROM xpost WHERE entryid=4214367 AND type_reason = '' AND is_comment = 1;
+delete FROM xpost WHERE entryid=4222328 AND type_reason = '' AND is_comment = 1;
+delete FROM xpost WHERE entryid=4221966 AND type_reason = '' AND is_comment = 1;
+delete FROM xpost WHERE entryid=4225832 AND type_reason = '' AND is_comment = 1;
+delete FROM xpost WHERE entryid=4233414 AND type_reason = '' AND is_comment = 1;
+```
+
 
 # 语句   
 
