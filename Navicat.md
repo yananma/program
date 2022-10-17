@@ -172,6 +172,13 @@ DELETE FROM `community`.`author_clean` WHERE `site_id` = '2'
 
 # 语句   
 
+### 是 None   
+
+```sql 
+IS NULL
+```
+
+
 ### 在列表   
 
 ```sql 
