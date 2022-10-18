@@ -215,7 +215,6 @@ ls | grep .*日 | xargs -i rm {}
 ```
 
 
-### 不常用  
 scp secure copy，远程 copy，用法 scp source_file des_file，比如 scp local_file remote_username@remote_ip:remote_folder   
 绝对路径是相对于 root 路径所说的，相对路径是相对于当前位置所说的   
 `-r` 递归 `-f` 强制  
@@ -253,7 +252,9 @@ Xshell Xftp 安装配置：过期可以更改参数
 
 chown newowner file `chown tom apple.txt`  
 
-chgrp newgroup file  
+chgrp newgroup file    
+
+修改脚本权限可以使用通配符，比如路径中有好几个 run_ 开头的脚本，那么就可以通过 `chmod 744 run_*` 更改所有脚本的权限。     
 
 
 #### crond 任务调度  
