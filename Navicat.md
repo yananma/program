@@ -185,19 +185,7 @@ delete FROM xpost WHERE entryid=4273617 AND type_reason = '' AND is_comment = 1;
 delete FROM xpost WHERE entryid=4273651 AND type_reason = '' AND is_comment = 1;
 delete FROM xpost WHERE entryid=4273589 AND type_reason = '' AND is_comment = 1;
 delete FROM xpost WHERE entryid=4273587 AND type_reason = '' AND is_comment = 1;
-delete FROM xpost WHERE entryid=4273584 AND type_reason = '' AND is_comment = 1;
-delete FROM xpost WHERE entryid=4274177 AND type_reason = '' AND is_comment = 1;
-delete FROM xpost WHERE entryid=4279655 AND type_reason = '' AND is_comment = 1;
-delete FROM xpost WHERE entryid=4283628 AND type_reason = '' AND is_comment = 1;
-delete FROM xpost WHERE entryid=4288122 AND type_reason = '' AND is_comment = 1;
-delete FROM xpost WHERE entryid=4292797 AND type_reason = '' AND is_comment = 1;
-delete FROM xpost WHERE entryid=4210975 AND type_reason = '' AND is_comment = 1;
-delete FROM xpost WHERE entryid=4214481 AND type_reason = '' AND is_comment = 1;
-delete FROM xpost WHERE entryid=4214367 AND type_reason = '' AND is_comment = 1;
-delete FROM xpost WHERE entryid=4222328 AND type_reason = '' AND is_comment = 1;
-delete FROM xpost WHERE entryid=4221966 AND type_reason = '' AND is_comment = 1;
-delete FROM xpost WHERE entryid=4225832 AND type_reason = '' AND is_comment = 1;
-delete FROM xpost WHERE entryid=4233414 AND type_reason = '' AND is_comment = 1;
+...
 ```
 
 
@@ -225,6 +213,7 @@ SELECT domain, COUNT(domain) FROM xpost WHERE domain LIKE '%搜狐%' AND title L
 
 ### 按时间聚类   
 
+分钟是 %i，不是 %m    
 ```sql  
 # 按小时  
 select DATE_FORMAT(include_t,'%Y-%m-%d %H') hours, count(postid) count from xpost WHERE include_t >= '2022-10-01 00:00:00' group by hours ORDER BY include_t;
