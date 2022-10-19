@@ -223,6 +223,17 @@ SELECT domain, COUNT(domain) FROM xpost WHERE domain LIKE '%搜狐%' AND title L
 ```
 
 
+### 按时间聚类   
+
+```sql  
+# 按小时  
+select DATE_FORMAT(include_t,'%Y-%m-%d %H') hours, count(postid) count from xpost WHERE include_t >= '2022-10-01 00:00:00' group by hours ORDER BY include_t;
+
+# 按天  
+select DATE_FORMAT(include_t,'%Y-%m-%d') days, count(postid) count from xpost WHERE include_t >= '2022-10-01 00:00:00' group by days ORDER BY include_t;
+```
+
+
 # 报错   
 
 ### 1241 - Operand should contain 1 column(s)   
