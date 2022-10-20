@@ -138,7 +138,7 @@ htop
 #### 网络 
 `ifconfig`  
 内网 ip：`ifconfig | grep 192`    
-外网 ip: `ifconfig | grep 112`    
+外网 ip：`ifconfig | grep 112`    
 
 `netstat -anp | less`  
 `curl` 是常用的命令行工具，用来请求 Web 服务器。它的名字就是客户端(client)的 URL 工具的意思。   
