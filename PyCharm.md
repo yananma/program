@@ -1,7 +1,7 @@
 
 PyCharm 配置的核心就是两个：   
 1. 一个是 server，在 Tools -> Deployment -> Configuration 中，这个是上传下载文件用的。    
-2. 一个是 interpreter，在右下角，配置 interpreter 的核心就是找到正确的 Python 所在的路径，里面有 server 是 python 的 server。就用上面哪一步的 server 就可以了。   
+2. 一个是 interpreter，在右下角，配置 interpreter 的核心就是找到正确的 Python 所在的路径，里面有 server 是 python 的 server。就用上面那一步的 server 就可以了。   
 
 
 ## 创建完整 Django 项目记录  
