@@ -234,3 +234,15 @@ SELECT DISTINCT siteid FROM `notice`.`xpost` WHERE `facetid` = (59, 66, 74, 75, 
 ```
 
 要把 facetid 的 = 改成 in。   
+
+
+### 1064 - You have an error in your SQL syntax;   
+
+在使用筛选功能的在列表查询的时候，列表中的元素要加引号，否则报这个错。    
+
+错误用法： `url 在列表 https://www.douyin.com/video/7155526446100794655,https://www.douyin.com/video/7155620716644273445`    
+正确用法： `url 在列表 'https://www.douyin.com/video/7155526446100794655','https://www.douyin.com/video/7155620716644273445'`     
+
+```python
+print("','".join(s.splitlines()))    
+```
