@@ -105,6 +105,8 @@ md5sum 文件名
 
 losf: list open files   
 
+如果启动服务说端口被占用，lsof 结果为空，很可能是还处在 4 次挥手阶段，等一会儿再试。     
+
 `ps` process status  
 `ps -aux | less`  
 `ps -aux | grep Nginx`  
