@@ -101,6 +101,13 @@ SELECT facetid, url, title, abstract, posttime, include_t, `status`, entry_name 
 SELECT COUNT(*) FROM `community`.`author` WHERE `site_id` = '2'
 ```
 
+危机预警统计某一个月的数据量。    
+
+```sql  
+select COUNT(1) FROM xpost WHERE hidden = 0 AND facetid IN (59, 66, 74, 75, 76, 77, 78) AND posttime >= '2022-09-01 00:00:00' AND posttime <= '2022-09-30 23:59:59' AND status IN (0, 1) AND noise_rank = 0
+```  
+
+
 ### ORDER BY  
 
 ```sql 
