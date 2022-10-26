@@ -13,6 +13,41 @@
 brand_origin_df = pd.read_excel(f"./data/san_ji_label/{file}").to_dict('records')
 ``` 
 
+Python2 要对字典的键做 decode   
+
+```python 
+# -*- coding: utf-8 -*-
+import traceback
+
+import pandas as pd
+from django.conf import settings
+from django.core.management.base import BaseCommand
+from pathlib import Path
+
+from xposts.models import Xpost
+from utils.common import get_logger
+
+logger = get_logger(u"tongyong_update_db_sentiment")
+
+
+class Command(BaseCommand):
+    help = u"读取 CSV 文件，更新数据库的正负面分数字段"
+
+    def handle(self, *args, **options):
+        file_path = Path(settings.BASE_DIR) / u"temp" / u"sentiment" / u"test_comment_10011015_aodi_predict.csv"
+        df = pd.read_csv(file_path)
+        obj_list = []
+        field_list = [u"type_rank", u"pos_type_rank"]
+        for row in df.to_dict(u"records"):
+            row = {key.decode(u"GB2312"): value for key, value in row.items()}  # 可以用 EmEditor 打开文件，看文件编码。
+            p = Xpost.objects.only(u"postid", u"type_rank", u"pos_type_rank").get(postid=row[u"postid"])
+            p.type_rank = int(row[u"负面分数"] * 100)
+            p.pos_type_rank = int(row[u"正面分数"] * 100)
+            obj_list.append(p)
+        Xpost.objects.bulk_update(obj_list, field_list, batch_size=5000)
+        logger.info(u"finish.")
+```
+
 最好是只转换一次，也就是在最开始的地方转成 dict。   
 
 
