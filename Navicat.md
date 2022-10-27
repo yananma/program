@@ -120,6 +120,12 @@ SELECT * FROM `xpost` WHERE domain = '东方财富网-股吧' AND `title` LIKE '
 SELECT domain, COUNT(domain) FROM xpost WHERE domain LIKE '%搜狐%' AND title LIKE '%原创%' GROUP BY domain
 ``` 
 
+Cyberin 统计正负面    
+
+```sql  
+SELECT type, COUNT(type) FROM `xpost` WHERE facetid = '306032' AND posttime >= '2022-10-01 00:00:00' AND posttime <= '2022-10-15 23:59:59' GROUP BY type 
+```
+
 
 ### DISTINCT   
 
