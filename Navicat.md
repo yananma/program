@@ -74,7 +74,15 @@ IntegerField 只有 0 和 1 的，用 tinyint，长度 2. 如果有多个，就�
     }
 ```
 
+### 杀查询进程  
 
+```python  
+show PROCESSLIST  
+
+在 info 列里找 SQL，找到以后复制 id      
+
+kill 2177771
+```
 
 
 # 知识点   
