@@ -236,6 +236,17 @@ select DATE_FORMAT(include_t,'%Y-%m-%d') days, count(postid) count from xpost WH
 ```
 
 
+# 项目   
+
+## 危机预警  
+
+索引查询    
+
+```python  
+SELECT * FROM `xpost` FORCE KEY  (`idx_eid`)  WHERE (`xpost`.`hidden` = 0 AND `xpost`.`entryid` IN (123985) AND `xpost`.`include_t` >= '2022-10-31 00:00:00' AND `xpost`.`status` IN (2) AND `xpost`.`noise_rank` = 0) ORDER BY posttime ASC   
+```
+
+
 # 报错   
 
 ### 1241 - Operand should contain 1 column(s)   
