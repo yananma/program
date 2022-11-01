@@ -246,6 +246,12 @@ select DATE_FORMAT(include_t,'%Y-%m-%d') days, count(postid) count from xpost WH
 SELECT * FROM `xpost` FORCE KEY  (`idx_eid`)  WHERE (`xpost`.`hidden` = 0 AND `xpost`.`entryid` IN (123985) AND `xpost`.`include_t` >= '2022-10-31 00:00:00' AND `xpost`.`status` IN (2) AND `xpost`.`noise_rank` = 0) ORDER BY posttime ASC   
 ```
 
+比亚迪按天聚合统计数量   
+
+```python 
+select DATE_FORMAT(include_t,'%Y-%m-%d') days, count(postid) count from xpost WHERE (`xpost`.`hidden` = 0 AND `xpost`.`include_t` >= '2022-10-01 00:00:00' AND `xpost`.`status` IN (2) AND `xpost`.`noise_rank` = 0 AND `xpost`.`facetid` = 59) group by days ORDER BY include_t;
+```
+
 
 # 报错   
 
