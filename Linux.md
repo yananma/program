@@ -40,7 +40,7 @@ shell 脚本是程序员工具箱的重要组成部分，既适用于个人，�
 `less` \-N 显示行号 \-m 显示百分比    
 
 `ls` 文件名中包好某个字 `ls | grep .*日`（注意是 .\*日，不能只写 \*日）     
-`ls -lht` t 是时间，按时间排序，用来删不用的日志     
+`ls -lht` t 是时间，按时间排序，用来删不用的日志，删除日志代码：`print(*[line.split()[-1] for line in log_str.splitlines()])`      
 `ls -lhrt` r 是 reverse 倒序     
 `du -sh * | sort -hr`    查看文件夹或文件夹下文件的大小-并按大小进行排序     
 
