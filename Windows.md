@@ -1,12 +1,20 @@
 
+## cmd
+
+### cmd 连接 ssh   
+
+```python 
+ssh -p port username@ip
+ssh -p 17718 mayanan@ent.mxspider.top
+```
+
+
 
 ### Ctrl + Shift + Esc 打开任务管理器   
 
 
 ### Ctrl + Shift + Home 选中从光标到开头的内容    
 
-
-### Windows + Pause/Break 打开控制面板系统    
 
 
 ### 配置环境变量  
