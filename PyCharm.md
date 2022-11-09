@@ -85,13 +85,6 @@ Tools -> Deployment -> Configuration，左上角 - 号。
 add python interpreter，选择 ssh interpreter，选择 existing server configuration，然后再选择正确的 python 解释器，配置正确的路径  
 
 
-### 项目重命名  
-
-应该是要重命名两个：  
-1. 用 pycharm 打开文件夹之前，先给文件夹重命名  
-2. 打开文件夹以后，给项目重命名。   
-
-
 ### PyCharm 切换分支  
 
 先用在项目目录打开 git bash  
@@ -99,6 +92,18 @@ add python interpreter，选择 ssh interpreter，选择 existing server configu
 git pull 同步远程  
 
 然后在命令行 git checkout 分支切换分支，PyCharm 会自动切换  
+
+
+### PyCharm git changelist   
+
+
+
+
+### 项目重命名  
+
+应该是要重命名两个：  
+1. 用 pycharm 打开文件夹之前，先给文件夹重命名  
+2. 打开文件夹以后，给项目重命名。   
 
 
 ### runserver 启动服务指定配置文件   
