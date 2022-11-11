@@ -212,6 +212,13 @@ tail -n 30000 crisis_admin.log > tiny_crisis_admin.log
 
 ### 统计日志 SQL 查询大于 5 秒的查询  
 
+不用正则：    
+```shell 
+tail -n 200 origin_20220611124948.log | grep 正在处理第65组聚类结果：
+```
+
+
+正则：    
 ```shell    
 cat debug.log | grep -P "\((\d{2,}|[5-9])\.\d+\)[^\r\n]+" > slow_sql.log   
 ```
