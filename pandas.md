@@ -10,7 +10,10 @@
 数据量大的时候，df.iterrows() 会非常慢，要转成 dict，转成 Python 对象。     
 
 ```python 
-brand_origin_df = pd.read_excel(f"./data/san_ji_label/{file}").to_dict('records')
+sentiment_df = pd.read_excel("./data/通用项目月度数据.xlsx", sheet_name="Sheet1").to_dict("records")
+
+for row in sentiment_df:
+    print(row)
 ``` 
 
 python2 要指定 encoding 参数，否则很麻烦。   
