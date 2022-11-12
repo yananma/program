@@ -6,6 +6,8 @@
 ```python 
 ssh -p port username@ip
 ssh -p 17718 mayanan@ent.mxspider.top
+
+ssh -p 17717 test@112.253.2.6 "cd /home/test/syb/mayanan/cyberin_backend/ && /home/test/testenv/bin/python manage.py crisis_warning_send --debug_time '2022-11-12 10:15:00' --settings cyberin_backend.settings_product"  （外面是双引号，里面是单引号）
 ```
 
 
