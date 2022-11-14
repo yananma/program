@@ -152,7 +152,34 @@ htop
 `wget` 复制要下载的文件链接，用 `wget 复制的 url` 下载   
 
 
-var 目录用来存放越来越大的文件，比如日志、配置等等  
+var 目录用来存放越来越大的文件，比如日志、配置等等   
+
+
+#### paramiko  
+
+```python  
+import paramiko
+ 
+# 创建SSH对象
+ssh = paramiko.SSHClient()
+ 
+# 允许连接不在know_hosts文件中的主机
+ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+ 
+# 连接服务器
+ssh.connect(hostname='xx.xx.xx.xx', port='', username='', password='')
+
+# 执行命令
+stdin, stdout, stderr = ssh.exec_command('python /xx/xx/xx.py')
+ 
+# 获取命令结果
+result = stdout.read().decode('utf8')
+print(result)  # 如果有输出的话
+ 
+# 关闭连接
+ssh.close()
+```
+
 
 #### Shell 编程  
 
