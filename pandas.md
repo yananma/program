@@ -316,6 +316,18 @@ with pd.ExcelWriter('output.xlsx') as writer:
     df2.to_excel(writer, sheet_name='Sheet_name_2')
 ```
 
+函数   
+
+```python  
+def write_to_excel(self, sheet_datas):
+    filepath = u'通用MKT品牌周报大数需求_{}.xlsx'.format(datetime.datetime.now().date())
+    writer = pd.ExcelWriter(filepath)
+    for sheet_name, sheet_data in sheet_datas.items():
+        pd.DataFrame(sheet_data).to_excel(writer, sheet_name, index=False, header=False)
+    writer.close()
+    return filepath
+```
+
 
 ### to_csv()  
 
