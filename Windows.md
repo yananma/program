@@ -11,6 +11,8 @@ ssh -p 17717 test@112.253.2.6 "cd /home/test/syb/mayanan/cyberin_backend/ && /ho
 ```
 
 
+### Alt + 鼠标实现批量操作    
+
 
 ### Ctrl + Shift + Esc 打开任务管理器   
 
