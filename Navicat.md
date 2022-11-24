@@ -1,9 +1,18 @@
 
-以后全部手写 SQL 语句，写 10000 条就差不多了。每 100 条，备份一次。    
+以后全部手写 SQL 语句，写 10000 条就差不多了。    
 
-在列表是 id 在列表 80, 74, 59, 66, 78，没有外面的一层 []    
+# 多试   
 
-如果是查 url 列表，url 元素要弄成字符串格式。    
+### SQL 知识点   
+
+1. limit 在 order by 后面     
+
+
+### 实践知识点    
+
+1. 从 Django 的 SQL 里复制出来的 SQL 在 Navicat 里试，要加引号。已经犯了好多次这个错误了。     
+2. 在列表是 id 在列表 80, 74, 59, 66, 78，没有外面的一层 []    
+3. 如果是查 url 列表，url 元素要弄成字符串格式。    
 
 
 ## 配置   
@@ -259,19 +268,6 @@ SELECT * FROM `xpost` FORCE KEY  (`idx_eid`)  WHERE (`xpost`.`hidden` = 0 AND `x
 ```python 
 select DATE_FORMAT(include_t,'%Y-%m-%d') days, count(postid) count from xpost WHERE (`xpost`.`hidden` = 0 AND `xpost`.`include_t` >= '2022-10-01 00:00:00' AND `xpost`.`status` IN (2) AND `xpost`.`noise_rank` = 0 AND `xpost`.`facetid` = 59) group by days ORDER BY include_t;
 ```
-
-
-# 多试   
-
-### SQL 知识点   
-
-1. limit 在 order by 后面     
-
-
-### 实践知识点    
-
-1. 从 Django 的 SQL 里复制出来的 SQL 在 Navicat 里试，要加引号。已经犯了好多次这个错误了。     
-
 
 
 # 报错   
