@@ -261,6 +261,19 @@ select DATE_FORMAT(include_t,'%Y-%m-%d') days, count(postid) count from xpost WH
 ```
 
 
+# 多试   
+
+### SQL 知识点   
+
+1. limit 在 order by 后面     
+
+
+### 实践知识点    
+
+1. 从 Django 的 SQL 里复制出来的 SQL 在 Navicat 里试，要加引号。已经犯了好多次这个错误了。     
+
+
+
 # 报错   
 
 ### 1241 - Operand should contain 1 column(s)   
