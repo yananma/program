@@ -306,6 +306,8 @@ chgrp newgroup file
 
 [网页工具 https://tool.lu/crontab/](https://tool.lu/crontab/)(还有不少其他工具，可能有用)   
 
+![img](https://img2020.cnblogs.com/blog/2608805/202112/2608805-20211217212815027-1936894567.png)    
+
 crontab   
 **使用 crontab 前，先执行 crontab -l，因为输入 crontab -e 编辑的时候，很可能会输成 crontab -r 把定时任务清空了。先输 l，清空了还可以复制**
 \-l list  
