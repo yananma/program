@@ -306,7 +306,12 @@ chgrp newgroup file
 
 [网页工具 https://tool.lu/crontab/](https://tool.lu/crontab/)(还有不少其他工具，可能有用)   
 
-![img](https://img2020.cnblogs.com/blog/2608805/202112/2608805-20211217212815027-1936894567.png)    
+分钟、小时、日期、月份、周几      
+
+\* 取值范围内的所有数字    
+/ 每过多少个数字   
+\- 从X到Z   
+, 散列数字    
 
 crontab   
 **使用 crontab 前，先执行 crontab -l，因为输入 crontab -e 编辑的时候，很可能会输成 crontab -r 把定时任务清空了。先输 l，清空了还可以复制**
@@ -314,10 +319,15 @@ crontab
 \-e edit  
 \-r remove  
 `crontab -l` 列表  
-`crontab -e` 编辑  
+`crontab -e` 编辑   
+
 `*/20 * * * *  # 每 20 分钟执行一次`     
 `0 */2 * * *` # 每 2 个小时执行一次，**注意一定要指定分钟是 0，如果不指定，就会每分钟都会执行一次**    
-`0 8 * * * cd /home/test/syb/mayanan/zjgdk && /home/test/anaconda3/envs/zjgdk/bin/python main.py &>> command/logs/upload_to_zjgdk_daily_task.log`   
+`0 8 * * * cd /home/test/syb/mayanan/zjgdk && /home/test/anaconda3/envs/zjgdk/bin/python main.py &>> command/logs/upload_to_zjgdk_daily_task.log`    
+`0 9,13,16 * * * cd /home/deploy/crisis_admin && /home/deploy/.crisis/bin/python manage.py push_zishengtang --settings=crisis_admin.settings_new_product &> /home/deploy/crisis_admin/logs/zishengtang.log &`    
+
+[菜鸟教程例子](https://www.runoob.com/w3cnote/linux-crontab-tasks.html)      
+
 
 #### apt 软件管理  
 apt-get update  
