@@ -18,6 +18,11 @@ for row in sentiment_df:
 
 python2 要指定 encoding 参数，否则很麻烦。   
 
+```python 
+sentiment_df = pd.read_excel("./data/通用项目月度数据.xlsx", sheet_name="Sheet1", encoding='utf-8').to_dict("records")    
+```
+
+
 最好是只转换一次，也就是在最开始的地方转成 dict。   
 
 
