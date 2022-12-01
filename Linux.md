@@ -314,7 +314,7 @@ chgrp newgroup file
 , 散列数字    
 
 crontab   
-**使用 crontab 前，先执行 crontab -l，因为输入 crontab -e 编辑的时候，很可能会输成 crontab -r 把定时任务清空了。先输 l，清空了还可以复制**
+**使用 crontab 前，先执行 crontab -l，因为输入 crontab -e 编辑时，很可能会输成 crontab -r 清空了定时任务。先输 l，清空了可以复制**   
 \-l list  
 \-e edit  
 \-r remove  
