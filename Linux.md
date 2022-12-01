@@ -301,7 +301,10 @@ chgrp newgroup file
 
 
 #### crond 任务调度  
+
 定时执行特定的命令或程序  
+
+[网页工具 https://tool.lu/crontab/](https://tool.lu/crontab/)(还有不少其他工具，可能有用)   
 
 crontab   
 **使用 crontab 前，先执行 crontab -l，因为输入 crontab -e 编辑的时候，很可能会输成 crontab -r 把定时任务清空了。先输 l，清空了还可以复制**
