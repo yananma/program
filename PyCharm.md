@@ -74,6 +74,11 @@ Tools -> Deployment -> Configuration，左上角 - 号。
 先通过一个函数进入源码 -> 右键上面文件名 open in -> 选 Explorer -> 删除本地的包 -> 重启 pycharm（不是关了所有的项目，关当前项目就可以） 就会自动安装远程最新的包    
 
 
+### 本地没有远程的包，打断点报错说没有该文件，断点不起作用     
+
+External Libraries -> Remote Libraries -> 找到 site-packages$ 文件夹 -> 右键 Open in Explorer -> 在远程压缩 zip -r django.zip django/ -> 发送到本地 -> 解压       
+
+
 ### 远程连接 Git 上已存在的项目   
 
 如果项目里有 idea 文件夹，就要 clone 完以后先删除这个文件夹，否则没有办法配置 Interpreter。    
