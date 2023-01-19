@@ -218,6 +218,23 @@ delete FROM xpost WHERE entryid=4273587 AND type_reason = '' AND is_comment = 1;
 ...
 ```
 
+### MySQL 的 split   
+
+select SUBSTRING_INDEX(SUBSTRING_INDEX('40,50',',',1),',',-1);结果为 40      
+
+select SUBSTRING_INDEX(SUBSTRING_INDEX('40,50',',',2),',',-1);结果为 50      
+
+函数解析：SUBSTRING_INDEX（str, delim, count）      
+
+参数解说     解释      
+str 　　　　需要拆分的字符串      
+delim 　　  分隔符，通过某字符进行拆分      
+count 　　  当 count 为正数，取第 n 个分隔符之前的所有字符； 当 count 为负数，取倒数第 n 个分隔符之后的所有字符。      
+
+```sql  
+SELECT SUBSTRING_INDEX(HOST,":",1) AS server, COUNT(1) AS c FROM information_schema.PROCESSLIST GROUP BY server ORDER BY c DESC      
+```
+
 
 # 语句   
 
