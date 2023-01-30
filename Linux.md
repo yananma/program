@@ -65,6 +65,7 @@ sz 下载文件到本地 send，可以使用通配符：`sz *.jpg`、`sz *.xls*`
 `rm` `rm -r 目录名` 删除非空目录，r recursive  
 `rm -rf video_frame/` 删除文件夹下所有文件，删除文件夹  
 `rm -rf video_frame/*` 删除当前文件夹下所有文件，保留文件夹  
+`rm *2023-01-30_17*` 通配符     
 `ls | grep export_tongyong_excel_ | xargs -i rm {}` 删除 ls 的结果    
 `rm` 反向删除：开启 extglob 选项 `shopt -s extglob`; 删除 `rm -rf !(文件或文件夹，多个用 | 分隔)`; 关闭 extglob 选项 `shopt -u extglob`   
 
