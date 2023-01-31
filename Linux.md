@@ -85,7 +85,7 @@ alias 永久生效：`$ vim ~/.bashrc`
 `cat` 只读查看  
 `sort`  
 `grep` Global Regular Expression Print 全局正则表达式搜索 `history | grep nginx` `ps -aux | grep nginx`    
-grep 正则过滤多个：`pip list | grep -E "data-normalization | bkdbreader"`    
+grep 正则过滤多个：`pip list | grep -E "a|b"`    
 `|` 管道符，表示将前面命令的处理结果传递给后面的命令处理  
 `ls | head -n 200 | xargs -i cp {} ../test_images/`  
 `head`  
