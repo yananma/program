@@ -14,6 +14,7 @@ PyCharm 配置的核心就是两个：
 `cd zjgdk`  
 `django-admin startapp post`  
 
+
 ## 新建项目配置   
 
 File -> New Project -> Pure Python -> 右侧点开 Project Interpreter -> Existing Interpreter -> 点击右侧三个点 -> SSH Interpreter -> （如果不存在就新建，输入 IP、端口、用户名、密码、测试连接，选择虚拟环境的 Python 解释器）如果存在 Existing server configuration -> 点击下拉框  -> 点击选择 (如果报错，看是不是开了 VPN)-> 点 Next 下一步 -> 右侧点击文件夹图标选择 /home/test/anaconda3/envs/环境名/bin/python -> 点击 finish -> 点击 Interpreter 下方 Remote project location 文件夹图标 -> 选择远程文件夹路径 -> 配置最上方 Location，修改文件夹名称 untitled 为项目名称 -> create； Tools -> Deployment 中取消勾选 Automatic upload    
@@ -72,6 +73,13 @@ Tools -> Deployment -> Configuration，左上角 - 号。
 版本不对，源码就不对，读源码就会有问题，debug 就会有问题，所以要更新。    
 
 先通过一个函数进入源码 -> 右键上面文件名 open in -> 选 Explorer -> 删除本地的包 -> 重启 pycharm（不是关了所有的项目，关当前项目就可以） 就会自动安装远程最新的包    
+
+
+### console 配置 settings   
+
+```python 
+File -> Settings -> Build Execution Deployment -> Console -> Django Console -> Environment Variables 中添加 DJANGO_SETTINGS_MODULE=aima_monitor_backend.settings-product    
+```
 
 
 ### 本地没有远程的包，打断点报错说没有该文件，断点不起作用     
