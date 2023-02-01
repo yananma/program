@@ -77,9 +77,7 @@ Tools -> Deployment -> Configuration，左上角 - 号。
 
 ### console 配置 settings   
 
-```python 
 File -> Settings -> Build Execution Deployment -> Console -> Django Console -> Environment Variables 中添加 DJANGO_SETTINGS_MODULE=aima_monitor_backend.settings-product    
-```
 
 
 ### 本地没有远程的包，打断点报错说没有该文件，断点不起作用     
