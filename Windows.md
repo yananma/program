@@ -35,7 +35,11 @@ ssh -p 17717 test@112.253.2.6 "cd /home/test/syb/mayanan/cyberin_backend/ && /ho
 左下角搜索“环境变量”    
 
 
+# 软件    
 
+## 飞书   
+
+开会状态：设置 -> 效率 -> 最下面个人状态 -> 会议中       
 
 
 
