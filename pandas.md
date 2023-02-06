@@ -365,6 +365,12 @@ df = df.sort_values(by=列名，没有列名的用 0 1 2 3 等这些数字)
 df = df.sort_values(by=[0, 3], key=lambda x: x if x.name == 0 else x.map(lambda x: json.loads(x)[0][1]))  
 ```
 
+```python 
+# df 倒序      
+
+df.sort_index(ascending=False)
+```
+
 
 ### 统计 nan 的数量  
 
