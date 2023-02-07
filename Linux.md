@@ -122,6 +122,8 @@ losf: list open files
 `ps -aux | grep Nginx`  
 `ps -eO lstart | grep zkpoint_es` 查看进程开始时间  
 
+如果想看定时任务的脚本的参数，一个是可以看 crontab，如果是 root 用户启用的 crontab，没有权限查看，可以先看日志，看命令执行时间，然后在定时任务执行的时候执行 `ps -aux | grep post_sim` 看正在执行的命令。        
+
 
 `ps -ef | less`  
 可以查看父进程  
