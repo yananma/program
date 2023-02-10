@@ -435,9 +435,17 @@ for i, row in df.iterrows():
 
 ### 消除 url 类型数量限制  
 
+pandas     
+
 ```python 
 with pd.ExcelWriter(f'{work_root}/{suffix}.xlsx',engine='xlsxwriter',options={'strings_to_urls': False}) as writer:
     newdf.to_excel(writer)
+```
+
+xlsxwriter      
+
+```python 
+xlsxwriter.Workbook(filename, {'strings_to_urls': False})     
 ```
 
 
