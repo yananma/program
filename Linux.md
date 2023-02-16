@@ -1,6 +1,7 @@
 
 shell 脚本是程序员工具箱的重要组成部分，既适用于个人，也适用于大型任务。如果你发现自己一遍又一遍地运行着同样的命令序列，那就把它们放到 shell 脚本中，从而将烦琐工作变得自动化。   
 
+哪天按照书的目录再重新排列一下笔记里内容的顺序       
 
 ### 命令  
 
@@ -84,6 +85,7 @@ alias 永久生效：`$ vim ~/.bashrc`、`source ~/.bashrc`
 
 
 `cat` 只读查看  
+cat 可以和 grep 结合使用，看代码有没有更新：`cat /opt/cyberin_backend/accounts/models.py | grep show_warning`    
 `sort`  
 `grep` Global Regular Expression Print 全局正则表达式搜索 `history | grep nginx` `ps -aux | grep nginx`    
 grep 正则过滤多个：`pip list | grep -E "a|b"`    
