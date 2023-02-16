@@ -34,6 +34,8 @@ ssh -p 17717 test@112.253.2.6 "cd /home/test/syb/mayanan/cyberin_backend/ && /ho
 
 左下角搜索“环境变量”    
 
+hosts 路径：`C:\Windows\System32\drivers\etc`       
+
 
 # 软件    
 
