@@ -52,3 +52,6 @@ docker 命令参数含义，这一篇比菜鸟教程那个要好得多 https://b
 <br>
 
 https://www.runoob.com/docker/docker-command-manual.html
+
+
+docker 改时区；`mv /etc/localtime /etc/localtime.bak && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime`          
