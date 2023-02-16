@@ -360,7 +360,7 @@ tmux a -t 名字
 tmux + b d  
 
 
-
+docker 改时区；`mv /etc/localtime /etc/localtime.bak && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime`      
 
 You can grasp the fundamental ideas fairly quickly, and then there were tons of details, in the end the details didn't matter(意思是说细节，慢慢都会弄明白的) \-\-Linus Torvalds  
 Linux 非常适合使用清单。  
