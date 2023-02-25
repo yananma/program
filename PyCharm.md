@@ -256,7 +256,7 @@ Help -> Edit Custom VM Options -> 手动修改大小。
 
 ```python  
 -Xms128m  # 最小内存  
--Xmx1262m  # 最大内存
+-Xmx2048m  # 最大内存
 ```
 
 **改完要重启 PyCharm，否则不生效。如果是开了多个项目，全部都要重启才行，**
