@@ -376,6 +376,8 @@ df_ads.isna().sum()
 
 ### 判断非 nan  
 
+不要用 if 判断，if nan 结果是 True    
+
 ```python 
 if not pd.isna(line[1]['names'])
 ```
