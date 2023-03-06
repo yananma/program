@@ -23,6 +23,7 @@ shell 脚本是程序员工具箱的重要组成部分，既适用于个人，�
 `find ./ -name manage.py`   
 `find ./ -name *.html`   
 `locate` 定位文件目录 `locate hello.txt`  
+find命令及不显示Permission denied：`find [path] -name "pattern " 2>/dev/null`    
 
 `wc`  
 行数、单词数、字节数   
@@ -118,6 +119,7 @@ md5sum 文件名
 查看端口被占用：`lsof -i:8001`   
 
 losf: list open files   
+可能看不了别的用户，比如 deploy 可能就看不到 dingyong 的进程，需要用 root 看      
 
 如果启动服务说端口被占用，lsof 结果为空，很可能是还处在 4 次挥手阶段，等一会儿再试。     
 
