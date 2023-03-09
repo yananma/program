@@ -117,6 +117,11 @@ git pull 同步远程
 2. 打开文件夹以后，给项目重命名。   
 
 
+### 项目取消 attach    
+
+右键项目 -> Remove from Project View      
+
+
 ### runserver 启动服务指定配置文件   
 
 Edit Configurations -> Additional options -> `--settings=mx_tools.settings-production-test`    
