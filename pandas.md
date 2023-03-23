@@ -702,6 +702,36 @@ def data_remove_nan():
 
 ## 报错   
 
+
+### Python2 read_excel keyerror   
+
+最开始的写法     
+```python 
+import pandas as pd
+
+
+df = pd.read_excel('./data/dlg_predict.xlsx')
+
+df = df[df[u'话题'] != u'无意义']
+print df
+```
+
+报错    
+
+```python 
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-2: ordinal not in range(128)   
+```
+
+解决办法是改用循环     
+
+```python  
+df = pd.read_excel('./data/dlg_predict.xlsx').to_dict(orient='records')
+
+df = [i for i in df if i[u'话题'] != u'无意义']
+print df
+```
+
+
 ### XLRDError: Excel xlsx file； not supported 报错
 
 原因是pip安装的是最新的 2.0.1 版本，只支持 .xls 文件。所以 pandas.read_excel(‘xxx.xlsx’) 会报错。   
