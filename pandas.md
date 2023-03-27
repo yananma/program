@@ -725,9 +725,9 @@ UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-2: ordin
 解决办法是改用循环     
 
 ```python  
-df = pd.read_excel('./data/dlg_predict.xlsx').to_dict(orient='records')
+df = pd.read_excel('./data/dlg_predict.xlsx')
 
-df = [i for i in df if i[u'话题'] != u'无意义']
+df = df[[it != u'无意义' for it in df[u'话题']]]
 print df
 ```
 
