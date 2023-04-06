@@ -251,6 +251,13 @@ echo "========备份成功========"
 cat * | grep http://www.douyin.com/video/123343546576876978
 ```
 
+在 scripts 文件夹的所有脚本里找命令行参数       
+
+```shell   
+cat * | grep run_gmtopic.py     
+``` 
+
+
 ### 日志文件太大，导出部分日志  
 
 ```shell 
