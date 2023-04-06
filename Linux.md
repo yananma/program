@@ -257,6 +257,11 @@ cat * | grep http://www.douyin.com/video/123343546576876978
 cat * | grep run_gmtopic.py     
 ``` 
 
+正则    
+
+```shell  
+cat * | grep -P "run_gmtopic.py(.*?)config"   
+```  
 
 ### 日志文件太大，导出部分日志  
 
