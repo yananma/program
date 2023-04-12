@@ -269,6 +269,13 @@ cat * | grep run_gmtopic.py
 cat * | grep -P "run_gmtopic.py(.*?)config"   
 ```  
 
+在所有 .py 文件里查找    
+
+```shell 
+grep -r --include='*.py' '192.168.241.51' .(. 是起始路径)    
+```
+
+
 ### 日志文件太大，导出部分日志  
 
 ```shell 
