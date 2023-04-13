@@ -285,6 +285,20 @@ df = pd.read_excel('护发素视频0-1数据(1)_语音_OCR.xlsx', header=1)
 ### 把列表写入到 Excel  
 
 ```python 
+In [7]: import pandas as pd 
+
+In [8]: li = [{'a': 1, 'b': 2}, {'a': 3, 'b': 4}, {'a': 5, 'b': 6}, {'a': 7, 'b': 8}]
+
+In [9]: pd.DataFrame(li)
+Out[9]: 
+   a  b
+0  1  2
+1  3  4
+2  5  6
+3  7  8
+```
+
+```python 
 result_list = []  
 for item in data_list:  
     result_dict = {}  
