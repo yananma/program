@@ -304,6 +304,20 @@ ls | grep .*日 | xargs -i rm {}
 ```
 
 
+### 删除 ls -lht 结果中的前 5 条   
+
+```shell 
+# 先查看结果：     
+ls -lht | head -n 6 | tail -n 5 | awk '{print $9}'
+
+# rm 删除   
+ls -lht | head -n 6 | tail -n 5 | awk '{print $9}' | xargs rm -f
+
+# unlink 删除   
+ls -lht | head -n 6 | tail -n 5 | awk '{print $9}' | xargs -I % unlink %
+```
+
+
 scp secure copy，远程 copy，用法 scp source_file des_file，比如 scp local_file remote_username@remote_ip:remote_folder   
 绝对路径是相对于 root 路径所说的，相对路径是相对于当前位置所说的   
 `-r` 递归 `-f` 强制  
