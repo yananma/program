@@ -17,6 +17,12 @@ ssh -p 17717 test@112.253.2.6 "cd /home/test/syb/mayanan/cyberin_backend/ && /ho
 ## 快捷键    
 
 
+### Ctrl + Home 文本编辑器回到第一行   
+
+
+### Ctrl + Alt + → 所有行的选中光标到末尾
+
+
 ### Home 在浏览器页面可以回到顶部     
 
 
