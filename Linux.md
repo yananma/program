@@ -282,6 +282,13 @@ grep -r --include='*.py' '192.168.241.51' .(. 是起始路径)
 tail -n 30000 crisis_admin.log > tiny_crisis_admin.log  
 ``` 
 
+### 日志文件太大，只保留最后几十万条日志   
+
+```shell 
+tail -n 300000 crisis_admin.log > tiny_crisis_admin.log  
+mv tiny_crisis_admin.log > crisis_admin.log    
+``` 
+
 
 ### 统计日志 SQL 查询大于 5 秒的查询  
 
