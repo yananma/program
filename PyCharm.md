@@ -26,6 +26,18 @@ Tools -> Deployment -> Options 添加 exclude 文件类型：`.svn;.cvs;.idea;.D
 右键项目文件夹，从远程 download 文件。如果文件比较大，最好自己弄成压缩包，用 sz 传输，然后自己在本地文件夹下面解压，不要通过 PyCharm 下载，很慢。       
 
 
+
+## 从 gitlab 上 clone 项目     
+
+ -> 
+
+先 clone 项目：PyCharm -> Git -> Clone      
+
+
+
+
+
+
 ## 已经有的项目配置（包括刚 git clone 下来的项目）   
 
 ### Interpreter   
