@@ -285,8 +285,8 @@ tail -n 30000 crisis_admin.log > tiny_crisis_admin.log
 ### 日志文件太大，只保留最后几十万条日志   
 
 ```shell 
-tail -n 300000 crisis_admin.log > tiny_crisis_admin.log  
-mv tiny_crisis_admin.log > crisis_admin.log    
+tail -n 300000 crisis_admin.log > trunc_crisis_admin.log  
+mv trunc_crisis_admin.log > crisis_admin.log    
 ``` 
 
 
