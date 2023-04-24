@@ -9,7 +9,8 @@ PyCharm 配置在 [PyCharm](https://github.com/yananma/program/blob/master/PyCha
 激活环境：`conda activate django_rest`  
 退出环境：`conda deactivate`   
 查看已有环境 `conda env list`  
-删除环境：`conda remove -n env_name --all`（all 应该是所有安装包）  
+删除环境：conda env remove -n env_name    
+(这种不行好像)`conda remove -n env_name --all`（all 应该是所有安装包）  
 
 如果没有 Anaconda，就用 virtualenv，先 `pip install virtaulenv`    
 ```python 
