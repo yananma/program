@@ -23,10 +23,16 @@ ssh -p 17717 test@112.253.2.6 "cd /home/test/syb/mayanan/cyberin_backend/ && /ho
 ### Ctrl + Alt + → 所有行的选中光标到末尾
 
 
+### Shift + Enter 实现 ChatGPT 换行     
+
+
 ### Home 在浏览器页面可以回到顶部     
 
 
 ### Alt + 鼠标实现批量操作    
+
+
+### 按滚轮下拉实现批量操作     
 
 
 ### Ctrl + Shift + Esc 打开任务管理器   
