@@ -154,6 +154,7 @@ top c 显示命令全称
 
 htop   
 
+查看 CPU 核数：lscpu 看 CPU(s)        
 
 #### 网络 
 `ifconfig`  
@@ -216,36 +217,6 @@ chmod 755 rm_txt.sh
 0 0 * * * cd /home/deploy/msg_encryptor/data && sh rm_txt.sh   
 ```
 
-
-
-
-数据库备份  
-```shell
-#!/bin/bash 
-BACKUP=/data/backup/db 
-DATETIME=$(date +%Y_%m_%d_%H%M%S) 
-echo $DATETIME
-
-echo "=========开始备份===========" 
-echo "===备份路径是 $BACKUP/$DATETIME.tar.gz==="
-
-HOST=localhost 
-DB_USER=root 
-DB_PWD= 
-DATABASE=xxkt_db 
-
-[ ! -d "$BACKUP/$DATETIME" ] && mkdir -p "$BACKUP/$DATETIME" 
-
-mysqldump -u${DB_USER} -p${DB_PWD} --host=$HOST $DATABASE | gzip > $BACKUP/$DATETIME/$DATETIME.sql.gz 
-
-cd $BACKUP 
-tar -zcvf $DATETIME.tar.gz $DATETIME 
-
-rm -rf $BACKUP/$DATETIME 
-
-find $BACKUP -mtime +10 -name "*tar.gz" -exec rm -rf {} \;  
-echo "========备份成功========"
-```
 
 
 # 实际例子  
