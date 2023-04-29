@@ -222,6 +222,13 @@ chmod 755 rm_txt.sh
 # 实际例子  
 
 
+### 日志显示切片    
+
+```python 
+tail crisis_warning_send_log.log.log -n 700 | head -n 100     
+```
+
+
 ### 在所有日志里过滤    
 
 ```shell   
