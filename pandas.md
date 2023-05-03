@@ -725,6 +725,15 @@ def data_remove_nan():
 ## 报错   
 
 
+### Python3 read_csv 报错 UnicodeDecodeError: 'utf-8' codec can't decode byte 0xc8 in position 0: invalid continuation byte
+
+Python3 可以加 encoding 参数      
+
+```python 
+df = pd.read_csv(newest_file, encoding='GB18030')
+``` 
+
+
 ### Python2 read_excel keyerror   
 
 最开始的写法     
