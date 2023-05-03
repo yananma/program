@@ -197,7 +197,7 @@ ssh.close()
 ```
 
 
-#### Shell 编程  
+# Shell 编程  
 
 运行脚本，两种方式   
 
@@ -206,6 +206,9 @@ ssh.close()
 
 
 shell 比传统的编程语言要简单很多，如果学过其他的学这个就是小菜一碟(找例子多敲就会了)  
+
+
+### 删除文件
 
 ```shell  
 vim rm_txt.sh   
@@ -216,6 +219,19 @@ rm num.txt
 chmod 755 rm_txt.sh   
 
 0 0 * * * cd /home/deploy/msg_encryptor/data && sh rm_txt.sh   
+```
+
+
+### 截断日志   
+
+```shell 
+#!/bin/bash
+cd /opt/cyberin_backend/logs
+
+# 更新互动数日志
+tail -n 1000000 tongyong_update_interact_num.log > trunc_tongyong_update_interact_num.log
+mv trunc_tongyong_update_interact_num.log tongyong_update_interact_num.log
+echo "tongyong_update_interact_num.log done."
 ```
 
 
