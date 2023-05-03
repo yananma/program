@@ -3,6 +3,7 @@ shell 脚本是程序员工具箱的重要组成部分，既适用于个人，�
 
 哪天按照书的目录再重新排列一下笔记里内容的顺序       
 
+
 ### 命令  
 
 `>` 重定向 `ls -l > a.txt` 比如 `history > history.txt`  
@@ -221,6 +222,29 @@ chmod 755 rm_txt.sh
 
 # 实际例子  
 
+### 删除文件名中包含“日”的文件   
+
+```shell
+ls | grep .*日 | xargs -i rm {}    
+```
+
+
+### 删除 ls -lht 结果中的前 5 条   
+
+```shell 
+# 先查看结果：     
+ls -lht | head -n 6 | tail -n 5 | awk '{print $9}'
+
+# rm 删除   
+ls -lht | head -n 6 | tail -n 5 | awk '{print $9}' | xargs rm -f
+
+# unlink 删除   
+ls -lht | head -n 6 | tail -n 5 | awk '{print $9}' | xargs -I % unlink %
+```
+
+
+
+# 日志    
 
 ### 日志显示切片    
 
@@ -257,7 +281,7 @@ grep -r --include='*.py' '192.168.241.51' .(. 是起始路径)
 ### 日志文件太大，导出部分日志  
 
 ```shell 
-tail -n 30000 crisis_admin.log > tiny_crisis_admin.log  
+tail -n 30000 crisis_admin.log > trunc_crisis_admin.log    
 ``` 
 
 ### 日志文件太大，只保留最后几十万条日志   
@@ -279,27 +303,6 @@ tail -n 200 origin_20220611124948.log | grep 正在处理第65组聚类结果：
 正则：    
 ```shell    
 cat debug.log | grep -P "\((\d{2,}|[5-9])\.\d+\)[^\r\n]+" > slow_sql.log   
-```
-
-
-### 删除文件名中包含“日”的文件   
-
-```shell
-ls | grep .*日 | xargs -i rm {}    
-```
-
-
-### 删除 ls -lht 结果中的前 5 条   
-
-```shell 
-# 先查看结果：     
-ls -lht | head -n 6 | tail -n 5 | awk '{print $9}'
-
-# rm 删除   
-ls -lht | head -n 6 | tail -n 5 | awk '{print $9}' | xargs rm -f
-
-# unlink 删除   
-ls -lht | head -n 6 | tail -n 5 | awk '{print $9}' | xargs -I % unlink %
 ```
 
 
