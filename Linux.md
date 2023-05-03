@@ -244,8 +244,12 @@ echo "tongyong_update_interact_num.log done."
 ls | grep .*日 | xargs -i rm {}    
 ```
 
+```shell
+ls | grep "预发" | xargs -I % unlink %
+``` 
 
-### 删除 ls -lht 结果中的前 5 条   
+
+### 按时间排序，删除 ls -lht 结果中的前 5 条   
 
 ```shell 
 # 先查看结果：     
@@ -257,7 +261,6 @@ ls -lht | head -n 6 | tail -n 5 | awk '{print $9}' | xargs rm -f
 # unlink 删除   
 ls -lht | head -n 6 | tail -n 5 | awk '{print $9}' | xargs -I % unlink %
 ```
-
 
 
 # 日志    
