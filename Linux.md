@@ -63,7 +63,8 @@ z 是 ZMODEM 协议。
 rz 上传文件到服务器 receive，用鼠标拖拽。   
 sz 下载文件到本地 send，可以使用通配符：`sz *.jpg`、`sz *.xls*`    
 `mv` `mv a.txt dir1`    
-`mv` 原文件名 新文件名 (目的地在当前目录，就是在这个目录下操作就不是移动了，就是重命名)  
+`mv` 原文件名 新文件名 (目的地在当前目录，就是在这个目录下操作就不是移动了，就是重命名)     
+`mv week_data/ tools/` 本来 week_data 和 tools 是同级目录，mv 完以后就变成了 tools/week_data/ 形式     
 `mv /data/new /data/old/` 剪切文件夹和文件夹下内容  
 
 `rm` `rm -r 目录名` 删除非空目录，r recursive  
