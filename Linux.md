@@ -56,7 +56,8 @@ find命令及不显示Permission denied：`find [path] -name "pattern " 2>/dev/n
 `scp -P 17717 huggingface.tar.gz crisis@192.168.241.64:/home/crisis/.cache/huggingface.tar.gz`    
 `scp -P 17717 -r little_env deploy@192.168.241.25:/home/deploy/` 文件夹 -r    
 对方端口、自己压缩包、对方用户名@对方内网 IP、目标文件夹。  
-带密码 scp，可以用于定时任务。`sshpass -p "密码，外面要带引号" scp -P 17717 /home/test/syb/mayanan/msg_encryptor/crontab_ps.txt deploy@192.168.241.30:/opt/cyberin_backend/tmp/crontab_ps.txt`     
+带密码 scp，可以用于定时任务。`sshpass -p "密码，外面要带上前后这两个引号" scp -P 17717 /home/test/syb/mayanan/msg_encryptor/crontab_ps.txt deploy@192.168.241.30:/opt/cyberin_backend/tmp/crontab_ps.txt`      
+带密码跳转：sshpass -p 'ylQUpQ&s4bwNiqZr' ssh -p 17717 b26        
 速度非常快，100MB/s  
 `yum install lrzsz`    
 z 是 ZMODEM 协议。    
