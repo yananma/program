@@ -38,6 +38,9 @@ ssh -p 17717 test@112.253.2.6 "cd /home/test/syb/mayanan/cyberin_backend/ && /ho
 ### Ctrl + Shift + Esc 打开任务管理器   
 
 
+### Windows + v 打开剪切板      
+
+
 ### Ctrl + Shift + Home 选中从光标到开头的内容    
 
 
