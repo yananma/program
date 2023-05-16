@@ -265,6 +265,13 @@ ls -lht | head -n 6 | tail -n 5 | awk '{print $9}' | xargs -I % unlink %
 ```
 
 
+### 包含 buzz 不包含 pre_send     
+
+```shell    
+crontab -l | grep buzz | grep -v pre_send 
+```
+
+
 # 日志    
 
 ### 日志显示切片    
