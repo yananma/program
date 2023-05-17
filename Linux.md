@@ -305,6 +305,12 @@ cat * | grep -P "run_gmtopic.py(.*?)config"
 grep -r --include='*.py' '192.168.241.51' .(. 是起始路径)    
 ```
 
+在指定文件名的日志里过滤     
+
+```shell
+find . -name "*iesdouyin_com*" | xargs grep "7233248167658016061"      
+```
+
 
 ### 日志文件太大，导出部分日志  
 
