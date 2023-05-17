@@ -311,6 +311,12 @@ grep -r --include='*.py' '192.168.241.51' .(. 是起始路径)
 find . -name "*iesdouyin_com*" | xargs grep "7233248167658016061"      
 ```
 
+过滤多台服务器的内容      
+
+```shell 
+ansible 6,11,45 -m shell -a "find log/ -name \"*iesdouyin_com*\" | xargs grep \"7233248167658016061\" | grep \"2023-05-16 02\""
+``` 
+
 
 ### 日志文件太大，导出部分日志  
 
