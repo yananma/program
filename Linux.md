@@ -74,6 +74,7 @@ sz 下载文件到本地 send，可以使用通配符：`sz *.jpg`、`sz *.xls*`
 `rm *2023-01-30_17*` 通配符     
 `ls | grep export_tongyong_excel_ | xargs -i rm {}` 删除 ls 的结果    
 `rm` 反向删除：开启 extglob 选项 `shopt -s extglob`; 删除 `rm -rf !(文件或文件夹，多个用 | 分隔)`; 关闭 extglob 选项 `shopt -u extglob`   
+`python -c "import shutil; shutil.rmtree('目录')"` 递归删除文件夹       
 
 `rmdir` 删除空目录  
 `ln -s 原文件 快捷方式`，创建软连接的时候，快捷方式文件不能存在，如果存在要先删掉再创建  
