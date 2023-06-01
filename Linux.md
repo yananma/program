@@ -348,6 +348,11 @@ tail -n 200 origin_20220611124948.log | grep 正在处理第65组聚类结果：
 cat debug.log | grep -P "\((\d{2,}|[5-9])\.\d+\)[^\r\n]+" > slow_sql.log   
 ```
 
+可以直接用正则，没写 -P 也可以   
+```shell
+tail -n 500 push_oulaiya.log | grep [^08:]06:.*done.    
+```  
+
 
 scp secure copy，远程 copy，用法 scp source_file des_file，比如 scp local_file remote_username@remote_ip:remote_folder   
 绝对路径是相对于 root 路径所说的，相对路径是相对于当前位置所说的   
