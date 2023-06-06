@@ -49,39 +49,6 @@ float 字段，类型是 double，长度 0，精度 0.
 IntegerField 只有 0 和 1 的，用 tinyint，长度 2. 如果有多个，就用 int，长度 11.     
 
 
-对照表   
-
-```python  
-    data_types = {
-        "AutoField": "integer AUTO_INCREMENT",
-        "BigAutoField": "bigint AUTO_INCREMENT",
-        "BinaryField": "longblob",
-        "BooleanField": "bool",
-        "CharField": "varchar(%(max_length)s)",
-        "DateField": "date",
-        "DateTimeField": "datetime(6)",
-        "DecimalField": "numeric(%(max_digits)s, %(decimal_places)s)",
-        "DurationField": "bigint",
-        "FileField": "varchar(%(max_length)s)",
-        "FilePathField": "varchar(%(max_length)s)",
-        "FloatField": "double precision",
-        "IntegerField": "integer",
-        "BigIntegerField": "bigint",
-        "IPAddressField": "char(15)",
-        "GenericIPAddressField": "char(39)",
-        "JSONField": "json",
-        "OneToOneField": "integer",
-        "PositiveBigIntegerField": "bigint UNSIGNED",
-        "PositiveIntegerField": "integer UNSIGNED",
-        "PositiveSmallIntegerField": "smallint UNSIGNED",
-        "SlugField": "varchar(%(max_length)s)",
-        "SmallAutoField": "smallint AUTO_INCREMENT",
-        "SmallIntegerField": "smallint",
-        "TextField": "longtext",
-        "TimeField": "time(6)",
-        "UUIDField": "char(32)",
-    }
-```
 
 ### 杀查询进程  
 
