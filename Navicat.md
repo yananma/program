@@ -1,6 +1,39 @@
 
 以后全部手写 SQL 语句，写 10000 条就差不多了。    
 
+
+# 项目   
+
+## Cyberin     
+
+
+按 sourcetype 统计数量
+
+通用的 fid：304265, 304266, 305987, 306022, 306023, 306024, 306025, 306026, 306027, 306028, 306032, 306036, 306043, 306044, 306046, 306054, 306055, 306056, 306057, 306058, 306059, 306060, 306061, 306062, 306063, 306064, 306065, 306066, 306067, 306070, 306071, 306072, 306111, 306114, 306115, 306116, 306148, 306150, 306239, 306240, 306241, 306242, 306243, 306244, 306245
+
+```python  
+SELECT sourcetype, COUNT(1) AS cnt FROM xpost WHERE entryid IN (5113547,5113621,5114626) AND hidden IN (-2, -1, 0, 2, 3, 4) AND is_comment = 0 GROUP BY sourcetype ORDER BY cnt DESC    
+```
+
+
+
+## 危机预警  
+
+索引查询    
+
+```python  
+SELECT * FROM `xpost` FORCE KEY  (`idx_eid`)  WHERE (`xpost`.`hidden` = 0 AND `xpost`.`entryid` IN (123985) AND `xpost`.`include_t` >= '2022-10-31 00:00:00' AND `xpost`.`status` IN (2) AND `xpost`.`noise_rank` = 0) ORDER BY posttime ASC   
+```
+
+比亚迪按天聚合统计数量   
+
+```python 
+select DATE_FORMAT(include_t,'%Y-%m-%d') days, count(postid) count from xpost WHERE (`xpost`.`hidden` = 0 AND `xpost`.`include_t` >= '2022-10-01 00:00:00' AND `xpost`.`status` IN (2) AND `xpost`.`noise_rank` = 0 AND `xpost`.`facetid` = 59) group by days ORDER BY include_t;
+```
+
+
+
+
 # 多试   
 
 ### SQL 知识点   
@@ -234,23 +267,6 @@ select DATE_FORMAT(include_t,'%Y-%m-%d %H') hours, count(postid) count from xpos
 
 # 按天  
 select DATE_FORMAT(include_t,'%Y-%m-%d') days, count(postid) count from xpost WHERE include_t >= '2022-10-01 00:00:00' group by days ORDER BY include_t;
-```
-
-
-# 项目   
-
-## 危机预警  
-
-索引查询    
-
-```python  
-SELECT * FROM `xpost` FORCE KEY  (`idx_eid`)  WHERE (`xpost`.`hidden` = 0 AND `xpost`.`entryid` IN (123985) AND `xpost`.`include_t` >= '2022-10-31 00:00:00' AND `xpost`.`status` IN (2) AND `xpost`.`noise_rank` = 0) ORDER BY posttime ASC   
-```
-
-比亚迪按天聚合统计数量   
-
-```python 
-select DATE_FORMAT(include_t,'%Y-%m-%d') days, count(postid) count from xpost WHERE (`xpost`.`hidden` = 0 AND `xpost`.`include_t` >= '2022-10-01 00:00:00' AND `xpost`.`status` IN (2) AND `xpost`.`noise_rank` = 0 AND `xpost`.`facetid` = 59) group by days ORDER BY include_t;
 ```
 
 
