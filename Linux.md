@@ -215,15 +215,26 @@ shell 比传统的编程语言要简单很多，如果学过其他的学这个�
 
 ### 删除文件
 
-```shell  
 vim rm_txt.sh   
 
+```shell  
 #!/bin/bash
 rm num.txt
+``` 
 
 chmod 755 rm_txt.sh   
 
+定时任务     
 0 0 * * * cd /home/deploy/msg_encryptor/data && sh rm_txt.sh   
+
+
+
+### 过滤删除   
+
+```shell
+#!/bin/bash 
+cd tongyong_report/ && ls | grep "预发" | xargs -I % unlink %
+echo "rm pre send done."
 ```
 
 
