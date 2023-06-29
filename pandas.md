@@ -83,6 +83,16 @@ df['原三级标签']
 ```
 
 
+### 只有一列，把这一列转成列表   
+
+```python
+df = pd.read_excel(BytesIO(requests.get(url).content), encoding='utf-8', sheet_name=u'负面词', header=None).fillna('')
+df.columns
+df.columns = ['word']
+df.word.to_list()
+```
+
+
 ### 删除列   
 
 要指定 axis=1   
