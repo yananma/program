@@ -315,9 +315,18 @@ cat * | grep -P "run_gmtopic.py(.*?)config"
 
 在所有 .py 文件里查找    
 
+通配符、查询内容、路径      
+
 ```shell 
 grep -r --include='*.py' '192.168.241.51' .(. 是起始路径)    
 ```
+
+过滤上数据日志     
+```shell
+ansible all-host -m shell -a "cd /home/dingyong/zxp/upload_to_community; grep -r --include='tidb-*' 'http://www.chinanews.com/cul/2023/07-11/10040544.shtml' /home/dingyong/logs/uploader/"
+```
+
+
 
 在指定文件名的日志里过滤     
 
