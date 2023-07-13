@@ -53,10 +53,11 @@ find命令及不显示Permission denied：`find [path] -name "pattern " 2>/dev/n
 复制文件夹和文件夹下所有文件：`cp -r source_dir(最后不加斜杠) dest_dir(最后加斜杠)`  
 在当前路径备份：`cp -r eval_ribao ./eval_ribao_bak/`    
 复制多个文件 `cp a.txt b.txt dir/`  
-`scp -P 17717 huggingface.tar.gz crisis@192.168.241.64:/home/crisis/.cache/huggingface.tar.gz`    
+`scp -P 17717 a.txt b.txt c.txt deploy@192.168.241.3:/home/deploy/`        
 `scp -P 17717 -r little_env deploy@192.168.241.25:/home/deploy/` 文件夹 -r    
 对方端口、自己压缩包、对方用户名@对方内网 IP、目标文件夹。  
-带密码 scp，可以用于定时任务。`sshpass -p "密码，外面要带上前后这两个引号" scp -P 17717 /home/test/syb/mayanan/msg_encryptor/crontab_ps.txt deploy@192.168.241.30:/opt/cyberin_backend/tmp/crontab_ps.txt`      
+带密码 scp，可以用于定时任务。`sshpass -p "密码，外面要带上前后这两个引号"        
+scp -P 17717 /home/test/syb/mayanan/msg_encryptor/crontab_ps.txt deploy@192.168.241.30:/opt/cyberin_backend/tmp/crontab_ps.txt`        
 带密码跳转：sshpass -p 'ylQUpQ&s4bwNiqZr' ssh -p 17717 b26        
 速度非常快，100MB/s  
 `yum install lrzsz`    
