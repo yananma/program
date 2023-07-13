@@ -1,10 +1,21 @@
 
-debug 应该还是要靠 Docker，Miniconda 没法用驱动，而且会有各种环境冲突，烦不胜烦，而且最后还没法运行  
-
-
 
 
 ## Docker 容器命令 
+
+多用 --help 功能      
+
+
+docker ps 查看镜像     
+docker ps -al     
+
+docker exec -it <CONTAINER ID> /bin/bash 进入容器       
+docker exec -it 142f65e77251 /bin/bash       
+
+docker cp 容器外路径  容器名:容器内路径      
+docker cp fanboy-social.txt sleepy_ritchie:/etc/splash/filters        
+
+
 
 docker start -ai jpt 进入 jpt 容器  
 
@@ -13,9 +24,6 @@ docker start -ai jpt 进入 jpt 容器
 
 docker images 查看镜像  
 docker run -it --name jpt -p 6008:8888 -p 8022:22 -v ~/mnt:/mnt pytorch/pytorch(镜像)  
-<br>
-docker ps  
-docker ps -a  
 <br> 
 docker attach jpt  
 Ctrl + p + q
