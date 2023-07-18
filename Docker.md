@@ -1,4 +1,3 @@
-![image](https://github.com/yananma/program/assets/33167262/bb10bca4-7460-42f8-b563-c51a72a6d28a)
 
 
 ## Docker 容器命令 
