@@ -1,4 +1,4 @@
-
+![image](https://github.com/yananma/program/assets/33167262/bb10bca4-7460-42f8-b563-c51a72a6d28a)
 
 
 ## Docker 容器命令 
@@ -14,6 +14,11 @@ docker exec -it 142f65e77251 /bin/bash
 
 docker cp 容器外路径  容器名:容器内路径      
 docker cp fanboy-social.txt sleepy_ritchie:/etc/splash/filters        
+
+
+查看 docker 日志：docker logs -f -n 300 splash         
+
+
 
 
 
