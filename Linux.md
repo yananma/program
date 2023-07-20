@@ -96,6 +96,7 @@ cat 可以和 grep 结合使用，看代码有没有更新：`cat /opt/cyberin_b
 `sort`  
 `grep` Global Regular Expression Print 全局正则表达式搜索 `history | grep nginx` `ps -aux | grep nginx`    
 grep 正则过滤多个：`pip list | grep -E "a|b"`    
+grep 展示附近多行：-A NUM, --after-context=NUM；-B NUM, --before-context=NUM；-C NUM, -NUM, --context=NUM    
 `|` 管道符，表示将前面命令的处理结果传递给后面的命令处理  
 `ls | head -n 200 | xargs -i cp {} ../test_images/`  
 `head`  
