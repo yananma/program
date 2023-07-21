@@ -326,7 +326,7 @@ grep -r --include='*.py' '192.168.241.51' .(. 是起始路径)
 
 过滤上数据日志     
 ```shell
-ansible all-host -m shell -a "grep -r --include='tidb-*' 'http://www.chinanews.com/cul/2023/07-11/10040544.shtml' /home/dingyong/logs/uploader/"
+ansible all-host,71,72,73,74,75,76 -m shell -a "grep -r --include='tidb-*' 'http://www.chinanews.com/cul/2023/07-11/10040544.shtml' /home/dingyong/logs/uploader/"
 ```
 
 
