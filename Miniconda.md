@@ -89,6 +89,33 @@ nvcc --version查看当前使用的cuda版本
 
 
 
+
+
+查看 cuda 对应驱动版本：https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html  
+
+查看驱动：cat /proc/driver/nvidia/version  
+
+查看cuda 版本，不行：cat /usr/local/cuda/version.txt  
+
+
+
+
+### Mask R-CNN 
+
+不要安装 python3.4 不支持 TensorFlow 版本，不要安装 python3.5 没法用 pycharm debug 要安装 python3.6  
+
+conda create -n MaskRCNN python==3.6 TensorFlow-gpu==1.3.0 会自动安装对应的 cuda 和 cudnn   
+
+运行会遇到 MKL 错误，按这个办法解决：https://blog.csdn.net/qq_36603091/article/details/87098452  
+
+再运行会遇到各种 numpy 错误，用 pip 卸载 numpy，不要用 conda 卸载，conda 会跟着卸载很多软件，然后用 conda install numpy==1.14.0  
+
+
+
+
+
+
+
 ### 安装 Miniconda  
 
 安装 Miniconda 就行，有 conda 就可以了，反正都是要创建虚拟环境自己安装  
@@ -114,23 +141,27 @@ conda 的几个常用命令：https://zhuanlan.zhihu.com/p/73460388
 
 
 
-查看 cuda 对应驱动版本：https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html  
+## 一次完整记录      
 
-查看驱动：cat /proc/driver/nvidia/version  
+在清华源：https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/ 上找到想要的版本 Miniconda3-py39_4.9.2-Linux-x86_64.sh，主要是 Linux、64 位。
 
-查看cuda 版本，不行：cat /usr/local/cuda/version.txt  
+用 wget 下载： wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-py39_4.9.2-Linux-x86_64.sh     
+
+报错证书过期，加参数： wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-py39_4.9.2-Linux-x86_64.sh --no-check-certificate       
+
+安装 bash Miniconda3-py39_4.9.2-Linux-x86_64.sh     
+
+一路回车，（提示 press ENTER，意思是回车。自己理解成了输入 ENTER 了，犯了这个小错）     
+
+conda --version 检查有没有成功       
+
+装 python 环境：conda create --name testenv python=2.7      
+
+conda activate testenv        
 
 
 
 
-### Mask R-CNN 
 
-不要安装 python3.4 不支持 TensorFlow 版本，不要安装 python3.5 没法用 pycharm debug 要安装 python3.6  
-
-conda create -n MaskRCNN python==3.6 TensorFlow-gpu==1.3.0 会自动安装对应的 cuda 和 cudnn   
-
-运行会遇到 MKL 错误，按这个办法解决：https://blog.csdn.net/qq_36603091/article/details/87098452  
-
-再运行会遇到各种 numpy 错误，用 pip 卸载 numpy，不要用 conda 卸载，conda 会跟着卸载很多软件，然后用 conda install numpy==1.14.0  
 
 
