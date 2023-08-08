@@ -466,6 +466,11 @@ apt-get install package --reinstall
 所谓源，就是手机里面的应用商店  
 
 
+#### 查看平台的操作系统类型和版本，是 centos 还是 Ubuntu
+
+lsb_release -a    
+
+
 #### tmux 命令  
 
 tmux new -s 名字  
