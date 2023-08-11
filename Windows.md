@@ -41,6 +41,9 @@ ssh -p 17717 test@112.253.2.6 "cd /home/test/syb/mayanan/cyberin_backend/ && /ho
 ### Windows + v 打开剪切板      
 
 
+### Ctrl + y 反向撤销   
+
+
 ### Ctrl + Shift + Home 选中从光标到开头的内容    
 
 
