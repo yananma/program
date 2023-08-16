@@ -147,6 +147,12 @@ Edit Configurations -> Additional options -> `--settings=mx_tools.settings-produ
 
 # 报错   
 
+
+### 上传文件报错 No files or folders found to process
+
+server 配的不对，和别的有冲突，去 Deployment -> Configuration 下把原来的 server 删掉，重新配一次就好了。
+
+
 ### 无法启动，报错表缺少字段    
 
 本地代码和服务器上的代码不一致。本地和远程都 pull，更新。     
