@@ -300,22 +300,6 @@ tail crisis_warning_send_log.log.log -n 700 | head -n 100
 
 ### 在所有日志里过滤    
 
-```shell   
-cat * | grep http://www.douyin.com/video/123343546576876978
-```
-
-在 scripts 文件夹的所有脚本里找命令行参数       
-
-```shell   
-cat * | grep run_gmtopic.py     
-``` 
-
-正则    
-
-```shell  
-cat * | grep -P "run_gmtopic.py(.*?)config"   
-```  
-
 在所有 .py 文件里查找    
 
 通配符、查询内容、路径      
@@ -342,6 +326,25 @@ find . -name "*iesdouyin_com*" | xargs grep "7233248167658016061"
 ```shell 
 ansible 6,11,45 -m shell -a "find log/ -name \"*iesdouyin_com*\" | xargs grep \"7233248167658016061\" | grep \"2023-05-16 02\""
 ``` 
+
+
+
+
+```shell   
+cat * | grep http://www.douyin.com/video/123343546576876978
+```
+
+在 scripts 文件夹的所有脚本里找命令行参数       
+
+```shell   
+cat * | grep run_gmtopic.py     
+``` 
+
+正则    
+
+```shell  
+cat * | grep -P "run_gmtopic.py(.*?)config"   
+```  
 
 
 ### 日志文件太大，导出部分日志  
