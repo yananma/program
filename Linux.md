@@ -300,6 +300,12 @@ tail crisis_warning_send_log.log.log -n 700 | head -n 100
 
 ### 在所有日志里过滤    
 
+
+```shell 
+grep -r 'Traceback' .(. 是起始路径)    
+```
+
+
 在所有 .py 文件里查找    
 
 通配符、查询内容、路径      
