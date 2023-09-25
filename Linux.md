@@ -69,6 +69,7 @@ sz 下载文件到本地 send，可以使用通配符：`sz *.jpg`、`sz *.xls*`
 `mv week_data/ tools/` 本来 week_data 和 tools 是同级目录，mv 完以后就变成了 tools/week_data/ 形式     
 `mv /data/new /data/old/` 剪切文件夹和文件夹下内容  
 
+rm 可以删除多个文件：rm a.txt b.txt     
 `rm` `rm -r 目录名` 删除非空目录，r recursive  
 `rm -rf video_frame/` 删除文件夹下所有文件，删除文件夹  
 `rm -rf video_frame/*` 删除当前文件夹下所有文件，保留文件夹  
