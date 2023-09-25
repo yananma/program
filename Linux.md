@@ -441,7 +441,8 @@ chgrp newgroup file
 \- 从X到Z   
 , 散列数字    
 
-crontab   
+crontab 备份：crontab -l > crontab_b33_20230925.txt    
+
 **使用 crontab 前，先执行 crontab -l，因为输入 crontab -e 编辑时，很可能会输成 crontab -r 清空了定时任务。先输 l，清空了可以复制**   
 \-l list  
 \-e edit  
