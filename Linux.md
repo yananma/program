@@ -232,6 +232,19 @@ chmod 755 rm_txt.sh
 0 0 * * * cd /home/deploy/msg_encryptor/data && sh rm_txt.sh   
 
 
+### 更新定时任务   
+
+update_crontab.sh     
+
+```shell
+#!/bin/bash 
+cd /opt/cyberin_backend && crontab -l > crontab_b79.txt   
+git pull
+git add crontab_b79.txt   
+git commit -m "update crontab.txt" 
+git push   
+```    
+
 
 ### 过滤删除   
 
