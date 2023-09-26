@@ -173,6 +173,10 @@ htop
 `netstat -anp | less`  
 `curl` 是常用的命令行工具，用来请求 Web 服务器。它的名字就是客户端(client)的 URL 工具的意思。   
 
+`curl http://localhost:18775/accounts/get_verify_img/`     
+`curl http://127.0.0.1:18775/accounts/get_verify_img/`     
+`curl http://192.168.241.79:18775/accounts/get_verify_img/`     
+
 `wget` 复制要下载的文件链接，用 `wget 复制的 url` 下载   
 `axel` 比 wget 更强大的多线程下载工具，以后用到的时候再研究一下       
 
