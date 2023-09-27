@@ -499,6 +499,11 @@ apt-get install package --reinstall
 
 #### 查看平台的操作系统类型和版本，是 centos 还是 Ubuntu
 
+centos  
+cat /etc/centos-release    
+
+
+Ubuntu    
 lsb_release -a    
 
 
