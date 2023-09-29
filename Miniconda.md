@@ -141,6 +141,19 @@ conda 的几个常用命令：https://zhuanlan.zhihu.com/p/73460388
 
 
 
+## Windows 安装记录   
+
+在清华源：https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/ 上找到想要的版本 Miniconda3-py39_23.5.1-0-Windows-x86_64.exe，主要是 Windows、64 位。      
+
+点击下载文件     
+
+双击安装    
+
+
+
+
+
+
 ## 一次完整记录      
 
 在清华源：https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/ 上找到想要的版本 Miniconda3-py39_4.9.2-Linux-x86_64.sh，主要是 Linux、64 位。
