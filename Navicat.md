@@ -90,7 +90,8 @@ show PROCESSLIST
 
 在 info 列里找 SQL，找到以后复制 id      
 
-kill 2177771
+MySQL：kill 2177771
+tidb：kill tidb 2177771 
 ```
 
 
