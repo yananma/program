@@ -48,7 +48,7 @@
 #### 其他
 1. 要经常用 . 命令，经常使用 * 命令  
 2. u 撤销、U 撤销一行、Ctrl + R 撤销撤销  
-3. 替换：%s/old/new/g
+3. 替换：`:%s/old/new/g`    
 
 翻页：  
 * Ctrl + f forward 继续往下阅读；Ctrl + d down 半屏 
