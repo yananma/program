@@ -1,5 +1,6 @@
 
 重命名不用选中     
+pycharm 右键有 generate test      
 
 
 
