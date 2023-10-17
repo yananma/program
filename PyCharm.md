@@ -11,6 +11,28 @@ PyCharm 配置的核心就是两个：
 2. 一个是 interpreter，在右下角，配置 interpreter 的核心就是找到正确的 Python 所在的路径，里面有 server 是 python 的 server。就用上面那一步的 server 就可以了。   
 
 
+
+
+# 创建项目完整记录    
+
+`conda create --name update_author python=3.11`     
+`conda activate update_author`     
+`pip install django`     
+`django-admin startproject update_author`     
+`cd update_author/`    
+`django-admin startapp update_author_app`      
+
+看 git.md 创建仓库，提交仓库。       
+
+
+
+
+
+
+
+
+
+
 ## 创建完整 Django 项目记录  
 
 `conda create --name zjgdk python=3.9` 
