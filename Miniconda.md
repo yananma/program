@@ -164,9 +164,9 @@ conda 的几个常用命令：https://zhuanlan.zhihu.com/p/73460388
 
 安装 bash Miniconda3-py39_4.9.2-Linux-x86_64.sh     
 
-一路回车，（提示 press ENTER，意思是回车。自己理解成了输入 ENTER 了，犯了这个小错）     
+一路回车，一路 yes，（提示 press ENTER，意思是回车。自己理解成了输入 ENTER 了，犯了这个小错）     
 
-conda --version 检查有没有成功       
+conda --version 检查有没有成功。（如果没有生效，就关闭窗口再打开。）     
 
 装 python 环境：conda create --name testenv python=2.7      
 
