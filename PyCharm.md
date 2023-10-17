@@ -11,28 +11,6 @@ PyCharm 配置的核心就是两个：
 2. 一个是 interpreter，在右下角，配置 interpreter 的核心就是找到正确的 Python 所在的路径，里面有 server 是 python 的 server。就用上面那一步的 server 就可以了。   
 
 
-
-
-# 创建项目完整记录    
-
-`conda create --name update_author python=3.11`     
-`conda activate update_author`     
-`pip install django`     
-`django-admin startproject update_author`     
-`cd update_author/`    
-`django-admin startapp update_author_app`      
-
-看 git.md 创建仓库，提交仓库。       
-
-
-
-
-
-
-
-
-
-
 ## 创建完整 Django 项目记录  
 
 `conda create --name zjgdk python=3.9` 
@@ -58,26 +36,29 @@ Tools -> Deployment -> Options 添加 exclude 文件类型：`.svn;.cvs;.idea;.D
 
 ## 从 gitlab 上 clone 项目     
 
- -> 
-
 先 clone 项目：PyCharm -> Git -> Clone      
 
+如果 clone 下来只有一个空文件夹，没有项目内容，就连远程，然后 download。     
 
 
 
 
 
-## 已经有的项目配置（包括刚 git clone 下来的项目）   
+
+
+## 已经有的项目配置，比如刚 git clone 下来的项目   
 
 ### Interpreter   
 
 添加 Interpreter：右下角 -> Add Interpreter -> SSH Interpreter -> 如果存在 Existing server configuration -> Next -> 选择 Python -> 配置路径 -> 取消 auto upload。
 
-修改 interpreter 名称和远程连接名称：右下角点击左键 -> 选择 Interpreter Settings -> 点击右上边齿轮 -> 选择 show all -> 点击 Edit -> Name 就是 Interpreter 的 name；-> 下边 Deployment configuration -> 点击右边三个点 -> 右键点击左侧 -> rename  
+修改 interpreter 名称和远程 server 连接名称：右下角点击左键 -> 选择 Interpreter Settings -> 点击右上边齿轮 -> 选择 show all -> 点击 Edit -> Name 就是 Interpreter 的 name；-> 下边 Deployment configuration -> 点击右边三个点 -> 右键点击左侧 -> rename  
 
 在配置 Interpreter 的时候就配好了 server，就不用再单独配置 server。   
 
 如果没有就要配置 server。   
+
+
 
 
 ### 添加 server   
