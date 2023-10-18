@@ -325,7 +325,7 @@ df.to_csv(file_name, index=False)
 写入的时候，指定列的顺序   
 
 ```python 
-result_df = pd.DataFrame(result_list)[[u'时间', u'编辑库', u'发布库', u'捡漏池', u'总量', u'提报量', u'发布库+编辑库']] 
+result_df = pd.DataFrame(result_list)（注意是两层列表）[[u'时间', u'编辑库', u'发布库', u'捡漏池', u'总量', u'提报量', u'发布库+编辑库']] 
 ```  
 
 
