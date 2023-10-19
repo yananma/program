@@ -324,6 +324,13 @@ tail crisis_warning_send_log.log.log -n 700 | head -n 100
 ### 在所有日志里过滤    
 
 
+过滤上数据日志（最常用的方法）     
+```shell
+ansible 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76 -m shell -a "grep -r --include='(文件名)tidb-*' '（要查的字符串）https://12345.haikou.gov.cn/' （文件路径）/home/dingyong/logs/uploader/"         
+```
+
+
+
 ```shell 
 grep -r 'Traceback' .(. 是起始路径)    
 ```
@@ -337,12 +344,6 @@ grep -r 'Traceback' .(. 是起始路径)
 grep -r --include='*.py' '192.168.241.51' .(. 是起始路径)    
 ```
 
-过滤上数据日志     
-```shell
-ansible all-host,71,72,73,74,75,76 -m shell -a "grep -r --include='tidb-*' 'http://www.chinanews.com/cul/2023/07-11/10040544.shtml' /home/dingyong/logs/uploader/"
-```
-
-
 
 在指定文件名的日志里过滤     
 
@@ -350,12 +351,11 @@ ansible all-host,71,72,73,74,75,76 -m shell -a "grep -r --include='tidb-*' 'http
 find . -name "*iesdouyin_com*" | xargs grep "7233248167658016061"      
 ```
 
-过滤多台服务器的内容      
+指定文件名在多台服务器上过滤内容      
 
 ```shell 
 ansible 6,11,45 -m shell -a "find log/ -name \"*iesdouyin_com*\" | xargs grep \"7233248167658016061\" | grep \"2023-05-16 02\""
 ``` 
-
 
 
 
