@@ -486,6 +486,8 @@ crontab 命令，时间前面加 0 和不加 0 都是可以的，默认不加 0
 `0 */2 * * *` # 每 2 个小时执行一次，**注意一定要指定分钟是 0，如果不指定，就会每分钟都会执行一次**    
 `0 8 * * * cd /home/test/syb/mayanan/zjgdk && /home/test/anaconda3/envs/zjgdk/bin/python main.py &>> command/logs/upload_to_zjgdk_daily_task.log`    
 `0 9,13,16 * * * cd /home/deploy/crisis_admin && /home/deploy/.crisis/bin/python manage.py push_zishengtang --settings=crisis_admin.settings_new_product &> /home/deploy/crisis_admin/logs/zishengtang.log &`    
+`0 12-22/2 20-24 10 *` 10 月 20-22 号，12-22 点，每两个小时执行一次。         
+``
 
 [菜鸟教程例子](https://www.runoob.com/w3cnote/linux-crontab-tasks.html)      
 
