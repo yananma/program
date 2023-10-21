@@ -182,6 +182,8 @@ htop
 `curl http://127.0.0.1:18775/accounts/get_verify_img/`     
 `curl http://192.168.241.79:18775/accounts/get_verify_img/`     
 
+带 session 请求：`curl -b "cyberin_session=c3vvaenvq89mrzp9m333wimldlbj8m9o" "http://127.0.0.1:18795/xposts/get_voice_general/?objectid=303326&start_date=2023-10-20&end_date=2023-10-21"`     
+
 `wget` 复制要下载的文件链接，用 `wget 复制的 url` 下载   
 `axel` 比 wget 更强大的多线程下载工具，以后用到的时候再研究一下       
 
