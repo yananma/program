@@ -184,6 +184,9 @@ htop
 
 带 session 请求：`curl -b "cyberin_session=c3vvamldlbj8m9o" "http://127.0.0.1:18795/xposts/voice_general/?objectid=3026&start_date=10-20&end_date=10-21"`     
 
+POST application/x-www-form-urlencoded     
+`curl -d "param1=value1&param2=value2" -X POST http:///localhost:3000/data`     
+
 `wget` 复制要下载的文件链接，用 `wget 复制的 url` 下载   
 `axel` 比 wget 更强大的多线程下载工具，以后用到的时候再研究一下       
 
