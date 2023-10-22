@@ -187,6 +187,8 @@ htop
 POST application/x-www-form-urlencoded     
 `curl -d "param1=value1&param2=value2" -X POST http:///localhost:3000/data`     
 
+[curl post 各种情况](https://blog.csdn.net/aa390481978/article/details/115082240)    
+
 `wget` 复制要下载的文件链接，用 `wget 复制的 url` 下载   
 `axel` 比 wget 更强大的多线程下载工具，以后用到的时候再研究一下       
 
