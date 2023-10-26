@@ -7,7 +7,6 @@ PyCharm 的书签用冒泡法排序。
 
 
 
-
 PyCharm 配置的核心就是两个：   
 1. 一个是 server，在 Tools -> Deployment -> Configuration 中，这个是上传下载文件用的。    
 2. 一个是 interpreter，在右下角，配置 interpreter 的核心就是找到正确的 Python 所在的路径，里面有 server 是 python 的 server。就用上面那一步的 server 就可以了。   
@@ -152,6 +151,11 @@ Edit Configurations -> Additional options -> `--settings=mx_tools.settings-produ
 
 注意要在 settings 前面加上项目名称 **mx_tools.** settings-production-test，否则会报错 no module named settings-production-test    
 
+
+
+### upload_to_community 里装 hill    
+
+先在里面 git clone hill 项目（不行的话就在外面 clone，然后 mv 过去），然后在 PyCharm 里选 Mark Directory as -> Sources Root     
 
 
 ***  
