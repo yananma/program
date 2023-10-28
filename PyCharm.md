@@ -1,5 +1,6 @@
 
 重命名不用选中     
+可以用 Change Signature 来改变参数顺序。     
 pycharm 右键有 generate test      
 在搜索旁边有一个 Find Tool Window      
 简单的 oid、fid 处理，就在 pycharm 里用鼠标操作，不用打开 EmEditor   
