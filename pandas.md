@@ -292,6 +292,18 @@ df = pd.read_excel('护发素视频0-1数据(1)_语音_OCR.xlsx', header=1)
 ```
 
 
+### 读 url 链接   
+
+```python
+def read_authors(self):
+    url = (u"https://oss.static.yuqingsee.com/staticfiles/cyberin_b33/export_temp_files/sp/%E5%A4%A7%E4%BC%97%E5%"
+           u"93%94%E5%93%A9%E5%93%94%E5%93%A9.xlsx")
+    df = pd.read_excel(url)
+    return df['author'].tolist()
+```
+
+
+
 ### 把列表写入到 Excel  
 
 ```python 
