@@ -1,5 +1,7 @@
 
-office 打开乱码：先用 WPS 打开，然后保存，然后再用 office 打开。    
+office 打开乱码：      
+临时解决：先用 WPS 打开，然后保存，然后再用 office 打开。     
+根本解决：把写入文件时的编码从 utf-8 改成 gbk。比如 `pd.DataFrame(columns=content).to_csv(path, index=False, encoding='gbk')`     
 
 
 
