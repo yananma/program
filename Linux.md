@@ -168,6 +168,9 @@ top c 显示命令全称
 
 htop   
 
+安装：`conda install -c conda-forge htop`，其中 conda-forge 是一个 channel，相当于应用商店      
+
+
 查看 CPU 核数：lscpu 看 CPU(s)        
 
 #### 网络 
