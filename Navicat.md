@@ -274,6 +274,15 @@ select DATE_FORMAT(include_t,'%Y-%m-%d %H') hours, count(postid) count from xpos
 select DATE_FORMAT(include_t,'%Y-%m-%d') days, count(postid) count from xpost WHERE include_t >= '2022-10-01 00:00:00' group by days ORDER BY include_t;
 ```
 
+按天聚类，再按字段中的类型聚类   
+
+```sql
+SELECT DATE_FORMAT(posttime,'%Y-%m-%d') AS days, 
+SUM(CASE WHEN is_comment = 0 THEN 1 ELSE 0 END) AS post,
+SUM(CASE WHEN is_comment = 1 THEN 1 ELSE 0 END) AS `comment` 
+FROM xpost WHERE entryid IN (5772605, 5775742, 5781123) GROUP BY days ORDER BY days
+```
+
 
 # 报错   
 
