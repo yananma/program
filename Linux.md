@@ -135,10 +135,13 @@ losf: list open files
 
 如果启动服务说端口被占用，lsof 结果为空，很可能是还处在 4 次挥手阶段，等一会儿再试。     
 
-`ps` process status  
+`ps` process status   
 `ps -aux | less`  
-`ps -aux | grep Nginx`  
-`ps -eO lstart | grep zkpoint_es` 查看进程开始时间  
+`ps -aux | grep Nginx`   
+`ps -eO lstart | grep zkpoint_es` 查看进程开始时间   
+`ps -aux --sort=%mem` 按内存占用排序      
+`ps -aux --sort=%mem | head -n 50` 取 top50     
+
 
 如果想看定时任务的脚本的参数，一个是可以看 crontab，如果是 root 用户启用的 crontab，没有权限查看，可以先看日志，看命令执行时间，然后在定时任务执行的时候执行 `ps -aux | grep post_sim` 看正在执行的命令。        
 
