@@ -141,6 +141,7 @@ losf: list open files
 `ps -eO lstart | grep zkpoint_es` 查看进程开始时间   
 `ps -aux --sort=%mem` 按内存占用排序      
 `ps -aux --sort=%mem | head -n 50` 取 top50     
+`ps -aux --sort=-%mem | head -n 20 > mayanan/crontab_ps/$(date +%Y_%m_%d_%H%M%S)_ps.txt` 拼接日期文件名      
 
 
 如果想看定时任务的脚本的参数，一个是可以看 crontab，如果是 root 用户启用的 crontab，没有权限查看，可以先看日志，看命令执行时间，然后在定时任务执行的时候执行 `ps -aux | grep post_sim` 看正在执行的命令。        
