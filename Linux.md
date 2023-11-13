@@ -179,6 +179,7 @@ htop
 
 uptime 查看 load average。    
 可以结合 uptime 和 awk 实现监测功能。     
+`uptime | awk -F "load average: " '{print $2}' | awk -F "," '{print $1, $2, $3}' `    
 
 
 #### 网络 
