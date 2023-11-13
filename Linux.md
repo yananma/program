@@ -296,6 +296,21 @@ echo "tongyong_update_interact_num.log done."
 ```
 
 
+### 进程监测脚本  
+
+send_top_ps.sh
+```shell
+load_average=$(uptime | awk -F'load average:' '{print $2}' | awk -F',' '{print $1}')
+echo $load_average
+if (( $(echo "$load_average > 40" | bc -l) )); then
+    ps_output=$(ps aux --sort=-%cpu | head -n 21)
+    python ~/mayanan/send_feishu_msg.py --msg "$ps_output"
+fi
+``` 
+
+
+
+
 
 # 实际例子  
 
