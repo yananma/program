@@ -175,7 +175,11 @@ htop
 安装：`conda install -c conda-forge htop`，其中 conda-forge 是一个 channel，相当于应用商店      
 
 
-查看 CPU 核数：lscpu 看 CPU(s)        
+查看 CPU 核数：lscpu 看 CPU(s)         
+
+uptime 查看 load average。    
+可以结合 uptime 和 awk 实现监测功能。     
+
 
 #### 网络 
 `ifconfig`  
