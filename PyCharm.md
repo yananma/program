@@ -1,5 +1,6 @@
 
 重命名不用选中     
+debug 的 window 在左侧有一个 pause program，可以中断执行     
 可以用 Change Signature 来改变参数顺序。     
 pycharm 右键有 generate test      
 在搜索旁边有一个 Find Tool Window      
