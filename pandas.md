@@ -261,6 +261,8 @@ class Command(BaseCommand):
 
 ### [read_excel()](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_excel.html)      
 
+df 切片，测试的时候只取几条用，df[0:3]
+
 ```python 
 df = pd.read_excel('模型反馈样本数据.xlsx', engine='openpyxl', sheet_name='c_label0_some_preds1')
 ```
