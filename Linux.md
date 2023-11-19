@@ -1,4 +1,7 @@
 
+
+可以组合使用 tail 和 head 切片日志。       
+
 多用 man    
 f forward    
 b backward     
