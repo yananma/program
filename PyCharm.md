@@ -1,5 +1,5 @@
 
-
+把正在写的功能的 tab 先 pin 起来，不用再找了    
 debug 的 window 在左侧有一个 pause program，可以中断执行     
 可以用 Change Signature 来改变参数顺序。     
 pycharm 右键有 generate test      
