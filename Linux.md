@@ -368,7 +368,7 @@ tail crisis_warning_send_log.log.log -n 700 | head -n 100
 b16 dingyong 用户     
 
 ```shell
-"grep -r --include='(文件名)tidb-*' '（要查的字符串）https://12345.haikou.gov.cn/' （文件路径）/home/dingyong/logs/uploader/"         
+grep -r --include='(文件名)tidb-*' '（要查的字符串）https://12345.haikou.gov.cn/' （文件路径）/home/dingyong/logs/uploader/         
 ```
 
 
