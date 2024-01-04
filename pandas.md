@@ -486,6 +486,10 @@ xlsxwriter.Workbook(filename, {'strings_to_urls': False})
 
 ### 高亮  
 
+
+XlsxWriter 文档 `https://xlsxwriter.readthedocs.io/`    
+
+
 write_rich_string 某个词高亮  
 ```python 
 from xlsxwriter.workbook import Workbook
@@ -515,6 +519,10 @@ print(test_list)
 worksheet.write_string(1, 0, *test_list)  # 写入工作簿
 workbook.close()  # 记得关闭
 ```
+
+
+
+
 
 
 
