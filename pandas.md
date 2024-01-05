@@ -521,6 +521,18 @@ workbook.close()  # 记得关闭
 ```
 
 
+单元格背景高亮    
+
+`https://xlsxwriter.readthedocs.io/format.html#format-set-bg-color`       
+
+```python
+cell_format = workbook.add_format()
+
+cell_format.set_bg_color('green')
+
+worksheet.write('A1', 'Ray', cell_format)
+```
+
 
 
 
