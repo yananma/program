@@ -185,7 +185,26 @@ n：为查询结果返回的数量
 
 select * from Customer limit 10;   --检索前10行数据，显示1-10条数据
 select * from Customer limit 5,10; --检索从第6行开始向前加10条数据，共显示id为6,7....15
-```   
+```
+
+
+### CASE   
+
+```sql
+SELECT DISTINCT(url) AS "链接", author_location AS "地域", CASE WHEN gender = -1 THEN ""
+	WHEN gender = 0 THEN "女"
+	WHEN gender = 1 THEN "男"
+END
+ AS "性别", posttime AS "发文时间" FROM `xpost` WHERE url IN ("http://www.dongchedi.com/article/17823191939") ORDER BY posttime 
+```
+
+### IF  
+
+```sql
+SELECT DISTINCT(url) AS "链接", author_location AS "地域", IF(gender = -1,"",IF(gender = 1,"男","女"))
+ AS "性别", posttime AS "发文时间" FROM `xpost` WHERE url IN ("http://www.dongchedi.com/article/17823191939") ORDER BY url
+```
+
 
 
 ### LEFT  
