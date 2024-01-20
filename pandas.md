@@ -470,7 +470,7 @@ for i, row in df.iterrows():
 
 ### 消除 url 类型数量限制  
 
-pandas     
+pandas，pandas 不能在 to_excel 里写 options 会报错没有这个参数，必须要用下面这种写法         
 
 ```python 
 with pd.ExcelWriter(f'{work_root}/{suffix}.xlsx',engine='xlsxwriter',options={'strings_to_urls': False}) as writer:
