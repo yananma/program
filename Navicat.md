@@ -94,13 +94,24 @@ IntegerField 只有 0 和 1 的，用 tinyint，长度 2. 如果有多个，就�
 ### 杀查询进程  
 
 ```python  
-show PROCESSLIST  
+show PROCESSLIST
+
+show full PROCESSLIST    
 
 在 info 列里找 SQL，找到以后复制 id      
 
 MySQL：kill 2177771
 tidb：kill tidb 2177771 
 ```
+
+
+### tidb查某个服务器请求的 SQL  
+
+```python
+select * from INFORMATION_SCHEMA.processlist where host like '192.168.241.70%';
+select * from INFORMATION_SCHEMA.cluster_processlist where host like '192.168.241.70%';
+```
+
 
 
 # 知识点   
