@@ -420,7 +420,7 @@ cat * | grep run_gmtopic.py
 正则    
 
 ```shell  
-cat * | grep -P "run_gmtopic.py(.*?)config"   
+cat * | grep -E "run_gmtopic.py(.*?)config"   
 ```  
 
 
@@ -448,10 +448,10 @@ tail -n 200 origin_20220611124948.log | grep 正在处理第65组聚类结果：
 
 正则：    
 ```shell    
-cat debug.log | grep -P "\((\d{2,}|[5-9])\.\d+\)[^\r\n]+" > slow_sql.log   
+cat debug.log | grep -E "\((\d{2,}|[5-9])\.\d+\)[^\r\n]+" > slow_sql.log   
 ```
 
-可以直接用正则，没写 -P 也可以   
+可以直接用正则，没写 -E 也可以，有默认的正则类型    
 ```shell
 tail -n 500 push_oulaiya.log | grep [^08:]06:.*done.    
 ```  
