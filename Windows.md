@@ -17,43 +17,43 @@ ssh -p 17717 test@112.253.2.6 "cd /home/test/syb/mayanan/cyberin_backend/ && /ho
 ## 快捷键    
 
 
-### Ctrl + Home 文本编辑器回到第一行   
+#### Ctrl + Home 文本编辑器回到第一行   
 
 
-### Ctrl + Alt + → 所有行的选中光标到末尾
+#### Ctrl + Alt + → 所有行的选中光标到末尾
 
 
-### Shift + Enter 实现 ChatGPT 换行     
+#### Shift + Enter 实现 ChatGPT 换行     
 
 
-### Home 在浏览器页面可以回到顶部     
+#### Home 在浏览器页面可以回到顶部     
 
 
-### Alt + 鼠标实现批量操作    
+#### Alt + 鼠标实现批量操作    
 
 
-### 按滚轮下拉实现批量操作     
+#### 按滚轮下拉实现批量操作     
 
 
-### Ctrl + Shift + Esc 打开任务管理器   
+#### Ctrl + Shift + Esc 打开任务管理器   
 
 
-### Windows + v 打开剪切板      
+#### Windows + v 打开剪切板      
 
 
-### Ctrl + y 反向撤销   
+#### Ctrl + y 反向撤销   
 
 
-### Ctrl + Shift + Home 选中从光标到开头的内容    
+#### Ctrl + Shift + Home 选中从光标到开头的内容    
 
 
 
-### 键盘打出来的字变宽了，打出来的字像这样　ｗｉｎｄｏｗｓ　　　
+## 键盘打出来的字变宽了，打出来的字像这样　ｗｉｎｄｏｗｓ　　　
 
 输入法全半角切换。（快捷键是 Shift + q，所以有时候会误触）      
 
 
-### 配置环境变量  
+## 配置环境变量  
 
 左下角搜索“环境变量”    
 
