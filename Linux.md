@@ -33,7 +33,7 @@ shell 脚本是程序员工具箱的重要组成部分，既适用于个人，�
 `find ./ -name manage.py`   
 `find ./ -name *.html`   
 `locate` 定位文件目录 `locate hello.txt`  
-find命令及不显示Permission denied：`find [path] -name "pattern " 2>/dev/null`    
+find命令及不显示Permission denied：`find [path] -name "pattern " 2>/dev/null`，比如 `find ./ -name upload_to_wei* 2>/dev/null`    
 
 `wc`  
 行数、单词数、字节数   
