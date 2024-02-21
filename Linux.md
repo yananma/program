@@ -29,6 +29,7 @@ shell 脚本是程序员工具箱的重要组成部分，既适用于个人，�
 解压到当前目录：`tar -zxvf vscode.tar.gz -C ./`
 
 `find` 一般要用通配符 `find ./ -name community*`      
+`find ./ -name *feed-*` 不是 feed 开头，前面要加通配符     
 `find` 范围 名称  `find /home -name hello.txt`  `-name` `-size` `-user`  
 `find ./ -name manage.py`   
 `find ./ -name *.html`   
