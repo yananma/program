@@ -341,3 +341,14 @@ SELECT DISTINCT siteid FROM `notice`.`xpost` WHERE `facetid` = (59, 66, 74, 75, 
 ```python
 print("','".join(s.splitlines()))    
 ```
+
+### 加字段一直加不上，用 SHOW PROCESSLIST 看进程，状态显示 Waiting for table metadata lock   
+
+可能是死锁了，去百度上搜，说可以用 `SELECT * FROM sys.schema_table_lock_waits` 命令看是不是死锁了。不过自己没试过。      
+
+遇到这种情况，或者没有遇到这种情况也可以，如果表不大的话，可以先复制一份，然后在复制的表上加字段，然后再把原来的表删除，然后再重命名复制表为原来表的名字。     
+
+
+
+
+
