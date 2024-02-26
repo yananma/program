@@ -10,6 +10,14 @@ SQL 是更本质的查询，遇到难以排查的问题就看 SQL 语句。
 
 
 
+### 查询数据库都有什么字段   
+
+```python
+ show columns from xentry
+```
+
+
+
 # 项目   
 
 ## Cyberin     
