@@ -532,7 +532,18 @@ worksheet.write('A1', 'Ray', cell_format)
 ```
 
 
+### 抽样脚本  
 
+```python
+import pandas as pd
+
+
+df = pd.read_csv("../data/tongyong/揽胜2023正面评论.csv", encoding='gbk')
+
+# 抽样 50 万条
+df = df.sample(n=500000)
+df.to_csv("../data/tongyong/揽胜2023正面评论_50w.csv", index=False)
+``` 
 
 
 
