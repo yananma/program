@@ -538,12 +538,17 @@ worksheet.write('A1', 'Ray', cell_format)
 import pandas as pd
 
 
-df = pd.read_csv("../data/tongyong/揽胜2023正面评论.csv", encoding='gbk')
+df = pd.read_csv("../data/tongyong/揽胜2023正面评论.csv", encoding='gbk', index_col=False)
 
 # 抽样 50 万条
 df = df.sample(n=500000)
 df.to_csv("../data/tongyong/揽胜2023正面评论_50w.csv", index=False)
 ``` 
+
+
+### 读取错位问题  
+
+默认以第一列为 index，如果不需要第一列为 index 要加 index_col=False 参数。      
 
 
 
