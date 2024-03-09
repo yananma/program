@@ -482,11 +482,32 @@ xlsxwriter.Workbook(filename, {'strings_to_urls': False})
 ```
 
 
+### 抽样脚本  
+
+```python
+import pandas as pd
+
+
+df = pd.read_csv("../data/tongyong/揽胜2023正面评论.csv", encoding='gbk', index_col=False)
+
+# 抽样 50 万条
+df = df.sample(n=500000)
+df.to_csv("../data/tongyong/揽胜2023正面评论_50w.csv", index=False)
+``` 
+
+
+### 读取错位问题  
+
+默认以第一列为 index，如果不需要第一列为 index 要加 index_col=False 参数。      
+
+
+
+
+# XlsxWriter   
+
+文档 `https://xlsxwriter.readthedocs.io/`    
+
 ### 高亮  
-
-
-XlsxWriter 文档 `https://xlsxwriter.readthedocs.io/`    
-
 
 write_rich_string 某个词高亮  
 ```python 
@@ -532,23 +553,14 @@ worksheet.write('A1', 'Ray', cell_format)
 ```
 
 
-### 抽样脚本  
+# xlwt  
 
-```python
-import pandas as pd
+xlwt 是一个旧包，只能写入 xls 格式，xls 格式只能写入 65535 条数据。    
 
-
-df = pd.read_csv("../data/tongyong/揽胜2023正面评论.csv", encoding='gbk', index_col=False)
-
-# 抽样 50 万条
-df = df.sample(n=500000)
-df.to_csv("../data/tongyong/揽胜2023正面评论_50w.csv", index=False)
-``` 
+即使把后缀改成了 xlsx 也不行，治标不治本。      
 
 
-### 读取错位问题  
 
-默认以第一列为 index，如果不需要第一列为 index 要加 index_col=False 参数。      
 
 
 
