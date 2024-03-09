@@ -559,7 +559,20 @@ xlwt 是一个旧包，只能写入 xls 格式，xls 格式只能写入 65535 �
 
 即使把后缀改成了 xlsx 也不行，治标不治本。      
 
+xlwt 改 xlsxwriter 也很容易。   
 
+原来：   
+```python
+f = xlwt.Workbook()
+sheet1 = f.add_sheet(u'sheet1', cell_overwrite_ok=True)
+f.save(filepath)
+```
+
+```python
+workbook  = xlsxwriter.Workbook(filepath)
+sheet1 = workbook.add_worksheet(u'sheet1')
+workbook.close()
+```
 
 
 
