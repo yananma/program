@@ -231,6 +231,44 @@ SELECT DISTINCT(url) AS "链接", author_location AS "地域", IF(gender = -1,""
 ```
 
 
+```sql
+SELECT
+	count(*),
+(	CASE
+	WHEN (type_rank >= 20) THEN
+		"负面"
+	WHEN (pos_type_rank >= 1) THEN
+		"正面"
+	ELSE
+		"中立"
+		END
+) AS "调性"
+FROM
+	`xpost` 
+WHERE
+	entryid IN (5265914, 5269200) 
+GROUP BY
+	`调性`
+```
+
+
+```sql
+SELECT
+	count(*),
+IF
+	(
+		type_rank >= 20,
+		"负面",
+	IF
+	( pos_type_rank >= 1, "正面", "中立" )) AS "调性" 
+FROM
+	`xpost` 
+WHERE
+	entryid IN ( 5509358 ) 
+GROUP BY
+	`调性`
+```
+
 
 ### LEFT  
 
