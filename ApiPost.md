@@ -5,7 +5,7 @@
 1. 克隆原来的接口。
 2. 重命名。
 3. 复制网页上的请求。（GET 请求是这样，POST 请求把参数写到 body 里）
-4. 比如复制 `http://test.maixunbytes.com:8001/xposts/search/?date1=2024-03-25+00:00:00&date2=2024-03-26+23:59:59&include_time_1=&include_time_2=&src=-1&fid_arr=305987&page=1&hide_ontop=ALL`    
+4. 比如复制 `http://test.maixunbytes.com:8001/xposts/search/?date1=2024-03-25+00:00:00&date2=2024-03-26+23:59:59&include_time_1=`    
 5. 找到 header 标签
 6. 复制页面上的 cookie。
 7. 参数名里写 Cookie，参数值里写复制的值。
