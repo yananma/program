@@ -509,7 +509,8 @@ df.to_csv("../data/tongyong/揽胜2023正面评论_50w.csv", index=False)
 
 ### 高亮  
 
-write_rich_string 某个词高亮  
+write_rich_string 某个词高亮，注意，使用 write_rich_string 的时候，如果写入的列表全部都是 string，没有 xlsxwriter format 对象，就会报错 AttributeError: 'str' object has no attribute '_get_xf_index'。    
+
 ```python 
 from xlsxwriter.workbook import Workbook
 
