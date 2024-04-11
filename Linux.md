@@ -66,14 +66,18 @@ find命令及不显示Permission denied：`find [path] -name "pattern " 2>/dev/n
 `scp -P 17717 a.txt b.txt c.txt deploy@192.168.241.3:/home/deploy/`        
 `scp -P 17717 -r little_env deploy@192.168.241.25:/home/deploy/` 文件夹 -r    
 对方端口、自己压缩包、对方用户名@对方内网 IP、目标文件夹。  
-带密码 scp，可以用于定时任务。`sshpass -p "密码，外面要带上前后这两个引号"        
-scp -P 17717 /home/test/syb/mayanan/msg_encryptor/crontab_ps.txt deploy@192.168.241.30:/opt/cyberin_backend/tmp/crontab_ps.txt`        
-带密码跳转：sshpass -p 'ylQUpQ&s4bwNiqZr' ssh -p 17717 b26        
+带密码 scp，可以用于定时任务。
+`sshpass -p "密码，外面要带上前后这两个引号" scp -P 17717 /home/test/syb/mayanan/msg_encryptor/crontab_ps.txt deploy@192.168.241.30:/opt/cyberin_backend/tmp/crontab_ps.txt`        
+比如：`sshpass -p 'ylQUpQ&s4bwNiqZr' scp -P 17717 679da677ec4ec8ce72379070a9c1c5f.png deploy@192.168.241.26:/usr/local/nginx/html/static/tx_daily/img/upload_img`     
+
+带密码跳转，比如：`sshpass -p 'ylQUpQ&s4bwNiqZr' ssh -p 17717 b26`        
 速度非常快，100MB/s  
+
 `yum install lrzsz`    
 z 是 ZMODEM 协议。    
 rz 上传文件到服务器 receive，用鼠标拖拽。   
 sz 下载文件到本地 send，可以使用通配符：`sz *.jpg`、`sz *.xls*`    
+
 `mv` `mv a.txt dir1`    
 `mv` 原文件名 新文件名 (目的地在当前目录，就是在这个目录下操作就不是移动了，就是重命名)     
 `mv week_data/ tools/` 本来 week_data 和 tools 是同级目录，mv 完以后就变成了 tools/week_data/ 形式     
