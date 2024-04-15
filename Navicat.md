@@ -119,6 +119,13 @@ tidb：kill tidb 2177771
 ```
 
 
+### 在改数据库字段，或者 drop table 很慢的时候，可能是有进程在 waiting   
+
+用 show processlist 看有没有进程在 waiting，如果有进程就杀掉     
+
+drop table 是很快的，上千万数据，马上就能 drop 掉。如果 drop 了很长时间，很可能就是有进程在 waiting     
+
+
 ### tidb查某个服务器请求的 SQL  
 
 ```python
