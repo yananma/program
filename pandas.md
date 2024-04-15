@@ -501,6 +501,39 @@ df.to_csv("../data/tongyong/揽胜2023正面评论_50w.csv", index=False)
 默认以第一列为 index，如果不需要第一列为 index 要加 index_col=False 参数。      
 
 
+### 判断时间序列是不是连续的   
+
+```python
+import pandas as pd
+# 示例时间数据
+timestamps = ['2022-01-01', '2022-01-02', '2022-01-04', '2022-01-05']
+# 将时间数据转换为DatetimeIndex对象
+dt_index = pd.to_datetime(timestamps)
+# 判断时间是否连续
+is_continuous = pd.infer_freq(dt_index) is not None
+if is_continuous:
+    print("时间是连续的")
+else:
+    print("时间不是连续的")
+```
+
+
+### 找到时间中断的地方    
+
+```python
+import pandas as pd
+# 示例时间数据
+timestamps = ['2022-01-01', '2022-01-02', '2022-01-04', '2022-01-05']
+# 将时间数据转换为DatetimeIndex对象
+dt_index = pd.to_datetime(b)
+# 计算时间间隔
+time_diff = dt_index.to_series().diff()
+# # 找出中断点的索引
+interrupted_indexes = time_diff[time_diff > pd.Timedelta(days=1)].index
+# # 输出中断点
+for index in interrupted_indexes:
+    print(index-pd.Timedelta(days=1))
+```
 
 
 # XlsxWriter   
