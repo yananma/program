@@ -2,7 +2,9 @@
 
 ## git  
 
-如果 C 盘快满了，可以用 git bash 看文件。用 du -sh * | sort -h 查看。     
+去百度网盘上的软件里下载 spacesniffer_1_3_0_2.zip，然后看 C 盘。     
+
+如果 C 盘快满了，可以用 git bash 看文件。用 du -sh * | sort -h 查看。(这种方法从 C 盘根目录查的时候很慢，要五六个小时)       
 
 
 
