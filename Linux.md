@@ -161,6 +161,15 @@ losf: list open files
 `ps -ef | less`  
 可以查看父进程  
 
+
+Ctrl + z 挂起进程    
+jobs 看有哪些被挂起的进程    
+fg 然后回车进入进程，看文章说可以加进程参数，但是试了不生效不知道为什么      
+
+
+
+
+
 kill 进程 id  
 \-9 强制关闭  
 
