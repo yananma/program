@@ -291,6 +291,21 @@ SELECT * FROM xpost WHERE domain LIKE '%汽车之家%' AND RIGHT(title, 2(这个
 ```
 
 
+
+
+### INSERT INTO 
+
+```python
+INSERT INTO topic_aspect_rank  （表名）
+(fid, postid, topic, name, `date`)  （字段）
+VALUES (307614, 101465535729, 'xwh123', 'Celestiq', '2023-10-23'),   （数据）
+       (307614, 101461509500, '品牌', 'Celestiq', '2023-10-23') 
+ON DUPLICATE KEY UPDATE topic = VALUES(topic)  （要更新的字段）
+```
+
+
+
+
 ### DELETE   
 
 ```sql  
