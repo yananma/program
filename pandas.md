@@ -369,6 +369,10 @@ def write_to_excel(self, sheet_datas):
 
 存 CSV 用 EmEditor 比用 pandas 快多了。    
 
+用 navicat 导出 csv 格式的数据的时候，用 WPS 打开是乱码，然后用 pandas 读到内存里，指定 encoding='utf-8'，看到已经不是乱码了。to_csv 的时候，指定 encoding='gbk' 打开还是乱码，就再加一个参数 errors='ignore' 就可以了.     
+
+`pd.concat([df1, df2, df3, df4, df5, df6]).to_csv('dazhongchezhan.csv', encoding='gbk', errors='ignore')`    
+
 
 #### 追加文件  
 
