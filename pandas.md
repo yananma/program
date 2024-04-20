@@ -374,6 +374,14 @@ def write_to_excel(self, sheet_datas):
 `pd.concat([df1, df2, df3, df4, df5, df6]).to_csv('dazhongchezhan.csv', encoding='gbk', errors='ignore')`    
 
 
+#### 'ascii' codec can't decode byte 0xe5 in position 0: ordinal not in range(128)
+
+```python
+# 加 encoding 参数
+df.to_csv('beijingchezhan.csv', index=False, encoding='utf-8')
+```
+
+
 #### 追加文件  
 
 指定参数 mode='a'，而且第一个写入的时候有表头，后面不要写表头，指定参数 headers=False   
