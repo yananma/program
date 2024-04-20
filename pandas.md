@@ -869,6 +869,38 @@ df = pd.read_csv(newest_file, encoding='GB18030')
 ``` 
 
 
+### to_excel 报错 'ascii' codec can't decode byte 0xe5 in position 0: ordinal not in range(128)   
+
+to_excel 没有 encoding 参数，要通过遍历，decode 数据。    
+
+```python
+# 比如 Date 里包含中文年月日，就可以先 decode 这个字段。  
+df["Date"] = df["Date"].map(lambda x: x.decode('utf-8'))
+```
+
+一个完整一些的写入的例子：   
+
+```python
+def write_to_excel(self, sheet_datas):
+    filepath = self.get_filepath()
+    with pd.ExcelWriter(filepath, engine='xlsxwriter') as writer:
+        for sheet_name, sheet_data in sheet_datas.items():
+            df = pd.DataFrame(sheet_data)
+            df["Date"] = df["Date"].map(lambda x: x.decode('utf-8'))
+            df.to_excel(writer, sheet_name, index=False, header=False)
+```
+
+
+### to_csv 报错 'ascii' codec can't decode byte 0xe5 in position 0: ordinal not in range(128)
+
+```python
+# 加 encoding 参数
+df.to_csv('beijingchezhan.csv', index=False, encoding='utf-8')
+```
+
+
+
+
 ### Python2 read_excel keyerror   
 
 最开始的写法     
@@ -907,15 +939,6 @@ print df
 ```python
 pip install xlrd==1.2.0
 ```
-
-
-### 'ascii' codec can't decode byte 0xe5 in position 0: ordinal not in range(128)  python2.7 pandas0.24.2  
-
-要指定 engine 和 encoding   
-
-```python 
-new_df.to_excel(excel_name, engine='xlsxwriter', index=False, encoding='utf-8')
-``` 
 
 
 ### UnicodeDecodeError: 'utf-16-le' codec can't decode bytes in position 1186-1187: unexpected end of data  
