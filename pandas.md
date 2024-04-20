@@ -876,6 +876,9 @@ to_excel 没有 encoding 参数，要通过遍历，decode 数据。
 ```python
 # 比如 Date 里包含中文年月日，就可以先 decode 这个字段。  
 df["Date"] = df["Date"].map(lambda x: x.decode('utf-8'))
+
+# 处理表头
+df.columns = df.columns.map(lambda x: x.decode('utf-8')) 
 ```
 
 一个完整一些的写入的例子：   
@@ -885,9 +888,10 @@ def write_to_excel(self, sheet_datas):
     filepath = self.get_filepath()
     with pd.ExcelWriter(filepath, engine='xlsxwriter') as writer:
         for sheet_name, sheet_data in sheet_datas.items():
-            df = pd.DataFrame(sheet_data)
+            df = pd.DataFrame(sheet_data)[self.get_headers()]
+            df.columns = df.columns.map(lambda x: x.decode('utf-8'))
             df["Date"] = df["Date"].map(lambda x: x.decode('utf-8'))
-            df.to_excel(writer, sheet_name, index=False, header=False)
+            df.to_excel(writer, sheet_name=sheet_name, index=False)
 ```
 
 
