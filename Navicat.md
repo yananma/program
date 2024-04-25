@@ -119,6 +119,13 @@ tidb：kill tidb 2177771
 ```
 
 
+### 查询占用时间长
+
+可以直接查 INFORMATION_SCHEMA 的 SLOW_QUERY 表，可以导出来看。按 query time 排序。    
+
+SELECT * FROM INFORMATION_SCHEMA.CLUSTER_PROCESSLIST ORDER BY TIME DESC 查看花费时间长的 SQL 进程。
+
+
 ### 在改数据库字段，或者 drop table 很慢的时候，可能是有进程在 waiting   
 
 用 show processlist 看有没有进程在 waiting，如果有进程就杀掉     
