@@ -434,4 +434,14 @@ print("','".join(s.splitlines()))
 
 
 
+# Navicat 报错
+
+### 报错 access denied @b70 
+
+端口变了。    
+
+
+
+
+
 
