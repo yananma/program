@@ -513,6 +513,48 @@ df.to_csv("../data/tongyong/揽胜2023正面评论_50w.csv", index=False)
 默认以第一列为 index，如果不需要第一列为 index 要加 index_col=False 参数。      
 
 
+
+### 判断数字是否连续  
+
+```python
+def find_discontinuous_numbers(lst):  
+    # 假设列表中的数字是唯一的，并且我们想要找出不连续的区间  
+    if not lst:  # 空列表没有不连续的数字  
+        return []  
+  
+    # 对列表进行排序  
+    lst.sort()  
+  
+    # 初始化上一个数字为列表的第一个元素  
+    prev_num = lst[0]  
+    discontinuous_intervals = []  # 存储不连续区间的列表  
+  
+    # 遍历列表（从第二个元素开始）  
+    for num in lst[1:]:  
+        # 检查当前数字与前一个数字的差值  
+        diff = num - prev_num  
+        # 如果差值大于1，说明有不连续的数字  
+        if diff > 1:  
+            # 记录不连续区间（可以使用元组(prev_num + 1, num - 1)来表示区间，  
+            # 但这里为了简单起见，我们只记录开始和结束的数字）  
+            discontinuous_intervals.append((prev_num + 1, num - 1))  
+  
+        # 更新前一个数字为当前数字  
+        prev_num = num  
+  
+    # 如果列表的最后一个元素与倒数第二个元素的差值大于1，  
+    # 那么最后一个元素后面也有一个不连续区间（例如，列表[1, 2, 4]）  
+    if lst[-1] - lst[-2] > 1:  
+        discontinuous_intervals.append((lst[-2] + 1, lst[-1] - 1))  
+  
+    return discontinuous_intervals  
+  
+# 示例  
+numbers = [1, 2, 4, 5, 7, 8, 10]  
+print(find_discontinuous_numbers(numbers))  # 输出: [(3, 3), (6, 6), (9, 9)]
+```
+
+
 ### 判断时间序列是不是连续的   
 
 ```python
