@@ -1,16 +1,23 @@
 
+可以在 debug 过程中改变量的值，要经常用这种方法，而不是总是重新进入，或者复制各种很难的数据，应该自己创造假数据。   
 把正在写的功能的 tab 先 pin 起来，不用再找了    
+Ctrl + d 复制    
+Ctrl + Shift + ↑ 移动语句    
+Shift + Tab 反向移动    
 debug 的 window 在左侧有一个 pause program，可以中断执行     
 可以用 Change Signature 来改变参数顺序。     
 pycharm 右键有 generate test      
-在搜索旁边有一个 Find Tool Window      
 简单的 oid、fid 处理，就在 pycharm 里用鼠标操作，不用打开 EmEditor   
 PyCharm 的书签用冒泡法排序。     
 重命名不用选中     
 git log 可以按人、按文件搜索。        
 git log 可以搜索 commit message。      
+git show history 可以看到这个文件的 history    
+git show history for selection 可以看到选中的代码的提交记录。    
 Python console 里可以看到执行过的命令的历史记录。Ctrl + a 可以选择全部。       
-可以在 debug 过程中改变量的值。   
+在搜索旁边有一个 Find Tool Window      
+
+
 通过 debug 进 Django 源码学会了 Django 的 call_command 的用法。      
 
 
