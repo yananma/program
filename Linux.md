@@ -99,12 +99,14 @@ rm 可以删除多个文件：rm a.txt b.txt
 ls 显示的时候，前面的是快捷方式，后面的是原文件  
 
 `which` 显示可执行文件的位置，`which python`、`which ipython`   
-`help` 获取 Shell 内建命令的帮助信息  
+`help` 获取 Shell 内建命令的帮助信息    
+
 `alias` 创建自己的命令：`alias myxxkt='cd /home/elearning/xxkt/'`  
 可以使用参数，比如 `alias c744="chmod 744 $1"`; 比如 `alias lmn="less -m -N $1"`  
 alias 可以和多条命令结合，命令之间用 ; 分隔   
 或者用一条命令，比如：`alias ipython='cd /opt/cyberin_backend/ && /home/deploy/cyberin_env/bin/python manage.py shell --settings cyberin_backend.settings_product'`    
 alias 永久生效：`$ vim ~/.bashrc`、`source ~/.bashrc`   
+堡垒机如果删除了 bashrc 里的 alias ，source 以后不生效，就重连堡垒机。     
 
 
 `cat` 只读查看  
