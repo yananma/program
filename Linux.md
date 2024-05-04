@@ -76,7 +76,7 @@ find命令及不显示Permission denied：`find [path] -name "pattern " 2>/dev/n
 `yum install lrzsz`    
 z 是 ZMODEM 协议。    
 rz 上传文件到服务器 receive，用鼠标拖拽。   
-sz 下载文件到本地 send，可以使用通配符：`sz *.jpg`、`sz *.xls*`    
+sz 下载文件到本地 send，可以使用通配符：`sz *、sz *.jpg`、`sz *.xls*`    
 
 `mv` `mv a.txt dir1`    
 `mv` 原文件名 新文件名 (目的地在当前目录，就是在这个目录下操作就不是移动了，就是重命名)     
