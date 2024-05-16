@@ -38,6 +38,26 @@ SELECT sourcetype, COUNT(1) AS cnt FROM xpost WHERE entryid IN (5113547,5113621,
 ```
 
 
+## 央视热榜推送  
+
+以一条 SQL 的查询结果，作为另一条 SQL 的查询条件   
+
+```sql
+SELECT
+	version,
+	COUNT(*) AS count,
+	create_time 
+FROM
+	`weibo` 
+WHERE
+	version IN ( SELECT version FROM `hot_list`.`weibo` WHERE `topic` = '普京访华' ORDER BY `version` ) 
+GROUP BY
+	version 
+ORDER BY
+	create_time DESC
+```
+
+
 
 ## 危机预警  
 
