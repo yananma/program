@@ -945,6 +945,11 @@ df.to_csv('beijingchezhan.csv', index=False, encoding='utf-8')
 ```
 
 
+### 读 Excel，遍历行的时候 KeyError    
+
+```python
+df.columns = [i.encode("utf-8").decode("utf-8") for i in df.columns]
+```
 
 
 ### Python2 read_excel keyerror   
