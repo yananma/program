@@ -418,6 +418,15 @@ SUM(CASE WHEN is_comment = 1 THEN 1 ELSE 0 END) AS `comment`
 FROM xpost WHERE entryid IN (5772605, 5775742, 5781123) GROUP BY days ORDER BY days
 ```
 
+通用统计主贴 + 互动数的评论数  
+
+```sql
+SELECT DATE_FORMAT(posttime,'%Y-%m-%d') AS days, 
+COUNT(*) + SUM(reply) AS cnt 
+FROM xpost WHERE entryid IN (6330204, 6330216) AND is_comment = 0 GROUP BY days ORDER BY days
+```
+
+
 
 # 报错   
 
