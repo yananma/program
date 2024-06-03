@@ -1,5 +1,5 @@
 
-
+文档：`https://www.emeditor.org/zh-cn/`   
 
 
 显示查询结果条数，在搜索里有一个显示匹配数。    
