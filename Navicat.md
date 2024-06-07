@@ -400,6 +400,11 @@ SELECT domain, COUNT(domain) FROM xpost WHERE domain LIKE '%搜狐%' AND title L
 
 ### 按时间聚类   
 
+```sql 
+DATE_FORMAT(include_t,'%Y-%m-%d %H:%i:%s')   
+```
+
+
 分钟是 %i，不是 %m    
 ```sql  
 # 按小时  
