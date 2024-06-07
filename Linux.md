@@ -211,7 +211,25 @@ uptime 查看 load average。
 内网 ip：`ifconfig | grep 192`    
 外网 ip：`ifconfig | grep 112`    
 
+当命令里有端口的时候，就可以通过 ps 命令找到进程，比如 Python 启动的带端口的 django 服务。   
+
+当命令里没有端口的时候，就要通过 netstat 找到命令。   
+
+```shell
+netstat -anp | grep 15200
+
+结果：tcp        0      0 192.168.241.35:15200    0.0.0.0:*               LISTEN      7685/python
+
+然后再用 ps 找到命令
+ps -aux | grep 7685
+
+```
+
 `netstat -anp | less`  
+
+
+
+
 `curl` 是常用的命令行工具，用来请求 Web 服务器。它的名字就是客户端(client)的 URL 工具的意思。   
 
 `curl http://localhost:18775/accounts/get_verify_img/`     
