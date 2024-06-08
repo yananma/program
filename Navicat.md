@@ -211,6 +211,12 @@ Cyberin 统计正负面
 SELECT type, COUNT(type) FROM `xpost` WHERE facetid = '306032' AND posttime >= '2022-10-01 00:00:00' AND posttime <= '2022-10-15 23:59:59' GROUP BY type 
 ```
 
+如果 as 了中文，group by 和 order by 的时候要加转码    
+
+```sql
+SELECT facetid, is_comment, DATE_FORMAT(posttime,'%Y-%m') AS '发文月份', COUNT(*) AS '数量' FROM xpost WHERE entryid IN (5992259, 5999921) AND is_comment = 1 AND hidden IN (-2, -1, 0) GROUP BY `发文月份` ORDER BY `发文月份`  
+```
+
 
 ### DISTINCT   
 
