@@ -13,15 +13,25 @@
 
 
 
-请求：   
 
-新建接口 -> 输入 url，比如：https://monitor.mxspider.top/msg_encryptor/link -> 选择请求方法，比如 POST -> POST 方法的参数写在 body 里，选择 Body 选项卡 -> 参数名 input-area -> 参数值 Hello world -> 发送     
-
-
-POST 请求可以传 json 格式的参数。     
+### GET 请求  
 
 
 
-文档：   
+
+### POST 请求   
+
+复制一个 POST 请求接口   
+在 Header 里填写 Cookie，参数名填写字符串 `Cookie`，参数值写请求的 header 里的值     
+在 Body 里填写请求参数。先在浏览器的 Payload 里复制参数（复制很多行，每一种是键值对那一种形式，用鼠标左键拉动复制），在 ApiPost 里选择 multipart/form-data 形式，从左边选择导入参数，然后粘贴，导入。   
+
+
+
+### 填写 cookie   
+
+
+
+
+### 文档   
 
 成功响应示例及参数描述 -> 从现有响应导入 -> 美化 -> 提取字段和描述 -> 右侧添加字段说明 -> Ctrl + s 保存 -> 分享文档    
