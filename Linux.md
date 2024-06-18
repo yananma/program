@@ -152,6 +152,9 @@ losf: list open files
 `ps` process status   
 `ps -aux | less`  
 `ps -aux | grep Nginx`   
+
+`ps -aux` 可以查看所有用户的进程，不单单是当前用户的进程。    
+
 `ps -eO lstart | grep zkpoint_es` 查看进程开始时间   
 `ps -aux --sort=%mem` 按内存占用排序      
 `ps -aux --sort=%mem | head -n 50` 取 top50     
