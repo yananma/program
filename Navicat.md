@@ -441,6 +441,8 @@ FROM xpost WHERE entryid IN (6330204, 6330216) AND is_comment = 0 GROUP BY days 
 
 # sqlite   
 
+和 MySQL 一样，当做 MySQL 用。可以在 PyCharm 里导入使用。自己的 navicat 里不能用，但是别的版本可以用，因为自己的只支持 MySQL。db_viewer 也可以用。    
+
 ```python
 import sqlite3
 
