@@ -439,6 +439,38 @@ FROM xpost WHERE entryid IN (6330204, 6330216) AND is_comment = 0 GROUP BY days 
 
 
 
+# sqlite   
+
+```python
+import sqlite3
+
+DB_NAME = 'updata_to_xpost_task_info.db'
+
+con = sqlite3.connect(DB_NAME, isolation_level=None)
+
+cursor = con.cursor()
+
+cursor.execute("PRAGMA table_info(task_info);")
+
+columns = cursor.fetchall()
+for column in columns:
+    print(column)
+
+cursor.execute("select * from task_info where name = '微信_20240618194224913993.xlsx'")
+
+rows = cursor.fetchall()
+for row in rows:
+    print(row)
+
+cursor.close()
+con.close() 
+```
+
+
+
+
+
+
 # 报错   
 
 ### 1241 - Operand should contain 1 column(s)   
