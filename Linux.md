@@ -401,7 +401,6 @@ else
 fi
 
 latest_files=$(ls -lhtr "$dir" | tail -n "$cnt" | awk '{print $9}')
-echo "$latest_files"
 for latest_file in $latest_files; do
     echo "delete $dir$latest_file"
     'r'm "$dir$latest_file"
