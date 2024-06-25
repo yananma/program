@@ -306,6 +306,15 @@ ssh.close()
 2. ./a.sh     
 
 
+### 语法  
+
+```shell
+# for 循环
+命令行使用 for i in a b c d;do echo $i; done
+
+```
+
+
 shell 比传统的编程语言要简单很多，如果学过其他的学这个就是小菜一碟(找例子多敲就会了)  
 
 
@@ -373,6 +382,31 @@ fi
 ``` 
 
 
+### 删除多个文件   
+
+delete_latest_file.sh  
+```shell
+#!/bin/bash
+
+if [[ ! -z $1 ]]; then
+    dir="$1"
+else
+    dir="./"
+fi
+
+if [[ ! -z $2 ]]; then
+    cnt="$2"
+else
+    cnt=1
+fi
+
+latest_files=$(ls -lhtr "$dir" | tail -n "$cnt" | awk '{print $9}')
+echo "$latest_files"
+for latest_file in $latest_files; do
+    echo "delete $dir$latest_file"
+    'r'm "$dir$latest_file"
+done
+```
 
 
 
