@@ -5,14 +5,23 @@
 多用 --help 功能      
 
 
-docker ps 查看镜像     
+查看镜像     
+```shell
+docker ps 
 docker ps -al     
+```
 
-docker exec -it <CONTAINER ID> /bin/bash 进入容器       
+进入容器
+```shell
+docker exec -it <CONTAINER ID> /bin/bash        
 docker exec -it 142f65e77251 /bin/bash       
+```
 
-docker cp 容器外路径  容器名:容器内路径      
+容器外路径  容器名:容器内路径      
+```shell
+docker cp 
 docker cp fanboy-social.txt sleepy_ritchie:/etc/splash/filters        
+```
 
 
 查看 docker 日志：
