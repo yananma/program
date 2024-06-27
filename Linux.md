@@ -117,6 +117,8 @@ cat 可以和 grep 结合使用，看代码有没有更新：`cat /opt/cyberin_b
 `grep` Global Regular Expression Print 全局正则表达式搜索 `history | grep nginx` `ps -aux | grep nginx`    
 grep 正则过滤多个：`pip list | grep -E "a|b"`    
 grep 展示附近多行：-A NUM, --after-context=NUM；-B NUM, --before-context=NUM；-C NUM, -NUM, --context=NUM    
+fgrep 不支持正则，纯文本匹配。   
+
 `|` 管道符，表示将前面命令的处理结果传递给后面的命令处理  
 `ls | head -n 200 | xargs -i cp {} ../test_images/`  
 `head`  
@@ -226,6 +228,12 @@ htop
 uptime 查看 load average。    
 可以结合 uptime 和 awk 实现监测功能。     
 `uptime | awk -F "load average: " '{print $2}' | awk -F "," '{print $1, $2, $3}' `    
+
+
+`watch -d -n 0.5 nvidia-smi`   
+d 展示变化的地方   
+n 时间间隔，默认是 2s    
+
 
 
 #### 网络 
