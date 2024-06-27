@@ -15,8 +15,10 @@ docker cp 容器外路径  容器名:容器内路径
 docker cp fanboy-social.txt sleepy_ritchie:/etc/splash/filters        
 
 
-查看 docker 日志：docker logs -f -n 300 splash         
-
+查看 docker 日志：
+```shell
+docker logs -f -n 300 splash(容器名)         
+```
 
 
 
