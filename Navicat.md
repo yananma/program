@@ -30,6 +30,12 @@ kill tidb 5465694291910749343;
  show columns from xentry
 ```
 
+只展示字段    
+
+```sql   
+SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'hot_list' AND TABLE_NAME = 'bilibili';
+```
+
 
 
 # 项目   
