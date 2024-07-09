@@ -70,6 +70,8 @@ scp -P 对方端口、自己文件或压缩包、对方用户名@对方内网 IP
 `scp -P 17717 -r little_env deploy@192.168.241.25:/home/deploy/` 文件夹 -r    
 带密码 scp，可以用于定时任务。
 
+sshpass 和 alias 用来实现同时处理经常要一起出现的操作，比如同时更新 b79 和 b33 代码。    
+
 ssh 远程执行命令：`sshpass -p "GMwQB6HLpWabWvPX" ssh -p 17717 deploy@192.168.241.51 'cd ~/hill ; git pull http://deploy:thisisalongpassword@gitlab.maixunbytes.com/data-platform/hill.git; python setup.py sdist upload -r maixun;`       
 
 `sshpass -p "密码，外面要带上前后这两个引号" scp -P 17717 /home/test/syb/mayanan/msg_encryptor/crontab_ps.txt deploy@192.168.241.30:/opt/cyberin_backend/tmp/crontab_ps.txt`        
