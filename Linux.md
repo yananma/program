@@ -223,8 +223,6 @@ top 命令是有配置文件的，也就是说你通过命令修改的配置都�
 
 htop   
 
-安装：`conda install -c conda-forge htop`，其中 conda-forge 是一个 channel，相当于应用商店      
-
 
 查看 CPU 核数：lscpu 看 CPU(s)         
 
@@ -240,6 +238,7 @@ n 时间间隔，默认是 2s
 
 
 #### 网络 
+
 `ifconfig`  
 内网 ip：`ifconfig | grep 192`    
 外网 ip：`ifconfig | grep 112`    
@@ -281,6 +280,13 @@ POST application/x-www-form-urlencoded
 
 
 var 目录用来存放越来越大的文件，比如日志、配置等等   
+
+
+#### conda 安装  
+
+安装：`conda install -c conda-forge htop`，其中 conda-forge 是一个 channel，相当于应用商店      
+
+`conda install -c conda-forge sshpass`     
 
 
 #### paramiko  
