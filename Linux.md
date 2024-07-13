@@ -700,6 +700,20 @@ Linux 非常适合使用清单。
 
 ## 报错   
 
+
+### 在 bashrc 里写函数报错  
+
+```shell
+-bash: /home/deploy/.bashrc: line 28: syntax error near unexpected token `('
+-bash: /home/deploy/.bashrc: line 28: `update_cyberin() {'
+```
+
+和 alias 里的命令有重名的   
+先把 alias 里同名的命令注释   
+重新连接服务器才能生效，否则 alias 一直有原来的设置，新的不生效（这一步重要，在这一步犯了两次错误了）   
+写新的函数。   
+
+
 ### [E212: 无法打开并写入文件](https://blog.csdn.net/shinyolive/article/details/108313986)     
 
 没有权限，用户不对。比如是不是 dingyong 在改 deploy 的文件。   
