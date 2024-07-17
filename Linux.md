@@ -121,6 +121,7 @@ cat 可以和 grep 结合使用，看代码有没有更新：`cat /opt/cyberin_b
 `sort`  
 `grep` Global Regular Expression Print 全局正则表达式搜索 `history | grep nginx` `ps -aux | grep nginx`    
 grep 正则过滤多个：`pip list | grep -E "a|b"`    
+grep 正则过滤多个组合：` tail -10000 logs/crisis_warning_send_log.log.log | grep -E "( 19:| 20:| 21:).* send success, "`       
 grep 展示附近多行：-A NUM, --after-context=NUM；-B NUM, --before-context=NUM；-C NUM, -NUM, --context=NUM    
 fgrep 不支持正则，纯文本匹配。   
 
