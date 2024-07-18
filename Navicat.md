@@ -530,6 +530,13 @@ print("','".join(s.splitlines()))
 
 # Navicat 报错
 
+
+### 报错 2003 - Can't connect to MySQL server on '127.0.0.1' (10061 "Unknown error")    
+
+关闭连接 -> 编辑连接重命名 -> 复制连接命名为原来的名字 -> 删除原来的连接     
+
+
+
 ### 报错 access denied @b70 
 
 端口变了。    
