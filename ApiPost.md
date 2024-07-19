@@ -23,7 +23,7 @@
 
 复制一个 POST 请求接口   
 在 Header 里填写 Cookie，参数名填写字符串 `Cookie`，参数值写请求的 header 里的值     
-在 Body 里填写请求参数。先在浏览器的 Payload 里复制参数（复制很多行，每一种是键值对那一种形式，用鼠标左键拉动复制），在 ApiPost 里选择 multipart/form-data 形式，从左边选择导入参数，然后粘贴，导入。   
+在 Body 里填写请求参数。先在浏览器的 Payload 里复制参数（复制很多行，每一种是键值对那一种形式，用鼠标左键拉动，然后复制），在 ApiPost 里选择 multipart/form-data 形式，从左边选择导入参数，然后粘贴，导入，即使原来有参数也没有关系会直接覆盖。    
 
 
 
