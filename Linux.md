@@ -193,7 +193,7 @@ kill 进程 id
 kill \-9 id1, id2, id3...
 
 `ps -aux | grep 名字 | awk -F " " '{print $2}'| xargs kill -9`    
-`ps -aux | grep -v grep | grep zishengtang | awk '{print $2}' | xargs kill -9`         
+`ps -aux | grep -v grep | grep zishengtang | awk '{print $2}' | xargs kill -9`（写成了命令）         
 
 
 pstree  
