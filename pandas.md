@@ -494,6 +494,25 @@ xlsxwriter.Workbook(filename, {'strings_to_urls': False})
 ```
 
 
+### 列转为字典  
+
+```python
+import pandas as pd
+
+df = pd.read_clipboard()
+
+keywords = df["关键词"].unique()
+
+d = {}
+for keyword in keywords:
+    print(keyword)
+    print(df[df["关键词"] == keyword])
+    d[keyword] = df[df["关键词"] == keyword]["fid"].tolist()
+
+print(d)
+```
+
+
 ### 抽样脚本  
 
 ```python
