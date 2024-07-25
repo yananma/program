@@ -139,18 +139,20 @@ echo 输出命令到控制台
 
 `touch a.txt` 创建文件    
 
-#### more 
+
+
+#### more 命令 
 
 查看文件   
 
 
-#### [ufw](https://www.jb51.net/article/184257.htm)    
+#### [ufw](https://www.jb51.net/article/184257.htm) 命令    
 
 防火墙   
 
 
 
-#### md5sum 
+#### md5sum 命令 
 
 查看是不是同一个文件，和 id 的意思是一样的。      
 
@@ -158,7 +160,7 @@ echo 输出命令到控制台
 
 
 
-#### ldd  
+#### ldd 命令 
 
 ldd 是 List Dynamic Dependencies 的缩写，用于查看一个可执行文件或共享库文件所依赖的动态链接库。它可以帮助我们分析程序的依赖关系，以解决程序运行时出现的依赖问题。   
 
