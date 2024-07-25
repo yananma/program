@@ -139,16 +139,42 @@ echo 输出命令到控制台
 
 `touch a.txt` 创建文件    
 
-more 查看   
+#### more 
 
-防火墙 [ufw](https://www.jb51.net/article/184257.htm)
-
-md5sum 文件名   
-
-`md5sum changcheng_daily_3.xlsx`   
+查看文件   
 
 
-#### 进程管理  
+#### [ufw](https://www.jb51.net/article/184257.htm)    
+
+防火墙   
+
+
+
+#### md5sum 
+
+查看是不是同一个文件，和 id 的意思是一样的。      
+
+用法：md5sum 文件名，`md5sum changcheng_daily_3.xlsx`   
+
+
+
+#### ldd  
+
+ldd 是 List Dynamic Dependencies 的缩写，用于查看一个可执行文件或共享库文件所依赖的动态链接库。它可以帮助我们分析程序的依赖关系，以解决程序运行时出现的依赖问题。   
+
+什么是软件包依赖关系？软件不仅仅是独立的源代码，而是本地源代码和外部库中借用的代码的结合体。当这些库和其他共享对象在您的系统中缺失时，依赖于它们的应用程序可能会出现故障，甚至拒绝启动。    
+
+装包环境报错，看 .so 文件。    
+
+ldd命令的使用非常简单，只需要在命令后面加上要分析的可执行文件或共享库文件的路径即可。命令执行后，会列出该文件所依赖的动态链接库，并显示其绝对路径。    
+
+`ldd /home/deploy/miniconda3/envs/staticpages/lib/python3.6/lib-dynload/_ctypes.cpython-36m-x86_64-linux-gnu.so`     
+
+`ldd /bin/ls`    
+
+
+
+## 进程管理  
 
 查看端口被占用：`lsof -i:8001`   
 
