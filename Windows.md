@@ -50,6 +50,7 @@ Ctrl + Shift + Esc 打开任务管理器
 
 Windows + v 打开剪切板      
 
+Windows + e 打开文件资源管理器    
 
 
 
