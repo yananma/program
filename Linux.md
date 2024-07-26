@@ -695,10 +695,13 @@ apt-get install package --reinstall
 
 centos  
 cat /etc/centos-release    
-
+或者输入 yum   
 
 Ubuntu    
 lsb_release -a    
+或者输入 apt-get 
+
+
 
 
 #### tmux 命令  
