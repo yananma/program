@@ -155,6 +155,18 @@ conda 的几个常用命令：https://zhuanlan.zhihu.com/p/73460388
 
 
 
+## 报错   
+
+
+#### 装包报错 CondaHTTPError: HTTP 000 CONNECTION FAILED for url 
+
+网络问题，ping baidu.com  
+替换为国内源。   
+curl 报错的源的 url，看是不是链接错了   
+重启服务   
+wsl 通过 wsl \-\-shutdown 命令重启了一次就好了    
+
+
 
 ## 一次完整记录      
 
