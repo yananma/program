@@ -170,6 +170,8 @@ conda 的几个常用命令：https://zhuanlan.zhihu.com/p/73460388
 
 conda --version 检查有没有成功。（如果没有生效，就关闭窗口再打开。）     
 
+如果关闭窗口再打开还是不行，就看 .bashrc 里有没有 conda 的环境变量。自己的一个跑通的了的办法是，先装一次，不行就把 miniconda 文件夹全部删掉，再重装一次，重装完 `source .bashrc`。核心应该还是环境变量的问题。看有没有 `export PATH="/home/mayanan/miniconda3/bin:$PATH"`     
+
 装 python 环境：conda create --name testenv python=2.7      
 
 conda activate testenv        
