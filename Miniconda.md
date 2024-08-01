@@ -12,7 +12,8 @@ PyCharm 配置在 [PyCharm](https://github.com/yananma/program/blob/master/PyCha
 删除环境：conda env remove -n env_name    
 (这种不行好像)`conda remove -n env_name --all`（all 应该是所有安装包）  
 
-不默认进入 base 环境。conda config --set auto_activate_base false      
+不默认进入 base 环境。`conda config --set auto_activate_base false`      
+
 
 如果没有 Anaconda，就用 virtualenv，先 `pip install virtaulenv`    
 ```python 
