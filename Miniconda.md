@@ -20,9 +20,18 @@ PyCharm 配置在 [PyCharm](https://github.com/yananma/program/blob/master/PyCha
 virtualenv myproject（创建）  
 source  myproject/bin/activate
 
+下面的 windows 很难用，改用 git bash 操作。   
 Windows 环境没有 source，直接 myproject\venv\Scripts\activate(注意 Windows 斜线的方向)）(staticpages 就是用的 virtualenv)    
 
 deactivate   
+```
+
+git bash 操作：  
+```python
+
+source staticpages/venv/Scripts/activate
+
+如果包装不上，就下载 whl 文件，激活虚拟环境，把 whl 文件移动到项目根目录下，通过 pip install whl 安装。
 ```
 
 
