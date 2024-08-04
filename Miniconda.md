@@ -31,6 +31,8 @@ git bash 操作：
 
 source staticpages/venv/Scripts/activate
 
+pip install structlog -i http://pypi.doubanio.com/simple   
+
 如果包装不上，就下载 whl 文件，激活虚拟环境，把 whl 文件移动到项目根目录下，通过 pip install whl 安装。
 ```
 
