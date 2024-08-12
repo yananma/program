@@ -5,6 +5,11 @@
 # Input/output  
 
 
+对于复杂的写入格式，比如表头、排序、样式，比如复杂的表格，不用 pandas，因为 pandas 自己不熟，操作起来很复杂；改成使用 python 操作，通过原生的方法写入。csv 使用 csv，excel 使用 xlsxwriter。   
+
+如果要写入样式，就去 WPS 里看样式，比如字体字号，然后去问 ChatGPT，这些该怎么实现就可以了。   
+
+
 ### [read_csv()](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html)  
 
 ```python
