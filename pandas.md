@@ -1,4 +1,179 @@
 
+结构不好的文档，全部按照官方文档的结构重新调整
+
+
+# Input/output  
+
+
+### [read_csv()](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html)  
+
+```python
+# 用 f 字符串拼最好   
+df = pd.read_csv(f'{self.file_dir}{self.name}.csv')   
+
+df = pd.read_csv('ocr.csv')   # 直接传文件名就可以  
+
+df = pd.read_csv(str(settings.RESOURCE_ROOT / 'docs' / 'program' / 'pika.csv'))
+
+# 不添加表头  
+df = pd.read_csv('ocr.csv', header=None)  
+```
+
+python2 要指定 encoding，否则，还要遍历每一列，一行一行 decode    
+
+```python 
+df = pd.read_csv(file_path, encoding=u"utf-8")
+```
+
+否则就会像下面这样    
+
+```python 
+# -*- coding: utf-8 -*-
+import traceback
+
+import pandas as pd
+from django.conf import settings
+from django.core.management.base import BaseCommand
+from pathlib import Path
+
+from xposts.models import Xpost
+from utils.common import get_logger
+
+logger = get_logger(u"tongyong_update_db_sentiment")
+
+
+class Command(BaseCommand):
+    help = u"读取 CSV 文件，更新数据库的正负面分数字段"
+
+    def handle(self, *args, **options):
+        file_path = Path(settings.BASE_DIR) / u"temp" / u"sentiment" / u"test_comment_10011015_aodi_predict.csv"
+        df = pd.read_csv(file_path)
+        obj_list = []
+        field_list = [u"type_rank", u"pos_type_rank"]
+        for row in df.to_dict(u"records"):
+            row = {key.decode(u"GB2312"): value for key, value in row.items()}  # 可以用 EmEditor 打开文件，看文件编码。
+            p = Xpost.objects.only(u"postid", u"type_rank", u"pos_type_rank").get(postid=row[u"postid"])
+            p.type_rank = int(row[u"负面分数"] * 100)
+            p.pos_type_rank = int(row[u"正面分数"] * 100)
+            obj_list.append(p)
+        Xpost.objects.bulk_update(obj_list, field_list, batch_size=5000)
+        logger.info(u"finish.")
+```
+
+
+### to_csv()  
+
+存 CSV 用 EmEditor 比用 pandas 快多了。    
+
+用 navicat 导出 csv 格式的数据的时候，用 WPS 打开是乱码，然后用 pandas 读到内存里，指定 encoding='utf-8'，看到已经不是乱码了。to_csv 的时候，指定 encoding='gbk' 打开还是乱码，就再加一个参数 errors='ignore' 就可以了.     
+
+`pd.concat([df1, df2, df3, df4, df5, df6]).to_csv('dazhongchezhan.csv', encoding='gbk', errors='ignore')`    
+
+
+#### 'ascii' codec can't decode byte 0xe5 in position 0: ordinal not in range(128)
+
+```python
+# 加 encoding 参数
+df.to_csv('beijingchezhan.csv', index=False, encoding='utf-8')
+```
+
+
+#### 追加文件  
+
+指定参数 mode='a'，而且第一个写入的时候有表头，后面不要写表头，指定参数 headers=False   
+
+```python 
+exist_flag = False   # 这个定义写在 for 循环外面  
+if not exist_flag:
+    df.to_csv("/home/test/syb/mayanan/zjgdk/resources/专家观点库微博0613.csv", index=False, mode="a")
+    exist_flag = True
+else:
+    df.to_csv("/home/test/syb/mayanan/zjgdk/resources/专家观点库微博0613.csv", header=False, index=False, mode="a")
+``` 
+
+
+### [read_excel()](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_excel.html)      
+
+df 切片，测试的时候只取几条用，df[0:3]
+
+```python 
+df = pd.read_excel('模型反馈样本数据.xlsx', engine='openpyxl', sheet_name='c_label0_some_preds1')
+```
+
+读取多个 sheet，指定 sheet_name=None，返回的 df 是一个字典，键是 sheet 名称，值是 DataFrame       
+
+```python 
+df = pd.read_excel('./data/车型车系表V6.xlsx', sheet_name=None)
+brand_list = list(df.keys())
+for brand in brand_list:
+    brand_df = df[brand]    
+```
+
+
+第一行不是 header，指定参数 header=None   
+
+拼接文件路径  
+
+```python 
+UPLOADS_DIR = '/home/test/syb/mayanan/reci/resources/uploads/'
+
+df = pd.read_excel(UPLOADS_DIR + '跑热词.xlsx', engine='openpyxl')
+```
+
+以第二行为表头   
+
+```python 
+df = pd.read_excel('护发素视频0-1数据(1)_语音_OCR.xlsx', header=1)
+```
+
+
+### 读 url 链接   
+
+```python
+def read_authors(self):
+    url = (u"https://oss.static.yuqingsee.com/staticfiles/cyberin_b33/export_temp_files/sp/%E5%A4%A7%E4%BC%97%E5%"
+           u"93%94%E5%93%A9%E5%93%94%E5%93%A9.xlsx")
+    df = pd.read_excel(url)
+    return df['author'].tolist()
+```
+
+### to_excel()
+
+写入的时候，指定列的顺序   
+
+```python 
+result_df = pd.DataFrame(result_list)（注意是两层列表）[[u'时间', u'编辑库', u'发布库', u'捡漏池', u'总量', u'提报量', u'发布库+编辑库']] 
+```  
+
+
+写入多个 sheet  
+
+```python 
+df1 = pd.DataFrame(result_list)
+df2 = pd.DataFrame(result_list[:5])
+
+with pd.ExcelWriter('output.xlsx') as writer:  
+    df1.to_excel(writer, sheet_name='Sheet_name_1')
+    df2.to_excel(writer, sheet_name='Sheet_name_2')
+```
+
+函数   
+
+```python  
+def write_to_excel(self, sheet_datas):
+    filepath = u'通用MKT品牌周报大数需求_{}.xlsx'.format(datetime.datetime.now().date())
+    writer = pd.ExcelWriter(filepath)
+    for sheet_name, sheet_data in sheet_datas.items():
+        pd.DataFrame(sheet_data).to_excel(writer, sheet_name, index=False, header=False)
+    writer.close()
+    return filepath
+```
+
+
+[to_excel 文档](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_excel.html)  
+
+
+
 
 ### 遍历行   
 
@@ -201,107 +376,6 @@ df_tag.columns.values
 ```
 
 
-### [read_csv()](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html)  
-
-```python
-# 用 f 字符串拼最好   
-df = pd.read_csv(f'{self.file_dir}{self.name}.csv')   
-
-df = pd.read_csv('ocr.csv')   # 直接传文件名就可以  
-
-df = pd.read_csv(str(settings.RESOURCE_ROOT / 'docs' / 'program' / 'pika.csv'))
-
-# 不添加表头  
-df = pd.read_csv('ocr.csv', header=None)  
-```
-
-python2 要指定 encoding，否则，还要遍历每一列，一行一行 decode    
-
-```python 
-df = pd.read_csv(file_path, encoding=u"utf-8")
-```
-
-否则就会像下面这样    
-
-```python 
-# -*- coding: utf-8 -*-
-import traceback
-
-import pandas as pd
-from django.conf import settings
-from django.core.management.base import BaseCommand
-from pathlib import Path
-
-from xposts.models import Xpost
-from utils.common import get_logger
-
-logger = get_logger(u"tongyong_update_db_sentiment")
-
-
-class Command(BaseCommand):
-    help = u"读取 CSV 文件，更新数据库的正负面分数字段"
-
-    def handle(self, *args, **options):
-        file_path = Path(settings.BASE_DIR) / u"temp" / u"sentiment" / u"test_comment_10011015_aodi_predict.csv"
-        df = pd.read_csv(file_path)
-        obj_list = []
-        field_list = [u"type_rank", u"pos_type_rank"]
-        for row in df.to_dict(u"records"):
-            row = {key.decode(u"GB2312"): value for key, value in row.items()}  # 可以用 EmEditor 打开文件，看文件编码。
-            p = Xpost.objects.only(u"postid", u"type_rank", u"pos_type_rank").get(postid=row[u"postid"])
-            p.type_rank = int(row[u"负面分数"] * 100)
-            p.pos_type_rank = int(row[u"正面分数"] * 100)
-            obj_list.append(p)
-        Xpost.objects.bulk_update(obj_list, field_list, batch_size=5000)
-        logger.info(u"finish.")
-```
-
-
-### [read_excel()](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_excel.html)      
-
-df 切片，测试的时候只取几条用，df[0:3]
-
-```python 
-df = pd.read_excel('模型反馈样本数据.xlsx', engine='openpyxl', sheet_name='c_label0_some_preds1')
-```
-
-读取多个 sheet，指定 sheet_name=None，返回的 df 是一个字典，键是 sheet 名称，值是 DataFrame       
-
-```python 
-df = pd.read_excel('./data/车型车系表V6.xlsx', sheet_name=None)
-brand_list = list(df.keys())
-for brand in brand_list:
-    brand_df = df[brand]    
-```
-
-
-第一行不是 header，指定参数 header=None   
-
-拼接文件路径  
-
-```python 
-UPLOADS_DIR = '/home/test/syb/mayanan/reci/resources/uploads/'
-
-df = pd.read_excel(UPLOADS_DIR + '跑热词.xlsx', engine='openpyxl')
-```
-
-以第二行为表头   
-
-```python 
-df = pd.read_excel('护发素视频0-1数据(1)_语音_OCR.xlsx', header=1)
-```
-
-
-### 读 url 链接   
-
-```python
-def read_authors(self):
-    url = (u"https://oss.static.yuqingsee.com/staticfiles/cyberin_b33/export_temp_files/sp/%E5%A4%A7%E4%BC%97%E5%"
-           u"93%94%E5%93%A9%E5%93%94%E5%93%A9.xlsx")
-    df = pd.read_excel(url)
-    return df['author'].tolist()
-```
-
 
 
 ### 把列表写入到 Excel  
@@ -331,72 +405,6 @@ df = pd.DataFrame(result_list)
 df.to_csv(file_name, index=False)  
 ```
 
-
-### to_excel()
-
-写入的时候，指定列的顺序   
-
-```python 
-result_df = pd.DataFrame(result_list)（注意是两层列表）[[u'时间', u'编辑库', u'发布库', u'捡漏池', u'总量', u'提报量', u'发布库+编辑库']] 
-```  
-
-
-写入多个 sheet  
-
-```python 
-df1 = pd.DataFrame(result_list)
-df2 = pd.DataFrame(result_list[:5])
-
-with pd.ExcelWriter('output.xlsx') as writer:  
-    df1.to_excel(writer, sheet_name='Sheet_name_1')
-    df2.to_excel(writer, sheet_name='Sheet_name_2')
-```
-
-函数   
-
-```python  
-def write_to_excel(self, sheet_datas):
-    filepath = u'通用MKT品牌周报大数需求_{}.xlsx'.format(datetime.datetime.now().date())
-    writer = pd.ExcelWriter(filepath)
-    for sheet_name, sheet_data in sheet_datas.items():
-        pd.DataFrame(sheet_data).to_excel(writer, sheet_name, index=False, header=False)
-    writer.close()
-    return filepath
-```
-
-
-### to_csv()  
-
-存 CSV 用 EmEditor 比用 pandas 快多了。    
-
-用 navicat 导出 csv 格式的数据的时候，用 WPS 打开是乱码，然后用 pandas 读到内存里，指定 encoding='utf-8'，看到已经不是乱码了。to_csv 的时候，指定 encoding='gbk' 打开还是乱码，就再加一个参数 errors='ignore' 就可以了.     
-
-`pd.concat([df1, df2, df3, df4, df5, df6]).to_csv('dazhongchezhan.csv', encoding='gbk', errors='ignore')`    
-
-
-#### 'ascii' codec can't decode byte 0xe5 in position 0: ordinal not in range(128)
-
-```python
-# 加 encoding 参数
-df.to_csv('beijingchezhan.csv', index=False, encoding='utf-8')
-```
-
-
-#### 追加文件  
-
-指定参数 mode='a'，而且第一个写入的时候有表头，后面不要写表头，指定参数 headers=False   
-
-```python 
-exist_flag = False   # 这个定义写在 for 循环外面  
-if not exist_flag:
-    df.to_csv("/home/test/syb/mayanan/zjgdk/resources/专家观点库微博0613.csv", index=False, mode="a")
-    exist_flag = True
-else:
-    df.to_csv("/home/test/syb/mayanan/zjgdk/resources/专家观点库微博0613.csv", header=False, index=False, mode="a")
-``` 
-
-
-[to_excel 文档](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_excel.html)  
 
 
 ### pandas 排序  
