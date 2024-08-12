@@ -361,6 +361,16 @@ origin_df = origin_df.drop(origin_df.columns[:10], axis=1)
 ```
 
 
+### [df.dropna](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.dropna.html)
+
+这三列，所有的都为 nan 才删除。   
+
+```python 
+df = pd.read_excel('green_data.xlsx')
+df = df.dropna(subset=['语音', '字幕', '花字'], how='all')
+```
+
+
 
 ### [某一列设为索引](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.set_index.html#pandas.DataFrame.set_index)   
 
@@ -417,15 +427,6 @@ def concat_excel():
     result_df.to_excel(f"./data/san_ji_label/result/concat_result.xlsx", index=False)
 ``` 
 
-
-### [df.dropna](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.dropna.html)
-
-这三列，所有的都为 nan 才删除。   
-
-```python 
-df = pd.read_excel('green_data.xlsx')
-df = df.dropna(subset=['语音', '字幕', '花字'], how='all')
-```
 
 
 ### 取 CSV 的表头   
