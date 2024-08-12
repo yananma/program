@@ -185,6 +185,58 @@ df['性别'].to_list()
 ```
 
 
+### 删除含有 nan 的行 dropna  
+
+```python 
+df.dropna(axis=0, how='any')  
+```
+
+
+### [fillna](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.fillna.html)   
+
+
+如果内容为 nan，就没有办法用 in 判断是否包含，会报错。所以解决办法就是 nan 替换成空字符串。    
+
+```python 
+fillna(value='')  
+```
+
+
+下面这种不再使用   
+
+```python 
+line['title'] if not pd.isna(line['title']) else ''
+```
+
+下面这种也不再使用   
+
+函数    
+```python 
+def replace_nan(self):
+    """把字典中的 nan 替换为空"""
+    for key, val in self.post.items():
+        if pd.isna(val):
+            self.post[key] = ''
+```
+
+
+
+### 判断非 nan， isna  
+
+不要用 if 判断，if nan 结果是 True    
+
+```python 
+if not pd.isna(line[1]['names'])
+```
+
+
+### 统计 nan 的数量  
+
+```python 
+df_ads.isna().sum()
+``` 
+
+
 
 
 # DataFrame  
@@ -439,67 +491,6 @@ df.sort_index(ascending=False)
 ```
 
 
-### 统计 nan 的数量  
-
-```python 
-df_ads.isna().sum()
-``` 
-
-
-### 判断非 nan  
-
-不要用 if 判断，if nan 结果是 True    
-
-```python 
-if not pd.isna(line[1]['names'])
-```
-
-
-### [fillna](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.fillna.html)   
-
-
-如果内容为 nan，就没有办法用 in 判断是否包含，会报错。所以解决办法就是 nan 替换成空字符串。    
-
-```python 
-fillna(value='')  
-```
-
-
-下面这种不再使用   
-
-```python 
-line['title'] if not pd.isna(line['title']) else ''
-```
-
-函数    
-```python 
-def replace_nan(self):
-    """把字典中的 nan 替换为空"""
-    for key, val in self.post.items():
-        if pd.isna(val):
-            self.post[key] = ''
-```
-
-
-### 删除含有 nan 的行  
-
-```python 
-df.dropna(axis=0, how='any')  
-```
-
-
-### 替换 nan 为空字符串  
-
-```python 
-def replace_nan_with_blank(row):
-    for key in row.keys():
-        if pd.isnull(row[key]):
-            row[key] = ""
-
-
-for i, row in df.iterrows():
-    replace_nan_with_blank(row)  
-```
 
 
 ### 消除 url 类型数量限制  
