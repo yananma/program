@@ -174,8 +174,31 @@ def write_to_excel(self, sheet_datas):
 
 
 
+# Series   
 
-### 遍历行   
+
+### 把一列转成列表 to_list    
+
+```python
+df = pd.read_excel(BytesIO(requests.get(url).content), encoding='utf-8', sheet_name=u'负面词', header=None).fillna('')
+df['性别'].to_list()
+```
+
+
+
+
+# DataFrame  
+
+
+### DataFrame  
+
+可以通过 index 指定行，指定显示的行，指定行的顺序。   
+
+可以通过 columns 指定列，指定显示的列，指定列的顺序。   
+
+
+
+### 遍历行 iterrows  
 
 数据量大的时候，df.iterrows() 会非常慢，要转成 dict，转成 Python 对象。     
 
@@ -257,13 +280,6 @@ iterrows 官方文档：You should never modify something you are iterating over
 df['原三级标签']   
 ```
 
-
-### 把一列转成列表   
-
-```python
-df = pd.read_excel(BytesIO(requests.get(url).content), encoding='utf-8', sheet_name=u'负面词', header=None).fillna('')
-df['性别'].to_list()
-```
 
 
 ### 删除列   
