@@ -185,6 +185,13 @@ df['性别'].to_list()
 ```
 
 
+### 列重命名 [rename](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.rename.html)   
+
+```python 
+df = df.rename(columns={'Unnamed: 1': '二级标题'})
+```
+
+
 ### 删除含有 nan 的行 dropna  
 
 ```python 
@@ -353,12 +360,6 @@ df = df.drop(['二级标签', '提及数量', 'Unnamed: 5'], axis=1)
 origin_df = origin_df.drop(origin_df.columns[:10], axis=1)     
 ```
 
-
-### [rename](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.rename.html)   
-
-```python 
-df = df.rename(columns={'Unnamed: 1': '二级标题'})
-```
 
 
 ### [某一列设为索引](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.set_index.html#pandas.DataFrame.set_index)   
