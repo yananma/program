@@ -13,8 +13,8 @@ docker ps -al
 
 进入容器
 ```shell
-docker exec -it <CONTAINER ID> /bin/bash        
-docker exec -it 142f65e77251 /bin/bash       
+docker exec -it api_test_v4 /bin/bash     
+docker exec -it 142f65e77251 /bin/bash   
 ```
 
 容器外路径  容器名:容器内路径      
