@@ -157,7 +157,7 @@ result_df = pd.DataFrame(result_list)（注意是两层列表）[[u'时间', u'�
 df1 = pd.DataFrame(result_list)
 df2 = pd.DataFrame(result_list[:5])
 
-with pd.ExcelWriter('output.xlsx') as writer:  
+with pd.ExcelWriter('output.xlsx', engine='xlsxwriter', options={'strings_to_urls': False}) as writer:  
     df1.to_excel(writer, sheet_name='Sheet_name_1')
     df2.to_excel(writer, sheet_name='Sheet_name_2')
 ```
@@ -167,7 +167,7 @@ with pd.ExcelWriter('output.xlsx') as writer:
 ```python  
 def write_to_excel(self, sheet_datas):
     filepath = u'通用MKT品牌周报大数需求_{}.xlsx'.format(datetime.datetime.now().date())
-    writer = pd.ExcelWriter(filepath)
+    writer = pd.ExcelWriter(filepath, engine='xlsxwriter', options={'strings_to_urls': False})
     for sheet_name, sheet_data in sheet_datas.items():
         pd.DataFrame(sheet_data).to_excel(writer, sheet_name, index=False, header=False)
     writer.close()
@@ -505,7 +505,7 @@ df.sort_index(ascending=False)
 pandas，pandas 不能在 to_excel 里写 options 会报错没有这个参数，必须要用下面这种写法         
 
 ```python 
-with pd.ExcelWriter(f'{work_root}/{suffix}.xlsx',engine='xlsxwriter',options={'strings_to_urls': False}) as writer:
+with pd.ExcelWriter(f'{work_root}/{suffix}.xlsx', engine='xlsxwriter', options={'strings_to_urls': False}) as writer:
     newdf.to_excel(writer)
 ```
 
@@ -969,7 +969,7 @@ df.columns = df.columns.map(lambda x: x.decode('utf-8'))
 ```python
 def write_to_excel(self, sheet_datas):
     filepath = self.get_filepath()
-    with pd.ExcelWriter(filepath, engine='xlsxwriter') as writer:
+    with pd.ExcelWriter(filepath, engine='xlsxwriter', options={'strings_to_urls': False}) as writer:
         for sheet_name, sheet_data in sheet_datas.items():
             df = pd.DataFrame(sheet_data)[self.get_headers()]
             df.columns = df.columns.map(lambda x: x.decode('utf-8'))
