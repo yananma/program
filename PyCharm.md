@@ -173,7 +173,11 @@ Edit Configurations -> Additional options -> `--settings=mx_tools.settings-produ
 先在里面 git clone hill 项目（不行的话就在外面 clone，然后 mv 过去），然后在 PyCharm 里选 Mark Directory as -> Sources Root     
 
 
-***  
+### PyCharm 通过堡垒机连远程  
+
+[ycharm配置远程连接跳板机上的服务器](https://blog.csdn.net/qq_39407107/article/details/115468254)
+
+
 
 
 # 报错   
