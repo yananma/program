@@ -175,7 +175,7 @@ Edit Configurations -> Additional options -> `--settings=mx_tools.settings-produ
 
 ### PyCharm 通过堡垒机连远程  
 
-[ycharm配置远程连接跳板机上的服务器](https://blog.csdn.net/qq_39407107/article/details/115468254)
+[pycharm配置远程连接跳板机上的服务器](https://blog.csdn.net/qq_39407107/article/details/115468254)
 
 
 
