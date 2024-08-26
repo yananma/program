@@ -74,7 +74,7 @@ sshpass 和 alias 用来实现同时处理经常要一起出现的操作，比�
 
 ssh 远程执行命令：`sshpass -p "GMwQB6HLpWabWvPX" ssh -p 17717 deploy@192.168.241.51 'cd ~/hill ; git pull http://deploy:thisisalongpassword@gitlab.maixunbytes.com/data-platform/hill.git; python setup.py sdist upload -r maixun;`       
 
-`sshpass -p "密码，外面要带上前后这两个引号" scp -P 17717 /home/test/syb/mayanan/msg_encryptor/crontab_ps.txt deploy@192.168.241.30:/opt/cyberin_backend/tmp/crontab_ps.txt`        
+`sshpass -p "密码，外面要带上前后这两个引号" scp -P 17717 /home/test/crontab_ps.txt deploy@192.168.241.30:/opt/cyberin_backend/tmp/crontab_ps.txt`        
 比如：`sshpass -p 'ylQUpQ&s4bwNiqZr' scp -P 17717 title.png deploy@192.168.241.26:/usr/static/img`     
 比如：`sshpass -p 'ylQUpQ&s4bwNiqZr' scp -P 17717 GM.xlsx deploy@192.168.241.79:/opt/cyberin_backend/export_temp_files`(第一次传可能要手动不带 sshpass 执行一次，否则报错 Host key verification failed；手动执行，提示保存 fingerprint，然后输入 yes)     
 
