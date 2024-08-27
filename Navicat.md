@@ -54,6 +54,11 @@ ALTER TABLE user_obj
 ADD COLUMN update_time DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP;
 ```
 
+### 删除列  
+
+```sql
+ALTER TABLE table_name DROP COLUMN column_name;
+```
 
 
 # 项目   
