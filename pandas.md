@@ -337,7 +337,23 @@ def label_data():
 iterrows 官方文档：You should never modify something you are iterating over. This is not guaranteed to work in all cases. Depending on the data types, the iterator returns a copy and not a view, and writing to it will have no effect.   
 
 
-### 取某一列的数据   
+
+### 读某一列的数据（先切片再读，占内存低）   
+
+因为 Python2 源码里有把列名 encode 成 str，但是返回的又是 Unicode，导致报错 ValueError      
+
+usecols 可以传函数。   
+
+```python 
+def usecols(x):
+    return x in {u"监控对象", u"摘要", u'主题', u'文章类型'}
+
+
+pd.read_csv(file_obj, encoding='gbk', usecols=usecols).fillna(u'')   
+```
+
+
+### 取某一列的数据（读完再切片，占内存和读全部一样）     
 
 ```python 
 # df['列名']
