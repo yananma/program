@@ -225,7 +225,9 @@ kill \-9 id1, id2, id3...
 `ps -aux | grep -v grep | grep zishengtang | awk '{print $2}' | xargs kill -9`（写成了命令）         
 
 
-pstree  
+pstree    
+
+如果有一直冒出来的进程，找不到原因，大概率就是有递归，用 pstree 检查一下，命令 `pstree -sp 进程号`    
 
 
 `top` 是动态更新的  
