@@ -251,7 +251,25 @@ df_ads.isna().sum()
 
 
 
+### group by 取 top value_count   
+
+```python
+In [1]: import pandas as pd
+
+In [2]: url = u"https://oss.static.yuqingsee.com/staticfiles/cyberin/export_temp_files/sp/top_location.csv"
+
+In [3]: df = pd.read_csv(url)
+
+In [5]: df.shape
+Out[5]: (7892797, 2)
+
+In [7]: df["author_location"].value_counts()
+```
+
+
+
 # DataFrame  
+
 
 
 ### DataFrame  
@@ -259,6 +277,14 @@ df_ads.isna().sum()
 可以通过 index 指定行，指定显示的行，指定行的顺序。   
 
 可以通过 columns 指定列，指定显示的列，指定列的顺序。   
+
+
+
+### 查看行数 shape   
+
+```python
+df.shape    
+```
 
 
 
@@ -512,7 +538,6 @@ df = df.sort_values(by=[0, 3], key=lambda x: x if x.name == 0 else x.map(lambda 
 
 df.sort_index(ascending=False)
 ```
-
 
 
 
