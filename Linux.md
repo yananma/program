@@ -343,6 +343,11 @@ ps -aux | grep 7685
 
 ```
 
+netstat 如果是不同的用户，展示出来的进程是个 -    
+
+同一用户才会显示进程号。    
+
+
 `netstat -anp | less`  
 
 
