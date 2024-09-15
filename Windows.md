@@ -1,5 +1,12 @@
 
 
+## wsl  
+
+Windows 路径在 /mnt/ 下。      
+
+
+
+
 ## git bash    
 
 去百度网盘上的软件里下载 spacesniffer_1_3_0_2.zip，然后看 C 盘。     
