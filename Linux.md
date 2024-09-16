@@ -81,6 +81,9 @@ ssh 远程执行命令：`sshpass -p "GMwQB6HLpWabWvPX" ssh -p 17717 deploy@192.
 带密码跳转，比如：`sshpass -p 'ylQUpQ&s4bwNiqZr' ssh -p 17717 b26`        
 速度非常快，100MB/s  
 
+`ssh-copy-id -i id_ed25519.pub -p 17717 dingyong@112.253.2.52（要登烟台VPN）`     
+
+
 `yum install lrzsz`    
 z 是 ZMODEM 协议。    
 rz 上传文件到服务器 receive，用鼠标拖拽。   
