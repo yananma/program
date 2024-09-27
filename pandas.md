@@ -683,6 +683,59 @@ for index in interrupted_indexes:
 
 文档 `https://xlsxwriter.readthedocs.io/`    
 
+
+```python
+workbook = xlsxwriter.Workbook(self.filepath)
+worksheet = workbook.add_worksheet(u"美团政策类信息汇总")
+worksheet.set_column(0, 12, 12)
+center_format = workbook.add_format({'align': 'center'})
+blue_format = workbook.add_format({'color': 'blue', 'underline': 1, 'align': 'center'})
+worksheet.merge_range(0, 0, 0, 12, u"美团安全政策类信息汇总{}-{}".format(self.format_date(self.args[u"date1"]), self.format_date(self.args[u"date2"])), center_format)
+head_row = [u"序号", u"专业方向", u"提及类型", u"主题", u"发表日期", u"发布平台", u"链接", u"链接2", u"分类", u"所属省份", u"所属市", u"作者", u"摘要"]
+
+for idx, h in enumerate(head_row):
+    worksheet.write(1, idx, h, center_format)
+for idx, post in enumerate(posts, 2):
+    for jdx, h in enumerate(head_row):
+        if h == u"链接":
+            worksheet.write_url(idx, jdx, post.get(h, ""), string=u"LINK", cell_format=blue_format)
+        else:
+            worksheet.write(idx, jdx, post.get(h, ""))
+workbook.close()
+filepath = self.filepath.split('cyberin_backend')[-1]
+return filepath
+```
+
+
+
+### 设置列宽   
+
+```python
+worksheet.set_column(0, 12, 12)  # 0 到 12 列，列宽 12  
+
+set_column(self, first_col, last_col, width=None, cell_format=None, options=None)
+```
+
+
+### 设置行高  
+
+```python
+set_row(0, 20)  # 第一行高度 20  
+
+set_row(self, row, height=None, cell_format=None, options=None):    
+```
+
+
+#### 合并单元格  
+
+```python
+worksheet.merge_range(0, 0, 0, 12, u"美团安全政策类信息汇总{}-{}".format(self.args[u"date1"], self.args[u"date2"]), center_format)  # 左上 0,0 右下 0,12   
+
+merge_range(self, first_row, first_col, last_row, last_col, data, cell_format=None):
+```
+
+
+
 ### 高亮  
 
 write_rich_string 某个词高亮，注意，使用 write_rich_string 的时候，如果写入的列表全部都是 string，没有 xlsxwriter format 对象，就会报错 AttributeError: 'str' object has no attribute '_get_xf_index'。    
