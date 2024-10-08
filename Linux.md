@@ -767,6 +767,16 @@ lsb_release -a
 
 
 
+#### bashrc   
+
+不再提示 You have mail in /var/spool/mail/deploy   
+
+如果是 root 用户，就在 /etc/profile 里追加，不是 root 用户，就在 .bashrc 里追加：    
+`unset MAILCHECK`     
+
+
+
+
 
 #### tmux 命令  
 
