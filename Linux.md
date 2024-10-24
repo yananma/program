@@ -743,6 +743,13 @@ crontab 命令，时间前面加 0 和不加 0 都是可以的，默认不加 0
 [菜鸟教程例子](https://www.runoob.com/w3cnote/linux-crontab-tasks.html)      
 
 
+### 快捷键   
+
+Ctrl + k 删除光标后面所有字符      
+
+
+
+
 #### apt 软件管理  
 apt-get update  
 apt-get install package  
