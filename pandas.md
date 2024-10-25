@@ -699,6 +699,11 @@ result_df['percentage'] = result_df['percentage'].round(2) # 保留两位小数
 print(result_df)
 ```
 
+转换成百分比：   
+
+```python
+df["percentage"] = df["percentage"].map(lambda x: format(x, ".2%"))
+```
 
 
 ### 判断数字是否连续  
