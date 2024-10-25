@@ -1,6 +1,11 @@
 
 学习 pandas 的方法就是自己构造数据，多试。    
 
+多用 ? 看用法，看例子，多敲代码。    
+
+不管结果怎么样，都要先自己试一试再说。    
+
+
 ```python
 In [2]: datas = [{u"name": u"a", u"type": -1, u"count": 200}, 
    ...:          {u"name": u"a", u"type": 0, u"count": 300},
