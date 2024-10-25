@@ -645,6 +645,62 @@ df.to_csv("../data/tongyong/揽胜2023正面评论_50w.csv", index=False)
 
 
 
+
+### 把数量转变成百分比   
+
+```python
+import pandas as pd
+
+# 假设你的DataFrame数据如下
+data = {
+    'name': ['大众', '大众', '大众', '通用', '通用', '通用'],
+    'sentiment': ['正', '中', '负', '正', '中', '负'],
+    'count': [10, 20, 30, 40, 50, 60]
+}
+
+df = pd.DataFrame(data)
+
+# 利用groupby根据'name'和'sentiment'分组，并计算每组的'count'总和，然后重置索引
+grouped_sum = df.groupby(['name', 'sentiment'])['count'].sum().reset_index(name='total_count')
+
+# 将原始DataFrame与分组总和进行合并
+df = pd.merge(df, grouped_sum, on=['name', 'sentiment'])
+
+# 计算百分比
+df['percentage'] = (df['count'] / df['total_count']) * 100
+
+# 若只需要name、sentiment和percentage列，可选择这些列展示
+result_df = df[['name', 'sentiment', 'percentage']]
+
+# 打印处理后的DataFrame
+print(result_df)
+
+```
+
+然而，上述方法稍显繁琐，因为我们进行了分组、求和、合并以及百分比计算等多个步骤。实际上，我们可以利用groupby和transform函数来更简洁地实现这一目标：   
+
+```python
+# 利用transform函数计算每组的总和，并直接用于百分比计算
+df['total_count'] = df.groupby(['name', 'sentiment'])['count'].transform('sum')
+df['percentage'] = (df['count'] / df['total_count']) * 100
+
+# 选择所需的列进行展示
+result_df = df[['name', 'sentiment', 'percentage']]
+
+# 打印结果
+print(result_df)
+
+```
+
+在这两种方法中，第二种方法更为简洁且高效。最后，如果你希望百分比保留特定的小数位数，可以利用round函数：   
+
+```python
+result_df['percentage'] = result_df['percentage'].round(2) # 保留两位小数
+print(result_df)
+```
+
+
+
 ### 判断数字是否连续  
 
 ```python
