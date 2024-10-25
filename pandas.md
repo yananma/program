@@ -428,6 +428,13 @@ pd.read_csv(file_obj, encoding='gbk', usecols=usecols).fillna(u'')
 df['原三级标签']   
 ```
 
+### 取某一行   
+
+loc、iloc   
+
+```python
+df[df['A'] == 2]
+```
 
 
 ### 删除列   
