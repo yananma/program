@@ -434,6 +434,8 @@ loc、iloc
 
 ```python
 df[df['A'] == 2]
+
+df[df["type"].isin([1, -1])]  
 ```
 
 
