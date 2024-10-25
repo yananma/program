@@ -225,6 +225,8 @@ def write_to_excel(self, sheet_datas):
 
 # Series   
 
+Series 是一维的数据，当做列表。    
+
 
 ### 把一列转成列表 to_list    
 
