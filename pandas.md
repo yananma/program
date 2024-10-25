@@ -1,4 +1,29 @@
 
+学习 pandas 的方法就是自己构造数据，多试。    
+
+```python
+In [2]: datas = [{u"name": u"a", u"type": -1, u"count": 200}, 
+   ...:          {u"name": u"a", u"type": 0, u"count": 300},
+   ...:          {u"name": u"a", u"type": 1, u"count": 400},
+   ...:          {u"name": u"b", u"type": -1, u"count": 500},
+   ...:          {u"name": u"b", u"type": 0, u"count": 600},
+   ...:          {u"name": u"b", u"type": 1, u"count": 700}]
+
+In [3]: df = pd.DataFrame(datas)
+
+In [4]: df
+Out[4]: 
+   count name  type
+0    200    a    -1
+1    300    a     0
+2    400    a     1
+3    500    b    -1
+4    600    b     0
+5    700    b     1
+```
+
+
+
 结构不好的文档，全部按照官方文档的结构重新调整
 
 
