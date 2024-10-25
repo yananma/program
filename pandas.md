@@ -26,7 +26,7 @@ dir、dir(collections)、dir(requests)
 
 ### 第五章   
 
-
+Series 可以当成一个字典。    
 
 
 
