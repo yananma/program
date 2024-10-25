@@ -40,17 +40,19 @@ Out[4]:
 ```
 
 
-
-结构不好的文档，全部按照官方文档的结构重新调整
-
-
-# Input/output  
+---  
 
 
 对于复杂的写入格式，比如表头、排序、样式，比如复杂的表格，不用 pandas，因为 pandas 自己不熟，操作起来很复杂；改成使用 python 操作，通过原生的方法写入。csv 使用 csv，excel 使用 xlsxwriter。自己写 pgc 导出，写了七八个小时，完成得还不好，如果用 python 操作可能半个小时就写完了。      
 
 如果要写入样式，就去 WPS 里看样式，比如字体字号，然后去问 ChatGPT，这些该怎么实现就可以了。   
 
+---   
+
+
+结构不好的文档，全部按照官方文档的结构重新调整
+
+# Input/output  
 
 ### [read_csv()](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html)  
 
