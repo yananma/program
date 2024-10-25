@@ -661,10 +661,10 @@ data = {
 df = pd.DataFrame(data)
 
 # 利用groupby根据'name'和'sentiment'分组，并计算每组的'count'总和，然后重置索引
-grouped_sum = df.groupby(['name', 'sentiment'])['count'].sum().reset_index(name='total_count')
+grouped_sum = df.groupby(['name'])['count'].sum().reset_index(name='total_count')
 
 # 将原始DataFrame与分组总和进行合并
-df = pd.merge(df, grouped_sum, on=['name', 'sentiment'])
+df = pd.merge(df, grouped_sum, on=['name'])
 
 # 计算百分比
 df['percentage'] = (df['count'] / df['total_count']) * 100
@@ -681,7 +681,7 @@ print(result_df)
 
 ```python
 # 利用transform函数计算每组的总和，并直接用于百分比计算
-df['total_count'] = df.groupby(['name', 'sentiment'])['count'].transform('sum')
+df['total_count'] = df.groupby(['name'])['count'].transform('sum')
 df['percentage'] = (df['count'] / df['total_count']) * 100
 
 # 选择所需的列进行展示
