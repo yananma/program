@@ -822,6 +822,12 @@ for index in interrupted_indexes:
 文档 `https://xlsxwriter.readthedocs.io/`    
 
 
+xlsxwriter 日期格式  
+
+`date_format = workbook.add_format({'num_format': 'yyyy-mm-dd hh:mm:ss', 'align': 'center'})`   
+
+
+
 ```python
 workbook = xlsxwriter.Workbook(self.filepath)
 worksheet = workbook.add_worksheet(u"美团政策类信息汇总")
