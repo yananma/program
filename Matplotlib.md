@@ -63,3 +63,13 @@ plt.show()
 
 #### 显示中文  
 `plt.rcParams['font.sans-serif']=['SimHei']`   
+
+
+#### 柱状图标签显示中文   
+
+```python
+ax = plt.gca(); 
+ax.xaxis.set_ticklabels(top_six, fontproperties=FontProperties(fname=font_name, size=12))   
+```    
+
+
