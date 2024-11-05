@@ -1181,6 +1181,49 @@ def data_remove_nan():
 
 ## 报错   
 
+### Python2 read_excel 读表头取列因为编码问题报错 keyerror（8 次）   
+
+
+读 Excel，遍历行的时候 KeyError 的一个解决办法   
+
+```python
+df.columns = [i.encode("utf-8").decode("utf-8") for i in df.columns]
+```
+
+
+
+有一次是把列名前面的 u 去掉，就可以了，还是编码问题。    
+
+
+
+最开始的写法     
+```python 
+import pandas as pd
+
+
+df = pd.read_excel('./data/dlg_predict.xlsx')
+
+df = df[df[u'话题'] != u'无意义']
+print df
+```
+
+报错    
+
+```python 
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-2: ordinal not in range(128)   
+```
+
+解决办法是改用循环     
+
+```python  
+df = pd.read_excel('./data/dlg_predict.xlsx')
+
+df = df[[it != u'无意义' for it in df[u'话题']]]
+print df
+```
+
+
+
 
 ### Python3 read_csv 报错 UnicodeDecodeError: 'utf-8' codec can't decode byte 0xc8 in position 0: invalid continuation byte（2 次）
 
@@ -1237,34 +1280,6 @@ df.to_csv('beijingchezhan.csv', index=False, encoding='utf-8')
 df.columns = [i.encode("utf-8").decode("utf-8") for i in df.columns]
 ```
 
-
-### Python2 read_excel keyerror   
-
-最开始的写法     
-```python 
-import pandas as pd
-
-
-df = pd.read_excel('./data/dlg_predict.xlsx')
-
-df = df[df[u'话题'] != u'无意义']
-print df
-```
-
-报错    
-
-```python 
-UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-2: ordinal not in range(128)   
-```
-
-解决办法是改用循环     
-
-```python  
-df = pd.read_excel('./data/dlg_predict.xlsx')
-
-df = df[[it != u'无意义' for it in df[u'话题']]]
-print df
-```
 
 
 ### XLRDError: Excel xlsx file； not supported 报错
