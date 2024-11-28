@@ -109,6 +109,14 @@ Home 在浏览器页面可以回到顶部
 
 
 
+# 激活 Windows   
+
+`https://github.com/TGSAN/CMWTAT_Digital_Edition` 下载软件    
+
+管理员权限运行。    
+
+
+
 
 
 
