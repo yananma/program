@@ -1184,6 +1184,9 @@ def data_remove_nan():
 ### Python2 read_excel 读表头取列因为编码问题报错 keyerror（8 次）   
 
 
+Python2 取的时候，一律加 u      
+
+
 读 Excel，遍历行的时候 KeyError 的一个解决办法   
 
 ```python
