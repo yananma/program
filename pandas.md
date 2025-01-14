@@ -1181,7 +1181,7 @@ def data_remove_nan():
 
 ## 报错   
 
-### Python2 read_excel 读表头取列因为编码问题报错 keyerror（8 次）   
+### Python2 read_excel 读表头取列因为 Unicode 编码问题报错 keyerror（8 次）   
 
 
 Python2 取的时候，一律加 u      
