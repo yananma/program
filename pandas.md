@@ -1191,6 +1191,8 @@ Python2 取的时候，一律加 u
 
 ```python
 df.columns = [i.encode("utf-8").decode("utf-8") for i in df.columns]
+
+实在不行就把中文改成英文。     
 ```
 
 
