@@ -417,6 +417,17 @@ delete FROM xpost WHERE entryid=4273587 AND type_reason = '' AND is_comment = 1;
 ...
 ```
 
+
+
+### UPDATE  
+
+```sql
+UPDATE Product SET sale_price=sale_price ＊ 10 WHERE product_type=’厨房用具’;      
+```
+
+
+
+
 ### MySQL 的 split   
 
 select SUBSTRING_INDEX(SUBSTRING_INDEX('40,50',',',1),',',-1);结果为 40      
