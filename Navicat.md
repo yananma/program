@@ -426,6 +426,17 @@ UPDATE Product SET sale_price=sale_price ＊ 10 WHERE product_type=’厨房用�
 ```
 
 
+```sql
+SELECT content_type FROM xpost WHERE postid IN ()
+
+UPDATE xpost SET content_type = 2  -- 更成 UGC  
+WHERE postid IN ()
+
+UPDATE xpost SET content_type = 1  -- 更成 PGC  
+WHERE postid IN ()
+```
+
+
 
 
 ### MySQL 的 split   
