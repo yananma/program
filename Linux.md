@@ -76,7 +76,7 @@ ssh 远程执行命令：`sshpass -p "GMwQB6HLpWabWvPX" ssh -p 17717 deploy@192.
 
 `sshpass -p "密码，外面要带上前后这两个引号" scp -P 17717 /home/test/crontab_ps.txt deploy@192.168.241.30:/opt/cyberin_backend/tmp/crontab_ps.txt`        
 比如：`sshpass -p 'ylQUpQ&s4bwNiqZr' scp -P 17717 title.png deploy@192.168.241.26:/usr/static/img`     
-比如：`sshpass -p 'ylQUpQ&s4bwNiqZr' scp -P 17717 GM.xlsx deploy@192.168.241.79:/opt/cyberin_backend/export_temp_files`(第一次传可能要手动不带 sshpass 执行一次，否则报错 Host key verification failed；手动执行，提示保存 fingerprint，然后输入 yes)     
+比如：`sshpass -p 'ylQUpQ&s4bwNiqZr' scp -P 17717 GM.xlsx deploy@192.168.241.79:/opt/cyberin_backend/export_temp_files`(第一次传要手动不带 sshpass 执行一次，否则报错 Host key verification failed，或者不打印但是不生效；手动执行 `ssh -p 17717 dingyong@192.168.241.68`，提示保存 fingerprint，然后输入 yes)     
 
 带密码跳转，比如：`sshpass -p 'ylQUpQ&s4bwNiqZr' ssh -p 17717 b26`        
 速度非常快，100MB/s  
