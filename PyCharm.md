@@ -114,6 +114,13 @@ Tools -> Deployment -> Configuration，左上角 - 号。
 如果不能运行的话，要配置 Django support，File -> Settings -> Language & Frameworks -> Django 勾选 Enable Django Support，配置 Django project root 为本地路径，配置 Manage script 为本地 manage.py   
 
 
+
+### django 脚本模板   
+
+settings -> Editor -> File and Code Templates -> Django Script      
+
+
+
 ### 找不到本地 python 解释器  
 
 尽量不在本地开发，没法上传，会打乱上传代码的习惯。   
