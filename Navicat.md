@@ -422,7 +422,7 @@ delete FROM xpost WHERE entryid=4273587 AND type_reason = '' AND is_comment = 1;
 ### UPDATE  
 
 ```sql
-UPDATE Product SET sale_price=sale_price ＊ 10 WHERE product_type=’厨房用具’;      
+UPDATE Product SET sale_price=sale_price + 10 WHERE product_type=’厨房用具’;      
 ```
 
 
