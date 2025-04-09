@@ -32,7 +32,8 @@ pycharm 右键有 generate test
 PyCharm 的书签用冒泡法排序。     
 Python console 里可以看到执行过的命令的历史记录。Ctrl + a 可以选择全部。       
 在搜索旁边有一个 Find Tool Window      
-重命名不用选中     
+重命名不用选中，Shift + F6        
+Mnemonic bookmark 是可以把代码内部函数加到书签里，比如 Class Search      
 
 
 
