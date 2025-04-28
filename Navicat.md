@@ -491,8 +491,8 @@ DATE_FORMAT(include_t,'%Y-%m-%d %H:%i:%s')
 # 按小时  
 select DATE_FORMAT(include_t,'%Y-%m-%d %H') hours, count(postid) count from xpost WHERE include_t >= '2022-10-01 00:00:00' group by hours ORDER BY include_t;
 
-# 按天  
-select DATE_FORMAT(include_t,'%Y-%m-%d') days, count(postid) count from xpost WHERE include_t >= '2022-10-01 00:00:00' group by days ORDER BY include_t;
+# 按天聚类  
+select DATE_FORMAT(tidb_in_time,'%Y-%m-%d') days, count(postid) count from xpost WHERE tidb_in_time >= '2022-10-01 00:00:00' group by days ORDER BY tidb_in_time;
 ```
 
 按天聚类，再按字段中的类型聚类   
