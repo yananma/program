@@ -1,11 +1,5 @@
 
 
-## wsl  
-
-Windows 路径在 /mnt/ 下。      
-
-
-
 
 ## Git Bash     
 
@@ -30,6 +24,10 @@ ssh -p 17717 test@112.253.2.6 "cd /home/test/syb/mayanan/cyberin_backend/ && /ho
 ```
 
 查看电脑连的 wifi 密码：`netsh wlan show profile [网络名称] key=clear`     
+
+
+
+计算器：calc    
 
 
 
@@ -94,6 +92,13 @@ Ctrl + Alt + C 调用代码块。再按 Ctrl + Alt + C 取消。再全选，再�
 预览展示的顺序是打开顺序，如果浏览器预览顺序和屏幕顺序不一样，就把左边的缩略窗口的整个关掉（把重要的 tab 移到另一个窗口），然后再用 Ctrl + Shift + t 重新打开就可以了。      
 
 Home 在浏览器页面可以回到顶部     
+
+
+
+## wsl  
+
+Windows 路径在 /mnt/ 下。      
+
 
 
 
