@@ -327,6 +327,7 @@ cpu load 超过 3 倍 cpu 数量可能就有问题。
 
 
 
+`watch -n 0.5 "ls -al /opt/cyberin_backend/pyspy/"`     
 
 `watch -d -n 0.5 nvidia-smi`   
 d 展示变化的地方   
