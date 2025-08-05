@@ -259,6 +259,8 @@ top 命令是有配置文件的，也就是说你通过命令修改的配置都�
 -i 不显示空闲进程。   
 
 
+定时任务直接写 top 不行，要加参数 `top -b -n 1 > /opt/cyberin_backend/pyspy/top/top_$(date +"\%Y\%m\%d_\%H\%M\%S").txt` -b batch_mode 批处理模式，可以用于写入文件，n 是次数，可以写 5 就写入 5 批。     
+
 
 TIME/TIME+ CPU 运行时间。   
 
