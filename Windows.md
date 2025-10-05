@@ -23,7 +23,10 @@ ssh -p 17718 mayanan@ent.mxspider.top
 ssh -p 17717 test@112.253.2.6 "cd /home/test/syb/mayanan/cyberin_backend/ && /home/test/testenv/bin/python manage.py crisis_warning_send --debug_time '2022-11-12 10:15:00' --settings cyberin_backend.settings_product"  （外面是双引号，里面是单引号）
 ```
 
-查看电脑连的 wifi 密码：`netsh wlan show profile [网络名称] key=clear`     
+查看电脑连的 wifi 密码：`netsh wlan show profile [网络名称] key=clear`（有时候查不出来，用下面这个更好的办法）     
+
+
+左键点击右下角 WiFi图标 -> 网络和internet设置 -> 网络和共享中心 -> 点击 WiFi 名称会有一个弹窗 -> 点击无线属性 -> 安全 -> 显示字符       
 
 
 
