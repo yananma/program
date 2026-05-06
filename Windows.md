@@ -1,6 +1,47 @@
 
 
 
+
+
+## 快捷键    
+
+
+F3 下一个，Shift + F3 搜索上一个     
+
+Alt + 鼠标实现批量操作    
+
+按滚轮下拉实现批量操作     
+
+
+Windows + Shift + → 把选中的软件从左屏幕移到右屏幕，比如移动文本编辑器。     
+
+
+
+
+#### 文本编辑器
+
+Ctrl + Home 文本编辑器回到第一行    
+
+Ctrl + Alt + → 所有行的选中光标到末尾    
+
+Ctrl + y 反向撤销   
+
+Ctrl + Shift + Home 选中从光标到开头的内容    
+
+
+
+
+
+#### 打开  
+
+Ctrl + Shift + Esc 打开任务管理器   
+
+Windows + v 打开剪切板      
+
+Windows + e 打开文件资源管理器    
+
+
+
 ## Git Bash     
 
 1. Windows 的搜索文件功能不好用，可以用 Git Bash 搜。`ll -al | grep 马亚南`    
@@ -33,37 +74,10 @@ ssh -p 17717 test@112.253.2.6 "cd /home/test/syb/mayanan/cyberin_backend/ && /ho
 计算器：calc    
 
 
-
-## 快捷键    
-
-
-F3 下一个，Shift + F3 搜索上一个     
-
-Ctrl + Home 文本编辑器回到第一行   
-
-Ctrl + Alt + → 所有行的选中光标到末尾
-
-Shift + Enter 实现 ChatGPT 换行     
-
-Alt + 鼠标实现批量操作    
-
-按滚轮下拉实现批量操作     
-
-Ctrl + y 反向撤销   
-
-Ctrl + Shift + Home 选中从光标到开头的内容    
-
-Ctrl + Shift + Esc 打开任务管理器   
-
-Windows + v 打开剪切板      
-
-Windows + e 打开文件资源管理器    
-
-
-
 ## 键盘打出来的字变宽了，打出来的字像这样　ｗｉｎｄｏｗｓ　　　
 
 输入法全半角切换。（快捷键是 Shift + q，所以有时候会误触）      
+
 
 
 ## 配置环境变量  
