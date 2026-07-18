@@ -42,6 +42,11 @@ Windows + e 打开文件资源管理器
 
 
 
+
+
+
+
+
 ## Git Bash     
 
 1. Windows 的搜索文件功能不好用，可以用 Git Bash 搜。`ll -al | grep 马亚南`    
@@ -64,14 +69,36 @@ ssh -p 17718 mayanan@ent.mxspider.top
 ssh -p 17717 test@112.253.2.6 "cd /home/test/syb/mayanan/cyberin_backend/ && /home/test/testenv/bin/python manage.py crisis_warning_send --debug_time '2022-11-12 10:15:00' --settings cyberin_backend.settings_product"  （外面是双引号，里面是单引号）
 ```
 
+
+
+## 查看电脑 WiFi 密码    
+
 查看电脑连的 wifi 密码：`netsh wlan show profile [网络名称] key=clear`（有时候查不出来，用下面这个更好的办法）     
 
 
 左键点击右下角 WiFi图标 -> 网络和internet设置 -> 网络和共享中心 -> 点击 WiFi 名称会有一个弹窗 -> 点击无线属性 -> 安全 -> 显示字符       
 
+住处 WiFi 密码：ma123456     
+
+
+
 
 
 计算器：calc    
+
+
+
+
+## 电脑只有一个屏幕亮，另一个屏幕有电，但显示无信号    
+
+右键桌面→显示设置，看看是不是第二个屏幕被设置成了"断开"或者"仅在1上显示"。如果是，改回"扩展这些显示器"就行了。     
+
+
+
+## 耳机插着，但是显示一个叉号    
+
+把叉号关掉就行了。    
+
 
 
 ## 键盘打出来的字变宽了，打出来的字像这样　ｗｉｎｄｏｗｓ　　　
